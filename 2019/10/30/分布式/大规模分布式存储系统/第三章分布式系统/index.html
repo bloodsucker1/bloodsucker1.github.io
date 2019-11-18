@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="分布式,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="分布式系统Paxos选举协议以及两阶段提交 基本概念异常异常类型 服务器宕机  网络异常  磁盘故障 超时 接口幂等性,覆盖写是一种常见的幂等操作 一致性 副本是分布式存储系统容错技术的唯一手段  如何保证副本之间的一致性是整个分布式系统的理论核心   理解一致性可以从两个角度:用户/存储系统  客户端:  强一致 弱一致 最终一致性: 最终一致有一个“不一致窗口”,不一致窗口大小以来以下几个因素">
+<meta name="keywords" content="分布式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分布式系统">
+<meta property="og:url" content="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="分布式系统Paxos选举协议以及两阶段提交 基本概念异常异常类型 服务器宕机  网络异常  磁盘故障 超时 接口幂等性,覆盖写是一种常见的幂等操作 一致性 副本是分布式存储系统容错技术的唯一手段  如何保证副本之间的一致性是整个分布式系统的理论核心   理解一致性可以从两个角度:用户/存储系统  客户端:  强一致 弱一致 最终一致性: 最终一致有一个“不一致窗口”,不一致窗口大小以来以下几个因素">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-04T12:38:34.009Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分布式系统">
+<meta name="twitter:description" content="分布式系统Paxos选举协议以及两阶段提交 基本概念异常异常类型 服务器宕机  网络异常  磁盘故障 超时 接口幂等性,覆盖写是一种常见的幂等操作 一致性 副本是分布式存储系统容错技术的唯一手段  如何保证副本之间的一致性是整个分布式系统的理论核心   理解一致性可以从两个角度:用户/存储系统  客户端:  强一致 弱一致 最终一致性: 最终一致有一个“不一致窗口”,不一致窗口大小以来以下几个因素">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/">
+
+
+
+
+
+  <title>分布式系统 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/bloodsucker1" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">分布式系统</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T21:11:29+08:00">
+                2019-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大型分布式系统/" itemprop="url" rel="index">
+                    <span itemprop="name">大型分布式系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h1><p>Paxos选举协议以及两阶段提交</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><h4 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h4><ul>
+<li><p>服务器宕机</p>
+</li>
+<li><p>网络异常</p>
+</li>
+<li><p>磁盘故障</p>
+<h4 id="超时"><a href="#超时" class="headerlink" title="超时"></a>超时</h4></li>
+<li><p>接口幂等性,覆盖写是一种常见的幂等操作</p>
+<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3></li>
+<li><p>副本是分布式存储系统容错技术的唯一手段</p>
+</li>
+<li><p>如何保证副本之间的一致性是整个分布式系统的理论核心</p>
+</li>
+</ul>
+<p>理解一致性可以从两个角度:用户/存储系统</p>
+<ul>
+<li><p>客户端:</p>
+<ul>
+<li>强一致</li>
+<li>弱一致</li>
+<li>最终一致性: 最终一致有一个“不一致窗口”,不一致窗口大小以来以下几个因素:交互延迟,系统负载,以及复制协议要求同步的副本数<br>最终一致性描述比较粗略,其他常见的变体如下:</li>
+</ul>
+</li>
+<li><p>读写(Read-your-writes)一致性: 如果客户端A写入了最新的值,那么A的后续操作都会读取到最新的值,但是其他用户可能要过一会儿才能看到</p>
+</li>
+<li><p>会话(session)一致性: 要求客户端和存储系统交互的整个会话期间保证读写一致性,如果原有会话因为某种原因失效,会话之间的操作要回滚掉</p>
+</li>
+<li><p>单调读一致性: 如果客户端A已经读取了对象的某个值,那么后续操作将不会读取到更早的值</p>
+</li>
+<li><p>单调写一致性: 客户端A的写操作按顺序我拿成,这意味着对与同一个客户端的操作,存储系统的多副本也要按照与客户端相同的顺序完成</p>
+</li>
+<li><p>从存储系统角度看:</p>
+<ul>
+<li>副本一致性:</li>
+<li>更新顺序一致性</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据分布"><a href="#数据分布" class="headerlink" title="数据分布"></a>数据分布</h3><p>分布式系统区别于传统单机系统在于能够数据分布到多个节点,并在多个节点之间实现负载均衡.<br>数据分布方式主要有两种:<br>    - 哈希分布,如一致性哈希<br>    - 顺序分布</p>
+<h4 id="哈希分布"><a href="#哈希分布" class="headerlink" title="哈希分布"></a>哈希分布</h4><p>衡量机器负载设计很多因素:如机器load,cpu,内存,磁盘以及网络等资源,分布式存储需要能够自动识别负载高的节点,当某台机器负载高时,实现自动迁移</p>
+<p>传统哈希分布,当服务器上下线时,N值发生变化,数据映射完全被打乱.几乎所有数据需要重新分布,这将带来大量的数据迁移</p>
+<p>一致性哈希有点在于节点加入/删除是只会影响到在哈希环中相邻的节点,而对其他节点没影响</p>
+<h4 id="顺序分布"><a href="#顺序分布" class="headerlink" title="顺序分布"></a>顺序分布</h4><p>将大表顺序划分为连续的范围,每个范围称为一个子表,总控服务器负责将这些子表按照一定的策略分配到存储节点上.</p>
+<h4 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h4><ul>
+<li>分布式系统每个集群中一般都有个总恐怖节点,其他节点为工作节点,工作节点通过心跳包将节点负载信息(如cpu,内存,磁盘,网络等信息)发送到主控节点.主控节点计算出工作节点的负载以及需要迁移的数据,生成迁移任务放入迁移队列中等待执行.</li>
+<li>负载均衡操作需要控制节奏,因为在迁移过程中机器服务能力会下降,一般新加机器迁移过程会持续300分钟到1个小时</li>
+<li>分布式存储一版是多副本,主副本对外提供服务,迁移备副本不会对服务造成影响,迁移主副本可以先将数据的读写服务切换到其他备副本,再迁移</li>
+</ul>
+<h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h4><p>主副本将写请求复制到其他备副本,最常见的做法是同步操作日志,主副本确定操作的顺序并写入到日志中复制给其他副本</p>
+<p>复制协议分为两种:</p>
+<ul>
+<li>强同步协议要求: 主备同步完成后才能返回客户端写成功.假设所有副本的个数为N,且N&gt;2, 那么实现强同步协议时,主副本只要并发地发给所有备副本并等待回复,只要至少1个备副本返回成功就可以回复客户端成功.</li>
+<li>异步复制: 主副本不需要等待备副本的回应,只需要在本地修改成功就可以告知客户端写操作成功</li>
+</ul>
+<p>基于复制协议,要求任何时刻只能有一个副本为主副本,由它来确定写操作之间的顺序.如果主副本故障,需要选举一个备副本成为新的主副本,这步操作称为选举,经典的选举协议为(Paxos协议)</p>
+<h4 id="一致性与可用性"><a href="#一致性与可用性" class="headerlink" title="一致性与可用性"></a>一致性与可用性</h4><p>CAP理论: 一致性(Consistency),可用性(Availability)以及分区可容忍性(Tolerance of network Partition)三者不能同时满足.</p>
+<ul>
+<li>一致性: 读操作总能读取到之前完成的写操作结果,满足这个条件的系统称为强一致性系统</li>
+<li>可用性: 读写操作在单台机器发生故障情况下仍然能正常执行</li>
+<li>分区可容忍性: 机器故障,网络故障情况下仍能满足一致性和可用性</li>
+</ul>
+<p>最大可用性模型: 正常情况下强同步模式,异常情况切换为异步复制模式</p>
+<h3 id="容错"><a href="#容错" class="headerlink" title="容错"></a>容错</h3><p>故障检测往往通过租约协议</p>
+<h4 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a>故障检测</h4><p>故障检测最自然想到的是心跳机制,但还是存在问题(没有收到心跳包并不一定能100分确认发生故障并停止了服务)</p>
+<p>传统心跳机制存在问题在于: 机器A和机器B之间需要对“机器B是否应为被认为发生故障且停止服务”达成一致.</p>
+<p>租约机制就是带有超时时间的一种授权,假设机器A需要检测机器B是否发生故障,机器A可以给机器B发放租约,机器B持有的租约的有效期范围内才允许提供服务,否则主动停止复制.机器B的租约快到期时向A重新申请租约来延长有效期.</p>
+<p>增加提前量,假设B机器租约有效期是10s,A机器必须啊哟加一个提前量,比如11s,才能任务机器B的租约过期.</p>
+<h4 id="故障恢复"><a href="#故障恢复" class="headerlink" title="故障恢复"></a>故障恢复</h4><p>常见分布式存储系统分为两种结构:单层结构/双层结构.</p>
+<h4 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h4><p>通过数据分布,复制以及容错等机制,能够将分布式存储系统部署到成千上万台服务器</p>
+<h4 id="总控节点"><a href="#总控节点" class="headerlink" title="总控节点"></a>总控节点</h4><p>总控节点一般用于维护数据分布信息,执行工作机管理,数据定位,故障检测与恢复,负载均衡等全局调度工作,那么总控节点是否会成为性能瓶颈呢?</p>
+<p>不太可能,而且可以通过一些手段来避免</p>
+<h2 id="分布式协议"><a href="#分布式协议" class="headerlink" title="分布式协议:"></a>分布式协议:</h2><p>两阶段提交协议:<br>A组织B,C,D三人去爬长城,如果所有人同意去爬长城,那么活动将举行,如果有一个人不同意去爬长城,则活动取消.</p>
+<p>但是</p>
+<p>两阶段提交协议是阻塞协议,执行过程需要锁住其他更新,且不能容错</p>
+<h3 id="google-spanner"><a href="#google-spanner" class="headerlink" title="google spanner"></a>google spanner</h3><p><a href="https://segmentfault.com/a/1190000009707788" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009707788</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/分布式/" <i class="fa fa-tag"> 分布式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/30/分布式/大规模分布式存储系统/第二章单机存储/" rel="next" title="单机存储">
+                <i class="fa fa-chevron-left"></i> 单机存储
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/" rel="prev" title="OceanBase架构初探">
+                OceanBase架构初探 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="John Doe">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式系统"><span class="nav-number">1.</span> <span class="nav-text">分布式系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异常"><span class="nav-number">1.1.1.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#异常类型"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">异常类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#超时"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">超时</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一致性"><span class="nav-number">1.1.2.</span> <span class="nav-text">一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据分布"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希分布"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">哈希分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序分布"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">顺序分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#负载均衡"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一致性与可用性"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">一致性与可用性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容错"><span class="nav-number">1.1.4.</span> <span class="nav-text">容错</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#故障检测"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">故障检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#故障恢复"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">故障恢复</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可扩展性"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">可扩展性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总控节点"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">总控节点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式协议"><span class="nav-number">1.2.</span> <span class="nav-text">分布式协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#google-spanner"><span class="nav-number">1.2.1.</span> <span class="nav-text">google spanner</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共字</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
