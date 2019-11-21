@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/148/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/leetcode/python技巧总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/11/leetcode/148/" itemprop="url">leetcode 148</a></h1>
+                <a class="post-title-link" href="/2019/10/12/leetcode/python技巧总结/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T10:35:45+08:00">
+                2019-10-12
               </time>
             
 
@@ -311,39 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -405,291 +372,12 @@
       
         
           
-            <h1 id="148"><a href="#148" class="headerlink" title="148"></a>148</h1><p>Sort a linked list in O(n log n) time using constant space complexity.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br></pre></td></tr></table></figure>
+            <h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><h2 id="range-用法"><a href="#range-用法" class="headerlink" title="range 用法"></a>range 用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=<span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)[::<span class="number">-1</span>]:</span><br><span class="line"><span class="meta">... </span>    print(i)</span><br><span class="line">...</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Example 2:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
+<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>思路: O(nlogn)采用归并排序</p>
-<p>总结,归并排序的本质是两个有序数组排序</p>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, val)</span>:</span></span><br><span class="line">        self.val, self.next = val, <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkList</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.head = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">init_list</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> type(data) == list</span><br><span class="line">        <span class="keyword">if</span> data:</span><br><span class="line">            point = self.head = ListNode(data[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="number">1</span>:]:</span><br><span class="line">                point.next = ListNode(i)</span><br><span class="line">                point = point.next</span><br><span class="line">        <span class="keyword">return</span> self.head</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_list</span><span class="params">(head)</span>:</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            data.append(str(head.val))</span><br><span class="line">            head = head.next</span><br><span class="line">        print(<span class="string">"-&gt;"</span>.join(data))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, h1, h2)</span>:</span></span><br><span class="line">        dummy = tail = ListNode(<span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">while</span> h1 <span class="keyword">and</span> h2:</span><br><span class="line">            <span class="keyword">if</span> h1.val &lt; h2.val:</span><br><span class="line">                tail.next, tail, h1 = h1, h1, h1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tail.next, tail, h2 = h2, h2, h2.next</span><br><span class="line"></span><br><span class="line">        tail.next = h1 <span class="keyword">or</span> h2</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">        pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">        pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    data = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>]</span><br><span class="line">    link_list = LinkList()</span><br><span class="line">    link_list.init_list(data)</span><br><span class="line">    print(<span class="string">"example:"</span>)</span><br><span class="line">    link_list.print_list(link_list.head)</span><br><span class="line">    print(<span class="string">"result:"</span>)</span><br><span class="line">    result = Solution().sortList(link_list.head)</span><br><span class="line">    link_list.print_list(result)</span><br></pre></td></tr></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow))</span><br><span class="line"></span><br><span class="line">等价于:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    left = self.sortList(head)</span><br><span class="line">    right = self.sortList(slow)</span><br><span class="line">    <span class="keyword">return</span> self.merge(left, right)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>map函数的原型是map(function, iterable, …)，它的返回结果是一个列表,函数式编程</li>
-</ol>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mul</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x*x</span><br><span class="line">res=map(mul,(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>(*)号操作符</li>
-</ol>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    print(a+b)</span><br><span class="line">l= [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">add(*l)</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>排序时间复杂度</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>排序方法</th>
-<th>平均时间</th>
-<th>最好时间</th>
-<th>最坏时间</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>桶排序(不稳定)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-</tr>
-<tr>
-<td>基数排序(稳定)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-</tr>
-<tr>
-<td>归并排序(稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-</tr>
-<tr>
-<td>快速排序(不稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>堆排序(不稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-</tr>
-<tr>
-<td>希尔排序(不稳定)</td>
-<td>O(n^1.25)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>冒泡排序(稳定)</td>
-<td>O(n^2)</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>选择排序(不稳定)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>直接插入排序(稳定)</td>
-<td>O(n^2)</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-</tr>
-</tbody></table>
-<ol start="4">
-<li>归并排序<br>思路:分解-&gt;两个子序列排序<br> 4.1. 如何分解,及如何递归的解决这个问题<br> 4.2. 两个子序列排序</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/179/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/179/" itemprop="url">leetcode 179</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="179"><a href="#179" class="headerlink" title="179"></a>179</h1><p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,2]</span><br><span class="line">Output: &quot;210&quot;</span><br><span class="line">Example 2:</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,30,34,5,9]</span><br><span class="line">Output: &quot;9534330&quot;</span><br></pre></td></tr></table></figure>
-
-<p>Note: The result may be very large, so you need to return a string instead of an integer.</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关键点就在于，如何对比两个数的大小？（理解为两个数谁应该放在前面），解法是按照顺序拼接两个字母串进行比较，如果a ＋b串 大于 b＋a串，那么a比较大（即题意中理解的a应该放在前面），反之b比较大</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def largestNumber(self, nums: List[int]) -&gt; str:</span><br><span class="line">        if len(nums)==0:</span><br><span class="line">            return &quot;&quot;</span><br><span class="line">        self.quickSort(nums,0,len(nums)-1)</span><br><span class="line">        return str(int(&quot;&quot;.join(map(str, nums)))) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def compare(self,num1:int,num2:int):</span><br><span class="line">        return str(num1)+str(num2)&gt;str(num2)+str(num1)</span><br><span class="line"></span><br><span class="line">    def quickSort(self,nums: List[int],low: int,high:int):</span><br><span class="line">        if low &gt;=high:</span><br><span class="line">            return</span><br><span class="line">        mid = self.adjust(nums,low,high)</span><br><span class="line">        self.quickSort(nums,low,mid-1)</span><br><span class="line">        self.quickSort(nums,mid+1,high)</span><br><span class="line">    </span><br><span class="line">    def adjust(self,nums: List[int],l:int,r:int) -&gt; int:</span><br><span class="line">        low = l</span><br><span class="line">        while l &lt; r:</span><br><span class="line">            if self.compare(nums[l], nums[r]):</span><br><span class="line">                nums[l], nums[low] = nums[low], nums[l]</span><br><span class="line">                low += 1</span><br><span class="line">            l += 1</span><br><span class="line">        nums[low], nums[r] = nums[r], nums[low]</span><br><span class="line">        return low</span><br></pre></td></tr></table></figure>
+<p>等价于:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    .....</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)[::<span class="number">-1</span>]:</span><br><span class="line">    .....</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1086,6 +774,473 @@
 <ol>
 <li>sorted 函数<br><a href="http://www.runoob.com/python/python-func-sorted.html" target="_blank" rel="noopener">http://www.runoob.com/python/python-func-sorted.html</a></li>
 <li>lambda 表达式<br><a href="https://www.jianshu.com/p/9f306285a3ca" target="_blank" rel="noopener">https://www.jianshu.com/p/9f306285a3ca</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/179/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/11/leetcode/179/" itemprop="url">leetcode 179</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
+                2019-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
+                    <span itemprop="name">sort</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="179"><a href="#179" class="headerlink" title="179"></a>179</h1><p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
+<p>Example 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,2]</span><br><span class="line">Output: &quot;210&quot;</span><br><span class="line">Example 2:</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,30,34,5,9]</span><br><span class="line">Output: &quot;9534330&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Note: The result may be very large, so you need to return a string instead of an integer.</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关键点就在于，如何对比两个数的大小？（理解为两个数谁应该放在前面），解法是按照顺序拼接两个字母串进行比较，如果a ＋b串 大于 b＋a串，那么a比较大（即题意中理解的a应该放在前面），反之b比较大</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def largestNumber(self, nums: List[int]) -&gt; str:</span><br><span class="line">        if len(nums)==0:</span><br><span class="line">            return &quot;&quot;</span><br><span class="line">        self.quickSort(nums,0,len(nums)-1)</span><br><span class="line">        return str(int(&quot;&quot;.join(map(str, nums)))) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def compare(self,num1:int,num2:int):</span><br><span class="line">        return str(num1)+str(num2)&gt;str(num2)+str(num1)</span><br><span class="line"></span><br><span class="line">    def quickSort(self,nums: List[int],low: int,high:int):</span><br><span class="line">        if low &gt;=high:</span><br><span class="line">            return</span><br><span class="line">        mid = self.adjust(nums,low,high)</span><br><span class="line">        self.quickSort(nums,low,mid-1)</span><br><span class="line">        self.quickSort(nums,mid+1,high)</span><br><span class="line">    </span><br><span class="line">    def adjust(self,nums: List[int],l:int,r:int) -&gt; int:</span><br><span class="line">        low = l</span><br><span class="line">        while l &lt; r:</span><br><span class="line">            if self.compare(nums[l], nums[r]):</span><br><span class="line">                nums[l], nums[low] = nums[low], nums[l]</span><br><span class="line">                low += 1</span><br><span class="line">            l += 1</span><br><span class="line">        nums[low], nums[r] = nums[r], nums[low]</span><br><span class="line">        return low</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/148/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/11/leetcode/148/" itemprop="url">leetcode 148</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
+                2019-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
+                    <span itemprop="name">sort</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="148"><a href="#148" class="headerlink" title="148"></a>148</h1><p>Sort a linked list in O(n log n) time using constant space complexity.</p>
+<p>Example 1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
+
+<p>思路: O(nlogn)采用归并排序</p>
+<p>总结,归并排序的本质是两个有序数组排序</p>
+<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, val)</span>:</span></span><br><span class="line">        self.val, self.next = val, <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkList</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.head = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">init_list</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> type(data) == list</span><br><span class="line">        <span class="keyword">if</span> data:</span><br><span class="line">            point = self.head = ListNode(data[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="number">1</span>:]:</span><br><span class="line">                point.next = ListNode(i)</span><br><span class="line">                point = point.next</span><br><span class="line">        <span class="keyword">return</span> self.head</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_list</span><span class="params">(head)</span>:</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            data.append(str(head.val))</span><br><span class="line">            head = head.next</span><br><span class="line">        print(<span class="string">"-&gt;"</span>.join(data))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, h1, h2)</span>:</span></span><br><span class="line">        dummy = tail = ListNode(<span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">while</span> h1 <span class="keyword">and</span> h2:</span><br><span class="line">            <span class="keyword">if</span> h1.val &lt; h2.val:</span><br><span class="line">                tail.next, tail, h1 = h1, h1, h1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tail.next, tail, h2 = h2, h2, h2.next</span><br><span class="line"></span><br><span class="line">        tail.next = h1 <span class="keyword">or</span> h2</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">        pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">        pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    data = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>]</span><br><span class="line">    link_list = LinkList()</span><br><span class="line">    link_list.init_list(data)</span><br><span class="line">    print(<span class="string">"example:"</span>)</span><br><span class="line">    link_list.print_list(link_list.head)</span><br><span class="line">    print(<span class="string">"result:"</span>)</span><br><span class="line">    result = Solution().sortList(link_list.head)</span><br><span class="line">    link_list.print_list(result)</span><br></pre></td></tr></table></figure>
+
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow))</span><br><span class="line"></span><br><span class="line">等价于:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    left = self.sortList(head)</span><br><span class="line">    right = self.sortList(slow)</span><br><span class="line">    <span class="keyword">return</span> self.merge(left, right)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>map函数的原型是map(function, iterable, …)，它的返回结果是一个列表,函数式编程</li>
+</ol>
+<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mul</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x*x</span><br><span class="line">res=map(mul,(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>(*)号操作符</li>
+</ol>
+<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    print(a+b)</span><br><span class="line">l= [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">add(*l)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>排序时间复杂度</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>排序方法</th>
+<th>平均时间</th>
+<th>最好时间</th>
+<th>最坏时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>桶排序(不稳定)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>基数排序(稳定)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>归并排序(稳定)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+</tr>
+<tr>
+<td>快速排序(不稳定)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>堆排序(不稳定)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+</tr>
+<tr>
+<td>希尔排序(不稳定)</td>
+<td>O(n^1.25)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>冒泡排序(稳定)</td>
+<td>O(n^2)</td>
+<td>O(n)</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>选择排序(不稳定)</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>直接插入排序(稳定)</td>
+<td>O(n^2)</td>
+<td>O(n)</td>
+<td>O(n^2)</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>归并排序<br>思路:分解-&gt;两个子序列排序<br> 4.1. 如何分解,及如何递归的解决这个问题<br> 4.2. 两个子序列排序</li>
 </ol>
 
           
@@ -1578,7 +1733,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1589,7 +1744,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

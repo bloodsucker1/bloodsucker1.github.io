@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表 对于每个KeyValue值，经">
+<meta name="description" content="6.824 Lab 1: MapReduce Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 Key">
 <meta name="keywords" content="分布式,mapReduce">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lab 1: MapReduce">
 <meta property="og:url" content="http://yoursite.com/2019/10/30/分布式/MIT 6.824/Lab 1: MapReduce/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表 对于每个KeyValue值，经">
+<meta property="og:description" content="6.824 Lab 1: MapReduce Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 Key">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-13T08:16:50.702Z">
+<meta property="og:updated_time" content="2019-11-18T12:36:04.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lab 1: MapReduce">
-<meta name="twitter:description" content="Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表 对于每个KeyValue值，经">
+<meta name="twitter:description" content="6.824 Lab 1: MapReduce Part1 Map/Reduce input and output主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数 doMap()函数: 读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 Key">
 
 
 
@@ -394,7 +394,8 @@
       
 
       
-        <h2 id="Part1-Map-Reduce-input-and-output"><a href="#Part1-Map-Reduce-input-and-output" class="headerlink" title="Part1 Map/Reduce input and output"></a>Part1 Map/Reduce input and output</h2><p>主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数</p>
+        <p><a href="https://pdos.csail.mit.edu/6.824/labs/lab-1.html" target="_blank" rel="noopener">6.824 Lab 1: MapReduce</a></p>
+<h2 id="Part1-Map-Reduce-input-and-output"><a href="#Part1-Map-Reduce-input-and-output" class="headerlink" title="Part1 Map/Reduce input and output"></a>Part1 Map/Reduce input and output</h2><p>主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数</p>
 <h3 id="doMap-函数"><a href="#doMap-函数" class="headerlink" title="doMap()函数:"></a>doMap()函数:</h3><ol>
 <li>读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表</li>
 <li>对于每个KeyValue值，经过ihash平均分配给nReduce个中间文件,中间文件可由reduceName() 得到名字，注意读写文件需要用json来序列化</li>
@@ -570,7 +571,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -581,7 +582,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

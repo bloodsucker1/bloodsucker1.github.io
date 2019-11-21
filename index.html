@@ -270,6 +270,403 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/19/go/pprof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/19/go/pprof/" itemprop="url">pprof工具使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T16:29:33+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="pprof"><a href="#pprof" class="headerlink" title="pprof"></a>pprof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># runtime.MemStats</span><br><span class="line"># Alloc = 6911928</span><br><span class="line"># TotalAlloc = 19160914800</span><br><span class="line"># Sys = 72373071</span><br><span class="line"># Lookups = 0</span><br><span class="line"># Mallocs = 201435665</span><br><span class="line"># Frees = 201407065</span><br><span class="line"># HeapAlloc = 6911928</span><br><span class="line"># HeapSys = 65994752</span><br><span class="line"># HeapIdle = 56852480</span><br><span class="line"># HeapInuse = 9142272</span><br><span class="line"># HeapReleased = 52936704</span><br><span class="line"># HeapObjects = 28600</span><br><span class="line"># Stack = 1114112 / 1114112</span><br><span class="line"># MSpan = 106488 / 196608</span><br><span class="line"># MCache = 6944 / 65536</span><br><span class="line"># BuckHashSys = 1616868</span><br><span class="line"># GCSys = 2394112</span><br><span class="line"># OtherSys = 991083</span><br><span class="line"># NextGC = 11362960</span><br><span class="line"># LastGC = 1574322082513879647</span><br><span class="line"># PauseNs = [189598 49953 92502 32422 38027 82085 100885 229316 76361 72260 78828 39619 149152 46332 70705 17145 16763 58004 64772 28182 78964 723741 61377 82393 95501 14008 20076 61063 43738 26423 80042 38541 71009 56981 28659 28020 71551 31313 98150 73792 79719 23929 99861 22701 120759 22477 68964 42352 11666 27739 59629 43175 31219 30039 81174 27849 25645 151912 49662 10258 22584 75402 63296 13006 43117 178897 31601 140531 28393 122639 85584 101906 10499 61339 126044 62926 16444 23959 49294 58229 18315 22263 42363 11487 13774 64256 78467 55070 17849 123218 49329 41235 15583 27532 22365 138046 143495 82689 83776 22407 16361 72739 30012 88179 53863 57042 19235 36012 49999 10093 150366 57210 74770 33872 17570 80342 33627 130745 45451 44563 68349 91948 80106 96768 123250 68130 37997 85617 52326 105215 79923 59876 82770 34976 71308 75440 74769 52477 81582 28035 26408 81097 51790 87575 83188 97461 74315 14031 63507 60049 70288 26258 30603 70501 25757 76272 54131 11315 15774 47247 28143 16491 44517 397021 109310 75557 38932 54458 57195 101318 13764 12970 61384 70465 74954 34697 74424 49610 546274 37799 21334 23761 26868 25757 67495 37693 48941 31569 11449 49646 26411 28535 17298 60990 14267 45562 81123 95301 51616 41552 68802 69589 80352 30789 85043 150628 9825 48716 31399 17660 90074 29268 58238 66220 21357 36999 83608 49139 10383 68450 52035 18896 22419 82571 20467 20933 49959 50114 24937 62938 17763 70881 29038 88511 33083 12115 39858 55640 25758 85965 25077 163754 28138 14249 57188 80709 53402 62238 78211 51991 12517 70669 66887 94401 65900 22837]</span><br><span class="line"># PauseEnd = [1574322080390712046 1574322080402601456 1574322080417597815 1574322080430075401 1574322080448743679 1574322080481843308 1574322080503285042 1574322080521567097 1574322080537619917 1574322080559570756 1574322080588332615 1574322080605197934 1574322080618694803 1574322080636061669 1574322080657184934 1574322080684348212 1574322080705329009 1574322080719469909 1574322080736620249 1574322080755391983 1574322080777142378 1574322080801636089 1574322080825558326 1574322080836895171 1574322080849027987 1574322080865581420 1574322080878967168 1574322080900290388 1574322080919367030 1574322080940890269 1574322080974232859 1574322080988857538 1574322081002500813 1574322081017118019 1574322081035119959 1574322081052533660 1574322081065488769 1574322081083060618 1574322081103290742 1574322081117706184 1574322081132701465 1574322081153895098 1574322081177445475 1574322081196174521 1574322081209746571 1574322081223541458 1574322081238549400 1574322081253663527 1574322081279011933 1574322081295221475 1574322081312807380 1574322081329454242 1574322081349673665 1574322081382931596 1574322081398104595 1574322081411675607 1574322081423663058 1574322081435591228 1574322081452690208 1574322081482717475 1574322081506495585 1574322081523191972 1574322081539546871 1574322081560526634 1574322081585884075 1574322081604924504 1574322081620393778 1574322081636910237 1574322081649709918 1574322081671440093 1574322081692351239 1574322081714954880 1574322081736383517 1574322081759477966 1574322081780396845 1574322081809275402 1574322081832646903 1574322081844973974 1574322081859919543 1574322081878146929 1574322081894049877 1574322081918470164 1574322081942839690 1574322081962122724 1574322081973635354 1574322081991546597 1574322082006185907 1574322082020228404 1574322082043356433 1574322082062069998 1574322082092364700 1574322082111501695 1574322082127799248 1574322082141316859 1574322082157849501 1574322082177158998 1574322082190978605 1574322082206080529 1574322082220254360 1574322082238405644 1574322082255306291 1574322082287696098 1574322082300844344 1574322082315626425 1574322082327934125 1574322082342279708 1574322082359464097 1574322082403441800 1574322082421731674 1574322082447831735 1574322082472752623 1574322082486526178 1574322082502363044 1574322082513879647 1574322077489750221 1574322077502583900 1574322077515159633 1574322077531276251 1574322077553955480 1574322077574258541 1574322077596114790 1574322077613266937 1574322077625509198 1574322077640497140 1574322077674765140 1574322077702541016 1574322077721769598 1574322077738605211 1574322077775075178 1574322077799454347 1574322077822280173 1574322077835197697 1574322077850735655 1574322077882828316 1574322077916692835 1574322077938708711 1574322077973382082 1574322077990437988 1574322078006060345 1574322078018689112 1574322078030868740 1574322078048097314 1574322078077412649 1574322078099010773 1574322078116051403 1574322078133467101 1574322078145929683 1574322078164972882 1574322078193059776 1574322078218462494 1574322078243964527 1574322078271299425 1574322078296295965 1574322078311903980 1574322078323289651 1574322078340564935 1574322078355041152 1574322078379113651 1574322078397064652 1574322078410283359 1574322078425451781 1574322078461478242 1574322078489565281 1574322078509050699 1574322078520379771 1574322078534615753 1574322078551371364 1574322078569855252 1574322078590158746 1574322078610728096 1574322078632052560 1574322078653213142 1574322078689313302 1574322078706298386 1574322078719347046 1574322078733274403 1574322078757892267 1574322078807458635 1574322078829797069 1574322078847526699 1574322078863212705 1574322078893213248 1574322078912050577 1574322078932015146 1574322078952862198 1574322078968937939 1574322078983422259 1574322079003764382 1574322079024587932 1574322079077176784 1574322079096946991 1574322079115658208 1574322079129207783 1574322079143182694 1574322079157474200 1574322079193690884 1574322079206345901 1574322079226361253 1574322079242177073 1574322079260978719 1574322079314650080 1574322079329493542 1574322079345056294 1574322079368803814 1574322079387376484 1574322079408767141 1574322079428095837 1574322079449106465 1574322079467998999 1574322079485391468 1574322079499939713 1574322079512307848 1574322079524423908 1574322079544692641 1574322079572892982 1574322079601073467 1574322079616249315 1574322079633470438 1574322079647391778 1574322079672249349 1574322079693840219 1574322079710479969 1574322079723083791 1574322079740765000 1574322079761293570 1574322079789464150 1574322079807361784 1574322079829103390 1574322079849831253 1574322079871286517 1574322079892161883 1574322079912346685 1574322079929479039 1574322079944339751 1574322079983735126 1574322079996146439 1574322080012304729 1574322080025186914 1574322080042884286 1574322080075591239 1574322080092800684 1574322080109987218 1574322080130215766 1574322080148307817 1574322080166223553 1574322080184252577 1574322080201494803 1574322080216216121 1574322080238095235 1574322080254460660 1574322080274530708 1574322080292243817 1574322080311767013 1574322080326532899 1574322080345139037 1574322080374701044]</span><br><span class="line"># NumGC = 7794</span><br><span class="line"># NumForcedGC = 0</span><br><span class="line"># GCCPUFraction = 0.10706624962106928</span><br><span class="line"># DebugGC = false</span><br></pre></td></tr></table></figure>
+
+<p>// Sys 是下面列出的 XSys 字段的综合。Sys 维护着为 Go 运行时预留的虚拟内存空间地址，<br>// 里面包含了：堆、栈，以及其他内部数据结构。<br>Sys uint64</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/分布式/MIT 6.824/论文/MapReduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/分布式/MIT 6.824/论文/MapReduce/" itemprop="url">MapReduce</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-18T21:43:33+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MapReduce/" itemprop="url" rel="index">
+                    <span itemprop="name">MapReduce</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
+<h2 id="MapReduce-入门"><a href="#MapReduce-入门" class="headerlink" title="MapReduce 入门"></a>MapReduce 入门</h2><p>MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算<br><a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">python map函数</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(x)</span> :</span>            <span class="comment"># 计算平方数</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(square, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表各个元素的平方</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提供了两个列表，对相同位置的列表数据进行相加</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line">[<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/python/python-func-reduce.html" target="_blank" rel="noopener">Python reduce() 函数</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span> :</span>            <span class="comment"># 两数相加</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x + y</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(add, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表和：1+2+3+4+5</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(<span class="keyword">lambda</span> x, y: x+y, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://dbaplus.cn/news-21-1277-1.html" target="_blank" rel="noopener">7个实例全面掌握Hadoop MapReduce</a></p>
+<h2 id="MapReduce进阶"><a href="#MapReduce进阶" class="headerlink" title="MapReduce进阶"></a>MapReduce进阶</h2><h3 id="MapReduce工作过程"><a href="#MapReduce工作过程" class="headerlink" title="MapReduce工作过程"></a>MapReduce工作过程</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png" alt></p>
+<ol>
+<li>MapReduce框架对输入的文件数据分成M片，每份数据的大小为16~64MB（可由用户配置）。</li>
+<li>在多台机器上开始运行User Program：包括一个master、多个map worker和多个reduce worker。</li>
+<li>master主要负责map worker和reduce worker的状态管理和任务分发。</li>
+<li>map worker从GFS读取分配到的文件数据，并进行相应的处理。MapReduce框架的调度会尽量使map worker运行的机器与数据靠近，以提高数据传输的效率。所以，数据传输可以是本地，也可能是网络。</li>
+<li>map worker的输出缓存在内存中，并定期刷到本地磁盘上。这些中间数据的位置信息会通过心跳信息告诉master，master记下这些信息后，通知reduce worker。数据存储在本地。</li>
+<li>reduce worker通过RPC从map worker读取需要的中间数据。数据通过网络传输。</li>
+<li>reduce worker对中间数据进行“合并”处理后，输出结果。</li>
+</ol>
+<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>MapReduce 如何容灾是其最重要的部分，对于故障我们可以分为 worker故障和master故障，worker故障又可以分为 map worker和reduce worker。</p>
+<h4 id="Worker故障"><a href="#Worker故障" class="headerlink" title="Worker故障"></a>Worker故障</h4><p>Master 通过心跳的机制来检测worker故障</p>
+<ul>
+<li>map worker<ul>
+<li>map任务执行完成后宕机：因为中间数据存储在本地磁盘，需要重新执行。</li>
+<li>map任务执行完成前宕机：需要重新执行</li>
+</ul>
+</li>
+<li>reduce worker<ul>
+<li>reduce任务执行完成后宕机：因为数据存储在GFS，不需要重新执行</li>
+<li>reduce任务执行完成前宕机：需要重新执行，输出文件可以覆盖原来的（文件名一样）</li>
+</ul>
+</li>
+</ul>
+<h4 id="Master故障"><a href="#Master故障" class="headerlink" title="Master故障"></a>Master故障</h4><p>master宕机，任务失败,可以简单的通过周期写快照的方式来处理master故障</p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
+<li>局部性：MapReduce用于大数据集的处理，其主要瓶颈是网络带宽。通过优化调度，可以让执行MapReduce任务的机器尽可能靠近机器。（同一机器==&gt;同一机架==&gt;同一机房…）</li>
+<li>任务粒度：执行MapReduce任务的过程其实就是M个Map任务+R个Reduce任务。M和R必须比机器数大很多才会有利于负载均衡</li>
+<li>备份任务：当MapReduce任务即将执行完成时，MapReduce框架会针对那些还在执行的任务，启动一个对应的备份任务。之后，只要主任务或备份任务执行完成，MapReduce任务就完成了。这样可以有效避免整个MapReduce任务被少部分比较慢的机器拖死</li>
+</ul>
+<h3 id="mapReduce试用范围"><a href="#mapReduce试用范围" class="headerlink" title="mapReduce试用范围"></a>mapReduce试用范围</h3><ul>
+<li>要想使用mapreduce首先要确保输入可以相对独立的进行计算(map),数据之间没有计算依赖关系</li>
+</ul>
+<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><ol>
+<li><p>一个mapreduce中,reduce是否需要等待所有mapper执行后才执行?<br>需要,在 mapper 结束之前，reducer 很难知道属于一个 key 的数据是否收集完整，因此如果过早地开始 reduce，无法保值结果的正确性</p>
+</li>
+<li><p>如果一个mapper执行特别慢会拖慢整个任务(长尾现象)<br>为了应对长尾现象（一个特别慢的子任务拖慢整个任务），MapReduce提供了 Backup Task的机制：当一个MapReduce接近结束时，master 对还处理 in-progress状态的task额外的调度备份执行，当primary和backup中一个执行成功就标记成功。</p>
+</li>
+<li><p>Mapreduce中Map与Reduce任务的个数如何确定<br><a href="https://blog.csdn.net/lb812913059/article/details/79898818" target="_blank" rel="noopener">Mapreduce中Map与Reduce任务的个数</a></p>
+</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a><br><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a><br><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a><br><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/操作系统/进程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -582,261 +979,6 @@
 <ol start="2">
 <li>如何排序,用什么排序算法</li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/13/分布式/MIT 6.824/论文/MapReduce/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/13/分布式/MIT 6.824/论文/MapReduce/" itemprop="url">MapReduce</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-13T16:13:50+08:00">
-                2019-11-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
-                    <span itemprop="name">MT6.248</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><p><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
-<h1 id="MapReduce-1"><a href="#MapReduce-1" class="headerlink" title="MapReduce"></a>MapReduce</h1><ol>
-<li>MapReduce 基本原理是什么？</li>
-<li>MapReduce 编程思路</li>
-<li>MapReduce 的执行过程是怎么样的？</li>
-<li>MapReduce 的核心流程细节</li>
-</ol>
-<h2 id="MapReduce基本原理"><a href="#MapReduce基本原理" class="headerlink" title="MapReduce基本原理"></a>MapReduce基本原理</h2><p>MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算<br><a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">python map函数</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(x)</span> :</span>            <span class="comment"># 计算平方数</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(square, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表各个元素的平方</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提供了两个列表，对相同位置的列表数据进行相加</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line">[<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.runoob.com/python/python-func-reduce.html" target="_blank" rel="noopener">Python reduce() 函数</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span> :</span>            <span class="comment"># 两数相加</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x + y</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(add, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表和：1+2+3+4+5</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(<span class="keyword">lambda</span> x, y: x+y, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="MapReduce通俗解释"><a href="#MapReduce通俗解释" class="headerlink" title="MapReduce通俗解释"></a>MapReduce通俗解释</h3><p>图书馆要清点图书数量，有10个书架，管理员为了加快统计速度，找来了10个同学，每个同学负责统计一个书架的图书数量。<br>张同学统计 书架1<br>王同学统计 书架2<br>刘同学统计 书架3<br>……</p>
-<p>过了一会儿，10个同学陆续到管理员这汇报自己的统计数字，管理员把各个数字加起来，就得到了图书总数。 </p>
-<p>这个过程就可以理解为MapReduce的工作过程。</p>
-<h3 id="什么样的任务可以使用mapreduce"><a href="#什么样的任务可以使用mapreduce" class="headerlink" title="什么样的任务可以使用mapreduce"></a>什么样的任务可以使用mapreduce</h3><p>是否对map结果排序</p>
-<h3 id="map和reduce函数"><a href="#map和reduce函数" class="headerlink" title="map和reduce函数"></a>map和reduce函数</h3><h3 id="并行计算依赖"><a href="#并行计算依赖" class="headerlink" title="并行计算依赖"></a>并行计算依赖</h3><ul>
-<li>map阶段的计算是相互独立的,也就是可以并行执行的</li>
-<li>reduce阶段就是对结果进行聚合</li>
-</ul>
-<p>分布式计算，分而自治。在mapreduce中都是通过key value对来实现的。所以核心在于中间的shuffle，reduce拿到的是同一个key的所有数据，换句话说就是子问题集，而map的主要作用就是对属于同一问题集的数据打上相同key。如果数据本身藕合度很低，甚至可以直接通过inputformat实现一下输入逻辑便可以实现并行，无需reduce。另外mapreduce框架其实在很多场合已经显示出其弊端，特别是多轮的时候，很多框架其实都已经逐渐去掉map和reduce的差别，就是一个work的概念，中间的数据传输和子问题如何聚在一起才是关键。好比TEZ框架，MRR这样的作业在一定程度上是打破传统的MRMR的弊端。</p>
-<ul>
-<li>其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似，其次它也是处理大数据集的一种实现，抽象出一个Map接口和一个Reduce接口，屏蔽底层的基础设施的细节，让使用者可以轻松的编写分布式的应用</li>
-<li>大多数的运算都包含这样的操作, 在输入数据的“逻辑”记录上应用 Map 操作得出一个中间 key/value 键值对集合，然后在所有<code>具有相同key值</code>的 value 值上应用 Reduce 操作，从而达到合并中间的数据，得到一个想要的结果的目的。</li>
-</ul>
-<h2 id="MapReduce-编程模型的原理是："><a href="#MapReduce-编程模型的原理是：" class="headerlink" title="MapReduce 编程模型的原理是："></a>MapReduce 编程模型的原理是：</h2><p>为什么抽象出一个map/reduce的概念:</p>
-<h2 id="以WordCount单词统计简述MapReduce-的执行过程"><a href="#以WordCount单词统计简述MapReduce-的执行过程" class="headerlink" title="以WordCount单词统计简述MapReduce 的执行过程"></a>以WordCount单词统计简述MapReduce 的执行过程</h2><ol>
-<li>将待统计文件自动分割成M个数据片段的集合的文件</li>
-<li>map worker 读取文本,</li>
-</ol>
-<h2 id="MapReduce编程思路"><a href="#MapReduce编程思路" class="headerlink" title="MapReduce编程思路"></a>MapReduce编程思路</h2><ul>
-<li>map处理逻辑——对传进来的一行数据如何处理？输出什么信息？</li>
-<li>reduce处理逻辑——对传进来的map处理结果如何处理？输出什么信</li>
-</ul>
-<h2 id="执行过程简析"><a href="#执行过程简析" class="headerlink" title="执行过程简析"></a>执行过程简析</h2><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png" alt></p>
-<ol>
-<li>MapReduce框架对输入的文件数据分成M片，每份数据的大小为16~64MB（可由用户配置）。</li>
-<li>在多台机器上开始运行User Program：包括一个master、多个map worker和多个reduce worker。</li>
-<li>master主要负责map worker和reduce worker的状态管理和任务分发。</li>
-<li>map worker从GFS读取分配到的文件数据，并进行相应的处理。MapReduce框架的调度会尽量使map worker运行的机器与数据靠近，以提高数据传输的效率。所以，数据传输可以是本地，也可能是网络。</li>
-<li>map worker的输出缓存在内存中，并定期刷到本地磁盘上。这些中间数据的位置信息会通过心跳信息告诉master，master记下这些信息后，通知reduce worker。数据存储在本地。</li>
-<li>reduce worker通过RPC从map worker读取需要的中间数据。数据通过网络传输。</li>
-<li>reduce worker对中间数据进行“合并”处理后，输出结果。</li>
-</ol>
-<h2 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h2><p>MapReduce 如何容灾是其最重要的部分，对于故障我们可以分为 worker故障和master故障，worker故障又可以分为 map worker和reduce worker。</p>
-<h3 id="Worker故障"><a href="#Worker故障" class="headerlink" title="Worker故障"></a>Worker故障</h3><p>Master 通过心跳的机制来检测worker故障</p>
-<ul>
-<li>map worker<ul>
-<li>map任务执行完成后宕机：因为中间数据存储在本地磁盘，需要重新执行。</li>
-<li>map任务执行完成前宕机：需要重新执行</li>
-</ul>
-</li>
-<li>reduce worker<ul>
-<li>reduce任务执行完成后宕机：因为数据存储在GFS，不需要重新执行</li>
-<li>reduce任务执行完成前宕机：需要重新执行，输出文件可以覆盖原来的（文件名一样）</li>
-</ul>
-</li>
-</ul>
-<h3 id="Master故障"><a href="#Master故障" class="headerlink" title="Master故障"></a>Master故障</h3><p>master宕机，任务失败,可以简单的通过周期写快照的方式来处理master故障</p>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ul>
-<li>局部性：MapReduce用于大数据集的处理，其主要瓶颈是网络带宽。通过优化调度，可以让执行MapReduce任务的机器尽可能靠近机器。（同一机器==&gt;同一机架==&gt;同一机房…）</li>
-<li>任务粒度：执行MapReduce任务的过程其实就是M个Map任务+R个Reduce任务。M和R必须比机器数大很多才会有利于负载均衡</li>
-<li>备份任务：当MapReduce任务即将执行完成时，MapReduce框架会针对那些还在执行的任务，启动一个对应的备份任务。之后，只要主任务或备份任务执行完成，MapReduce任务就完成了。这样可以有效避免整个MapReduce任务被少部分比较慢的机器拖死</li>
-</ul>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
-<li><p>一个mapreduce中,reduce是否需要等待所有mapper执行后才执行?<br>需要,在 mapper 结束之前，reducer 很难知道属于一个 key 的数据是否收集完整，因此如果过早地开始 reduce，无法保值结果的正确性</p>
-</li>
-<li><p>如果一个mapper执行特别慢会拖慢整个任务(长尾现象)<br>为了应对长尾现象（一个特别慢的子任务拖慢整个任务），MapReduce提供了 Backup Task的机制：当一个MapReduce接近结束时，master 对还处理 in-progress状态的task额外的调度备份执行，当primary和backup中一个执行成功就标记成功。</p>
-</li>
-<li><p>Mapreduce中Map与Reduce任务的个数如何确定<br><a href="https://blog.csdn.net/lb812913059/article/details/79898818" target="_blank" rel="noopener">Mapreduce中Map与Reduce任务的个数</a></p>
-</li>
-</ol>
-<p>什么是MapReduce</p>
-<p><a href="https://dbaplus.cn/news-21-1277-1.html" target="_blank" rel="noopener">https://dbaplus.cn/news-21-1277-1.html</a></p>
-<p><a href="http://www.flyne.org/article/1121" target="_blank" rel="noopener">http://www.flyne.org/article/1121</a></p>
-<p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
-<p><a href="https://www.jianshu.com/p/0c2e97772812" target="_blank" rel="noopener">https://www.jianshu.com/p/0c2e97772812</a></p>
-<p>Over the course of the following exercises, you will have to write/modify doMap, doReduce, and schedule yourself. These are located in common_map.go, common_reduce.go, and schedule.go respectively. You will also have to write the map and reduce functions in ../main/wc.go</p>
-<p>Map/Reduce框架由一个单独的master JobTracker 和每个集群节点一个slave TaskTracker共同组成,master负责调度构成一个作业的所有任务，这些任务分布在不同的slave上，master监控它们的执行，重新执行已经失败的任务。而slave仅负责执行由master指派的任务。</p>
-<p><a href="https://pdos.csail.mit.edu/6.824/labs/lab-1.html" target="_blank" rel="noopener">6.824 Lab 1: MapReduce</a><br><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a></p>
-<p><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://dbaplus.cn/news-21-1277-1.html" target="_blank" rel="noopener">7个实例全面掌握Hadoop MapReduce</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a></p>
-<p><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a></p>
 
           
         
@@ -1913,200 +2055,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/" itemprop="url">OceanBase架构初探</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T21:03:54+08:00">
-                2019-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/大规模分布式存储系统/" itemprop="url" rel="index">
-                    <span itemprop="name">大规模分布式存储系统</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="OceanBase"><a href="#OceanBase" class="headerlink" title="OceanBase"></a>OceanBase</h2><p>支持强一致性和跨行跨表事务,支持服务器线性扩展</p>
-<h3 id="OceanBase整体架构图"><a href="#OceanBase整体架构图" class="headerlink" title="OceanBase整体架构图"></a>OceanBase整体架构图</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191031202554.png" alt></p>
-<p>定期合并与数据分发:</p>
-<ol>
-<li>UpdateServer冻结当前的活跃内存表,生成冻结内存表,并开启新的活跃内存表,后续的更新操作都写入到新的活跃内存表</li>
-<li>UpdateServer通知RootServer数据版本发生了变化,之后RootServer通过心跳消息通知ChunkServer</li>
-<li>每台ChunkServer启动定期合并或者数据分发操作,从UpdateServer获取每个子表对应的增量更新数据</li>
-</ol>
-<p>查询结果 = 旧子表+ 冻结内存表+新的活跃内存表<br>        = 新子表+ 新的活跃内存表</p>
-<p>如何实现强一致性:<br>    1. 操作日志同步到主备的情况下才能够返回客户端写入成功<br>    2. 为了提高可用性,如果主机往备机同步操作日志失败,比如备机故障,主机可以将备机从同步列表中剔除,本地跟新成功后就返回客户端写入成功.</p>
-<p>OceanBase数据分为基线数据和增量数据两部分,基线数据分布在多台ChunkServer上,增量数据全部放在一台UpdateServer上.</p>
-<h3 id="读写事务"><a href="#读写事务" class="headerlink" title="读写事务"></a>读写事务</h3><p>用户的读写请求,都发给MergeServer,</p>
-<ul>
-<li>只读事务: 由MergeServer发送给相应的ChunkServer分别执行后再合并每个ChunkServer的执行结果</li>
-<li>读写事务: 由MergeServer进行预处理后,再发生给UpdateServer执行.</li>
-</ul>
-<h3 id="数据正确性"><a href="#数据正确性" class="headerlink" title="数据正确性"></a>数据正确性</h3><ul>
-<li>数据存储校验: 每个存储记录同时保存64位CRC校验码.数据被访问时,重新计算和比对校验码</li>
-<li>数据传输校验: 每个传输记录同时传输64位crc校验码,数据被接收后,重新计算和比对校验码</li>
-<li>数据镜像校验: UpdateServer的内存表在主备间必须保持一致,为此UpdateServer为每个MemTable生成一个校验码,MemTable 每次更新时,校验码同步更新并记录在对应的操作日志中,备UpdateServer收到操作日志并重放到MemTable时,也同步更新MemTable检验码并与接收到的校验码对照.</li>
-<li>数据副本校验: ChunkServer在定期合并生成新的子表时,也同时为每个子表生成一个校验码,并碎新子表汇报给RootServer,以便RootServer核对同一个子表不同副本的校验码</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2159,7 +2107,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2170,7 +2118,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

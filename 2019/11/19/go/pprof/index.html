@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="dotnet,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="pprof123456789101112131415161718192021222324252627# runtime.MemStats# Alloc = 6911928# TotalAlloc = 19160914800# Sys = 72373071# Lookups = 0# Mallocs = 201435665# Frees = 201407065# HeapAlloc = 691192">
+<meta name="keywords" content="dotnet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pprof工具使用">
+<meta property="og:url" content="http://yoursite.com/2019/11/19/go/pprof/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="pprof123456789101112131415161718192021222324252627# runtime.MemStats# Alloc = 6911928# TotalAlloc = 19160914800# Sys = 72373071# Lookups = 0# Mallocs = 201435665# Frees = 201407065# HeapAlloc = 691192">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-21T07:45:16.966Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pprof工具使用">
+<meta name="twitter:description" content="pprof123456789101112131415161718192021222324252627# runtime.MemStats# Alloc = 6911928# TotalAlloc = 19160914800# Sys = 72373071# Lookups = 0# Mallocs = 201435665# Frees = 201407065# HeapAlloc = 691192">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/19/go/pprof/">
+
+
+
+
+
+  <title>pprof工具使用 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/bloodsucker1" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/19/go/pprof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">pprof工具使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T16:29:33+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="pprof"><a href="#pprof" class="headerlink" title="pprof"></a>pprof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># runtime.MemStats</span><br><span class="line"># Alloc = 6911928</span><br><span class="line"># TotalAlloc = 19160914800</span><br><span class="line"># Sys = 72373071</span><br><span class="line"># Lookups = 0</span><br><span class="line"># Mallocs = 201435665</span><br><span class="line"># Frees = 201407065</span><br><span class="line"># HeapAlloc = 6911928</span><br><span class="line"># HeapSys = 65994752</span><br><span class="line"># HeapIdle = 56852480</span><br><span class="line"># HeapInuse = 9142272</span><br><span class="line"># HeapReleased = 52936704</span><br><span class="line"># HeapObjects = 28600</span><br><span class="line"># Stack = 1114112 / 1114112</span><br><span class="line"># MSpan = 106488 / 196608</span><br><span class="line"># MCache = 6944 / 65536</span><br><span class="line"># BuckHashSys = 1616868</span><br><span class="line"># GCSys = 2394112</span><br><span class="line"># OtherSys = 991083</span><br><span class="line"># NextGC = 11362960</span><br><span class="line"># LastGC = 1574322082513879647</span><br><span class="line"># PauseNs = [189598 49953 92502 32422 38027 82085 100885 229316 76361 72260 78828 39619 149152 46332 70705 17145 16763 58004 64772 28182 78964 723741 61377 82393 95501 14008 20076 61063 43738 26423 80042 38541 71009 56981 28659 28020 71551 31313 98150 73792 79719 23929 99861 22701 120759 22477 68964 42352 11666 27739 59629 43175 31219 30039 81174 27849 25645 151912 49662 10258 22584 75402 63296 13006 43117 178897 31601 140531 28393 122639 85584 101906 10499 61339 126044 62926 16444 23959 49294 58229 18315 22263 42363 11487 13774 64256 78467 55070 17849 123218 49329 41235 15583 27532 22365 138046 143495 82689 83776 22407 16361 72739 30012 88179 53863 57042 19235 36012 49999 10093 150366 57210 74770 33872 17570 80342 33627 130745 45451 44563 68349 91948 80106 96768 123250 68130 37997 85617 52326 105215 79923 59876 82770 34976 71308 75440 74769 52477 81582 28035 26408 81097 51790 87575 83188 97461 74315 14031 63507 60049 70288 26258 30603 70501 25757 76272 54131 11315 15774 47247 28143 16491 44517 397021 109310 75557 38932 54458 57195 101318 13764 12970 61384 70465 74954 34697 74424 49610 546274 37799 21334 23761 26868 25757 67495 37693 48941 31569 11449 49646 26411 28535 17298 60990 14267 45562 81123 95301 51616 41552 68802 69589 80352 30789 85043 150628 9825 48716 31399 17660 90074 29268 58238 66220 21357 36999 83608 49139 10383 68450 52035 18896 22419 82571 20467 20933 49959 50114 24937 62938 17763 70881 29038 88511 33083 12115 39858 55640 25758 85965 25077 163754 28138 14249 57188 80709 53402 62238 78211 51991 12517 70669 66887 94401 65900 22837]</span><br><span class="line"># PauseEnd = [1574322080390712046 1574322080402601456 1574322080417597815 1574322080430075401 1574322080448743679 1574322080481843308 1574322080503285042 1574322080521567097 1574322080537619917 1574322080559570756 1574322080588332615 1574322080605197934 1574322080618694803 1574322080636061669 1574322080657184934 1574322080684348212 1574322080705329009 1574322080719469909 1574322080736620249 1574322080755391983 1574322080777142378 1574322080801636089 1574322080825558326 1574322080836895171 1574322080849027987 1574322080865581420 1574322080878967168 1574322080900290388 1574322080919367030 1574322080940890269 1574322080974232859 1574322080988857538 1574322081002500813 1574322081017118019 1574322081035119959 1574322081052533660 1574322081065488769 1574322081083060618 1574322081103290742 1574322081117706184 1574322081132701465 1574322081153895098 1574322081177445475 1574322081196174521 1574322081209746571 1574322081223541458 1574322081238549400 1574322081253663527 1574322081279011933 1574322081295221475 1574322081312807380 1574322081329454242 1574322081349673665 1574322081382931596 1574322081398104595 1574322081411675607 1574322081423663058 1574322081435591228 1574322081452690208 1574322081482717475 1574322081506495585 1574322081523191972 1574322081539546871 1574322081560526634 1574322081585884075 1574322081604924504 1574322081620393778 1574322081636910237 1574322081649709918 1574322081671440093 1574322081692351239 1574322081714954880 1574322081736383517 1574322081759477966 1574322081780396845 1574322081809275402 1574322081832646903 1574322081844973974 1574322081859919543 1574322081878146929 1574322081894049877 1574322081918470164 1574322081942839690 1574322081962122724 1574322081973635354 1574322081991546597 1574322082006185907 1574322082020228404 1574322082043356433 1574322082062069998 1574322082092364700 1574322082111501695 1574322082127799248 1574322082141316859 1574322082157849501 1574322082177158998 1574322082190978605 1574322082206080529 1574322082220254360 1574322082238405644 1574322082255306291 1574322082287696098 1574322082300844344 1574322082315626425 1574322082327934125 1574322082342279708 1574322082359464097 1574322082403441800 1574322082421731674 1574322082447831735 1574322082472752623 1574322082486526178 1574322082502363044 1574322082513879647 1574322077489750221 1574322077502583900 1574322077515159633 1574322077531276251 1574322077553955480 1574322077574258541 1574322077596114790 1574322077613266937 1574322077625509198 1574322077640497140 1574322077674765140 1574322077702541016 1574322077721769598 1574322077738605211 1574322077775075178 1574322077799454347 1574322077822280173 1574322077835197697 1574322077850735655 1574322077882828316 1574322077916692835 1574322077938708711 1574322077973382082 1574322077990437988 1574322078006060345 1574322078018689112 1574322078030868740 1574322078048097314 1574322078077412649 1574322078099010773 1574322078116051403 1574322078133467101 1574322078145929683 1574322078164972882 1574322078193059776 1574322078218462494 1574322078243964527 1574322078271299425 1574322078296295965 1574322078311903980 1574322078323289651 1574322078340564935 1574322078355041152 1574322078379113651 1574322078397064652 1574322078410283359 1574322078425451781 1574322078461478242 1574322078489565281 1574322078509050699 1574322078520379771 1574322078534615753 1574322078551371364 1574322078569855252 1574322078590158746 1574322078610728096 1574322078632052560 1574322078653213142 1574322078689313302 1574322078706298386 1574322078719347046 1574322078733274403 1574322078757892267 1574322078807458635 1574322078829797069 1574322078847526699 1574322078863212705 1574322078893213248 1574322078912050577 1574322078932015146 1574322078952862198 1574322078968937939 1574322078983422259 1574322079003764382 1574322079024587932 1574322079077176784 1574322079096946991 1574322079115658208 1574322079129207783 1574322079143182694 1574322079157474200 1574322079193690884 1574322079206345901 1574322079226361253 1574322079242177073 1574322079260978719 1574322079314650080 1574322079329493542 1574322079345056294 1574322079368803814 1574322079387376484 1574322079408767141 1574322079428095837 1574322079449106465 1574322079467998999 1574322079485391468 1574322079499939713 1574322079512307848 1574322079524423908 1574322079544692641 1574322079572892982 1574322079601073467 1574322079616249315 1574322079633470438 1574322079647391778 1574322079672249349 1574322079693840219 1574322079710479969 1574322079723083791 1574322079740765000 1574322079761293570 1574322079789464150 1574322079807361784 1574322079829103390 1574322079849831253 1574322079871286517 1574322079892161883 1574322079912346685 1574322079929479039 1574322079944339751 1574322079983735126 1574322079996146439 1574322080012304729 1574322080025186914 1574322080042884286 1574322080075591239 1574322080092800684 1574322080109987218 1574322080130215766 1574322080148307817 1574322080166223553 1574322080184252577 1574322080201494803 1574322080216216121 1574322080238095235 1574322080254460660 1574322080274530708 1574322080292243817 1574322080311767013 1574322080326532899 1574322080345139037 1574322080374701044]</span><br><span class="line"># NumGC = 7794</span><br><span class="line"># NumForcedGC = 0</span><br><span class="line"># GCCPUFraction = 0.10706624962106928</span><br><span class="line"># DebugGC = false</span><br></pre></td></tr></table></figure>
+
+<p>// Sys 是下面列出的 XSys 字段的综合。Sys 维护着为 Go 运行时预留的虚拟内存空间地址，<br>// 里面包含了：堆、栈，以及其他内部数据结构。<br>Sys uint64</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/dotnet/" <i class="fa fa-tag"> dotnet</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/18/分布式/MIT 6.824/论文/MapReduce/" rel="next" title="MapReduce">
+                <i class="fa fa-chevron-left"></i> MapReduce
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="John Doe">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pprof"><span class="nav-number">1.</span> <span class="nav-text">pprof</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共字</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

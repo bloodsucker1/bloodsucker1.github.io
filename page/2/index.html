@@ -270,6 +270,200 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/" itemprop="url">OceanBase架构初探</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T21:03:54+08:00">
+                2019-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大规模分布式存储系统/" itemprop="url" rel="index">
+                    <span itemprop="name">大规模分布式存储系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="OceanBase"><a href="#OceanBase" class="headerlink" title="OceanBase"></a>OceanBase</h2><p>支持强一致性和跨行跨表事务,支持服务器线性扩展</p>
+<h3 id="OceanBase整体架构图"><a href="#OceanBase整体架构图" class="headerlink" title="OceanBase整体架构图"></a>OceanBase整体架构图</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191031202554.png" alt></p>
+<p>定期合并与数据分发:</p>
+<ol>
+<li>UpdateServer冻结当前的活跃内存表,生成冻结内存表,并开启新的活跃内存表,后续的更新操作都写入到新的活跃内存表</li>
+<li>UpdateServer通知RootServer数据版本发生了变化,之后RootServer通过心跳消息通知ChunkServer</li>
+<li>每台ChunkServer启动定期合并或者数据分发操作,从UpdateServer获取每个子表对应的增量更新数据</li>
+</ol>
+<p>查询结果 = 旧子表+ 冻结内存表+新的活跃内存表<br>        = 新子表+ 新的活跃内存表</p>
+<p>如何实现强一致性:<br>    1. 操作日志同步到主备的情况下才能够返回客户端写入成功<br>    2. 为了提高可用性,如果主机往备机同步操作日志失败,比如备机故障,主机可以将备机从同步列表中剔除,本地跟新成功后就返回客户端写入成功.</p>
+<p>OceanBase数据分为基线数据和增量数据两部分,基线数据分布在多台ChunkServer上,增量数据全部放在一台UpdateServer上.</p>
+<h3 id="读写事务"><a href="#读写事务" class="headerlink" title="读写事务"></a>读写事务</h3><p>用户的读写请求,都发给MergeServer,</p>
+<ul>
+<li>只读事务: 由MergeServer发送给相应的ChunkServer分别执行后再合并每个ChunkServer的执行结果</li>
+<li>读写事务: 由MergeServer进行预处理后,再发生给UpdateServer执行.</li>
+</ul>
+<h3 id="数据正确性"><a href="#数据正确性" class="headerlink" title="数据正确性"></a>数据正确性</h3><ul>
+<li>数据存储校验: 每个存储记录同时保存64位CRC校验码.数据被访问时,重新计算和比对校验码</li>
+<li>数据传输校验: 每个传输记录同时传输64位crc校验码,数据被接收后,重新计算和比对校验码</li>
+<li>数据镜像校验: UpdateServer的内存表在主备间必须保持一致,为此UpdateServer为每个MemTable生成一个校验码,MemTable 每次更新时,校验码同步更新并记录在对应的操作日志中,备UpdateServer收到操作日志并重放到MemTable时,也同步更新MemTable检验码并与接收到的校验码对照.</li>
+<li>数据副本校验: ChunkServer在定期合并生成新的子表时,也同时为每个子表生成一个校验码,并碎新子表汇报给RootServer,以便RootServer核对同一个子表不同副本的校验码</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -825,7 +1019,8 @@
       
         
           
-            <h2 id="Part1-Map-Reduce-input-and-output"><a href="#Part1-Map-Reduce-input-and-output" class="headerlink" title="Part1 Map/Reduce input and output"></a>Part1 Map/Reduce input and output</h2><p>主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数</p>
+            <p><a href="https://pdos.csail.mit.edu/6.824/labs/lab-1.html" target="_blank" rel="noopener">6.824 Lab 1: MapReduce</a></p>
+<h2 id="Part1-Map-Reduce-input-and-output"><a href="#Part1-Map-Reduce-input-and-output" class="headerlink" title="Part1 Map/Reduce input and output"></a>Part1 Map/Reduce input and output</h2><p>主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数</p>
 <h3 id="doMap-函数"><a href="#doMap-函数" class="headerlink" title="doMap()函数:"></a>doMap()函数:</h3><ol>
 <li>读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表</li>
 <li>对于每个KeyValue值，经过ihash平均分配给nReduce个中间文件,中间文件可由reduceName() 得到名字，注意读写文件需要用json来序列化</li>
@@ -1998,188 +2193,6 @@ Connected to server02.</code></pre></li>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/网络/1.网络设置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/25/网络/1.网络设置/" itemprop="url">网络设置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T22:58:01+08:00">
-                2019-10-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h2><p>配置网卡ifcfg-eth2</p>
-<blockquote>
-<p>虚拟机配置eth2网卡,每次虚拟机重启不能自动获取ip,所以如下操作</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/etc/sysconfig/network-scripts</span><br><span class="line">cat ifcfg-eth22</span><br><span class="line">DEVICE=eth2</span><br><span class="line">HWADDR=08:00:27:d7:58:c8</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=c89ca729-525a-40e4-93ec-ad073841c318</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=yes</span><br><span class="line">BOOTPROTO=dhcp</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/gua___gua/article/details/48968837" target="_blank" rel="noopener">linux 网卡配置详解 ifcfg-eth0</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install NetworkManager</span><br><span class="line">service NetworkManager status</span><br><span class="line">service NetworkManager start</span><br><span class="line">如果一直报NetworkManager 已死，但 pid 文件仍存,就直接reboot,</span><br><span class="line">nmcli con</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.51cto.com/lidongfeng/1933162" target="_blank" rel="noopener">centos6 查看机器网卡uuid</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2232,7 +2245,7 @@ Connected to server02.</code></pre></li>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2243,7 +2256,7 @@ Connected to server02.</code></pre></li>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
