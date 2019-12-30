@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="MapReduceHadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算pyth">
+<meta name="description" content="Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算python map函数">
 <meta name="keywords" content="dotnet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MapReduce">
 <meta property="og:url" content="http://yoursite.com/2019/11/18/分布式/MIT 6.824/论文/MapReduce/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="MapReduceHadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算pyth">
+<meta property="og:description" content="Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算python map函数">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png">
-<meta property="og:updated_time" content="2019-11-18T13:55:04.752Z">
+<meta property="og:updated_time" content="2019-11-23T10:30:22.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MapReduce">
-<meta name="twitter:description" content="MapReduceHadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算pyth">
+<meta name="twitter:description" content="Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本 MapReduce 入门MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算python map函数">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png">
 
 
@@ -396,7 +396,7 @@
       
 
       
-        <h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
+        <p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
 <h2 id="MapReduce-入门"><a href="#MapReduce-入门" class="headerlink" title="MapReduce 入门"></a>MapReduce 入门</h2><p>MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算<br><a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">python map函数</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(x)</span> :</span>            <span class="comment"># 计算平方数</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(square, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表各个元素的平方</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提供了两个列表，对相同位置的列表数据进行相加</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line">[<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br></pre></td></tr></table></figure>
 
@@ -445,7 +445,7 @@
 <li><p>Mapreduce中Map与Reduce任务的个数如何确定<br><a href="https://blog.csdn.net/lb812913059/article/details/79898818" target="_blank" rel="noopener">Mapreduce中Map与Reduce任务的个数</a></p>
 </li>
 </ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a><br><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a><br><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a><br><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a><br><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a><br><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a><br><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
 
       
     </div>
@@ -567,7 +567,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -578,7 +578,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -589,7 +589,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -622,7 +622,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MapReduce"><span class="nav-number">1.</span> <span class="nav-text">MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-入门"><span class="nav-number">1.1.</span> <span class="nav-text">MapReduce 入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce进阶"><span class="nav-number">1.2.</span> <span class="nav-text">MapReduce进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce工作过程"><span class="nav-number">1.2.1.</span> <span class="nav-text">MapReduce工作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容灾"><span class="nav-number">1.2.2.</span> <span class="nav-text">容灾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Worker故障"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Worker故障</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Master故障"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">Master故障</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化"><span class="nav-number">1.2.3.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapReduce试用范围"><span class="nav-number">1.2.4.</span> <span class="nav-text">mapReduce试用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#疑问"><span class="nav-number">1.2.5.</span> <span class="nav-text">疑问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.2.6.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce-入门"><span class="nav-number">1.</span> <span class="nav-text">MapReduce 入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MapReduce进阶"><span class="nav-number">2.</span> <span class="nav-text">MapReduce进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce工作过程"><span class="nav-number">2.1.</span> <span class="nav-text">MapReduce工作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容灾"><span class="nav-number">2.2.</span> <span class="nav-text">容灾</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Worker故障"><span class="nav-number">2.2.1.</span> <span class="nav-text">Worker故障</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Master故障"><span class="nav-number">2.2.2.</span> <span class="nav-text">Master故障</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化"><span class="nav-number">2.3.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mapReduce试用范围"><span class="nav-number">2.4.</span> <span class="nav-text">mapReduce试用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#疑问"><span class="nav-number">2.5.</span> <span class="nav-text">疑问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

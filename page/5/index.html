@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/leetcode/python技巧总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/分布式/大规模分布式存储系统/第九章分布式存储引擎/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/12/leetcode/python技巧总结/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2019/10/31/分布式/大规模分布式存储系统/第九章分布式存储引擎/" itemprop="url">第九章分布式存储引擎</a></h1>
         
 
         <div class="post-meta">
@@ -301,163 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T10:35:45+08:00">
-                2019-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><h2 id="range-用法"><a href="#range-用法" class="headerlink" title="range 用法"></a>range 用法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=<span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)[::<span class="number">-1</span>]:</span><br><span class="line"><span class="meta">... </span>    print(i)</span><br><span class="line">...</span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">10</span>;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>等价于:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    .....</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)[::<span class="number">-1</span>]:</span><br><span class="line">    .....</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/242/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/242/" itemprop="url">leetcode 242</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T21:24:32+08:00">
+                2019-10-31
               </time>
             
 
@@ -479,19 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
+                  <a href="/categories/dotnet/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet</span>
                   </a>
                 </span>
 
@@ -560,1093 +394,1766 @@
       
         
           
-            <h1 id="242"><a href="#242" class="headerlink" title="242"></a>242</h1><p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
-
-<p>Example 2:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;rat&quot;, t = &quot;car&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
-
-<p>Note:<br>You may assume the string contains only lowercase alphabets.</p>
-<p>Follow up:<br>What if the inputs contain unicode characters? How would you adapt your solution to such case?</p>
-<h2 id="题目意思"><a href="#题目意思" class="headerlink" title="题目意思"></a>题目意思</h2><p>比较两个字符串包含的字符是否相同</p>
-<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><ul>
-<li>先将字符排序,然后比较</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isAnagram(self, s: str, t: str) -&gt; bool:</span><br><span class="line">       return sorted(s) == sorted(t) </span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-
+            <p>分布式存储引擎层包含三个模块: RootServer,UpdateServer,ChunkServer</p>
 <ul>
-<li>如果都是字母组成,可以统计字母的个数,然后比较</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isAnagram(self, s: str, t: str) -&gt; bool:</span><br><span class="line">        dict1,dict2 = &#123;&#125;,&#123;&#125;</span><br><span class="line">        for item in s:</span><br><span class="line">            dict1[item] = dict1.get(item,0)+1</span><br><span class="line">        for item in t:</span><br><span class="line">            dict2[item] = dict2.get(item,0)+1</span><br><span class="line">        return dict1 == dict2</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/56/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/56/" itemprop="url">leetcode 56</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><p>Given a collection of intervals, merge all overlapping intervals.</p>
-<p>For example,<br>Given [1,3],[2,6],[8,10],[15,18],<br>return [1,6],[8,10],[15,18].</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路:"></a>解题思路:</h2><ol>
-<li>先将区间按照每个start的值来排序，(所给数据是乱序)</li>
-<li>排好序以后判断一个区间的start值是否处在前一个区间中，如果在前一个区间中，那么合并；如果不在，就将新区间添加。</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, intervals)</span>:</span></span><br><span class="line">    out = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> sorted(intervals, key=<span class="keyword">lambda</span> i: i.start):</span><br><span class="line">        <span class="keyword">if</span> out <span class="keyword">and</span> i.start &lt;= out[<span class="number">-1</span>].end:</span><br><span class="line">            out[<span class="number">-1</span>].end = max(out[<span class="number">-1</span>].end, i.end)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            out += i,</span><br><span class="line">    <span class="keyword">return</span> out</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://zhuanlan.zhihu.com/p/33114095" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33114095</a></p>
-<p>总结:</p>
-<ol>
-<li>sorted 函数<br><a href="http://www.runoob.com/python/python-func-sorted.html" target="_blank" rel="noopener">http://www.runoob.com/python/python-func-sorted.html</a></li>
-<li>lambda 表达式<br><a href="https://www.jianshu.com/p/9f306285a3ca" target="_blank" rel="noopener">https://www.jianshu.com/p/9f306285a3ca</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/179/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/179/" itemprop="url">leetcode 179</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="179"><a href="#179" class="headerlink" title="179"></a>179</h1><p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,2]</span><br><span class="line">Output: &quot;210&quot;</span><br><span class="line">Example 2:</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,30,34,5,9]</span><br><span class="line">Output: &quot;9534330&quot;</span><br></pre></td></tr></table></figure>
-
-<p>Note: The result may be very large, so you need to return a string instead of an integer.</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关键点就在于，如何对比两个数的大小？（理解为两个数谁应该放在前面），解法是按照顺序拼接两个字母串进行比较，如果a ＋b串 大于 b＋a串，那么a比较大（即题意中理解的a应该放在前面），反之b比较大</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def largestNumber(self, nums: List[int]) -&gt; str:</span><br><span class="line">        if len(nums)==0:</span><br><span class="line">            return &quot;&quot;</span><br><span class="line">        self.quickSort(nums,0,len(nums)-1)</span><br><span class="line">        return str(int(&quot;&quot;.join(map(str, nums)))) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    def compare(self,num1:int,num2:int):</span><br><span class="line">        return str(num1)+str(num2)&gt;str(num2)+str(num1)</span><br><span class="line"></span><br><span class="line">    def quickSort(self,nums: List[int],low: int,high:int):</span><br><span class="line">        if low &gt;=high:</span><br><span class="line">            return</span><br><span class="line">        mid = self.adjust(nums,low,high)</span><br><span class="line">        self.quickSort(nums,low,mid-1)</span><br><span class="line">        self.quickSort(nums,mid+1,high)</span><br><span class="line">    </span><br><span class="line">    def adjust(self,nums: List[int],l:int,r:int) -&gt; int:</span><br><span class="line">        low = l</span><br><span class="line">        while l &lt; r:</span><br><span class="line">            if self.compare(nums[l], nums[r]):</span><br><span class="line">                nums[l], nums[low] = nums[low], nums[l]</span><br><span class="line">                low += 1</span><br><span class="line">            l += 1</span><br><span class="line">        nums[low], nums[r] = nums[r], nums[low]</span><br><span class="line">        return low</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/148/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/148/" itemprop="url">leetcode 148</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="148"><a href="#148" class="headerlink" title="148"></a>148</h1><p>Sort a linked list in O(n log n) time using constant space complexity.</p>
-<p>Example 1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br></pre></td></tr></table></figure>
-
-<p>Example 2:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
-
-<p>思路: O(nlogn)采用归并排序</p>
-<p>总结,归并排序的本质是两个有序数组排序</p>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, val)</span>:</span></span><br><span class="line">        self.val, self.next = val, <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinkList</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.head = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">init_list</span><span class="params">(self, data)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> type(data) == list</span><br><span class="line">        <span class="keyword">if</span> data:</span><br><span class="line">            point = self.head = ListNode(data[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="number">1</span>:]:</span><br><span class="line">                point.next = ListNode(i)</span><br><span class="line">                point = point.next</span><br><span class="line">        <span class="keyword">return</span> self.head</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_list</span><span class="params">(head)</span>:</span></span><br><span class="line">        data = []</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            data.append(str(head.val))</span><br><span class="line">            head = head.next</span><br><span class="line">        print(<span class="string">"-&gt;"</span>.join(data))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, h1, h2)</span>:</span></span><br><span class="line">        dummy = tail = ListNode(<span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">while</span> h1 <span class="keyword">and</span> h2:</span><br><span class="line">            <span class="keyword">if</span> h1.val &lt; h2.val:</span><br><span class="line">                tail.next, tail, h1 = h1, h1, h1.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tail.next, tail, h2 = h2, h2, h2.next</span><br><span class="line"></span><br><span class="line">        tail.next = h1 <span class="keyword">or</span> h2</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">        pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">        pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    data = [<span class="number">4</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>]</span><br><span class="line">    link_list = LinkList()</span><br><span class="line">    link_list.init_list(data)</span><br><span class="line">    print(<span class="string">"example:"</span>)</span><br><span class="line">    link_list.print_list(link_list.head)</span><br><span class="line">    print(<span class="string">"result:"</span>)</span><br><span class="line">    result = Solution().sortList(link_list.head)</span><br><span class="line">    link_list.print_list(result)</span><br></pre></td></tr></table></figure>
-
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> self.merge(*map(self.sortList, (head, slow))</span><br><span class="line"></span><br><span class="line">等价于:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line"></span><br><span class="line">    pre, slow, fast = <span class="literal">None</span>, head, head</span><br><span class="line">    <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">        pre, slow, fast = slow, slow.next, fast.next.next</span><br><span class="line">    pre.next = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    left = self.sortList(head)</span><br><span class="line">    right = self.sortList(slow)</span><br><span class="line">    <span class="keyword">return</span> self.merge(left, right)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>map函数的原型是map(function, iterable, …)，它的返回结果是一个列表,函数式编程</li>
-</ol>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mul</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x*x</span><br><span class="line">res=map(mul,(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>(*)号操作符</li>
-</ol>
-<figure class="highlight python"><figcaption><span>&#123;cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b)</span>:</span></span><br><span class="line">    print(a+b)</span><br><span class="line">l= [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">add(*l)</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>排序时间复杂度</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>排序方法</th>
-<th>平均时间</th>
-<th>最好时间</th>
-<th>最坏时间</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>桶排序(不稳定)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-</tr>
-<tr>
-<td>基数排序(稳定)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-<td>O(n)</td>
-</tr>
-<tr>
-<td>归并排序(稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-</tr>
-<tr>
-<td>快速排序(不稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>堆排序(不稳定)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-</tr>
-<tr>
-<td>希尔排序(不稳定)</td>
-<td>O(n^1.25)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>冒泡排序(稳定)</td>
-<td>O(n^2)</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>选择排序(不稳定)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-</tr>
-<tr>
-<td>直接插入排序(稳定)</td>
-<td>O(n^2)</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-</tr>
-</tbody></table>
-<ol start="4">
-<li>归并排序<br>思路:分解-&gt;两个子序列排序<br> 4.1. 如何分解,及如何递归的解决这个问题<br> 4.2. 两个子序列排序</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/11/leetcode/57/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/11/leetcode/57/" itemprop="url">leetcode 57</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-11T21:16:05+08:00">
-                2019-10-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="57"><a href="#57" class="headerlink" title="57"></a>57</h1><ol>
-<li>简单的for…[if]…语句</li>
-</ol>
-<p>for…[if]…语句一种简洁的构建List的方法，从for给定的List中选择出满足if条件的元素组成新的List，其中if是可以省略的</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b=[x <span class="keyword">for</span> x <span class="keyword">in</span> a <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line">[<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/gzhouc/article/details/53240749" target="_blank" rel="noopener">https://blog.csdn.net/gzhouc/article/details/53240749</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/26/leetcode/315/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/26/leetcode/315/" itemprop="url">leetcode 315</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T12:12:57+08:00">
-                2017-05-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/sort/" itemprop="url" rel="index">
-                    <span itemprop="name">sort</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].</p>
-<p>Example:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: [5,2,6,1]</span><br><span class="line">Output: [2,1,1,0] </span><br><span class="line">Explanation:</span><br><span class="line">To the right of 5 there are 2 smaller elements (2 and 1).</span><br><span class="line">To the right of 2 there is only 1 smaller element (1).</span><br><span class="line">To the right of 6 there is 1 smaller element (1).</span><br><span class="line">To the right of 1 there is 0 smaller element.</span><br></pre></td></tr></table></figure>
-
-<p>判断数组某个元素右边有几个比他小的</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="Brute-force"><a href="#Brute-force" class="headerlink" title="Brute force"></a>Brute force</h3><p>最容易想到的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">countSmaller</span><span class="params">(self, nums: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        count = [<span class="number">0</span>]*len(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums))[i+<span class="number">1</span>:]: </span><br><span class="line">                <span class="keyword">if</span> nums[j]&lt;nums[i]:</span><br><span class="line">                    count[i] +=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> count</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度O(n2)太大.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Time Limit Exceeded</span><br><span class="line">15/16 cases passed (N/A)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Fenwick-Tree-Binary-Indexed-Tree-BST"><a href="#Fenwick-Tree-Binary-Indexed-Tree-BST" class="headerlink" title="Fenwick Tree/ Binary Indexed Tree(BST)"></a>Fenwick Tree/ Binary Indexed Tree(BST)</h3><p>逆序</p>
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>以[5, 2, 6, 1]为例，我们使用归并排序解决这个问题：<br>首先归并排序将[5, 2, 6, 1]分为</p>
-<p><code>[5, 2], [6, 1]</code></p>
-<p>然后因为再归并的话可以得到</p>
-<p><code>[[5], [2]], [[6], [1]]</code></p>
-<p>在<code>[[5], [2]]</code>中，<code>[2]</code>位于整个区间的右部，所以结果为0；<code>[5]</code>位于左边，使<code>[5]</code>中每个元素都与右边<code>[2]</code>比较，可以得到5的count值为1；比较完成后对<code>[[5], [2]]</code>进行排序，得到：</p>
-<p><code>[[5(1)], [2]], [[1], [6]]</code></p>
-<p>然后在<code>[[1], [6]]</code>中执行相同的操作，1的count值为0， 6的count值为1，得到：</p>
-<p><code>[[2], [5(1)]], [[1], [6(1)]]</code></p>
-<p>然后在<code>[[[2], [5(1)]], [[1], [6(1)]]]</code>中进行比较，左边<code>[[2], [5(1)]]</code>中每个数值都在<code>[[1], [6(1)]]</code>进行遍历计数，由于<code>[[1], [6(1)]]</code>和<code>[[2], [5(1)]]</code>都已经排好序了，所以只需要遍历一遍就可以得到结果：</p>
-<p><code>[[2(1)], [5(2)]], [[1], [6(1)]]</code></p>
-<p>每次通过辅助的拷贝数组将计数信息保存到正确的位置即可；<br>由于使用了归并排序，所以每次进行比较的时候都是比较的有序队列，这样可以很好地提高效率，同时也保证了每一轮次左右相对位置的稳定；</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countSmaller</span><span class="params">(nums)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sort</span><span class="params">(enum)</span>:</span></span><br><span class="line">        half = int(len(enum) / <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">if</span> half:</span><br><span class="line">            left, right = sort(enum[:half]), sort(enum[half:])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(enum))[::<span class="number">-1</span>]:</span><br><span class="line">                print(i)</span><br><span class="line">                <span class="comment"># left[-1][1]: 左边最后一个元素的值,right[-1][1]: 右边最后一个元素的值</span></span><br><span class="line">                <span class="comment"># 由于子序列是有序的，左边元素最小，右边元素最大</span></span><br><span class="line">                print(<span class="string">"left:"</span>, left)</span><br><span class="line">                print(<span class="string">"right:"</span>, right)</span><br><span class="line">                <span class="comment"># 因为不停弹出数据，所以left，right有可能为空的情况</span></span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> right <span class="keyword">or</span> left <span class="keyword">and</span> left[<span class="number">-1</span>][<span class="number">1</span>] &gt; right[<span class="number">-1</span>][<span class="number">1</span>]:</span><br><span class="line">                    <span class="comment"># 使用pop，每次弹出最后一个元素</span></span><br><span class="line">                    smaller[left[<span class="number">-1</span>][<span class="number">0</span>]] += len(right)</span><br><span class="line">                    enum[i] = left.pop()</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    enum[i] = right.pop()</span><br><span class="line">        print(<span class="string">"enum"</span>, enum)</span><br><span class="line">        print(<span class="string">"smaller:"</span>, smaller)</span><br><span class="line">        print(<span class="string">"============="</span>)</span><br><span class="line">        <span class="keyword">return</span> enum</span><br><span class="line"></span><br><span class="line">    smaller = [<span class="number">0</span>] * len(nums)</span><br><span class="line">    <span class="comment"># 虽然数组有序的，但是原始顺序变化了,计算每个元素数量需要找到他们的位置，因此需要记录每个元素的index</span></span><br><span class="line">    sort(list(enumerate(nums)))</span><br><span class="line">    <span class="keyword">return</span> smaller</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    nums = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">1</span>]</span><br><span class="line">    print(<span class="string">"input:"</span>, nums)</span><br><span class="line">    smaller = countSmaller(nums)</span><br><span class="line">    print(<span class="string">"output:"</span>, smaller)</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><p><a href="http://haoyuanliu.github.io/2016/12/28/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E6%B7%B1%E5%85%A5%E5%BA%94%E7%94%A8%E5%88%86%E6%9E%90/" target="_blank" rel="noopener">归并排序的实现与深入应用分析</a></p>
-</li>
-<li><p><a href="https://www.youtube.com/watch?v=2SVLYsq5W8M" target="_blank" rel="noopener">花花酱 LeetCode 315</a></p>
-</li>
+<li>RootServer: 用于整体控制,实现子表分布,副本复制,负载均衡,机器管理以及Schema管理</li>
+<li>UpdateServer: 用于存储增量数据</li>
+<li>ChunkServer: 用于存储基线数据</li>
 </ul>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/31/分布式/大规模分布式存储系统/第八章OceanBase架构初探/" itemprop="url">OceanBase架构初探</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T21:03:54+08:00">
+                2019-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大规模分布式存储系统/" itemprop="url" rel="index">
+                    <span itemprop="name">大规模分布式存储系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="OceanBase"><a href="#OceanBase" class="headerlink" title="OceanBase"></a>OceanBase</h2><p>支持强一致性和跨行跨表事务,支持服务器线性扩展</p>
+<h3 id="OceanBase整体架构图"><a href="#OceanBase整体架构图" class="headerlink" title="OceanBase整体架构图"></a>OceanBase整体架构图</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191031202554.png" alt></p>
+<p>定期合并与数据分发:</p>
+<ol>
+<li>UpdateServer冻结当前的活跃内存表,生成冻结内存表,并开启新的活跃内存表,后续的更新操作都写入到新的活跃内存表</li>
+<li>UpdateServer通知RootServer数据版本发生了变化,之后RootServer通过心跳消息通知ChunkServer</li>
+<li>每台ChunkServer启动定期合并或者数据分发操作,从UpdateServer获取每个子表对应的增量更新数据</li>
+</ol>
+<p>查询结果 = 旧子表+ 冻结内存表+新的活跃内存表<br>        = 新子表+ 新的活跃内存表</p>
+<p>如何实现强一致性:<br>    1. 操作日志同步到主备的情况下才能够返回客户端写入成功<br>    2. 为了提高可用性,如果主机往备机同步操作日志失败,比如备机故障,主机可以将备机从同步列表中剔除,本地跟新成功后就返回客户端写入成功.</p>
+<p>OceanBase数据分为基线数据和增量数据两部分,基线数据分布在多台ChunkServer上,增量数据全部放在一台UpdateServer上.</p>
+<h3 id="读写事务"><a href="#读写事务" class="headerlink" title="读写事务"></a>读写事务</h3><p>用户的读写请求,都发给MergeServer,</p>
+<ul>
+<li>只读事务: 由MergeServer发送给相应的ChunkServer分别执行后再合并每个ChunkServer的执行结果</li>
+<li>读写事务: 由MergeServer进行预处理后,再发生给UpdateServer执行.</li>
+</ul>
+<h3 id="数据正确性"><a href="#数据正确性" class="headerlink" title="数据正确性"></a>数据正确性</h3><ul>
+<li>数据存储校验: 每个存储记录同时保存64位CRC校验码.数据被访问时,重新计算和比对校验码</li>
+<li>数据传输校验: 每个传输记录同时传输64位crc校验码,数据被接收后,重新计算和比对校验码</li>
+<li>数据镜像校验: UpdateServer的内存表在主备间必须保持一致,为此UpdateServer为每个MemTable生成一个校验码,MemTable 每次更新时,校验码同步更新并记录在对应的操作日志中,备UpdateServer收到操作日志并重放到MemTable时,也同步更新MemTable检验码并与接收到的校验码对照.</li>
+<li>数据副本校验: ChunkServer在定期合并生成新的子表时,也同时为每个子表生成一个校验码,并碎新子表汇报给RootServer,以便RootServer核对同一个子表不同副本的校验码</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/30/分布式/大规模分布式存储系统/第三章分布式系统/" itemprop="url">分布式系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T21:11:29+08:00">
+                2019-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大型分布式系统/" itemprop="url" rel="index">
+                    <span itemprop="name">大型分布式系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h1><p>Paxos选举协议以及两阶段提交</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><h4 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h4><ul>
+<li><p>服务器宕机</p>
+</li>
+<li><p>网络异常</p>
+</li>
+<li><p>磁盘故障</p>
+<h4 id="超时"><a href="#超时" class="headerlink" title="超时"></a>超时</h4></li>
+<li><p>接口幂等性,覆盖写是一种常见的幂等操作</p>
+<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3></li>
+<li><p>副本是分布式存储系统容错技术的唯一手段</p>
+</li>
+<li><p>如何保证副本之间的一致性是整个分布式系统的理论核心</p>
+</li>
+</ul>
+<p>理解一致性可以从两个角度:用户/存储系统</p>
+<ul>
+<li><p>客户端:</p>
+<ul>
+<li>强一致</li>
+<li>弱一致</li>
+<li>最终一致性: 最终一致有一个“不一致窗口”,不一致窗口大小以来以下几个因素:交互延迟,系统负载,以及复制协议要求同步的副本数<br>最终一致性描述比较粗略,其他常见的变体如下:</li>
+</ul>
+</li>
+<li><p>读写(Read-your-writes)一致性: 如果客户端A写入了最新的值,那么A的后续操作都会读取到最新的值,但是其他用户可能要过一会儿才能看到</p>
+</li>
+<li><p>会话(session)一致性: 要求客户端和存储系统交互的整个会话期间保证读写一致性,如果原有会话因为某种原因失效,会话之间的操作要回滚掉</p>
+</li>
+<li><p>单调读一致性: 如果客户端A已经读取了对象的某个值,那么后续操作将不会读取到更早的值</p>
+</li>
+<li><p>单调写一致性: 客户端A的写操作按顺序我拿成,这意味着对与同一个客户端的操作,存储系统的多副本也要按照与客户端相同的顺序完成</p>
+</li>
+<li><p>从存储系统角度看:</p>
+<ul>
+<li>副本一致性:</li>
+<li>更新顺序一致性</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据分布"><a href="#数据分布" class="headerlink" title="数据分布"></a>数据分布</h3><p>分布式系统区别于传统单机系统在于能够数据分布到多个节点,并在多个节点之间实现负载均衡.<br>数据分布方式主要有两种:<br>    - 哈希分布,如一致性哈希<br>    - 顺序分布</p>
+<h4 id="哈希分布"><a href="#哈希分布" class="headerlink" title="哈希分布"></a>哈希分布</h4><p>衡量机器负载设计很多因素:如机器load,cpu,内存,磁盘以及网络等资源,分布式存储需要能够自动识别负载高的节点,当某台机器负载高时,实现自动迁移</p>
+<p>传统哈希分布,当服务器上下线时,N值发生变化,数据映射完全被打乱.几乎所有数据需要重新分布,这将带来大量的数据迁移</p>
+<p>一致性哈希有点在于节点加入/删除是只会影响到在哈希环中相邻的节点,而对其他节点没影响</p>
+<h4 id="顺序分布"><a href="#顺序分布" class="headerlink" title="顺序分布"></a>顺序分布</h4><p>将大表顺序划分为连续的范围,每个范围称为一个子表,总控服务器负责将这些子表按照一定的策略分配到存储节点上.</p>
+<h4 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h4><ul>
+<li>分布式系统每个集群中一般都有个总恐怖节点,其他节点为工作节点,工作节点通过心跳包将节点负载信息(如cpu,内存,磁盘,网络等信息)发送到主控节点.主控节点计算出工作节点的负载以及需要迁移的数据,生成迁移任务放入迁移队列中等待执行.</li>
+<li>负载均衡操作需要控制节奏,因为在迁移过程中机器服务能力会下降,一般新加机器迁移过程会持续300分钟到1个小时</li>
+<li>分布式存储一版是多副本,主副本对外提供服务,迁移备副本不会对服务造成影响,迁移主副本可以先将数据的读写服务切换到其他备副本,再迁移</li>
+</ul>
+<h4 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h4><p>主副本将写请求复制到其他备副本,最常见的做法是同步操作日志,主副本确定操作的顺序并写入到日志中复制给其他副本</p>
+<p>复制协议分为两种:</p>
+<ul>
+<li>强同步协议要求: 主备同步完成后才能返回客户端写成功.假设所有副本的个数为N,且N&gt;2, 那么实现强同步协议时,主副本只要并发地发给所有备副本并等待回复,只要至少1个备副本返回成功就可以回复客户端成功.</li>
+<li>异步复制: 主副本不需要等待备副本的回应,只需要在本地修改成功就可以告知客户端写操作成功</li>
+</ul>
+<p>基于复制协议,要求任何时刻只能有一个副本为主副本,由它来确定写操作之间的顺序.如果主副本故障,需要选举一个备副本成为新的主副本,这步操作称为选举,经典的选举协议为(Paxos协议)</p>
+<h4 id="一致性与可用性"><a href="#一致性与可用性" class="headerlink" title="一致性与可用性"></a>一致性与可用性</h4><p>CAP理论: 一致性(Consistency),可用性(Availability)以及分区可容忍性(Tolerance of network Partition)三者不能同时满足.</p>
+<ul>
+<li>一致性: 读操作总能读取到之前完成的写操作结果,满足这个条件的系统称为强一致性系统</li>
+<li>可用性: 读写操作在单台机器发生故障情况下仍然能正常执行</li>
+<li>分区可容忍性: 机器故障,网络故障情况下仍能满足一致性和可用性</li>
+</ul>
+<p>最大可用性模型: 正常情况下强同步模式,异常情况切换为异步复制模式</p>
+<h3 id="容错"><a href="#容错" class="headerlink" title="容错"></a>容错</h3><p>故障检测往往通过租约协议</p>
+<h4 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a>故障检测</h4><p>故障检测最自然想到的是心跳机制,但还是存在问题(没有收到心跳包并不一定能100分确认发生故障并停止了服务)</p>
+<p>传统心跳机制存在问题在于: 机器A和机器B之间需要对“机器B是否应为被认为发生故障且停止服务”达成一致.</p>
+<p>租约机制就是带有超时时间的一种授权,假设机器A需要检测机器B是否发生故障,机器A可以给机器B发放租约,机器B持有的租约的有效期范围内才允许提供服务,否则主动停止复制.机器B的租约快到期时向A重新申请租约来延长有效期.</p>
+<p>增加提前量,假设B机器租约有效期是10s,A机器必须啊哟加一个提前量,比如11s,才能任务机器B的租约过期.</p>
+<h4 id="故障恢复"><a href="#故障恢复" class="headerlink" title="故障恢复"></a>故障恢复</h4><p>常见分布式存储系统分为两种结构:单层结构/双层结构.</p>
+<h4 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h4><p>通过数据分布,复制以及容错等机制,能够将分布式存储系统部署到成千上万台服务器</p>
+<h4 id="总控节点"><a href="#总控节点" class="headerlink" title="总控节点"></a>总控节点</h4><p>总控节点一般用于维护数据分布信息,执行工作机管理,数据定位,故障检测与恢复,负载均衡等全局调度工作,那么总控节点是否会成为性能瓶颈呢?</p>
+<p>不太可能,而且可以通过一些手段来避免</p>
+<h2 id="分布式协议"><a href="#分布式协议" class="headerlink" title="分布式协议:"></a>分布式协议:</h2><p>两阶段提交协议:<br>A组织B,C,D三人去爬长城,如果所有人同意去爬长城,那么活动将举行,如果有一个人不同意去爬长城,则活动取消.</p>
+<p>但是</p>
+<p>两阶段提交协议是阻塞协议,执行过程需要锁住其他更新,且不能容错</p>
+<h3 id="google-spanner"><a href="#google-spanner" class="headerlink" title="google spanner"></a>google spanner</h3><p><a href="https://segmentfault.com/a/1190000009707788" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009707788</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/分布式/大规模分布式存储系统/第二章单机存储/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/30/分布式/大规模分布式存储系统/第二章单机存储/" itemprop="url">单机存储</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T11:57:02+08:00">
+                2019-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/分布式存储/" itemprop="url" rel="index">
+                    <span itemprop="name">分布式存储</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="分布式文件系统"><a href="#分布式文件系统" class="headerlink" title="分布式文件系统"></a>分布式文件系统</h3><h3 id="分布式键值系统"><a href="#分布式键值系统" class="headerlink" title="分布式键值系统"></a>分布式键值系统</h3><h3 id="分布式表格系统"><a href="#分布式表格系统" class="headerlink" title="分布式表格系统"></a>分布式表格系统</h3><h3 id="分布式数据库"><a href="#分布式数据库" class="headerlink" title="分布式数据库"></a>分布式数据库</h3><h2 id="单机存储系统"><a href="#单机存储系统" class="headerlink" title="单机存储系统"></a>单机存储系统</h2><p>单机存储引擎就是hash表,b树等数据结构在机械磁盘,ssd等持久化上的实现</p>
+<h3 id="硬件基础"><a href="#硬件基础" class="headerlink" title="硬件基础"></a>硬件基础</h3><h4 id="cpu架构"><a href="#cpu架构" class="headerlink" title="cpu架构"></a>cpu架构</h4><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgSMP%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.png" alt></p>
+<h4 id="io总线"><a href="#io总线" class="headerlink" title="io总线"></a>io总线</h4><h5 id="Numa架构"><a href="#Numa架构" class="headerlink" title="Numa架构"></a>Numa架构</h5><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgNuma%E6%9E%B6%E6%9E%84.png" alt="Numa架构"></p>
+<h5 id="Interl-X48主板南北桥架构"><a href="#Interl-X48主板南北桥架构" class="headerlink" title="Interl X48主板南北桥架构"></a>Interl X48主板南北桥架构</h5><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgintelX48.png" alt></p>
+<h4 id="网络拓扑"><a href="#网络拓扑" class="headerlink" title="网络拓扑"></a>网络拓扑</h4><h4 id="性能参数"><a href="#性能参数" class="headerlink" title="性能参数"></a>性能参数</h4><p>硬件性能对比<br><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191030191255.png" alt></p>
+<p>15000 转的stata盘顺序读取带宽可达到100MB以上,由于磁盘寻到的时间大约是10ms,顺序读取1Mb数据时间为: 磁盘寻道时间+ 数据读取时间,即 10ms+ 1MB/100MB/s X1000 = 20ms</p>
+<p>存储介质对比<br><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img%E5%AD%98%E5%82%A8%E4%BB%8B%E8%B4%A8%E5%AF%B9%E6%AF%94.png" alt></p>
+<h5 id="存储层次架构"><a href="#存储层次架构" class="headerlink" title="存储层次架构"></a>存储层次架构</h5><p>热数据(访问频繁)存储到ssd中,冷数据(访问不频繁的)存储到磁盘中</p>
+<h3 id="单机存储引擎"><a href="#单机存储引擎" class="headerlink" title="单机存储引擎"></a>单机存储引擎</h3><h4 id="哈希存储引擎"><a href="#哈希存储引擎" class="headerlink" title="哈希存储引擎"></a>哈希存储引擎</h4><p>哈希表的持久化实现,支持增删读改操作,以及随机读取操作,但不支持顺序扫描,对应的存储系统为键值(key-Value)存储系统</p>
+<h4 id="B树存储引擎"><a href="#B树存储引擎" class="headerlink" title="B树存储引擎"></a>B树存储引擎</h4><p>B树的持久化实现,不仅支持单条记录的增删读改操作,还支持顺序扫描,对应的存储系统是关系数据库,当然键值系统也可以通过B树存储引擎实现</p>
+<h4 id="LSM树"><a href="#LSM树" class="headerlink" title="LSM树"></a>LSM树</h4><p>LSM树存储引擎和b树存储引擎一样,支持增、删、改、随机读以及顺序扫描.它通过批量转储技术规避磁盘随机写入问题</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/分布式/MIT 6.824/Lab 1: MapReduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/30/分布式/MIT 6.824/Lab 1: MapReduce/" itemprop="url">Lab 1: MapReduce</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T11:26:30+08:00">
+                2019-10-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
+                    <span itemprop="name">MT6.248</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://pdos.csail.mit.edu/6.824/labs/lab-1.html" target="_blank" rel="noopener">6.824 Lab 1: MapReduce</a></p>
+<h2 id="Part1-Map-Reduce-input-and-output"><a href="#Part1-Map-Reduce-input-and-output" class="headerlink" title="Part1 Map/Reduce input and output"></a>Part1 Map/Reduce input and output</h2><p>主要是实现 mapreduce/common_map.go 中的 doMap() 函数以及 mapreduce/common_reduce.go 中的 doReduce() 函数</p>
+<h3 id="doMap-函数"><a href="#doMap-函数" class="headerlink" title="doMap()函数:"></a>doMap()函数:</h3><ol>
+<li>读取 inFile 文件的内容，然后经过用户定义的 mapF() 函数得到一个 KeyValue列表</li>
+<li>对于每个KeyValue值，经过ihash平均分配给nReduce个中间文件,中间文件可由reduceName() 得到名字，注意读写文件需要用json来序列化</li>
+</ol>
+<p>疑问:</p>
+<ul>
+<li>如果文件特别大,不可能一次性全读到内存中啊</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">doMap</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">	jobName <span class="keyword">string</span>, // the name of the MapReduce job</span></span></span><br><span class="line"><span class="function"><span class="params">	mapTask <span class="keyword">int</span>,    // which <span class="keyword">map</span> task this is</span></span></span><br><span class="line"><span class="function"><span class="params">	inFile <span class="keyword">string</span>,</span></span></span><br><span class="line">	nReduce int, // the number of reduce task that will be run ("R" in the paper)</span><br><span class="line">	mapF <span class="function"><span class="keyword">func</span><span class="params">(filename <span class="keyword">string</span>, contents <span class="keyword">string</span>)</span> []<span class="title">KeyValue</span>,</span></span><br><span class="line"><span class="function">)</span> &#123;</span><br><span class="line">	<span class="comment">// 读取文件，并处理产生键值对</span></span><br><span class="line">	cont, _ := ioutil.ReadFile(inFile)</span><br><span class="line">	contents := <span class="keyword">string</span>(cont)</span><br><span class="line">	resultKV := mapF(inFile, contents)</span><br><span class="line"></span><br><span class="line">	reduceFiles := <span class="built_in">make</span>([]*os.File, nReduce)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; nReduce; i++ &#123;</span><br><span class="line">		file, _ := os.OpenFile(reduceName(jobName, mapTask, i), os.O_CREATE|os.O_WRONLY, <span class="number">0666</span>)</span><br><span class="line">		reduceFiles[i] = file</span><br><span class="line">		<span class="keyword">defer</span> file.Close()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 将键值对写入nReduce个文件中</span></span><br><span class="line">	<span class="keyword">for</span> _, keyValue := <span class="keyword">range</span> resultKV &#123;</span><br><span class="line">		r := ihash(keyValue.Key) % nReduce</span><br><span class="line">		file := reduceFiles[r]</span><br><span class="line">		enc := json.NewEncoder(file)</span><br><span class="line">		_ = enc.Encode(&amp;keyValue)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="doReduce"><a href="#doReduce" class="headerlink" title="doReduce"></a>doReduce</h3><ol>
+<li>从所有中间文件中读取到内存中,读出KeyValue值后将相同key的value合并，这里可以使用map。然后按照key进行排序</li>
+<li>对新的key-value使用 reduceF() 函数，即可得到例如 hello: 2, word: 3 的词频结果，写入新的merge文件,merge文件可由mergeName()得到名字</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">doReduce</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">	jobName <span class="keyword">string</span>, // the name of the whole MapReduce job</span></span></span><br><span class="line"><span class="function"><span class="params">	reduceTask <span class="keyword">int</span>, // which reduce task this is</span></span></span><br><span class="line"><span class="function"><span class="params">	outFile <span class="keyword">string</span>, // write the output here</span></span></span><br><span class="line">	nMap int,       // the number of map tasks that were run ("M" in the paper)</span><br><span class="line">	reduceF <span class="function"><span class="keyword">func</span><span class="params">(key <span class="keyword">string</span>, values []<span class="keyword">string</span>)</span> <span class="title">string</span>,</span></span><br><span class="line"><span class="function">)</span> &#123;</span><br><span class="line">	<span class="keyword">var</span> keyValues []KeyValue</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; nMap; i++ &#123;</span><br><span class="line">		reduceFileName := reduceName(jobName, i, reduceTask)</span><br><span class="line">		file, err := os.Open(reduceFileName)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">"doReduce can not open:"</span>, reduceFileName)</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">defer</span> file.Close()</span><br><span class="line">		br := bufio.NewReader(file)</span><br><span class="line">		<span class="keyword">for</span> &#123;</span><br><span class="line">			line, _, next := br.ReadLine()</span><br><span class="line">			<span class="keyword">var</span> tmp KeyValue</span><br><span class="line">			json.Unmarshal(line, &amp;tmp)</span><br><span class="line">			<span class="keyword">if</span> next == io.EOF &#123;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">			keyValues = <span class="built_in">append</span>(keyValues, tmp)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sort.Slice(keyValues, <span class="function"><span class="keyword">func</span><span class="params">(i, j <span class="keyword">int</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">		<span class="keyword">return</span> keyValues[i].Key &lt; keyValues[j].Key</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	oFile, _ := os.OpenFile(outFile, os.O_CREATE|os.O_WRONLY, <span class="number">0666</span>)</span><br><span class="line">	<span class="keyword">defer</span> oFile.Close()</span><br><span class="line">	enc := json.NewEncoder(oFile)</span><br><span class="line"></span><br><span class="line">	tmp := keyValues[<span class="number">0</span>].Key</span><br><span class="line">	<span class="keyword">var</span> values []<span class="keyword">string</span></span><br><span class="line">	<span class="keyword">for</span> _, keyValue := <span class="keyword">range</span> keyValues &#123;</span><br><span class="line">		<span class="keyword">if</span> keyValue.Key == tmp &#123;</span><br><span class="line">			values = <span class="built_in">append</span>(values, keyValue.Value)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			enc.Encode(KeyValue&#123;tmp, reduceF(tmp, values)&#125;)</span><br><span class="line">			values = []<span class="keyword">string</span>&#123;keyValue.Value&#125;</span><br><span class="line">			tmp = keyValue.Key</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	enc.Encode(KeyValue&#123;tmp, reduceF(tmp, values)&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后在终端输入 <code>go test -run Sequential</code>进行测试，如果出现</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cd <span class="number">6.824</span></span><br><span class="line">$ export <span class="string">"GOPATH=$PWD"</span>  # <span class="keyword">go</span> needs $GOPATH to be set to the project<span class="string">'s working directory</span></span><br><span class="line"><span class="string">$ cd "$GOPATH/src/mapreduce"</span></span><br><span class="line"><span class="string">$ go test -run Sequential</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">.\master_rpc.go:48: debug call has arguments but no formatting directives</span></span><br><span class="line"><span class="string">FAIL 6.824/src/mapreduce [build failed]</span></span><br></pre></td></tr></table></figure>
+
+<p>注释掉 <code>master_rpc.go</code>的48行 <code>debug(&quot;RegistrationServer: accept error&quot;, err)</code> 即可</p>
+<h2 id="Part2-Single-worker-word-count"><a href="#Part2-Single-worker-word-count" class="headerlink" title="Part2 Single-worker word count"></a>Part2 Single-worker word count</h2><p>实现<code>main/wc.go</code> 中的<code>mapF() and reduceF()</code> 方法,统计单词出现次数</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">mapF</span><span class="params">(filename <span class="keyword">string</span>, contents <span class="keyword">string</span>)</span> []<span class="title">mapreduce</span>.<span class="title">KeyValue</span></span> &#123;</span><br><span class="line">	<span class="comment">// Your code here (Part II).</span></span><br><span class="line">	words := strings.FieldsFunc(contents, <span class="function"><span class="keyword">func</span><span class="params">(r <span class="keyword">rune</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">		<span class="keyword">return</span> !unicode.IsLetter(r)</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">var</span> kvs []mapreduce.KeyValue</span><br><span class="line">	<span class="keyword">for</span> _, word := <span class="keyword">range</span> words &#123;</span><br><span class="line">		kvs = <span class="built_in">append</span>(kvs, mapreduce.KeyValue&#123;Key: word, Value: <span class="string">"1"</span>&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> kvs</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reduceF</span><span class="params">(key <span class="keyword">string</span>, values []<span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="comment">// Your code here (Part II).</span></span><br><span class="line">	<span class="keyword">return</span> strconv.Itoa(<span class="built_in">len</span>(values))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> 6.824</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">export</span> <span class="string">"GOPATH=<span class="variable">$PWD</span>"</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> <span class="string">"<span class="variable">$GOPATH</span>/src/main"</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> go run wc.go master sequential pg-*.txt</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Part-III-Distributing-MapReduce-tasks"><a href="#Part-III-Distributing-MapReduce-tasks" class="headerlink" title="Part III: Distributing MapReduce tasks"></a>Part III: Distributing MapReduce tasks</h2><p>文案翻译:</p>
+<p>您当前的实现只能一次运行一个任务。 Map / Reduce最大的卖点之一是，它可以自动并行化普通的顺序代码，而无需开发人员进行任何额外的工作。 在本部分的实验中，您将完成一个MapReduce版本，该版本将工作划分为一组在多个内核上并行运行的工作线程。 虽然不像实际的Map / Reduce部署那样分布在多台计算机上，但是您的实现将使用RPC来模拟分布式计算。</p>
+<p><code>mapreduce / master.go</code>中的代码完成了管理MapReduce作业的大部分工作。 我们还在<code>mapreduce / worker.go</code>中为您提供了工作线程的完整代码，并在<code>mapreduce / common_rpc.go</code>中为您提供了处理RPC的一些代码。</p>
+<p>您的工作是在<code>mapreduce / schedule.go</code>中实现<code>schedule（）</code>。 Master在MapReduce作业期间两次调用<code>schedule（）</code>，一次在Map阶段，一次在Reduce阶段。 <code>schedule（)</code>的工作是将任务分发给可用的worker。 通常tasks数超过worker数，因此<code>schedule（）</code>必须给每个工作线程一系列任务， <code>schedule（）</code>应等待所有任务完成，然后返回。</p>
+<p><code>schedule（）</code>从<code>registerChan</code>中获取空闲的worker的地址，然后将任务非配给空闲的worker执行.</p>
+<p><code>schedule（）</code>通过<code>Worker.DoTask</code>RPC发送给worder来通知worker执行任务。 该RPC的参数由<code>DoTaskArgs</code>在<code>mapreduce / common_rpc.go</code>中定义。 File元素仅由Map任务使用，是要读取的文件的名称； schedule（）可以在mapFiles中找到这些文件名。</p>
+<p>使用<code>mapreduce / common_rpc.go</code>中的<code>call（）</code>函数将RPC发送给工作程序。 第一个参数是worker的地址，从registerChan读取。 第二个参数应为<code>Worker.DoTask</code>。 第三个参数应为DoTaskArgs结构，最后一个参数应为nil。</p>
+<p>使用<code>go test -run TestParallel</code>来测试您的解决方案。 这将执行两个测试，<code>TestParallelBasic和TestParallelCheck</code>； 后者验证您的scheduler程序执行task的并行度</p>
+<p>思路:</p>
+<ul>
+<li>使用for循环启动需要执行的任务</li>
+<li>使用goroutine执行每个任务</li>
+<li>等待所有任务执行结束</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">schedule</span><span class="params">(jobName <span class="keyword">string</span>, mapFiles []<span class="keyword">string</span>, nReduce <span class="keyword">int</span>, phase jobPhase, registerChan <span class="keyword">chan</span> <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> ntasks <span class="keyword">int</span></span><br><span class="line">	<span class="keyword">var</span> n_other <span class="keyword">int</span> <span class="comment">// number of inputs (for reduce) or outputs (for map)</span></span><br><span class="line">	<span class="keyword">switch</span> phase &#123;</span><br><span class="line">	<span class="keyword">case</span> mapPhase:</span><br><span class="line">		ntasks = <span class="built_in">len</span>(mapFiles)</span><br><span class="line">		n_other = nReduce</span><br><span class="line">	<span class="keyword">case</span> reducePhase:</span><br><span class="line">		ntasks = nReduce</span><br><span class="line">		n_other = <span class="built_in">len</span>(mapFiles)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fmt.Printf(<span class="string">"Schedule: %v %v tasks (%d I/Os)\n"</span>, ntasks, phase, n_other)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// All ntasks tasks have to be scheduled on workers. Once all tasks</span></span><br><span class="line">	<span class="comment">// have completed successfully, schedule() should return.</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// Your code here (Part III, Part IV).</span></span><br><span class="line">	<span class="keyword">var</span> waitGroup sync.WaitGroup</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; ntasks; i++ &#123;</span><br><span class="line">		waitGroup.Add(<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">var</span> taskArgs DoTaskArgs</span><br><span class="line">		taskArgs.JobName = jobName</span><br><span class="line">		taskArgs.Phase = phase</span><br><span class="line">		taskArgs.TaskNumber = i</span><br><span class="line">		taskArgs.NumOtherPhase = n_other</span><br><span class="line">		<span class="keyword">if</span> phase == mapPhase &#123;</span><br><span class="line">			taskArgs.File = mapFiles[i]</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">defer</span> waitGroup.Done()</span><br><span class="line">			worker := &lt;-registerChan</span><br><span class="line">			<span class="keyword">if</span> !call(worker, <span class="string">"Worker.DoTask"</span>, &amp;taskArgs, <span class="literal">nil</span>) &#123;</span><br><span class="line">				log.Fatal(<span class="string">"call RPC failed"</span>)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123; registerChan &lt;- worker &#125;()</span><br><span class="line">		&#125;()</span><br><span class="line">	&#125;</span><br><span class="line">	waitGroup.Wait()</span><br><span class="line">	fmt.Printf(<span class="string">"Schedule: %v done\n"</span>, phase)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参考:<br><a href="https://colobu.com/2016/09/18/go-net-rpc-guide/" target="_blank" rel="noopener">Go官方库RPC开发指南</a><br><a href="https://golang.org/pkg/net/rpc/" target="_blank" rel="noopener">Package rpc</a><br><a href="https://ms2008.github.io/2019/05/12/golang-data-race/" target="_blank" rel="noopener">谈谈 Golang 中的 Data Race</a><br><a href="https://shockerli.net/post/golang-pkg-mutex/" target="_blank" rel="noopener">sync.Mutex 互斥锁</a><br><a href="https://liudanking.com/golang/golang-waitgroup-usage/" target="_blank" rel="noopener">Golang中WaitGroup使用的一点坑</a></p>
+<h2 id="Part-IV-Handling-worker-failures"><a href="#Part-IV-Handling-worker-failures" class="headerlink" title="Part IV: Handling worker failures"></a>Part IV: Handling worker failures</h2><p>schedule调度的任务可能会发生错误，需要将发生错误的任务在一个空闲的worker上重新执行。这里可以对发生错误的任务使用递归的方式在一个新的worker执行。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">schedule</span><span class="params">(jobName <span class="keyword">string</span>, mapFiles []<span class="keyword">string</span>, nReduce <span class="keyword">int</span>, phase jobPhase, registerChan <span class="keyword">chan</span> <span class="keyword">string</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> ntasks <span class="keyword">int</span></span><br><span class="line">	<span class="keyword">var</span> n_other <span class="keyword">int</span> <span class="comment">// number of inputs (for reduce) or outputs (for map)</span></span><br><span class="line">	<span class="keyword">switch</span> phase &#123;</span><br><span class="line">	<span class="keyword">case</span> mapPhase:</span><br><span class="line">		ntasks = <span class="built_in">len</span>(mapFiles)</span><br><span class="line">		n_other = nReduce</span><br><span class="line">	<span class="keyword">case</span> reducePhase:</span><br><span class="line">		ntasks = nReduce</span><br><span class="line">		n_other = <span class="built_in">len</span>(mapFiles)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fmt.Printf(<span class="string">"Schedule: %v %v tasks (%d I/Os)\n"</span>, ntasks, phase, n_other)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// All ntasks tasks have to be scheduled on workers. Once all tasks</span></span><br><span class="line">	<span class="comment">// have completed successfully, schedule() should return.</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// Your code here (Part III, Part IV).</span></span><br><span class="line">	<span class="keyword">var</span> waitGroup sync.WaitGroup</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; ntasks; i++ &#123;</span><br><span class="line">		waitGroup.Add(<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">var</span> taskArgs DoTaskArgs</span><br><span class="line">		taskArgs.JobName = jobName</span><br><span class="line">		taskArgs.Phase = phase</span><br><span class="line">		taskArgs.TaskNumber = i</span><br><span class="line">		taskArgs.NumOtherPhase = n_other</span><br><span class="line">		<span class="keyword">if</span> phase == mapPhase &#123;</span><br><span class="line">			taskArgs.File = mapFiles[i]</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">defer</span> waitGroup.Done()</span><br><span class="line">			<span class="keyword">for</span> &#123;</span><br><span class="line">				worker := &lt;-registerChan</span><br><span class="line">				<span class="keyword">if</span> call(worker, <span class="string">"Worker.DoTask"</span>, taskArgs, <span class="literal">nil</span>) &#123;</span><br><span class="line">					<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">						registerChan &lt;- worker</span><br><span class="line">					&#125;()</span><br><span class="line">					<span class="keyword">break</span></span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;()</span><br><span class="line">	&#125;</span><br><span class="line">	waitGroup.Wait()</span><br><span class="line">	fmt.Printf(<span class="string">"Schedule: %v done\n"</span>, phase)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Part-V-Inverted-index-generation-optional-does-not-count-in-grade"><a href="#Part-V-Inverted-index-generation-optional-does-not-count-in-grade" class="headerlink" title="Part V: Inverted index generation (optional, does not count in grade)"></a>Part V: Inverted index generation (optional, does not count in grade)</h2><p>倒排索引</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">mapF</span><span class="params">(document <span class="keyword">string</span>, value <span class="keyword">string</span>)</span> <span class="params">(res []mapreduce.KeyValue)</span></span> &#123;</span><br><span class="line">	<span class="comment">// Your code here (Part V).</span></span><br><span class="line">	words := strings.FieldsFunc(value, <span class="function"><span class="keyword">func</span><span class="params">(r <span class="keyword">rune</span>)</span> <span class="title">bool</span></span> &#123;</span><br><span class="line">		<span class="keyword">return</span> !unicode.IsLetter(r)</span><br><span class="line">	&#125;)</span><br><span class="line">	DocMaps := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br><span class="line">	<span class="keyword">var</span> kv []mapreduce.KeyValue</span><br><span class="line">	<span class="keyword">for</span> _, word := <span class="keyword">range</span> words &#123;</span><br><span class="line">		DocMaps[word] = document</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> k, doc := <span class="keyword">range</span> DocMaps &#123;</span><br><span class="line">		kv = <span class="built_in">append</span>(kv, mapreduce.KeyValue&#123;Key: k, Value: doc&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> kv</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// The reduce function is called once for each key generated by Map, with a</span></span><br><span class="line"><span class="comment">// list of that key's string value (merged across all inputs). The return value</span></span><br><span class="line"><span class="comment">// should be a single output value for that key.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reduceF</span><span class="params">(key <span class="keyword">string</span>, values []<span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="comment">// Your code here (Part V).</span></span><br><span class="line">	nDoc := <span class="built_in">len</span>(values)</span><br><span class="line">	sort.Strings(values)</span><br><span class="line">	resString := strconv.Itoa(nDoc) + <span class="string">" "</span></span><br><span class="line">	<span class="keyword">for</span> _, v := <span class="keyword">range</span> values &#123;</span><br><span class="line">		resString = resString + v + <span class="string">","</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> resString[:(<span class="built_in">len</span>(resString)<span class="number">-1</span>)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://tanyihao.me/2018/04/21/%E7%94%A8go%E5%AE%9E%E7%8E%B0MapReduce%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD/" target="_blank" rel="noopener">用go实现MapReduce部分功能</a><br><a href="https://izualzhy.cn/6.824-lab1-notes" target="_blank" rel="noopener">MIT 6.824 Distributed Systems Lab-1 笔记</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/29/Spark/spark core/1. 什么是rdd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/29/Spark/spark core/1. 什么是rdd/" itemprop="url">什么是rdd</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-29T20:21:21+08:00">
+                2019-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/spark/" itemprop="url" rel="index">
+                    <span itemprop="name">spark</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="什么是rdd"><a href="#什么是rdd" class="headerlink" title="什么是rdd"></a>什么是rdd</h2><p>RDD，全称为 Resilient Distributed Datasets,弹性分部署数据集,是为了对用户操作的简化,以面向对象的方式提供了RDD很多方法,rdd是懒执行的,分为转换和行动两部分</p>
+<h2 id="rdd特性"><a href="#rdd特性" class="headerlink" title="rdd特性"></a>rdd特性</h2><ul>
+<li>不可变,所有rdd操作会产生一个新的rdd</li>
+<li>可分区,通过将数据进行分区保存</li>
+<li>弹性<br>存储的弹性: 内存与磁盘的自动切换<br>容错的弹性: 数据丢失可以自动恢复<br>计算的弹性: 计算出错重试机制<br>分片的弹性: 根据需要重新分片</li>
+</ul>
+<h2 id="spark都做了什么"><a href="#spark都做了什么" class="headerlink" title="spark都做了什么:"></a>spark都做了什么:</h2><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191029210231.png" alt></p>
+<h2 id="rdd创建"><a href="#rdd创建" class="headerlink" title="rdd创建"></a>rdd创建</h2><p>rdd创建方式分为3种:</p>
+<p>从集合中创建<br>在Driver（驱动程序）中一个已经存在的集合（数组）上创建，SparkContext对象代表到Spark集群的连接，可以用来创建RDD、广播变量和累加器。可以复制集合的对象创建一个支持并行操作的分布式数据集（ParallelCollectionRDD）。一旦该RDD创建完成，分布数据集可以支持并行操作，比如在该集合上调用Reduce将数组的元素相加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; sc.makeRDD(0 to 10)</span><br><span class="line">res0: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[0] at makeRDD at &lt;console&gt;:25</span><br><span class="line">scala&gt; res0.collect</span><br><span class="line">res1: Array[Int] = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zhuanlan.zhihu.com/p/29517436" target="_blank" rel="noopener">Apache Spark RDD 论文中文版 | ApacheCN</a><br><a href="https://zhuanlan.zhihu.com/p/36288538" target="_blank" rel="noopener">Spark RDD 论文简析</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/Spark/2.spark 的HA模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/28/Spark/2.spark 的HA模式/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T21:47:23+08:00">
+                2019-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.csdn.net/u011308691/article/details/52128177" target="_blank" rel="noopener">https://blog.csdn.net/u011308691/article/details/52128177</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/zookeeper/0.zookeeper安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/28/zookeeper/0.zookeeper安装/" itemprop="url">zookeeper安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T20:12:09+08:00">
+                2019-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/zookeeper/" itemprop="url" rel="index">
+                    <span itemprop="name">zookeeper</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Zookeeper-集群搭建"><a href="#Zookeeper-集群搭建" class="headerlink" title="Zookeeper 集群搭建"></a>Zookeeper 集群搭建</h2><p>环境: CentOS release 6.10 + zookeeper-3.4.14</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><blockquote>
+<p>特别注意防火墙问题</p>
+</blockquote>
+<p><a href="/2019/10/24/Spark/1.spark安装/">环境准备</a></p>
+<h3 id="下载解压"><a href="#下载解压" class="headerlink" title="下载解压"></a>下载解压</h3><p><a href="https://www.apache.org/dyn/closer.cgi#verify" target="_blank" rel="noopener">download</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper-3.4.14.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cp zoo_sample.cfg zoo.cfg</span><br><span class="line"># 修改存储快照文件snapshot的目录(自己随便修改)</span><br><span class="line">dataDir=/home/hadoop/zookeeper-3.4.14/tmp</span><br><span class="line"></span><br><span class="line"># 添加集群节点信息,本机器上必须是0.0.0.0,否则其他机器访问,zk集群起不来,这里server.x中的x是一个数字，与myid文件中的id是一致的</span><br><span class="line">server.1=0.0.0.0:2888:3888</span><br><span class="line">server.2=server02:2888:3888</span><br><span class="line">server.3=server03:2888:3888</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建myid文件"><a href="#创建myid文件" class="headerlink" title="创建myid文件"></a>创建myid文件</h3><blockquote>
+<p>myid文件必须在dataDir目录下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/hadoop/zookeeper-3.4.14/tmp</span><br><span class="line">echo 1 &gt; /home/hadoop/apps/zookeeper-3.4.9/tmp/myid</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /home/hadoop/zookeeper-3.4.14</span><br><span class="line"># 启动</span><br><span class="line">bin/zkServer.sh start</span><br><span class="line"># 查看状态</span><br><span class="line">bin/zkServer.sh status</span><br><span class="line"># 客户端连接</span><br><span class="line">bin/zkCli.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题:"></a>问题:</h3><ul>
+<li>启动用户<br>网上会有说必须用root用户启动,其实<code>并不用</code></li>
+<li>Error contacting service. It is probably not running.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># zkServer.sh start</span><br><span class="line">JMX enabled by default</span><br><span class="line">Using config: /usr/local/zk/bin/../conf/zoo.cfg</span><br><span class="line">Starting zookeeper … STARTED(正常启动就是这样的显示)</span><br><span class="line"></span><br><span class="line">查看状态却报错：</span><br><span class="line"># zkServer.sh status</span><br><span class="line">JMX enabled by default</span><br><span class="line">Using config: /usr/local/zk/bin/../conf/zoo.cfg</span><br><span class="line">Error contacting service. It is probably not running.(就是集群没有起来,可以根据zookeeper.out来查看失败原因)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="https://blog.csdn.net/cc1949/article/details/78196226" target="_blank" rel="noopener">Zookeep启动正常，却报错：Error contacting service. It is probably not running</a></p>
+<ul>
+<li>遇到问题排查思路<pre><code># 确认进程是否启动
+[hadoop@server02 zookeeper-3.4.14]$ jps
+3216 QuorumPeerMain
+3303 Jps
+[hadoop@server02 zookeeper-3.4.14]$ netstat -tunlp|grep 3216
+# 确认端口是否开放
+(Not all processes could be identified, non-owned process info
+will not be shown, you would have to be root to see it all.)
+tcp        0      0 :::2181                     :::*                        LISTEN      3216/java
+tcp        0      0 :::2888                     :::*                        LISTEN      3216/java
+tcp        0      0 :::43919                    :::*                        LISTEN      3216/java
+tcp        0      0 :::3888                     :::*                        LISTEN      3216/java
+# 确认防火墙是否关闭
+[hadoop@server01 zookeeper-3.4.14]$ telnet  server02 3888
+Trying 100.80.128.165...
+Connected to server02.</code></pre></li>
+</ul>
+<p><a href="https://www.jianshu.com/p/a5fda39f20d0" target="_blank" rel="noopener">Zookeeper 集群搭建</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/27/hadoop/1.分布式文件系统HDFS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/27/hadoop/1.分布式文件系统HDFS/" itemprop="url">分布式文件系统HDFS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-27T15:40:14+08:00">
+                2019-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">hadoop</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="分布式文件系统HDFS"><a href="#分布式文件系统HDFS" class="headerlink" title="分布式文件系统HDFS"></a>分布式文件系统HDFS</h2><p>HDFS是Hadoop的数据储存部分,主要由NameNode，DataNode<strong>,SecondNameNode</strong>组成</p>
+<h3 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h3><ul>
+<li>NameNode主要功能：接受客户端的读写服务</li>
+<li>NameNode保存metadata信息包括：<ul>
+<li>文件ownership和permission</li>
+<li>文件包含哪些块</li>
+<li>Block保存在哪个DataNode（由DataNode启动时上报）</li>
+</ul>
+</li>
+<li>NameNode的metadata信息在启动后会加载到内存<ul>
+<li>metadata储存到磁盘文件名为“fsimage”(它是在NameNode启动时对整个文件系统的快照)</li>
+<li>Block的位置信息不会保存到fsimage</li>
+<li>edits log(它是在NameNode启动后，对文件系统的改动序列)对metadata的操作日志</li>
+</ul>
+</li>
+</ul>
+<h3 id="SecondNameNode（SNN）"><a href="#SecondNameNode（SNN）" class="headerlink" title="SecondNameNode（SNN）"></a>SecondNameNode（SNN）</h3><ul>
+<li>SecondNameNode主要功能: 它不是NN的备份（但可以做部分备份），它的主要工作是帮助NN合并edits log，减少NN启动时间</li>
+<li>SNN执行合并实际<ul>
+<li>根据配置文件设置的时间间隔fs.checkpoint.period默认3600秒</li>
+<li>根据配置文件设置edits log大小fs.checkpoint.size贵的edits文件的最大值默认是64MB</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://blog.csdn.net/xh16319/article/details/31375197" target="_blank" rel="noopener">Secondary NameNode:它究竟有什么作用</a></p>
+<h3 id="DataNode（DN"><a href="#DataNode（DN" class="headerlink" title="DataNode（DN)"></a>DataNode（DN)</h3><ul>
+<li>储存数据（Block）</li>
+<li>启动DN线程的时候回向NN回报block信息</li>
+<li>通过向NN发送心跳保持与其保持联系（3秒一次），如果NN 10分钟没有收到DN的心跳，则认为其已经lost，并copy其上的block到其它的DN</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/26/hadoop/0.hadoop组件概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/26/hadoop/0.hadoop组件概述/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-26T09:49:10+08:00">
+                2019-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
@@ -1685,7 +2192,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1733,7 +2240,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1744,7 +2251,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1755,7 +2262,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

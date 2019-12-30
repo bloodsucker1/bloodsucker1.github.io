@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/18/mysql/安装与压测/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/分布式/MIT 6.824/开源实践/tidb raft实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/18/mysql/安装与压测/" itemprop="url">mac下mysql安装与压测</a></h1>
+                <a class="post-title-link" href="/2019/11/27/分布式/MIT 6.824/开源实践/tidb raft实现/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-18T17:33:20+08:00">
-                2019-10-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-27T20:07:09+08:00">
+                2019-11-27
               </time>
             
 
@@ -311,28 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">mysql</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -394,9 +372,7 @@
       
         
           
-            <h2 id="安装mysql5-6"><a href="#安装mysql5-6" class="headerlink" title="安装mysql5.6"></a>安装mysql5.6</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装过的需要清理干净</span><br><span class="line">brew install mysql@5.6</span><br></pre></td></tr></table></figure>
-
-<h2 id="压测"><a href="#压测" class="headerlink" title="压测"></a>压测</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install sysbench</span><br><span class="line"> </span><br><span class="line">sysbench --mysql-host=127.0.0.1 --mysql-port=3306 --mysql-user=root --mysql-password=&apos;&apos; --test=/usr/local/Cellar/sysbench/1.0.17/share/sysbench/tests/include/oltp_legacy/oltp.lua --oltp_tables_count=10 --oltp-table-size=1000000 --rand-init=on prepare</span><br><span class="line"> </span><br><span class="line">sysbench --mysql-host=127.0.0.1  --mysql-port=3306 --mysql-user=root  --mysql-password=&quot;&quot;  --test=/usr/local/Cellar/sysbench/1.0.17/share/sysbench/tests/include/oltp_legacy/oltp.lua --oltp_tables_count=6 --oltp-table-size=13000000 --num-threads=500 --oltp-read-only=off --report-interval=10 --rand-type=uniform --max-time=600 --max-requests=0 --percentile=99 run</span><br></pre></td></tr></table></figure>
+            
           
         
       
@@ -444,7 +420,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/17/mysql/sql语法解析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/19/go/pprof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -463,7 +439,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/17/mysql/sql语法解析/" itemprop="url">sql语法解析</a></h1>
+                <a class="post-title-link" href="/2019/11/19/go/pprof/" itemprop="url">pprof工具使用</a></h1>
         
 
         <div class="post-meta">
@@ -475,8 +451,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-17T15:50:07+08:00">
-                2019-10-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T16:29:33+08:00">
+                2019-11-19
               </time>
             
 
@@ -498,8 +474,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mysql/" itemprop="url" rel="index">
-                    <span itemprop="name">mysql</span>
+                  <a href="/categories/dotnet/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet</span>
                   </a>
                 </span>
 
@@ -568,38 +544,618 @@
       
         
           
-            <p>lex 和 yacc 是什么，为什么人们同时提及它们<br>lex 和 yacc 是一对配对工具。lex 将文件分解为成组的“记号（tokens）”，大体上类似于单词。yacc 接受 成组的记号，并将它们装配为高层次的结构，类似于句子</p>
-<h2 id="yacc-的语法"><a href="#yacc-的语法" class="headerlink" title="yacc 的语法"></a>yacc 的语法</h2><ul>
-<li>结构，由%%分割的三部分组成：声明 %% 规则 %% 程序</li>
-<li>%{与%}之间的代码将会直接出现在目标代码中</li>
-<li>yacc 命令忽略语法文件中的空格、制表符和换行符</li>
-<li>注释：/* This is a comment on a line by itself. */</li>
-<li>使用’’（单引号）表示字符串</li>
-<li>优先顺序规则由 %prec 关键字定义，并更改与特定的语法规则关联的优先顺序级别。保留符号 %prec 可紧跟在语法规则的主体后面，且其后可有标记名称或者文字。构造使得语法规则的优先顺序成为标记名称或者文字的优先顺序。</li>
-<li>yacc 生成的解析器将首先尝试去解析在文件的规则部分得到的第一个规则的实例, %start 来指定从哪个开始</li>
-<li>$$符号可引用产生式左部非终结符的属性值，而$i则可以引用产生式右部第i个文法符号的属性值</li>
+            <h2 id="pprof"><a href="#pprof" class="headerlink" title="pprof"></a>pprof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">heap profile: 13: 764144560 [139616: 4600982112] @ heap/1048576</span><br><span class="line">1: 258760704 [1: 258760704] @ 0x947570 0x946625 0x94e9bc 0x46abf1</span><br><span class="line">#	0x94756f	main.(*MySQLDecoder).decodeClientPacket+0xf2f	/home/q/gopath/src/my-sniffer/decode.go:54</span><br><span class="line">#	0x946624	main.(*MySQLDecoder).DecodeClientPacket+0x134	/home/q/gopath/src/my-sniffer/decode.go:38</span><br><span class="line">#	0x94e9bb	main.(*Sniffer).parse+0x37b			/home/q/gopath/src/my-sniffer/sniffer.go:88</span><br><span class="line"></span><br><span class="line">1: 207003648 [2: 414007296] @ 0x947570 0x946625 0x94e9bc 0x46abf1</span><br><span class="line">#	0x94756f	main.(*MySQLDecoder).decodeClientPacket+0xf2f	/home/q/gopath/src/my-sniffer/decode.go:54</span><br><span class="line">#	0x946624	main.(*MySQLDecoder).DecodeClientPacket+0x134	/home/q/gopath/src/my-sniffer/decode.go:38</span><br><span class="line">#	0x94e9bb	main.(*Sniffer).parse+0x37b			/home/q/gopath/src/my-sniffer/sniffer.go:88</span><br><span class="line"></span><br><span class="line">1: 165601280 [3: 496803840] @ 0x947570 0x946625 0x94e9bc 0x46abf1</span><br><span class="line">#	0x94756f	main.(*MySQLDecoder).decodeClientPacket+0xf2f	/home/q/gopath/src/my-sniffer/decode.go:54</span><br><span class="line">#	0x946624	main.(*MySQLDecoder).DecodeClientPacket+0x134	/home/q/gopath/src/my-sniffer/decode.go:38</span><br><span class="line">#	0x94e9bb	main.(*Sniffer).parse+0x37b			/home/q/gopath/src/my-sniffer/sniffer.go:88</span><br><span class="line"></span><br><span class="line">1: 54255616 [1: 54255616] @ 0x948a55 0x9464cf 0x94eb24 0x46abf1</span><br><span class="line">#	0x948a54	main.(*MySQLDecoder).decodeServerPacket+0xba4	/home/q/gopath/src/my-sniffer/decode.go:218</span><br><span class="line">#	0x9464ce	main.(*MySQLDecoder).DecodeServerPacket+0x13e	/home/q/gopath/src/my-sniffer/decode.go:27</span><br><span class="line">#	0x94eb23	main.(*Sniffer).parse+0x4e3			/home/q/gopath/src/my-sniffer/sniffer.go:83</span><br><span class="line"></span><br><span class="line">1: 43401216 [2: 86802432] @ 0x948a55 0x9464cf 0x94eb24 0x46abf1</span><br><span class="line">#	0x948a54	main.(*MySQLDecoder).decodeServerPacket+0xba4	/home/q/gopath/src/my-sniffer/decode.go:218</span><br><span class="line">#	0x9464ce	main.(*MySQLDecoder).DecodeServerPacket+0x13e	/home/q/gopath/src/my-sniffer/decode.go:27</span><br><span class="line">#	0x94eb23	main.(*Sniffer).parse+0x4e3			/home/q/gopath/src/my-sniffer/sniffer.go:83</span><br><span class="line"></span><br><span class="line">1: 34717696 [3: 104153088] @ 0x948a55 0x9464cf 0x94eb24 0x46abf1</span><br><span class="line">#	0x948a54	main.(*MySQLDecoder).decodeServerPacket+0xba4	/home/q/gopath/src/my-sniffer/decode.go:218</span><br><span class="line">#	0x9464ce	main.(*MySQLDecoder).DecodeServerPacket+0x13e	/home/q/gopath/src/my-sniffer/decode.go:27</span><br><span class="line">#	0x94eb23	main.(*Sniffer).parse+0x4e3			/home/q/gopath/src/my-sniffer/sniffer.go:83</span><br><span class="line"></span><br><span class="line">1: 196608 [1: 196608] @ 0x4f92eb 0x4fb0b2 0x9470ef 0x9470a3 0x947069 0x946625 0x94e9bc 0x46abf1</span><br><span class="line">#	0x4f92ea	log.(*Logger).Output+0x38a					/usr/lib/golang/src/log/log.go:168</span><br><span class="line">#	0x4fb0b1	my-sniffer/vendor/github.com/ngaut/log.(*logger).logf+0x1e1	/home/q/gopath/src/my-sniffer/vendor/github.com/ngaut/log/log.go:291</span><br><span class="line">#	0x9470ee	my-sniffer/vendor/github.com/ngaut/log.(*logger).Infof+0xaae	/home/q/gopath/src/my-sniffer/vendor/github.com/ngaut/log/log.go:333</span><br><span class="line">#	0x9470a2	my-sniffer/vendor/github.com/ngaut/log.Infof+0xa62		/home/q/gopath/src/my-sniffer/vendor/github.com/ngaut/log/log.go:84</span><br><span class="line">#	0x947068	main.(*MySQLDecoder).decodeClientPacket+0xa28			/home/q/gopath/src/my-sniffer/decode.go:118</span><br><span class="line">#	0x946624	main.(*MySQLDecoder).DecodeClientPacket+0x134			/home/q/gopath/src/my-sniffer/decode.go:38</span><br><span class="line">#	0x94e9bb	main.(*Sniffer).parse+0x37b					/home/q/gopath/src/my-sniffer/sniffer.go:88</span><br><span class="line"></span><br><span class="line">1: 163840 [1: 163840] @ 0x94fc46 0x9501dd 0x46abf1</span><br><span class="line">#	0x94fc45	main.(*Sniffer).manageChannel+0x4f5	/home/q/gopath/src/my-sniffer/sniffer.go:194</span><br><span class="line">#	0x9501dc	main.(*Sniffer).ServerCron+0x23c	/home/q/gopath/src/my-sniffer/sniffer.go:244</span><br><span class="line"></span><br><span class="line">1: 18432 [1: 18432] @ 0x87e913 0x87e956 0x93c68c 0x49f316 0x49ead4 0x87dc90 0x926511 0x93b533 0x938fad 0x46abf1</span><br><span class="line">#	0x87e912	my-sniffer/vendor/github.com/rcrowley/go-metrics.newExpDecaySampleHeap+0x72			/home/q/gopath/src/my-sniffer/vendor/github.com/rcrowley/go-metrics/sample.go:544</span><br><span class="line">#	0x87e955	my-sniffer/vendor/github.com/rcrowley/go-metrics.NewExpDecaySample+0xb5				/home/q/gopath/src/my-sniffer/vendor/github.com/rcrowley/go-metrics/sample.go:56</span><br><span class="line">#	0x93c68b	my-sniffer/vendor/github.com/Shopify/sarama.getOrRegisterHistogram.func1+0x3b			/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/metrics.go:21</span><br><span class="line">#	0x49f315	reflect.Value.call+0x5f5									/usr/lib/golang/src/reflect/value.go:460</span><br><span class="line">#	0x49ead3	reflect.Value.Call+0xb3										/usr/lib/golang/src/reflect/value.go:321</span><br><span class="line">#	0x87dc8f	my-sniffer/vendor/github.com/rcrowley/go-metrics.(*StandardRegistry).GetOrRegister+0x28f	/home/q/gopath/src/my-sniffer/vendor/github.com/rcrowley/go-metrics/registry.go:99</span><br><span class="line">#	0x926510	my-sniffer/vendor/github.com/Shopify/sarama.getOrRegisterHistogram+0x60				/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/metrics.go:20</span><br><span class="line">#	0x93b532	my-sniffer/vendor/github.com/Shopify/sarama.(*Broker).Open.func1+0x7a2				/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/broker.go:183</span><br><span class="line">#	0x938fac	my-sniffer/vendor/github.com/Shopify/sarama.withRecover+0x4c					/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/utils.go:45</span><br><span class="line"></span><br><span class="line">1: 16384 [8053: 131940352] @ 0x86f83a 0x7edb28 0x7edda3 0x46abf1</span><br><span class="line">#	0x86f839	my-sniffer/vendor/github.com/google/gopacket/pcap.(*Handle).ReadPacketData+0x189	/home/q/gopath/src/my-sniffer/vendor/github.com/google/gopacket/pcap/pcap.go:247</span><br><span class="line">#	0x7edb27	my-sniffer/vendor/github.com/google/gopacket.(*PacketSource).NextPacket+0x47		/home/q/gopath/src/my-sniffer/vendor/github.com/google/gopacket/packet.go:801</span><br><span class="line">#	0x7edda2	my-sniffer/vendor/github.com/google/gopacket.(*PacketSource).packetsToChannel+0x82	/home/q/gopath/src/my-sniffer/vendor/github.com/google/gopacket/packet.go:818</span><br><span class="line"></span><br><span class="line">1: 8192 [67: 548864] @ 0x946ccf 0x946625 0x94e9bc 0x46abf1</span><br><span class="line">#	0x946cce	main.(*MySQLDecoder).decodeClientPacket+0x68e	/home/q/gopath/src/my-sniffer/decode.go:101</span><br><span class="line">#	0x946624	main.(*MySQLDecoder).DecodeClientPacket+0x134	/home/q/gopath/src/my-sniffer/decode.go:38</span><br><span class="line">#	0x94e9bb	main.(*Sniffer).parse+0x37b			/home/q/gopath/src/my-sniffer/sniffer.go:88</span><br><span class="line"></span><br><span class="line">1: 896 [1: 896] @ 0x92582b 0x9184b5 0x8ff6a4 0x8fd520 0x90a374 0x9078c0 0x905987 0x8f630d 0x952977 0x952b28 0x46abf1</span><br><span class="line">#	0x92582a	my-sniffer/vendor/github.com/Shopify/sarama.(*MetadataResponse).decode+0xda	/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/metadata_response.go:169</span><br><span class="line">#	0x9184b4	my-sniffer/vendor/github.com/Shopify/sarama.versionedDecode+0xb4		/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/encoder_decoder.go:79</span><br><span class="line">#	0x8ff6a3	my-sniffer/vendor/github.com/Shopify/sarama.(*Broker).sendAndReceive+0x203	/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/broker.go:719</span><br><span class="line">#	0x8fd51f	my-sniffer/vendor/github.com/Shopify/sarama.(*Broker).GetMetadata+0x6f		/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/broker.go:287</span><br><span class="line">#	0x90a373	my-sniffer/vendor/github.com/Shopify/sarama.(*client).tryRefreshMetadata+0x4c3	/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/client.go:784</span><br><span class="line">#	0x9078bf	my-sniffer/vendor/github.com/Shopify/sarama.(*client).RefreshMetadata+0xaf	/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/client.go:442</span><br><span class="line">#	0x905986	my-sniffer/vendor/github.com/Shopify/sarama.NewClient+0x616			/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/client.go:159</span><br><span class="line">#	0x8f630c	my-sniffer/vendor/github.com/Shopify/sarama.NewAsyncProducer+0x4c		/home/q/gopath/src/my-sniffer/vendor/github.com/Shopify/sarama/async_producer.go:111</span><br><span class="line">#	0x952976	main.(*KafkaWriter).Producer+0xa6						/home/q/gopath/src/my-sniffer/write.go:144</span><br><span class="line">#	0x952b27	main.(*KafkaWriter).Write+0xc7							/home/q/gopath/src/my-sniffer/write.go:175</span><br><span class="line"></span><br><span class="line">1: 48 [12729: 610992] @ 0x41996d 0x7e5b9c 0x94c484 0x94e92a 0x46abf1</span><br><span class="line">#	0x7e5b9b	my-sniffer/vendor/github.com/streamrail/concurrent-map.New+0x7b	/home/q/gopath/src/my-sniffer/vendor/github.com/streamrail/concurrent-map/concurrent_map.go:24</span><br></pre></td></tr></table></figure>
+
+<p>764144560-258760704-207003648-165601280-54255616-43401216-34717696-196608-163840-18432-16384-8192-896-48=0</p>
+<p><a href="http://xxxx:8888/debug/pprof/heap?debug=1" target="_blank" rel="noopener">http://xxxx:8888/debug/pprof/heap?debug=1</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># runtime.MemStats</span><br><span class="line"># Alloc = 6911928</span><br><span class="line"># TotalAlloc = 19160914800</span><br><span class="line"># Sys = 72373071</span><br><span class="line"># Lookups = 0</span><br><span class="line"># Mallocs = 201435665</span><br><span class="line"># Frees = 201407065</span><br><span class="line"># HeapAlloc = 6911928</span><br><span class="line"># HeapSys = 65994752</span><br><span class="line"># HeapIdle = 56852480</span><br><span class="line"># HeapInuse = 9142272</span><br><span class="line"># HeapReleased = 52936704</span><br><span class="line"># HeapObjects = 28600</span><br><span class="line"># Stack = 1114112 / 1114112</span><br><span class="line"># MSpan = 106488 / 196608</span><br><span class="line"># MCache = 6944 / 65536</span><br><span class="line"># BuckHashSys = 1616868</span><br><span class="line"># GCSys = 2394112</span><br><span class="line"># OtherSys = 991083</span><br><span class="line"># NextGC = 11362960</span><br><span class="line"># LastGC = 1574322082513879647</span><br><span class="line"># PauseNs = [189598 49953 92502 32422 38027 82085 100885 229316 76361 72260 78828 39619 149152 46332 70705 17145 16763 58004 64772 28182 78964 723741 61377 82393 95501 14008 20076 61063 43738 26423 80042 38541 71009 56981 28659 28020 71551 31313 98150 73792 79719 23929 99861 22701 120759 22477 68964 42352 11666 27739 59629 43175 31219 30039 81174 27849 25645 151912 49662 10258 22584 75402 63296 13006 43117 178897 31601 140531 28393 122639 85584 101906 10499 61339 126044 62926 16444 23959 49294 58229 18315 22263 42363 11487 13774 64256 78467 55070 17849 123218 49329 41235 15583 27532 22365 138046 143495 82689 83776 22407 16361 72739 30012 88179 53863 57042 19235 36012 49999 10093 150366 57210 74770 33872 17570 80342 33627 130745 45451 44563 68349 91948 80106 96768 123250 68130 37997 85617 52326 105215 79923 59876 82770 34976 71308 75440 74769 52477 81582 28035 26408 81097 51790 87575 83188 97461 74315 14031 63507 60049 70288 26258 30603 70501 25757 76272 54131 11315 15774 47247 28143 16491 44517 397021 109310 75557 38932 54458 57195 101318 13764 12970 61384 70465 74954 34697 74424 49610 546274 37799 21334 23761 26868 25757 67495 37693 48941 31569 11449 49646 26411 28535 17298 60990 14267 45562 81123 95301 51616 41552 68802 69589 80352 30789 85043 150628 9825 48716 31399 17660 90074 29268 58238 66220 21357 36999 83608 49139 10383 68450 52035 18896 22419 82571 20467 20933 49959 50114 24937 62938 17763 70881 29038 88511 33083 12115 39858 55640 25758 85965 25077 163754 28138 14249 57188 80709 53402 62238 78211 51991 12517 70669 66887 94401 65900 22837]</span><br><span class="line"># PauseEnd = [1574322080390712046 1574322080402601456 1574322080417597815 1574322080430075401 1574322080448743679 1574322080481843308 1574322080503285042 1574322080521567097 1574322080537619917 1574322080559570756 1574322080588332615 1574322080605197934 1574322080618694803 1574322080636061669 1574322080657184934 1574322080684348212 1574322080705329009 1574322080719469909 1574322080736620249 1574322080755391983 1574322080777142378 1574322080801636089 1574322080825558326 1574322080836895171 1574322080849027987 1574322080865581420 1574322080878967168 1574322080900290388 1574322080919367030 1574322080940890269 1574322080974232859 1574322080988857538 1574322081002500813 1574322081017118019 1574322081035119959 1574322081052533660 1574322081065488769 1574322081083060618 1574322081103290742 1574322081117706184 1574322081132701465 1574322081153895098 1574322081177445475 1574322081196174521 1574322081209746571 1574322081223541458 1574322081238549400 1574322081253663527 1574322081279011933 1574322081295221475 1574322081312807380 1574322081329454242 1574322081349673665 1574322081382931596 1574322081398104595 1574322081411675607 1574322081423663058 1574322081435591228 1574322081452690208 1574322081482717475 1574322081506495585 1574322081523191972 1574322081539546871 1574322081560526634 1574322081585884075 1574322081604924504 1574322081620393778 1574322081636910237 1574322081649709918 1574322081671440093 1574322081692351239 1574322081714954880 1574322081736383517 1574322081759477966 1574322081780396845 1574322081809275402 1574322081832646903 1574322081844973974 1574322081859919543 1574322081878146929 1574322081894049877 1574322081918470164 1574322081942839690 1574322081962122724 1574322081973635354 1574322081991546597 1574322082006185907 1574322082020228404 1574322082043356433 1574322082062069998 1574322082092364700 1574322082111501695 1574322082127799248 1574322082141316859 1574322082157849501 1574322082177158998 1574322082190978605 1574322082206080529 1574322082220254360 1574322082238405644 1574322082255306291 1574322082287696098 1574322082300844344 1574322082315626425 1574322082327934125 1574322082342279708 1574322082359464097 1574322082403441800 1574322082421731674 1574322082447831735 1574322082472752623 1574322082486526178 1574322082502363044 1574322082513879647 1574322077489750221 1574322077502583900 1574322077515159633 1574322077531276251 1574322077553955480 1574322077574258541 1574322077596114790 1574322077613266937 1574322077625509198 1574322077640497140 1574322077674765140 1574322077702541016 1574322077721769598 1574322077738605211 1574322077775075178 1574322077799454347 1574322077822280173 1574322077835197697 1574322077850735655 1574322077882828316 1574322077916692835 1574322077938708711 1574322077973382082 1574322077990437988 1574322078006060345 1574322078018689112 1574322078030868740 1574322078048097314 1574322078077412649 1574322078099010773 1574322078116051403 1574322078133467101 1574322078145929683 1574322078164972882 1574322078193059776 1574322078218462494 1574322078243964527 1574322078271299425 1574322078296295965 1574322078311903980 1574322078323289651 1574322078340564935 1574322078355041152 1574322078379113651 1574322078397064652 1574322078410283359 1574322078425451781 1574322078461478242 1574322078489565281 1574322078509050699 1574322078520379771 1574322078534615753 1574322078551371364 1574322078569855252 1574322078590158746 1574322078610728096 1574322078632052560 1574322078653213142 1574322078689313302 1574322078706298386 1574322078719347046 1574322078733274403 1574322078757892267 1574322078807458635 1574322078829797069 1574322078847526699 1574322078863212705 1574322078893213248 1574322078912050577 1574322078932015146 1574322078952862198 1574322078968937939 1574322078983422259 1574322079003764382 1574322079024587932 1574322079077176784 1574322079096946991 1574322079115658208 1574322079129207783 1574322079143182694 1574322079157474200 1574322079193690884 1574322079206345901 1574322079226361253 1574322079242177073 1574322079260978719 1574322079314650080 1574322079329493542 1574322079345056294 1574322079368803814 1574322079387376484 1574322079408767141 1574322079428095837 1574322079449106465 1574322079467998999 1574322079485391468 1574322079499939713 1574322079512307848 1574322079524423908 1574322079544692641 1574322079572892982 1574322079601073467 1574322079616249315 1574322079633470438 1574322079647391778 1574322079672249349 1574322079693840219 1574322079710479969 1574322079723083791 1574322079740765000 1574322079761293570 1574322079789464150 1574322079807361784 1574322079829103390 1574322079849831253 1574322079871286517 1574322079892161883 1574322079912346685 1574322079929479039 1574322079944339751 1574322079983735126 1574322079996146439 1574322080012304729 1574322080025186914 1574322080042884286 1574322080075591239 1574322080092800684 1574322080109987218 1574322080130215766 1574322080148307817 1574322080166223553 1574322080184252577 1574322080201494803 1574322080216216121 1574322080238095235 1574322080254460660 1574322080274530708 1574322080292243817 1574322080311767013 1574322080326532899 1574322080345139037 1574322080374701044]</span><br><span class="line"># NumGC = 7794</span><br><span class="line"># NumForcedGC = 0</span><br><span class="line"># GCCPUFraction = 0.10706624962106928</span><br><span class="line"># DebugGC = false</span><br></pre></td></tr></table></figure>
+
+<p>结果分析:</p>
+<h3 id="sys"><a href="#sys" class="headerlink" title="sys"></a>sys</h3><p>Sys 是下面列出的 XSys 字段的综合。Sys 维护着为 Go 运行时预留的虚拟内存空间地址，里面包含了：堆、栈，以及其他内部数据结构。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Sys(72373071) = HeapSys(65994752)+ GCSys(2394112) + OtherSys(991083) + BuckHashSys(1616868)+ StackSys(1114112) + MSpanSys(196608) + MCacheSys(65536)</span><br><span class="line"></span><br><span class="line">Stack = 1114112(StackInuse) / 1114112(StackSys)</span><br><span class="line">MSpan = 106488(MSpanInuse) / 196608(MSpanSys)</span><br><span class="line">MCache = 6944(MCacheInuse) / 65536(MCacheSys)</span><br></pre></td></tr></table></figure>
+
+<p>HeapSys: 从操作系统获得的堆内存大小,虚拟内存空间为堆保留的大小，包括还没有被使用的<br>StackSys: 从操作系统取得的栈内存大小<br>MSpanSys: 从操作系统为mspan获取的内存字节数<br>MCacheSys: 从操作系统为mcache获取的内存字节数<br>BuckHashSys: 在profiling bucket hash tables中的内存字节数<br>GCSys: 垃圾回收元数据使用的内存字节数<br>OtherSys: off-heap的杂项内存字节数.</p>
+<h3 id="HeapSys"><a href="#HeapSys" class="headerlink" title="HeapSys"></a>HeapSys</h3><p>HeapSys：程序向应用程序申请的内存<br>HeapAlloc：堆上目前分配的内存<br>HeapIdle：堆上目前没有使用的内存<br>HeapReleased：回收到操作系统的内存</p>
+<ul>
+<li>HeapSys == HeapIdle + HeapInuse 代表了作为堆用途的内存空间。堆内存以Span为单元进行管理，从Span中分配内存给对象，分为Idle（没有分配对象）和Inuse（有对象）两种类型。</li>
+<li>HeapAlloc == Alloc 代表了堆上的未回收对象的实际占用空间（包括可回收部分）。注意，这和HeapInuse是有区别的。HeapInuse代表了分配对象的Span的大小，而HeapAlloc代表了实际对象的大小，因此可以认为一个是粗统计，一个是细统计，HeapAlloc &lt;= HeapInuse</li>
+<li>StackSys 代表协程栈大小，其实是Stack Span的大小，可以和Idle Span互相转换。不同版本Go语言的最小协程栈大小是不同的，这次问题里面的协程栈大小为8K，因此30万协程2.4G，和图中的Stack部分相符，但还不足以解释剩下6G的堆内存占用量。</li>
 </ul>
-<h3 id="编译生产go"><a href="#编译生产go" class="headerlink" title="编译生产go"></a>编译生产go</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goyacc -o sqlTest.go sql_test.y</span><br><span class="line">gofmt -w sqlTest.go</span><br></pre></td></tr></table></figure>
+<h2 id="命令行pprof命令"><a href="#命令行pprof命令" class="headerlink" title="命令行pprof命令"></a>命令行pprof命令</h2><p>查看30秒钟的CPU状态信息(执行后会卡30s,等就行了)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> tool pprof http:<span class="comment">//localhost:6060/debug/pprof/profile</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="EBNF文法"><a href="#EBNF文法" class="headerlink" title="EBNF文法"></a>EBNF文法</h2><ol>
-<li><a href="https://github.com/cznic/ebnf2y" target="_blank" rel="noopener">ebnf2y</a>安装<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;github.com/cznic/ebnfutil&quot;</span><br><span class="line">&quot;github.com/cznic/strutil&quot;</span><br><span class="line">替换成</span><br><span class="line">&quot;modernc.org/ebnfutil&quot;</span><br><span class="line">&quot;modernc.org/strutil&quot;</span><br></pre></td></tr></table></figure>
+<p>查看堆状态信息</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> tool pprof http:<span class="comment">//localhost:6060/debug/pprof/heap</span></span><br></pre></td></tr></table></figure>
 
+<p>-source 命令配置源码地址[可以定位到具体的代码行]</p>
+<p>top,list 等常用命令</p>
+<p><a href="https://cloud.tencent.com/developer/section/1143647" target="_blank" rel="noopener">https://cloud.tencent.com/developer/section/1143647</a></p>
+<p><a href="https://www.dazhuanlan.com/2019/09/29/5d907f1435d79/" target="_blank" rel="noopener">https://www.dazhuanlan.com/2019/09/29/5d907f1435d79/</a><br><a href="https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so" target="_blank" rel="noopener">https://colobu.com/2019/08/28/go-memory-leak-i-dont-think-so</a></p>
+<p>Go字符串的内存布局</p>
+<p><a href="https://blog.csdn.net/pplin/article/details/70241075" target="_blank" rel="noopener">https://blog.csdn.net/pplin/article/details/70241075</a><br><a href="https://draveness.me/golang/datastructure/golang-string.html" target="_blank" rel="noopener">https://draveness.me/golang/datastructure/golang-string.html</a></p>
+<p><a href="https://i6448038.github.io/2019/05/18/golang-mem/" target="_blank" rel="noopener">https://i6448038.github.io/2019/05/18/golang-mem/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/分布式/MIT 6.824/论文/MapReduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/分布式/MIT 6.824/论文/MapReduce/" itemprop="url">MapReduce</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-18T21:43:33+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MapReduce/" itemprop="url" rel="index">
+                    <span itemprop="name">MapReduce</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
+<h2 id="MapReduce-入门"><a href="#MapReduce-入门" class="headerlink" title="MapReduce 入门"></a>MapReduce 入门</h2><p>MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算<br><a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">python map函数</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(x)</span> :</span>            <span class="comment"># 计算平方数</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(square, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表各个元素的平方</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提供了两个列表，对相同位置的列表数据进行相加</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line">[<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/python/python-func-reduce.html" target="_blank" rel="noopener">Python reduce() 函数</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span> :</span>            <span class="comment"># 两数相加</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x + y</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(add, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表和：1+2+3+4+5</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(<span class="keyword">lambda</span> x, y: x+y, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://dbaplus.cn/news-21-1277-1.html" target="_blank" rel="noopener">7个实例全面掌握Hadoop MapReduce</a></p>
+<h2 id="MapReduce进阶"><a href="#MapReduce进阶" class="headerlink" title="MapReduce进阶"></a>MapReduce进阶</h2><h3 id="MapReduce工作过程"><a href="#MapReduce工作过程" class="headerlink" title="MapReduce工作过程"></a>MapReduce工作过程</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png" alt></p>
+<ol>
+<li>MapReduce框架对输入的文件数据分成M片，每份数据的大小为16~64MB（可由用户配置）。</li>
+<li>在多台机器上开始运行User Program：包括一个master、多个map worker和多个reduce worker。</li>
+<li>master主要负责map worker和reduce worker的状态管理和任务分发。</li>
+<li>map worker从GFS读取分配到的文件数据，并进行相应的处理。MapReduce框架的调度会尽量使map worker运行的机器与数据靠近，以提高数据传输的效率。所以，数据传输可以是本地，也可能是网络。</li>
+<li>map worker的输出缓存在内存中，并定期刷到本地磁盘上。这些中间数据的位置信息会通过心跳信息告诉master，master记下这些信息后，通知reduce worker。数据存储在本地。</li>
+<li>reduce worker通过RPC从map worker读取需要的中间数据。数据通过网络传输。</li>
+<li>reduce worker对中间数据进行“合并”处理后，输出结果。</li>
+</ol>
+<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>MapReduce 如何容灾是其最重要的部分，对于故障我们可以分为 worker故障和master故障，worker故障又可以分为 map worker和reduce worker。</p>
+<h4 id="Worker故障"><a href="#Worker故障" class="headerlink" title="Worker故障"></a>Worker故障</h4><p>Master 通过心跳的机制来检测worker故障</p>
+<ul>
+<li>map worker<ul>
+<li>map任务执行完成后宕机：因为中间数据存储在本地磁盘，需要重新执行。</li>
+<li>map任务执行完成前宕机：需要重新执行</li>
+</ul>
+</li>
+<li>reduce worker<ul>
+<li>reduce任务执行完成后宕机：因为数据存储在GFS，不需要重新执行</li>
+<li>reduce任务执行完成前宕机：需要重新执行，输出文件可以覆盖原来的（文件名一样）</li>
+</ul>
+</li>
+</ul>
+<h4 id="Master故障"><a href="#Master故障" class="headerlink" title="Master故障"></a>Master故障</h4><p>master宕机，任务失败,可以简单的通过周期写快照的方式来处理master故障</p>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
+<li>局部性：MapReduce用于大数据集的处理，其主要瓶颈是网络带宽。通过优化调度，可以让执行MapReduce任务的机器尽可能靠近机器。（同一机器==&gt;同一机架==&gt;同一机房…）</li>
+<li>任务粒度：执行MapReduce任务的过程其实就是M个Map任务+R个Reduce任务。M和R必须比机器数大很多才会有利于负载均衡</li>
+<li>备份任务：当MapReduce任务即将执行完成时，MapReduce框架会针对那些还在执行的任务，启动一个对应的备份任务。之后，只要主任务或备份任务执行完成，MapReduce任务就完成了。这样可以有效避免整个MapReduce任务被少部分比较慢的机器拖死</li>
+</ul>
+<h3 id="mapReduce试用范围"><a href="#mapReduce试用范围" class="headerlink" title="mapReduce试用范围"></a>mapReduce试用范围</h3><ul>
+<li>要想使用mapreduce首先要确保输入可以相对独立的进行计算(map),数据之间没有计算依赖关系</li>
+</ul>
+<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><ol>
+<li><p>一个mapreduce中,reduce是否需要等待所有mapper执行后才执行?<br>需要,在 mapper 结束之前，reducer 很难知道属于一个 key 的数据是否收集完整，因此如果过早地开始 reduce，无法保值结果的正确性</p>
+</li>
+<li><p>如果一个mapper执行特别慢会拖慢整个任务(长尾现象)<br>为了应对长尾现象（一个特别慢的子任务拖慢整个任务），MapReduce提供了 Backup Task的机制：当一个MapReduce接近结束时，master 对还处理 in-progress状态的task额外的调度备份执行，当primary和backup中一个执行成功就标记成功。</p>
+</li>
+<li><p>Mapreduce中Map与Reduce任务的个数如何确定<br><a href="https://blog.csdn.net/lb812913059/article/details/79898818" target="_blank" rel="noopener">Mapreduce中Map与Reduce任务的个数</a></p>
 </li>
 </ol>
-<p>执行make</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a><br><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a><br><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a><br><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/操作系统/进程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/18/操作系统/进程/" itemprop="url">进程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-18T17:04:07+08:00">
+                2019-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/操作系统/" itemprop="url" rel="index">
+                    <span itemprop="name">操作系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="什么是守护进程"><a href="#什么是守护进程" class="headerlink" title="什么是守护进程"></a>什么是守护进程</h2><p>简单说,守护进程是在后台运行不受终端控制的进程</p>
+<h2 id="守护进程与孤儿进程区别联系"><a href="#守护进程与孤儿进程区别联系" class="headerlink" title="守护进程与孤儿进程区别联系"></a>守护进程与孤儿进程区别联系</h2><ul>
+<li>孤儿进程是因为父进程异常结束了，然后被1号进程init收养。守护进程是创建守护进程时有意把父进程结束，然后被1号进程init收养,</li>
+<li>虽然他们都会被init进程收养，但是他们是不一样的进程。守护进程会随着系统的启动默默地在后台运行，周期地完成某些任务或者等待某个事件的发生，直到系统关闭守护进程才会结束。孤儿进程则不是，孤儿进程会因为完成使命后结束运行。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/14/分布式/MIT 6.824/论文/Hadoop中的mapReduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/14/分布式/MIT 6.824/论文/Hadoop中的mapReduce/" itemprop="url">Hadoop的MapReduce</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-14T10:58:48+08:00">
+                2019-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
+                    <span itemprop="name">MT6.248</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Hadoop的MapReduce是对MapReduce的工程实践,做了大量的优化</p>
+<ol>
+<li>MapReduce中排序发生在哪几个阶段？？这些排序是否可以避免，为什么？？<br>一个MapReduce作业由Map阶段和Reduce阶段两部分组成，这两阶段会对数据排序,</li>
+</ol>
+<ul>
+<li>Map Task会在本地磁盘输出一个按照key排序（采用的是快速排序）的文件( 实际上Map阶段的排序就是为了减轻Reduce端排序负载)</li>
+<li>在Reduce阶段，每个Reduce Task会对收到的数据排序,</li>
+</ul>
 <ol start="2">
-<li>EBNF文法</li>
+<li>如何排序,用什么排序算法</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">::= 表示定义；</span><br><span class="line">&lt; &gt; 尖括号里的内容表示必选内容；</span><br><span class="line">[ ] 中是可选项；</span><br><span class="line">&quot; &quot; 双引号里的内容表示字符；</span><br><span class="line">| 竖线两边的是可选内容，相当于or；</span><br><span class="line">* 表示零个或者多个……</span><br><span class="line">+ 表示一个或者多个……</span><br></pre></td></tr></table></figure>
-
-<p>解释:</p>
-<p>$$符号可引用产生式左部非终结符的属性值，而$i则可以引用产生式右部第i个文法符号的属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">into_table_name:</span><br><span class="line">  INTO table_name</span><br><span class="line">  &#123;</span><br><span class="line">    $$ = $2</span><br><span class="line">  &#125;</span><br><span class="line">| table_name</span><br><span class="line">  &#123;</span><br><span class="line">    $$ = $1</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>即$2代表table_name,赋值给$$</p>
-</blockquote>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://chyroc.cn//posts/anko-ii/" target="_blank" rel="noopener">anko 源代码阅读之 go 的 lex/yacc</a><br><a href="https://blog.csdn.net/wp1603710463/article/details/50365640" target="_blank" rel="noopener">YACC（BISON）使用指南</a><br><a href="https://segmentfault.com/a/1190000000396608" target="_blank" rel="noopener">如何使用Lex/YACC</a><br><a href="https://zhuanlan.zhihu.com/p/34770765" target="_blank" rel="noopener">TiDB 源码阅读系列文章（五）TiDB SQL Parser 的实现</a><br><a href="https://blog.csdn.net/lin_strong/article/details/78583543" target="_blank" rel="noopener">扩展巴科斯范式(EBNF)简介</a><br><a href="https://lyric.im/c/the-craft-of-selfteaching/Part.3.B.5.bnf-ebnf-pebnf" target="_blank" rel="noopener">BNF 以及 EBNF</a></p>
 
           
         
@@ -648,7 +1204,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/16/kafka/0.start/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/分布式/MIT 6.824/Lab 2: Raft/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -667,7 +1223,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/16/kafka/0.start/" itemprop="url">start</a></h1>
+                <a class="post-title-link" href="/2019/11/06/分布式/MIT 6.824/Lab 2: Raft/" itemprop="url">Lab 2: Raft</a></h1>
         
 
         <div class="post-meta">
@@ -679,8 +1235,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-16T10:58:17+08:00">
-                2019-10-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T19:26:24+08:00">
+                2019-11-06
               </time>
             
 
@@ -702,8 +1258,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/kafka/" itemprop="url" rel="index">
-                    <span itemprop="name">kafka</span>
+                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
+                    <span itemprop="name">MT6.248</span>
                   </a>
                 </span>
 
@@ -772,945 +1328,14 @@
       
         
           
-            <p><a href="https://www.cnblogs.com/QuestionsZhang/p/10514971.html" target="_blank" rel="noopener">Kafka Tool</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/15/leetcode/开始/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/15/leetcode/开始/" itemprop="url">开始</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-15T19:56:44+08:00">
-                2019-10-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐:"></a>推荐:</h2><p><a href="https://zxi.mytechroad.com/blog/leetcode-list/" target="_blank" rel="noopener">Huahua’s Tech Road</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/八大排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/八大排序/" itemprop="url">八大排序总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T11:15:55+08:00">
-                2019-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="八大排序"><a href="#八大排序" class="headerlink" title="八大排序"></a>八大排序</h1><p><a href="https://blog.csdn.net/foreverling/article/details/43798223#_147" target="_blank" rel="noopener">https://blog.csdn.net/foreverling/article/details/43798223#_147</a></p>
-<h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><ul>
-<li>技巧<br>不要使用断言,java的断言是默认关闭的<br><a href="https://blog.csdn.net/XiufengWu/article/details/78108954" target="_blank" rel="noopener">java使用assert断言时不起作用的解决办法</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/5.插入排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/5.插入排序/" itemprop="url">插入排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T11:12:55+08:00">
-                2019-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.llnn.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 插入排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> llnn</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-09-26 18:01</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InsertSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">51</span>, <span class="number">46</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">82</span>, <span class="number">30</span>, <span class="number">77</span>, <span class="number">50</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">"待排序:"</span> + Arrays.toString(a));</span><br><span class="line">        insertSort(a);</span><br><span class="line">        System.out.println(<span class="string">"结果:"</span> + Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = a[i];</span><br><span class="line">            <span class="keyword">int</span> j = i;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; a[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">                a[j] = a[j - <span class="number">1</span>];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            a[j] = temp;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/4.冒泡排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/4.冒泡排序/" itemprop="url">冒泡排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T11:12:18+08:00">
-                2019-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>##算法步骤</p>
-<p>1）比较相邻的元素。如果第一个比第二个大，就交换他们两个。</p>
-<p>2）对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</p>
-<p>3）针对所有的元素重复以上的步骤，除了最后一个。</p>
-<p>4）持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.llnn.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 冒泡排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> llnn</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-09-26 17:41</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">51</span>, <span class="number">46</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">82</span>, <span class="number">30</span>, <span class="number">77</span>, <span class="number">50</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">"待排序:"</span> + Arrays.toString(a));</span><br><span class="line">        bubbleSort(a);</span><br><span class="line">        System.out.println(<span class="string">"结果:"</span> + Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= a.length - <span class="number">2</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt;= a.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[i] &gt; a[j]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = a[i];</span><br><span class="line">                    a[i] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.jianshu.com/p/ad84fd4dd4e2" target="_blank" rel="noopener">https://www.jianshu.com/p/ad84fd4dd4e2</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/3.堆排序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/3.堆排序/" itemprop="url">堆排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T11:11:21+08:00">
-                2019-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><p>最大堆,最小堆:</p>
-<ul>
-<li>最大堆：<br>堆的最大元素存放在根结点中。并且，在任一子树中，该子树所包含的所有结点的值都不大于该子树根结点的值。即：A[PARENT(i) ≥ A[i]。堆排序使用最大堆。</li>
-<li>最小堆：<br>堆的最小元素存放在根结点中。并且，在任一子树中，该子树所包含的所有结点的值都不小于该子树根结点的值。即：A[PARENT(i) ≤ A[i]。最小堆常用来构造优先队列。</li>
-</ul>
-<p>将数组A看成一颗近似完全二叉树:</p>
-<ul>
-<li>树的第一个根节点是A[0],最后一个根节点A[len(A)//2 - 1]</li>
-<li>假定一个结点下标是i,则它的父节点,左孩子,右孩子下标如下:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LEFT(i) : return 2i+1 </span><br><span class="line">RIGHT(i) : return 2i+2</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+            <p><a href="https://www.zhihu.com/question/54095779" target="_blank" rel="noopener">https://www.zhihu.com/question/54095779</a></p>
+<p><a href="https://pdos.csail.mit.edu/6.824/labs/lab-raft.html" target="_blank" rel="noopener">6.824 Lab 2: Raft</a></p>
 <ol>
-<li>如何建最大堆</li>
-<li>如何维护最大堆</li>
-<li>排序</li>
+<li>是否需要存角色的变量</li>
+<li>任期号为什么会变</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.llnn.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 堆排序,最大堆</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> llnn</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-09-26 12:57</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> heapSize;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">51</span>, <span class="number">46</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">82</span>, <span class="number">30</span>, <span class="number">77</span>, <span class="number">50</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">"待排序:"</span> + Arrays.toString(a));</span><br><span class="line">        heapSort(a);</span><br><span class="line">        System.out.println(<span class="string">"结果:"</span> + Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span>[] a)</span> </span>&#123;</span><br><span class="line">        heapSize = a.length;</span><br><span class="line">        buildMaxHeap(a);</span><br><span class="line">        System.out.println(<span class="string">"最大堆:"</span> + Arrays.toString(a));</span><br><span class="line">        System.out.println(<span class="string">"=============="</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = a.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = a[<span class="number">0</span>];</span><br><span class="line">            a[<span class="number">0</span>] = a[i];</span><br><span class="line">            a[i] = temp;</span><br><span class="line">            <span class="comment">// 调整数组大小</span></span><br><span class="line">            heapSize--;</span><br><span class="line">            adjustHeap(a, <span class="number">0</span>);</span><br><span class="line">            System.out.println(Arrays.toString(a));</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"=============="</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">buildMaxHeap</span><span class="params">(<span class="keyword">int</span>[] a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = heapSize / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            adjustHeap(a, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">adjustHeap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> large = root;</span><br><span class="line">        <span class="keyword">int</span> leftChild = <span class="number">2</span> * root + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> rightChild = <span class="number">2</span> * root + <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 最小堆 a[leftChild] &lt; a[root]</span></span><br><span class="line">        <span class="keyword">if</span> (leftChild &lt; heapSize - <span class="number">1</span> &amp;&amp; a[leftChild] &gt; a[root]) &#123;</span><br><span class="line">            large = leftChild;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 最小堆 a[leftChild] &lt; a[root]</span></span><br><span class="line">        <span class="keyword">if</span> (rightChild &lt; heapSize - <span class="number">1</span> &amp;&amp; a[rightChild] &gt; a[large]) &#123;</span><br><span class="line">            large = rightChild;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (large != root) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = a[root];</span><br><span class="line">            a[root] = a[large];</span><br><span class="line">            a[large] = temp;</span><br><span class="line">            adjustHeap(a, large);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">待排序:[51, 46, 20, 18, 65, 97, 82, 30, 77, 50]</span><br><span class="line">最大堆:[97, 77, 82, 46, 65, 20, 51, 30, 18, 50]</span><br><span class="line">==============</span><br><span class="line">[82, 77, 51, 46, 65, 20, 50, 30, 18, 97]</span><br><span class="line">[77, 65, 51, 46, 18, 20, 50, 30, 82, 97]</span><br><span class="line">[65, 46, 51, 30, 18, 20, 50, 77, 82, 97]</span><br><span class="line">[51, 46, 50, 30, 18, 20, 65, 77, 82, 97]</span><br><span class="line">[50, 46, 20, 30, 18, 51, 65, 77, 82, 97]</span><br><span class="line">[46, 18, 20, 30, 50, 51, 65, 77, 82, 97]</span><br><span class="line">[30, 18, 20, 46, 50, 51, 65, 77, 82, 97]</span><br><span class="line">[20, 18, 30, 46, 50, 51, 65, 77, 82, 97]</span><br><span class="line">[18, 20, 30, 46, 50, 51, 65, 77, 82, 97]</span><br><span class="line">[18, 20, 30, 46, 50, 51, 65, 77, 82, 97]</span><br><span class="line">==============</span><br><span class="line">结果:[18, 20, 30, 46, 50, 51, 65, 77, 82, 97]</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://ictar.xyz/2015/12/07/%E4%B9%9D%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0%E4%B9%8B%E5%A0%86%E6%8E%92%E5%BA%8F/" target="_blank" rel="noopener">https://ictar.xyz/2015/12/07/%E4%B9%9D%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0%E4%B9%8B%E5%A0%86%E6%8E%92%E5%BA%8F/</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32049139" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32049139</a><br><a href="https://github.com/maemual/raft-zh_cn" target="_blank" rel="noopener">https://github.com/maemual/raft-zh_cn</a></p>
+<p><a href="https://github.com/aQuaYi/MIT-6.824-Distributed-Systems" target="_blank" rel="noopener">https://github.com/aQuaYi/MIT-6.824-Distributed-Systems</a></p>
 
           
         
@@ -1759,7 +1384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/2.归并排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/go/defer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -1778,7 +1403,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/2.归并排序/" itemprop="url">归并排序</a></h1>
+                <a class="post-title-link" href="/2019/11/04/go/defer/" itemprop="url">defer</a></h1>
         
 
         <div class="post-meta">
@@ -1790,8 +1415,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T11:08:50+08:00">
-                2019-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T21:22:42+08:00">
+                2019-11-04
               </time>
             
 
@@ -1813,19 +1438,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">go</span>
                   </a>
                 </span>
 
@@ -1894,26 +1508,10 @@
       
         
           
-            <h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>归并排序基本原理是合并两个已排序的数组<br><a href="https://www.cnblogs.com/chengxiao/p/6194356.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengxiao/p/6194356.html</a></p>
-<p>递归实现，自顶向下,between top down merge:<br><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20190925170841.png" alt></p>
-<p>非递归,自底向上,bottom up merge sort:<br><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img1233.png" alt></p>
-<p>递归就是把大问题拆解成一个个小问题,最后拆成两两相邻元素比较.</p>
-<p>java实现:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.llnn.sort;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 归并排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> llnn</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-09-23 21:47</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeSort</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> mid, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[high - low + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> l = low;</span><br><span class="line">        <span class="comment">// 这里为什么要加1</span></span><br><span class="line">        <span class="keyword">int</span> h = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 为什么要小于等于</span></span><br><span class="line">        <span class="keyword">while</span> (l &lt;= mid &amp;&amp; h &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[l] &lt; a[h]) &#123;</span><br><span class="line">                temp[k++] = a[l++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                temp[k++] = a[h++];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 因为要遍历到最后一个元素,所以是小于等于</span></span><br><span class="line">        <span class="keyword">while</span> (l &lt;= mid) &#123;</span><br><span class="line">            temp[k++] = a[l++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (h &lt;= high) &#123;</span><br><span class="line">            temp[k++] = a[h++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (temp.length &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            System.arraycopy(temp, <span class="number">0</span>, a, low, temp.length);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">          递归实现，自顶向下,between top down merge</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">if</span> (low &gt;= high) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> mid = (low + high) / <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 为啥high是mid,不是mid -1</span></span><br><span class="line">        mergeSort(a, low, mid);</span><br><span class="line">        mergeSort(a, mid + <span class="number">1</span>, high);</span><br><span class="line">        merge(a, low, mid, high);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort2</span><span class="params">(<span class="keyword">int</span>[] a)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">          非递归,自底向上,bottom up merge sort</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">int</span> N = a.length;</span><br><span class="line">        <span class="comment">/* 第一层循环 表示归并排序子数组的长度 从1 , 2 , 4 ,8 ..... */</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> sz = <span class="number">1</span>; sz &lt; N; sz *= <span class="number">2</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"sz"</span> + sz);</span><br><span class="line">            <span class="comment">//第二层循环表示每两个自数组之间归并排序，确定起始和终止INDEX</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> lo = <span class="number">0</span>; lo &lt; N - sz; lo += <span class="number">2</span> * sz) &#123;</span><br><span class="line">                System.out.println(<span class="string">"low:"</span> + lo + <span class="string">"mid"</span> + (lo + sz - <span class="number">1</span>) + <span class="string">"high"</span> + Math.min(lo + <span class="number">2</span> * sz - <span class="number">1</span>, N - <span class="number">1</span>));</span><br><span class="line">                merge(a, lo, lo + sz - <span class="number">1</span>, Math.min(lo + sz + sz - <span class="number">1</span>, N - <span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">51</span>, <span class="number">46</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">82</span>, <span class="number">30</span>, <span class="number">77</span>, <span class="number">50</span>&#125;;</span><br><span class="line">        mergeSort(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line"><span class="comment">//        mergeSort2(a);</span></span><br><span class="line">        System.out.println(<span class="string">"排序结果："</span> + Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>python实现:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(arr, low, mid, high)</span>:</span></span><br><span class="line">    l = low</span><br><span class="line">    h = mid + <span class="number">1</span></span><br><span class="line">    temp = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= mid <span class="keyword">and</span> h &lt;= high:</span><br><span class="line">        <span class="keyword">if</span> arr[l] &lt; arr[h]:</span><br><span class="line">            temp.append(arr[l])</span><br><span class="line">            l += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp.append(arr[h])</span><br><span class="line">            h += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= mid:</span><br><span class="line">        temp.append(arr[l])</span><br><span class="line">        l += <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> h &lt;= high:</span><br><span class="line">        temp.append(arr[h])</span><br><span class="line">        h += <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> temp:</span><br><span class="line">        arr[low] = i</span><br><span class="line">        low += <span class="number">1</span></span><br><span class="line">    print(arr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">(arr, low, high)</span>:</span></span><br><span class="line">    <span class="comment"># 为啥是大于等于</span></span><br><span class="line">    <span class="keyword">if</span> low &gt;= high:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = int((low + high) / <span class="number">2</span>)</span><br><span class="line">    <span class="comment"># 为啥high是mid,不是mid-1</span></span><br><span class="line">    merge_sort(arr, low, mid)</span><br><span class="line">    merge_sort(arr, mid + <span class="number">1</span>, high)</span><br><span class="line">    merge(arr, low, mid, high)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort1</span><span class="params">(arr)</span>:</span></span><br><span class="line">    size = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> size &lt; len(arr):</span><br><span class="line">        low = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> low &lt; len(arr) - size:</span><br><span class="line">            high = min(<span class="number">2</span> * size + low - <span class="number">1</span>, len(arr) - <span class="number">1</span>)</span><br><span class="line">            mid = low + size - <span class="number">1</span></span><br><span class="line">            merge(arr, low, mid, high)</span><br><span class="line">            low += <span class="number">2</span> * size</span><br><span class="line">        size = <span class="number">2</span> * size</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    arr = [<span class="number">51</span>, <span class="number">46</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">82</span>, <span class="number">30</span>, <span class="number">77</span>, <span class="number">50</span>]</span><br><span class="line">    <span class="comment"># merge_sort(arr, 0, len(arr) - 1)</span></span><br><span class="line">    merge_sort1(arr)</span><br><span class="line">    print(arr)</span><br></pre></td></tr></table></figure>
-
-<p>边界界定:</p>
-<p>非递归方法,边界界定:</p>
-<ol>
-<li>让相邻的两个数组进行归并,保证相邻的两个元素是有序的.</li>
-<li>由于相邻两个数组变成有序了,所以子数组长度是按2的指数增长的1,2,4,8…</li>
-<li>需要找出low,mid,high 之前的关系</li>
-</ol>
-<p>递归方法:</p>
-<p>参考:</p>
-<p><a href="https://www.cnblogs.com/edwinchen/p/4783218.html" target="_blank" rel="noopener">https://www.cnblogs.com/edwinchen/p/4783218.html</a><br><a href="https://blog.csdn.net/MoreWindows/article/details/6678165" target="_blank" rel="noopener">https://blog.csdn.net/MoreWindows/article/details/6678165</a><br><a href="https://blog.csdn.net/jianyuerensheng/article/details/51262984" target="_blank" rel="noopener">https://blog.csdn.net/jianyuerensheng/article/details/51262984</a><br><a href="http://www.codebytes.in/2014/10/bottom-up-merge-sort-java-implementation.html" target="_blank" rel="noopener">bottom up merge sort</a></p>
+            <h1 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h1><p><a href="https://studygolang.com/articles/12136" target="_blank" rel="noopener">https://studygolang.com/articles/12136</a></p>
+<p>go 的 defer 语句是用来延迟执行函数的，而且延迟发生在调用函数 return 之后,defer 的重要用途一：清理释放资源,defer 的重要用途二：执行 recover</p>
+<p>Golang捕获panic堆栈信息的优雅姿势</p>
+<p><a href="https://my.oschina.net/henrylee2cn/blog/873885" target="_blank" rel="noopener">https://my.oschina.net/henrylee2cn/blog/873885</a></p>
 
           
         
@@ -1962,7 +1560,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/算法/八大排序/1.快速排序/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/go/文件操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -1981,7 +1579,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/12/算法/八大排序/1.快速排序/" itemprop="url">快速排序</a></h1>
+                <a class="post-title-link" href="/2019/11/04/go/文件操作/" itemprop="url">文件操作</a></h1>
         
 
         <div class="post-meta">
@@ -1993,8 +1591,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-12T10:43:31+08:00">
-                2019-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T20:59:48+08:00">
+                2019-11-04
               </time>
             
 
@@ -2016,19 +1614,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/八大排序/" itemprop="url" rel="index">
-                    <span itemprop="name">八大排序</span>
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">go</span>
                   </a>
                 </span>
 
@@ -2097,32 +1684,353 @@
       
         
           
-            <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p>挖坑填数+分治法</p>
-<p>快排的思想就是:</p>
-<ul>
-<li>头尾指针,挖坑填数,确定一个元素,它的左边元素都比它大,右边元素都比它小</li>
-<li>递归,保证每一个子列表都满足它的左边元素都比它大,右边元素都比它小,这样就是有序的</li>
-</ul>
-<p>为什么要用分治法?</p>
-<p>根源是:一次挖坑排序,只能确保</p>
-<p><a href="https://blog.csdn.net/MoreWindows/article/details/6684558" target="_blank" rel="noopener">https://blog.csdn.net/MoreWindows/article/details/6684558</a></p>
-<p>可以使用分治的保障是?</p>
-<p>每次会返回一个middle值,这个值,左边的都比他小,右边的都比他大</p>
-<p>这样才能保证调整到最后整个数组有序</p>
-<p>挖坑:<br>不需要担心数据被覆盖,因为数据都已经被保存了.</p>
-<p>对挖坑填数进行总结</p>
-<p>1．i =L; j = R; 将基准数挖出形成第一个坑a[i]。</p>
-<p>2．j–由后向前找比它小的数，找到后挖出此数填前一个坑a[i]中。</p>
-<p>3．i++由前向后找比它大的数，找到后也挖出此数填到前一个坑a[j]中。</p>
-<p>4．再重复执行2，3二步，直到i==j，将基准数填入a[i]中。</p>
-<p>递归实现:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * void: 没有返回值是因为操作数组,直接交换值</span></span><br><span class="line"><span class="comment">         * low,high: 是为了递归</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">// 递归的结束条件</span></span><br><span class="line">        <span class="keyword">if</span> (low &gt;= high) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> i, j, tmp;</span><br><span class="line">        <span class="comment">// 保留low,high为了后面的递归</span></span><br><span class="line">        i = low;</span><br><span class="line">        j = high;</span><br><span class="line">        <span class="comment">// 挖坑</span></span><br><span class="line">        tmp = a[low];</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j &amp;&amp; a[j] &gt;= tmp) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                a[i++] = a[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt; tmp) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                a[j--] = a[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 此时i=j</span></span><br><span class="line">        a[i] = tmp;</span><br><span class="line">        quickSort(a, low, i - <span class="number">1</span>);</span><br><span class="line">        quickSort(a, i + <span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">49</span>, <span class="number">38</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>&#125;;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">        quickSort(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="常见"><a href="#常见" class="headerlink" title="常见"></a>常见</h1>
+          
+        
+      
+    </div>
+    
+    
+    
 
-<p>将中间一部分抽出来,可以看到就是一个典型的递归</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (low &gt;= high) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> i = adjustArray(a, low, high);</span><br><span class="line">        quickSort(a, low, i - <span class="number">1</span>);</span><br><span class="line">        quickSort(a, i + <span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">adjustArray</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = a[low];</span><br><span class="line">        <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">            <span class="keyword">while</span> (low &lt; high &amp;&amp; a[high] &gt;= tmp) &#123;</span><br><span class="line">                high--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (low &lt; high) &#123;</span><br><span class="line">                a[low++] = a[high];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span> (low &lt; high &amp;&amp; a[low] &lt; tmp) &#123;</span><br><span class="line">                low++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (low &lt; high) &#123;</span><br><span class="line">                a[high--] = a[low];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        a[low] = tmp;</span><br><span class="line">        <span class="keyword">return</span> low;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] a = &#123;<span class="number">49</span>, <span class="number">38</span>, <span class="number">65</span>, <span class="number">97</span>, <span class="number">76</span>, <span class="number">13</span>, <span class="number">27</span>, <span class="number">49</span>&#125;;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">        quickSort(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
 
-<p>python:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">adjust_array</span><span class="params">(low, high)</span>:</span></span><br><span class="line">    temp = a[low]</span><br><span class="line">    <span class="keyword">while</span> low &lt; high:</span><br><span class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> a[high] &gt;= temp:</span><br><span class="line">            high -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> low &lt; high:</span><br><span class="line">            a[low] = a[high]</span><br><span class="line">            low += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> low &lt; high <span class="keyword">and</span> a[low] &lt;= temp:</span><br><span class="line">            low += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> low &lt; high:</span><br><span class="line">            a[high] = a[low]</span><br><span class="line">            high -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    a[low] = temp</span><br><span class="line">    <span class="keyword">return</span> low</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(low, high)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> low &gt;= high:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    mid = adjust_array(low, high)</span><br><span class="line">    quick_sort(low, mid - <span class="number">1</span>)</span><br><span class="line">    quick_sort(mid + <span class="number">1</span>, high)</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    a = [<span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">    quick_sort(<span class="number">0</span>, len(a) - <span class="number">1</span>)</span><br><span class="line">    print(a)</span><br></pre></td></tr></table></figure>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/分布式/MIT 6.824/start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/04/分布式/MIT 6.824/start/" itemprop="url">start</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T20:39:36+08:00">
+                2019-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
+                    <span itemprop="name">MT6.248</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="相关博客"><a href="#相关博客" class="headerlink" title="相关博客"></a>相关博客</h1><p><a href="http://blog.fnil.net/blog/ac1fa10ff9b2404ed0b91bdfaf76a87d/" target="_blank" rel="noopener">http://blog.fnil.net/blog/ac1fa10ff9b2404ed0b91bdfaf76a87d/</a></p>
+<h2 id="待读书"><a href="#待读书" class="headerlink" title="待读书"></a>待读书</h2><p><a href="https://github.com/Vonng/ddia" target="_blank" rel="noopener">https://github.com/Vonng/ddia</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/分布式/大规模分布式存储系统/分布式系统原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/01/分布式/大规模分布式存储系统/分布式系统原理/" itemprop="url">分布式系统原理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-01T19:06:52+08:00">
+                2019-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/dotnet/" itemprop="url" rel="index">
+                    <span itemprop="name">dotnet</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="分布式系统原理"><a href="#分布式系统原理" class="headerlink" title="分布式系统原理"></a>分布式系统原理</h2>
           
         
       
@@ -2161,7 +2069,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2209,7 +2117,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2220,7 +2128,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2231,7 +2139,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

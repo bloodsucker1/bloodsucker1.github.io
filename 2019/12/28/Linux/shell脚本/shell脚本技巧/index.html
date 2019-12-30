@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="shell脚本技巧,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="linux中shell变量linux中shell变量$#,$@,$0,$1,$2的含义解释: 12345678910111213141516171819变量说明: $$ Shell本身的PID（ProcessID） $! Shell最后运行的后台Process的PID $? 最后运行的命令的结束代码（返回值） $- 使用Set命令设定的Flag一览 $* 所有参数列表。如&quot;$*&quot;用「&quot;」括起来的情">
+<meta name="keywords" content="shell脚本技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell脚本技巧">
+<meta property="og:url" content="http://yoursite.com/2019/12/28/Linux/shell脚本/shell脚本技巧/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="linux中shell变量linux中shell变量$#,$@,$0,$1,$2的含义解释: 12345678910111213141516171819变量说明: $$ Shell本身的PID（ProcessID） $! Shell最后运行的后台Process的PID $? 最后运行的命令的结束代码（返回值） $- 使用Set命令设定的Flag一览 $* 所有参数列表。如&quot;$*&quot;用「&quot;」括起来的情">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-30T07:02:13.681Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell脚本技巧">
+<meta name="twitter:description" content="linux中shell变量linux中shell变量$#,$@,$0,$1,$2的含义解释: 12345678910111213141516171819变量说明: $$ Shell本身的PID（ProcessID） $! Shell最后运行的后台Process的PID $? 最后运行的命令的结束代码（返回值） $- 使用Set命令设定的Flag一览 $* 所有参数列表。如&quot;$*&quot;用「&quot;」括起来的情">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/28/Linux/shell脚本/shell脚本技巧/">
+
+
+
+
+
+  <title>shell脚本技巧 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/bloodsucker1" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/28/Linux/shell脚本/shell脚本技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">shell脚本技巧</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-28T21:44:13+08:00">
+                2019-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="linux中shell变量"><a href="#linux中shell变量" class="headerlink" title="linux中shell变量"></a>linux中shell变量</h2><p><strong>linux中shell变量<code>$#</code>,<code>$@</code>,<code>$0</code>,<code>$1</code>,<code>$2</code>的含义解释:</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量说明: </span><br><span class="line"><span class="meta">$</span><span class="bash">$ </span></span><br><span class="line">Shell本身的PID（ProcessID） </span><br><span class="line"><span class="meta">$</span><span class="bash">! </span></span><br><span class="line">Shell最后运行的后台Process的PID </span><br><span class="line"><span class="meta">$</span><span class="bash">? </span></span><br><span class="line">最后运行的命令的结束代码（返回值） </span><br><span class="line"><span class="meta">$</span><span class="bash">- </span></span><br><span class="line">使用Set命令设定的Flag一览 </span><br><span class="line"><span class="meta">$</span><span class="bash">* </span></span><br><span class="line">所有参数列表。如"$*"用「"」括起来的情况、以"$1 $2 … $n"的形式输出所有参数。 </span><br><span class="line"><span class="meta">$</span><span class="bash">@ </span></span><br><span class="line">所有参数列表。如"$@"用「"」括起来的情况、以"$1" "$2" … "$n" 的形式输出所有参数。 </span><br><span class="line"><span class="meta">$</span><span class="bash"><span class="comment"># </span></span></span><br><span class="line">添加到Shell的参数个数 </span><br><span class="line"><span class="meta">$</span><span class="bash">0 </span></span><br><span class="line">Shell本身的文件名 </span><br><span class="line"><span class="meta">$</span><span class="bash">1～<span class="variable">$n</span></span></span><br></pre></td></tr></table></figure>
+
+<p>A:<code>$*</code>和<code>$@</code>的区别</p>
+<p><code>$*</code>和 <code>$@</code>都表示传递给函数或脚本的所有参数，不被双引号(“ “)包含时，都以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。<br>但是当它们被双引号(“ “)包含时，<code>&quot;$*&quot;</code> 会将所有的参数作为一个整体，以<code>&quot;$1 $2 … $n&quot;</code>的形式输出所有参数；<code>&quot;$@&quot;</code> 会将各个参数分开，以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">test.sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">echo "\$*=" $*</span><br><span class="line">echo "\"\$*\"=" "$*"</span><br><span class="line">echo "\$@=" $@</span><br><span class="line">echo "\"\$@\"=" "$@"</span><br><span class="line">echo "print each param from \$*"</span><br><span class="line">for var in $*</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \$@"</span><br><span class="line">for var in $@</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \"\$*\""</span><br><span class="line">for var in "$*"</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br><span class="line">echo "print each param from \"\$@\""</span><br><span class="line">for var in "$@"</span><br><span class="line">do</span><br><span class="line">    echo "$var"</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p><code>./test.sh &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">*= a b c d</span></span><br><span class="line"></span><br><span class="line">"$*"= a b c d</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash">@= a b c d</span></span><br><span class="line"></span><br><span class="line">"$@"= a b c d</span><br><span class="line"></span><br><span class="line">print each param from $*</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br><span class="line"></span><br><span class="line">print each param from $@</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br><span class="line"></span><br><span class="line">print each param from "$*"</span><br><span class="line"></span><br><span class="line">a b c d</span><br><span class="line"></span><br><span class="line">print each param from "$@"</span><br><span class="line"></span><br><span class="line">a</span><br><span class="line"></span><br><span class="line">b</span><br><span class="line"></span><br><span class="line">c</span><br><span class="line"></span><br><span class="line">d</span><br></pre></td></tr></table></figure>
+
+<p>B:<code>$?</code>退出状态</p>
+<p>就是上一个命令执行后的返回结果。退出状态是一个数字，一般情况下，大部分命令执行<code>成功会返回 0，失败返回 1</code>。不过，也有一些命令返回其他值，表示不同类型的错误。</p>
+<h2 id="getopts参数处理"><a href="#getopts参数处理" class="headerlink" title="getopts参数处理"></a>getopts参数处理</h2><h3 id="使用getopts方式实现短选项的处理"><a href="#使用getopts方式实现短选项的处理" class="headerlink" title="使用getopts方式实现短选项的处理"></a>使用<code>getopts</code>方式实现短选项的处理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">getopts.sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">PROG=`basename $0`</span><br><span class="line">usage() &#123;</span><br><span class="line">    cat &lt;&lt;EOF</span><br><span class="line">Usage: $&#123;PROG&#125; [OPTION]…</span><br><span class="line">Find out the highest cpu consumed threads of java, and print the stack of these threads.</span><br><span class="line">Example: $&#123;PROG&#125; -i interface -P 3306 start</span><br><span class="line">Options:</span><br><span class="line">    -i, interface</span><br><span class="line">    -c, port</span><br><span class="line">    -h, --help display this help and exit</span><br><span class="line">EOF</span><br><span class="line">    exit $1</span><br><span class="line">&#125;</span><br><span class="line">while getopts "i:P:" arg</span><br><span class="line">do</span><br><span class="line">    case $arg in</span><br><span class="line">        i)</span><br><span class="line">            interface=$&#123;OPTARG:-any&#125;</span><br><span class="line">            ;;</span><br><span class="line">        P)</span><br><span class="line">            port=$&#123;OPTARG:-3306&#125;</span><br><span class="line">        ;;</span><br><span class="line">        ?)</span><br><span class="line">            usage 1</span><br><span class="line">        ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br><span class="line">interface=$&#123;interface:-any&#125;</span><br><span class="line">port=$&#123;port:-3306&#125;</span><br><span class="line">shift $(($OPTIND - 1))</span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br><span class="line">mode=$1</span><br><span class="line">echo $interface</span><br><span class="line">echo $port</span><br><span class="line">echo $mode</span><br></pre></td></tr></table></figure>
+
+<p>A:<code>while getopts &quot;:a:bc&quot; opt</code> </p>
+<p>第一个冒号表示忽略错误；字符后面的冒号表示该选项必须有自己的参数</p>
+<p>B:<code>shift $(($OPTIND - 1))</code></p>
+<p>通过<code>shift $(($OPTIND - 1))</code>的处理，$*中就只保留了除去选项内容的参数，可以在其后进行正常的shell编程处理了。 </p>
+<p>C:<code>basename $0</code> 取出文件名</p>
+<p>D:<code>usage 1</code>代表传参1,在usage中执行exit 1退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>F:放在<code>shift $(($OPTIND - 1))</code>之后,有两个作用:一是传入参数为0时退出，二是选项之后没有跟参数时退出</p>
+<p>G:getopts不能直接处理长的选项（如：–prefix=/home等）</p>
+<p>H:内置变量<code>$OPTARG</code>和<code>$OPTIND</code>,<code>$OPTARG</code>存储相应选项的参数，而<code>$OPTIND</code>总是存储原始<code>$*</code>中下一个要处理的元素位置</p>
+<p>I:interface=<code>${OPTARG:-any}</code>为了在interface为空字符串时赋值any,interface=<code>${interface:-any}</code>,为了防止在interface没有输入时，设置为any</p>
+<h3 id="使用getopt实现长-短选项的处理"><a href="#使用getopt实现长-短选项的处理" class="headerlink" title="使用getopt实现长/短选项的处理"></a>使用<code>getopt</code>实现长/短选项的处理</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">basename命令用于打印目录或者文件的基本名称</span></span><br><span class="line"></span><br><span class="line">PROG=`basename $0`</span><br><span class="line"></span><br><span class="line">usage() &#123;</span><br><span class="line">    cat &lt;&lt;EOF</span><br><span class="line">Usage: $&#123;PROG&#125; [OPTION]...</span><br><span class="line">Find out the highest cpu consumed threads of java, and print the stack of these threads.</span><br><span class="line">Example: $&#123;PROG&#125; -c 10</span><br><span class="line">Options:</span><br><span class="line">    -p, --pid find out the highest cpu consumed threads from the specifed java process,</span><br><span class="line">                    default from all java process.</span><br><span class="line">    -c, --count set the thread count to show, default is 5</span><br><span class="line">    -h, --help display this help and exit</span><br><span class="line">EOF</span><br><span class="line">    exit $1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ $# -eq 0 ]; then</span><br><span class="line">    usage 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">ARGS=`getopt -n "$PROG" -a -o c:p:h -l count:,pid:,help -- "$@"`</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">等价于[ $? -ne 0 ] &amp;&amp; usage，就是如果前面的错误就调用usage方法</span></span><br><span class="line"></span><br><span class="line">[ $? -ne 0 ] &amp;&amp; usage 1</span><br><span class="line"></span><br><span class="line">eval set -- "$&#123;ARGS&#125;"</span><br><span class="line">while true; do</span><br><span class="line">    case "$1" in</span><br><span class="line">    -c|--count)</span><br><span class="line">        count="$2"</span><br><span class="line">        shift 2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">;;这是<span class="keyword">case</span>语法</span></span><br><span class="line">        ;;</span><br><span class="line">    -p|--pid)</span><br><span class="line">        pid="$2"</span><br><span class="line">        shift 2</span><br><span class="line">        ;;</span><br><span class="line">    -h|--help)</span><br><span class="line">        usage</span><br><span class="line">        ;;</span><br><span class="line">    --)</span><br><span class="line">        shift</span><br><span class="line">        break</span><br><span class="line">        ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p><code>getopt</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-a, --alternative</span><br><span class="line">              Allow long options to start with a single ‘-’.</span><br><span class="line"></span><br><span class="line">-l, --longoptions longopts 支持的长选项，由冒号和字符组成类似getopts</span><br><span class="line"></span><br><span class="line">-o, --options shortopts 支持的短选项，同上</span><br><span class="line"></span><br><span class="line">-n, --name progname 命令就是通过该名称被调用</span><br><span class="line"></span><br><span class="line">-- "$@" 将所有参数列表当作getopt入参,</span><br></pre></td></tr></table></figure>
+
+<h2 id="倒计时效果"><a href="#倒计时效果" class="headerlink" title="倒计时效果"></a>倒计时效果</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">sc 保存当前光标位置</span></span><br><span class="line"><span class="meta">#</span><span class="bash">rc 恢复光标到最后保存位置</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">ed 向前清除一个字符</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">tput.sh</span></span><br><span class="line"></span><br><span class="line">tput sc</span><br><span class="line"></span><br><span class="line">count=10;</span><br><span class="line"></span><br><span class="line">while true; do</span><br><span class="line"></span><br><span class="line">  if [ $count -gt 1 ]; then</span><br><span class="line"></span><br><span class="line">        let count--;</span><br><span class="line"></span><br><span class="line">        sleep 1;</span><br><span class="line"></span><br><span class="line">        tput rc</span><br><span class="line"></span><br><span class="line">        tput ed</span><br><span class="line"></span><br><span class="line">        echo -n $count Seconds;</span><br><span class="line"></span><br><span class="line">        else</span><br><span class="line"></span><br><span class="line">            break</span><br><span class="line"></span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<h2 id="read命令"><a href="#read命令" class="headerlink" title="read命令"></a>read命令</h2><p>A:read后面的变量只有name一个，也可以有多个，这时如果输入多个数据，则第一个数据给第一个变量，第二个数据给第二个变量，如果输入数 据个数过多，则最后所有的值都给第一个变量。如果太少输入不会结束。在read命令行中也可以不指定变量.如果不指定变量，那么read命令会将接收到的数据放置在环境变量REPLY中</p>
+<p><code>-p参数，允许在read命令行中直接指定一个提示</code></p>
+<p>B:计时输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">if read -t 5 -p "please enter your name:" name</span><br><span class="line">then </span><br><span class="line">    echo "hello $name ,welcome to my script"</span><br><span class="line">else</span><br><span class="line">    echo "sorry,too slow"</span><br><span class="line">fi</span><br><span class="line">exit 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化输出-echo-“-date-Y-m-d-H-M-S-该服务器没有安装-MySQL-Server”"><a href="#格式化输出-echo-“-date-Y-m-d-H-M-S-该服务器没有安装-MySQL-Server”" class="headerlink" title="格式化输出  echo “$(date +%Y-%m-%d\ %H:%M:%S) ** 该服务器没有安装 MySQL Server”"></a>格式化输出  echo “$(date +%Y-%m-%d\ %H:%M:%S) <strong>**</strong> 该服务器没有安装 MySQL Server”</h2><h2 id="eval-用法"><a href="#eval-用法" class="headerlink" title="eval 用法"></a>eval 用法</h2><h2 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h2><p>A:位置参数可以用shift命令左移。比如<code>shift 3</code>表示原来的<code>$4</code>现在变成<code>$1</code>，原来的<code>$5</code>现在变成<code>$2</code>等等，原来的<code>$1</code>、<code>$2</code>、<code>$3</code>丢弃，<code>$0</code>不移动。不带参数的<code>shift</code>命令相当于<code>shift 1</code></p>
+<p>B:Shift 命令还有另外一个重要用途, Bsh 定义了9个位置变量，从 <code>$1</code> 到<code>$9</code>,这并不意味着用户在命令行只能使用9个参数，借助 shift 命令可以访问多于9个的参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">shift.sh</span></span><br><span class="line"></span><br><span class="line">if [ $# -eq 0 ]</span><br><span class="line">then</span><br><span class="line">echo "Usage:x_shift2.sh 参数"</span><br><span class="line">exit 1</span><br><span class="line">fi</span><br><span class="line">sum=0</span><br><span class="line">until [ $# -eq 0 ]</span><br><span class="line">do</span><br><span class="line">sum=`expr $sum + $1`</span><br><span class="line">shift</span><br><span class="line">done</span><br><span class="line">echo "sum is: $sum"</span><br></pre></td></tr></table></figure>
+
+<p><code>./shift.sh 10 20 15</code></p>
+<h2 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h2><p>eval命令将会首先扫描命令行进行所有的替换，然后再执行命令。该命令使用于那些一次扫描无法实现其功能的变量。该命令对变量进行两次扫描。这些需要进行两次扫描的变量有时候被称为复杂变量</p>
+<p><code>eval set -- &quot;{value}&quot;</code></p>
+<p> If no arguments follow this option, then the positional parameters are unset. Otherwise, the positional parameters are set to the args, even if some of them begin with a -.(即使有些参数是以-开头的，只要有参数，都会被设置位置参数)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">eval</span>也可以用于回显简单变量，不一定时复杂变量。</span></span><br><span class="line">NAME=ZONE</span><br><span class="line">eval echo $NAME等价于echo $NAME</span><br><span class="line"><span class="meta">#</span><span class="bash">两次扫描</span></span><br><span class="line">test.txt内容：hello shell world!</span><br><span class="line">myfile="cat test.txt"</span><br><span class="line">(1)echo $myfile　　#result:cat test.txt</span><br><span class="line">(2)eval echo $myfile　　#result:hello shell world!</span><br><span class="line">从（2）可以知道第一次扫描进行了变量替换，第二次扫描执行了该字符串中所包含的命令</span><br><span class="line"><span class="meta">#</span><span class="bash">获得最后一个参数</span></span><br><span class="line">echo "Last argument is $(eval echo \$$#)"</span><br><span class="line">echo "Last argument is $(eval echo $#)"</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-gt-dev-null-true"><a href="#2-gt-dev-null-true" class="headerlink" title="2&gt; /dev/null || true"></a><code>2&gt; /dev/null || true</code></h2><p>Regarding || true - If command return non 0 (zero) exit status (that usually indicating some type of error/failure) then true forcible set exit status code to 0 (zero) indicating success</p>
+<p>stdin（标准输入，文件描述符0），stdout（标准输出，文件描述符1）和stderr（标准错误，文件描述符2）</p>
+<p><code>2&gt; /dev/null</code>将错误信息丢弃</p>
+<p><code>2&gt;＆1</code> 将标准错误重定向到标准输出的地址（＆1）</p>
+<p><code>&amp;&gt;/dev/null</code> 所有IO重定向(&amp;&gt;中的&amp;可以代表任意，0，1，2，3……)</p>
+<p><a href="https://superuser.com/questions/1179844/what-does-dev-null-21-true-mean-in-linux" target="_blank" rel="noopener">https://superuser.com/questions/1179844/what-does-dev-null-21-true-mean-in-linux</a></p>
+<h2 id="amp-amp-与-和-amp"><a href="#amp-amp-与-和-amp" class="headerlink" title="&amp;&amp;与|| 和&amp;"></a>&amp;&amp;与|| 和&amp;</h2><p><code>&amp;</code>放在启动参数后面表示设置此进程为后台进程,一般为了防止信息输出干扰屏幕可以<code>ping 127.0.0.1 &amp;&gt;/dev/null &amp;</code></p>
+<p><code>command1 &amp;&amp; command2</code>,如果command1执行<code>成功</code>,那么执行command2</p>
+<p><code>command1 || command2</code>,如果command1执行<code>失败</code>,那么执行command2</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>算术运算符</li>
+</ul>
+<ul>
+<li>关系运算符</li>
+</ul>
+<p>关系运算符只支持数字，不支持字符串，除非字符串的值是数字。<br>下表列出了常用的关系运算符，假定变量 a 为 10，变量 b 为 20：</p>
+<ul>
+<li>布尔运算符<br>运算符    说明    举例<br>!    非运算，表达式为 true 则返回 false，否则返回 true。    <code>[ ! false ]</code> 返回 true。</li>
+<li>o    或运算，有一个表达式为 true 则返回 true。    <code>[ $a -lt 20 -o $b -gt 100 ]</code>返回 true。</li>
+<li>a    与运算，两个表达式都为 true 才返回 true。    <code>[ $a -lt 20 -a $b -gt 100 ]</code>返回 false。<ul>
+<li>逻辑运算符<br>运算符    说明    举例<br>&amp;&amp;    逻辑的 AND    <code>[[ $a -lt 100</code>&amp;&amp;<code>$b -gt 100 ]]</code> 返回 false<br>||    逻辑的 OR    <code>[[ $a -lt 100 || $b -gt 100 ]]</code> 返回 true</li>
+<li>字符串运算符<br>运算符    说明    举例<br>=    检测两个字符串是否相等，相等返回 true。    <code>[ $a = $b ]</code> 返回 false。<br>!=    检测两个字符串是否相等，不相等返回 true。    <code>[ $a != $b ]</code> 返回 true。</li>
+</ul>
+</li>
+<li>z    检测字符串长度是否为0，为0返回 true。    <code>[ -z $a ]</code> 返回 false。</li>
+<li>n    检测字符串长度是否为0，不为0返回 true。    <code>[ -n $a ]</code> 返回 true。<br>str    检测字符串是否为空，不为空返回 true。    <code>[ $a ]</code> 返回 true。<ul>
+<li>文件测试运算符<br>操作符    说明    举例</li>
+</ul>
+</li>
+<li>b file    检测文件是否是块设备文件，如果是，则返回 true。    <code>[ -b $file ]</code>返回 false。</li>
+<li>c file    检测文件是否是字符设备文件，如果是，则返回 true。    <code>[ -c $file ]</code> 返回 false。</li>
+<li>d file    检测文件是否是目录，如果是，则返回 true。    <code>[ -d $file ]</code>返回 false。</li>
+<li>f file    检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。    <code>[ -f $file ]</code> 返回 true。</li>
+<li>g file    检测文件是否设置了 SGID 位，如果是，则返回 true。    <code>[ -g $file ]</code>返回 false。</li>
+<li>k file    检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。    <code>[ -k $file ]</code>返回 false。</li>
+<li>p file    检测文件是否是有名管道，如果是，则返回 true。    <code>[ -p $file ]</code> 返回 false。</li>
+<li>u file    检测文件是否设置了 SUID 位，如果是，则返回 true。    <code>[ -u $file ]</code>返回 false。</li>
+<li>r file    检测文件是否可读，如果是，则返回 true。    <code>[ -r $file ]</code> 返回 true。</li>
+<li>w file    检测文件是否可写，如果是，则返回 true。    <code>[ -w $file ]</code> 返回 true。</li>
+<li>x file    检测文件是否可执行，如果是，则返回 true。    <code>[ -x $file ]</code> 返回 true。</li>
+<li>s file    检测文件是否为空（文件大小是否大于0），不为空返回 true。    <code>[ -s $file ]</code> 返回 true。</li>
+<li>e file    检测文件（包括目录）是否存在，如果是，则返回 true。    <code>[ -e $file ]</code>返回 true。<br><a href="http://www.runoob.com/linux/linux-shell-basic-operators.html" target="_blank" rel="noopener">Shell 基本运算符</a></li>
+</ul>
+<h2 id="dirname截取给定路径目录部分"><a href="#dirname截取给定路径目录部分" class="headerlink" title="dirname截取给定路径目录部分"></a>dirname截取给定路径目录部分</h2><p>1.示例1</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 跳转到脚本所在目录  </span></span><br><span class="line">cd $(dirname "$0") || exit 1</span><br></pre></td></tr></table></figure>
+
+<p>2.示例2</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; dirname /usr/bin/sort </span></span><br><span class="line">/usr/bin</span><br></pre></td></tr></table></figure>
+
+<p>#跳转到脚本所在目录，并输出当前目录地址到SCRIPTS_DIR变量，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SCRIPTS_DIR=&quot;$(cd $(dirname &quot;$0&quot;); pwd -P)&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>pwd<ul>
+<li>-P代表avoid all symlinks(避免所有符号链接)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server /home/q/mysql/multi/3308/private]# ln -s /tmp test</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private]# ll</span><br><span class="line">lrwxrwxrwx 1 root root 4 Mar 21 23:50 test -&gt; /tmp</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private/test]# pwd</span><br><span class="line">/home/q/mysql/multi/3308/private/test</span><br><span class="line">[root@server /home/q/mysql/multi/3308/private/test]# pwd -P</span><br><span class="line">/tmp</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="pv"><a href="#pv" class="headerlink" title="pv"></a>pv</h2><p>通过管道监视数据的进度</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-f, --force</span><br><span class="line">        Force output.  Normally, pv will not output any visual display if standard error is not a terminal.  This option forces it to do so.</span><br></pre></td></tr></table></figure>
+
+<h2 id="点命令"><a href="#点命令" class="headerlink" title="点命令"></a>点命令</h2><p>A:<code>. $(dirname $0)/wsrep_sst_common</code>从当前目录读取wsrep_sst_common文件并在当前进程执行，类似import语句，相当于source命令<br>B:可以使用点命令/source命在不修改文件权限的情况下，直接执行shell脚本<code>. test.sh/source test.sh</code>,它与直接执行shell的区别在于这样执行的shell是在本地shell中执行，而./test.sh 是在子shell中执行。<br>C:常用在多个shell文件公用变量时，可以将变量抽到一个文件中，在使用时source进去<br>15.declare用于声明 shell 变量<br>-a Each name is an indexed array variable (see Arrays above).</p>
+<h2 id="冒号命令"><a href="#冒号命令" class="headerlink" title="冒号命令"></a>冒号命令</h2><p>没有效果; 该命令除了扩展参数和执行任何指定的重定向之外什么都不做。 返回零退出代码</p>
+<ul>
+<li><p>脚本注释、占位符</p>
+<ul>
+<li>占位符啥也不做，只起到占位符的作用。比如在编写脚本的过程中，某些语法结构需要多个部分组成，但开始阶段并没有想好或完成相应的代码，这时就可以用:来做占位符，否则执行时就会报错。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh  </span></span><br><span class="line"></span><br><span class="line">: this is single line comment  </span><br><span class="line"></span><br><span class="line">: 'this is a multiline comment,  </span><br><span class="line">second line  </span><br><span class="line">end of comments'  </span><br><span class="line"></span><br><span class="line">if [ "1" == "1" ]; then  </span><br><span class="line">        echo "yes"  </span><br><span class="line">else  </span><br><span class="line">        :  </span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>执行任何指定的重定向</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">: &gt; file等价于&gt;file</span><br><span class="line">: $&#123;VAR:=DEFAULT&#125; 等价于 VAR=$&#123;VAR:=DEFAULT&#125;  相当于将VAR重定向为DEFAULT值</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/honghuzhilangzixin/article/details/7073312" target="_blank" rel="noopener">shell中的冒号“：”–个人整理总结版-注意与makfle中:的区别</a></p>
+<h2 id="shell特殊字符和引用"><a href="#shell特殊字符和引用" class="headerlink" title="shell特殊字符和引用"></a>shell特殊字符和引用</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> 变量表达式</span></span><br><span class="line">&amp; 后台作业</span><br><span class="line">* 字符串通配符</span><br><span class="line">( 启动子 shell</span><br><span class="line">) 停止子 shell</span><br><span class="line">\ 应用下一个字符</span><br><span class="line">| 管道</span><br><span class="line">[ 开始字符集通配符号</span><br><span class="line">] 结束字符集通配符号</span><br><span class="line">&#123; 开始命令块</span><br><span class="line">&#125; 结束命令块</span><br><span class="line">; shell 命令分隔符</span><br><span class="line">' 强引用</span><br><span class="line">" 弱引用</span><br><span class="line">&lt; 输入重定向</span><br><span class="line">输出重定向</span><br><span class="line">/ 路径名目录分割符</span><br><span class="line">? 单个任意字符</span><br><span class="line">! 管道行逻辑 NOT</span><br></pre></td></tr></table></figure>
+
+<h2 id="bash-数组学习笔记"><a href="#bash-数组学习笔记" class="headerlink" title="bash 数组学习笔记"></a>bash 数组学习笔记</h2><p><a href="http://github.tiankonguse.com/recordpost.html?id=702" target="_blank" rel="noopener">bash 数组学习笔记</a></p>
+<h2 id="shell-编程：冒号-后面跟-等号，加号，减号，问号的意义"><a href="#shell-编程：冒号-后面跟-等号，加号，减号，问号的意义" class="headerlink" title="shell 编程：冒号 后面跟 等号，加号，减号，问号的意义"></a>shell 编程：冒号 后面跟 等号，加号，减号，问号的意义</h2><ul>
+<li><code>:=句法</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username已被定义，而且是一个空值时，变量username才会被设置为变量LOGNAME的值</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:=$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;name:=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $name</span><br><span class="line">root</span><br><span class="line">[root@server ~]#</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li><code>=句法</code><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">只有当变量name未被定义过，变量name才会被设置为变量LOGNAME的值,当username被定义过,则会输出空行</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username=$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username=$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;name=$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $name</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:=句法</code>要比<code>=句法</code>限制更松些,<code>:=句法</code>允许变量为空,只有<code>:=句法</code>和<code>=句法</code>赋值</strong><br>当脚本或者函数需要依赖某些定义变量时，就要使用这种语法。它主要应用于登陆。如果一个特定环境变量还没有被定义，就可以给它赋予脚本所需要的值</p>
+<hr>
+<ul>
+<li><p><code>:-句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username为空时，在`“$&#123;&#125;”`句法中username被替换为`$LOGNAME`</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:-$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# echo $username</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:-$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;usernameee:-$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>-句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">只有当变量username为空时，在`“$&#123;&#125;”`句法中username不会被替换</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username-$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username-$LOGNAME&#125;"</span><br><span class="line">ss</span><br><span class="line">[root@server ~]# echo "$&#123;usernamesss-$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:-句法</code>要比<code>-句法</code>限制更松些,<code>:-句法</code>允许变量为空,但是与<code>:=句法</code>要比`=句法区别是都不会给变量赋值</strong><br>当脚本评价或检查系统环境的时，:-句法和-句法都可以使用。这两种检查基本上是相反的，它们用默认值替换变量，或者甚至于不依赖username变量是否已经被定义。如果脚本中急需要一组被定义的变量，也需要一些不该被定义的变量，那么在脚本执行任务之前组合这两种句法，肯定可以实现正确的设置。</p>
+<hr>
+<ul>
+<li><p><code>:?句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">当变量未被定义或者定义了一个空值时,那么在echo命令中就会使用LOGNAME的值，并且脚本退出执行</span><br><span class="line">[root@server ~]# username="sss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:?$LOGNAME&#125;"</span><br><span class="line">sss</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:?$LOGNAME&#125;"</span><br><span class="line">bash: username: root</span><br><span class="line">[root@server ~]# echo "$&#123;useme:?$LOGNAME&#125;"</span><br><span class="line">bash: useme: root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>?句法</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">当变量未被定义时那么在echo命令中就会使用LOGNAME的值，并且脚本退出执行</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username?$LOGNAME&#125;"</span><br><span class="line">[root@server ~]# echo "$&#123;userna?$LOGNAME&#125;"</span><br><span class="line">bash: userna: root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:?句法</code>与<code>?句法</code>区别在于，<code>?句法</code>允许变量为空”</strong></p>
+<hr>
+<ul>
+<li><p><code>:+句法</code>只有当变量已被定义而且是非空的时候，“${}”表达式才执行替换</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username:+$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username:+$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# echo "$&#123;usernam+$LOGNAME&#125;"</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>+句法</code>,</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">只要变量被定义了即使为空,“$&#123;&#125;”表达式也执行替换</span><br><span class="line">[root@server ~]# echo "$&#123;use+$LOGNAME&#125;"</span><br><span class="line"></span><br><span class="line">[root@server ~]# username="ss"</span><br><span class="line">[root@server ~]# echo "$&#123;username+$LOGNAME&#125;"</span><br><span class="line">root</span><br><span class="line">[root@server ~]# username=""</span><br><span class="line">[root@server ~]# echo "$&#123;username+$LOGNAME&#125;"</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong><code>:+句法</code>要比<code>+句法</code>要求苛刻些，<code>+句法</code>允许变量为空</strong></p>
+<hr>
+<p><strong>区别：</strong></p>
+<ul>
+<li><code>:?句法</code>与<code>?句法</code>与其他句法区别<br>  错误之后退出，其他不会</li>
+<li><code>:=句法</code>与<code>=句法</code>与其他句法区别<br>  只有<code>:=句法</code>与`=句法会将结果赋值给变量,其他都不会</li>
+<li><code>:+</code>、<code>+</code> 与<code>:-</code>、<code>-</code>区别<br>  最主要的区别是<code>:+</code>、<code>+</code>示例检查的是一个已定义的变量，而不是未定义的变量</li>
+<li><code>:?句法</code>、<code>?句法</code>与<code>:=句法</code>、<code>=句法</code>区别<br>  主要区别是<code>？</code>会退出,<code>=</code>会赋值.<br><a href="http://www.cnblogs.com/fhefh/archive/2011/04/22/2024750.html" target="_blank" rel="noopener">linux bash shell之变量替换</a></li>
+</ul>
+<h2 id="Linux-shell-中-反引号，-，-，-作用与区别"><a href="#Linux-shell-中-反引号，-，-，-作用与区别" class="headerlink" title="Linux shell 中$() 反引号，${}，$[] $(())，[ ] (( )) [[ ]]作用与区别"></a>Linux shell 中<code>$() 反引号，${}，$[] $(())，[ ] (( )) [[ ]]</code>作用与区别</h2><ul>
+<li><p><code>$()</code>和 反引号<br>用来做命令替换用</p>
+<ul>
+<li>各自的优缺点<br>  a.反引号 基本上可用在全部的 unix shell 中使用，若写成 shell script ，其移植性比较高。但反单引号容易打错或看错。<br>  b.<code>$()</code>并不是所有shell都支持。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# version=$(uname -r)</span><br><span class="line">[root@server ~]# echo $version</span><br><span class="line">2.6.32-358.23.2.el6.x86_64</span><br><span class="line">[root@server ~]# version=`uname -r`</span><br><span class="line">[root@server ~]# echo $version</span><br><span class="line">2.6.32-358.23.2.el6.x86_64</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>${ }</code><br><code>${ }</code>用于变量替换。一般情况下，<code>$var</code> 与<code>${var}</code> 并没有啥不一样。但是用 <code>${ }</code> 会比较精确的界定变量名称的范围</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# A=B</span><br><span class="line">[root@server ~]# echo $AB</span><br><span class="line"></span><br><span class="line">[root@server ~]# echo $&#123;A&#125;B</span><br><span class="line">BB</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]#  A='abcde'</span><br><span class="line">[root@server ~]# echo $&#123;A#cd&#125;</span><br><span class="line">abcde</span><br><span class="line">[root@server ~]# echo $&#123;A#ab&#125;</span><br><span class="line">cde</span><br><span class="line">[root@server ~]# echo $&#123;A%de&#125;</span><br><span class="line">abc</span><br><span class="line">[root@server ~]# A='abcabcde'</span><br><span class="line">[root@server ~]# echo $&#123;A/abc/df&#125;</span><br><span class="line">dfabcde</span><br><span class="line">[root@server ~]# echo $&#123;A//abc/df&#125;</span><br><span class="line">dfdfde</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>$[] $(())</code><br>它们是一样的，都是进行数学运算的。支持+ - * / %：分别为 “加、减、乘、除、取模”。但是注意，bash只能作整数运算，对于浮点数是当作字符串处理的<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# a=5; b=7; c=2</span><br><span class="line">[root@server ~]# echo $(( a+b*c ))</span><br><span class="line">19</span><br><span class="line">[root@server ~]# echo $(( (a+b)/c ))</span><br><span class="line">6</span><br><span class="line">[root@server ~]# echo $(( (a*b)%c))</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>在 <code>$(( ))</code> 中的变量名称，可于其前面加<code>$</code>符号来替换，也可以不用<br><code>$(( $a + $b * $c))</code> 也可得到 19 的结果</p>
+<ul>
+<li><code>[ ]</code>:<br>即为test命令的另一种形式</li>
+</ul>
+<p>1.你必须在左括号的右侧和右括号的左侧各加一个空格，否则会报错<br>2.test命令使用标准的数学比较符号来表示字符串的比较，而用文本符号来表示数值的比较。很多人会记反了。使用反了，shell可能得不到正确的结果。<br>3.大于符号或小于符号必须要转义，否则会被理解成重定向。</p>
+<ul>
+<li><code>(( ))及[[ ]]</code>:<br>它们分别是[ ]的针对数学比较表达式和字符串表达式的加强版<ul>
+<li>在<code>[[ ]]</code>中增加了另一个特性：模式匹配</li>
+<li>其中<code>(( ))</code>，不需要再将表达式里面的大小于符号转义，除了可以使用标准的数学运算符外，还增加了以下符号：</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://blog.csdn.net/x1269778817/article/details/46535729" target="_blank" rel="noopener">Linux shell 中<code>$()</code> <code>，${}，$[] $(())，[ ] (( )) [[ ]]</code>作用与区别</a></p>
+<h2 id="获取本机IP地址"><a href="#获取本机IP地址" class="headerlink" title="获取本机IP地址"></a>获取本机IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ipaddr=`/sbin/ifconfig | grep 'inet addr:' | grep -v '127.0.0.1'|cut -d : -f2 | awk '&#123;print $1&#125;'`</span><br><span class="line">echo $ipaddr</span><br></pre></td></tr></table></figure>
+
+<h2 id="umark-022"><a href="#umark-022" class="headerlink" title="umark 022"></a>umark 022</h2><p>预设权限<br>目录的预设权限是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0777 drwxrwxrwx</span><br></pre></td></tr></table></figure>
+
+<p>文件的预设权限是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0666 -rw-rw-rw-</span><br></pre></td></tr></table></figure>
+
+<p>其中r的十进制值是4，w的十进制值是2，x的十进制值是1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">umask=022中&quot;022&quot;是八进制的写法，如果换成二进制是000010010</span><br><span class="line">在unix中文件权限是三类用户，三种权限。三类用户分别是文件所有者user(u)，文件所有者所在主群组group(g)、其它用户others(o)，三种权限分别是起读read(r)、写write(w)、执行execute(x)。</span><br><span class="line">如果一个文件的权限如下：所有者有读写的权限，群组有读和执行权限、其它用户有读权限，可以写成：</span><br><span class="line">rw-r-xr--</span><br><span class="line">其中前三位指明了所有者的权限、中间三位指明了组权限、最后三位指明了其它用户的权限。我们用ls -l可以看到文件权限详情，列出来的是10位，最前一位如果是d表示是子目录。</span><br><span class="line">说回来，如果把这上面9位字母换成二进制数则是：</span><br><span class="line">110101100</span><br><span class="line">如果换成八进制是多少？</span><br><span class="line">因此文件权限可以用9位二进制数表示。umask在英文中是屏蔽的意思，那么</span><br><span class="line">umask=022</span><br><span class="line">指屏蔽文件的022权限，到底屏蔽了什么？将这个八进制数用二进制表示</span><br><span class="line">000010010</span><br><span class="line">换算成字母是</span><br><span class="line">----w--w-</span><br><span class="line">#指取消组的写权限、取消其它用户的写权限。</span><br><span class="line">屏蔽这些权限后，剩下什么权限呢？用字母表示是：</span><br><span class="line">#rwxr-xr-x</span><br><span class="line">用二进制数表示是：</span><br><span class="line">111101101</span><br><span class="line">你可以对比一下</span><br><span class="line">000010010</span><br><span class="line">可以知道屏蔽前后的换算关系。</span><br></pre></td></tr></table></figure>
+
+<p>umask决定目录和文件被创建时得到的初始权限<br>umask = 022时<br>新建的目录 权限是755<br>文件的权限是 644</p>
+<h2 id="readonly-WSREP-SST-OPT-BYPASS"><a href="#readonly-WSREP-SST-OPT-BYPASS" class="headerlink" title="readonly WSREP_SST_OPT_BYPASS"></a>readonly WSREP_SST_OPT_BYPASS</h2><p>readonly命令用于定义只读shell变量和shell函数。readonly命令的选项-p可以输出显示系统中所有定义的只读变量。<br><a href="http://man.linuxde.net/readonly" target="_blank" rel="noopener">http://man.linuxde.net/readonly</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shell脚本技巧/" <i class="fa fa-tag"> shell脚本技巧</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/28/Linux/Linux文件操作命令/" rel="next" title="Linux文件操作命令">
+                <i class="fa fa-chevron-left"></i> Linux文件操作命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/30/kafka/kafka/" rel="prev" title="kafka">
+                kafka <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="John Doe">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux中shell变量"><span class="nav-number">1.</span> <span class="nav-text">linux中shell变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getopts参数处理"><span class="nav-number">2.</span> <span class="nav-text">getopts参数处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用getopts方式实现短选项的处理"><span class="nav-number">2.1.</span> <span class="nav-text">使用getopts方式实现短选项的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用getopt实现长-短选项的处理"><span class="nav-number">2.2.</span> <span class="nav-text">使用getopt实现长/短选项的处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#倒计时效果"><span class="nav-number">3.</span> <span class="nav-text">倒计时效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#read命令"><span class="nav-number">4.</span> <span class="nav-text">read命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化输出-echo-“-date-Y-m-d-H-M-S-该服务器没有安装-MySQL-Server”"><span class="nav-number">5.</span> <span class="nav-text">格式化输出  echo “$(date +%Y-%m-%d\ %H:%M:%S) ** 该服务器没有安装 MySQL Server”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval-用法"><span class="nav-number">6.</span> <span class="nav-text">eval 用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shift"><span class="nav-number">7.</span> <span class="nav-text">shift</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval"><span class="nav-number">8.</span> <span class="nav-text">eval</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-gt-dev-null-true"><span class="nav-number">9.</span> <span class="nav-text">2&gt; /dev/null || true</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#amp-amp-与-和-amp"><span class="nav-number">10.</span> <span class="nav-text">&amp;&amp;与|| 和&amp;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">11.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dirname截取给定路径目录部分"><span class="nav-number">12.</span> <span class="nav-text">dirname截取给定路径目录部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pv"><span class="nav-number">13.</span> <span class="nav-text">pv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点命令"><span class="nav-number">14.</span> <span class="nav-text">点命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒号命令"><span class="nav-number">15.</span> <span class="nav-text">冒号命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell特殊字符和引用"><span class="nav-number">16.</span> <span class="nav-text">shell特殊字符和引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash-数组学习笔记"><span class="nav-number">17.</span> <span class="nav-text">bash 数组学习笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell-编程：冒号-后面跟-等号，加号，减号，问号的意义"><span class="nav-number">18.</span> <span class="nav-text">shell 编程：冒号 后面跟 等号，加号，减号，问号的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-shell-中-反引号，-，-，-作用与区别"><span class="nav-number">19.</span> <span class="nav-text">Linux shell 中$() 反引号，${}，$[] $(())，[ ] (( )) [[ ]]作用与区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取本机IP地址"><span class="nav-number">20.</span> <span class="nav-text">获取本机IP地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#umark-022"><span class="nav-number">21.</span> <span class="nav-text">umark 022</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#readonly-WSREP-SST-OPT-BYPASS"><span class="nav-number">22.</span> <span class="nav-text">readonly WSREP_SST_OPT_BYPASS</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共字</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
